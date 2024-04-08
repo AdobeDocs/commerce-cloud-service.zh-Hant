@@ -3,11 +3,11 @@ title: Cloud Docker包
 description: 請參閱Cloud Docker套件最新改良的清單。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2023-07-31T00:00:00Z
+last-substantial-update: 2024-04-08T00:00:00Z
 exl-id: 907d977f-2e9c-4553-a46b-000bc6a57b28
-source-git-commit: 21754f2ee3df586cd03d57210741b36409ad2b36
+source-git-commit: bc76cba0219f16fd055c20289811b51c35c9b026
 workflow-type: tm+mt
-source-wordcount: '3620'
+source-wordcount: '3662'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.3.6 {#latest}
+## v1.3.7 {#latest}
+
+發行日期： 2024年4月8日
+
+- ![新圖示](../../assets/new.svg) **PHP**  — 新增對PHP 8.3和PHP 8.3影像的支援。
+- ![新圖示](../../assets/new.svg) **Nginx**  — 新增影像nginx 1.24版。
+- ![新圖示](../../assets/new.svg) **Opensearch**  — 新增影像OpenSearch v. 2.12、1.3。
+- ![新圖示](../../assets/new.svg) **作曲者**  — 將Composer版本更新至2.2.23。
+
+## v1.3.6
 
 發行日期： 2023年7月31日
 

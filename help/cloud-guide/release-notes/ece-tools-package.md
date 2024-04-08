@@ -2,11 +2,11 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-01-16T00:00:00Z
+last-substantial-update: 2024-04-08T00:00:00Z
 exl-id: a464b940-c56e-4a7c-9948-559539e25361
-source-git-commit: f2aa4aa183298d829d27c4641f21acef1514d312
+source-git-commit: e21f21e34f89b62842bd22c99ff5705f984898e0
 workflow-type: tm+mt
-source-wordcount: '2887'
+source-wordcount: '2905'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.1.17 {#latest}
+
+## v2002.1.18 {#latest}
+
+發行日期： 2024年4月8日
+
+- ![新圖示](../../assets/new.svg) **PHP**  — 新增對PHP 8.3的支援。
+- ![修正圖示](../../assets/fix.svg) 驗證器 — 已更新EOL驗證器。
+
+## v2002.1.17
 
 發行日期： 2024年1月16日
 

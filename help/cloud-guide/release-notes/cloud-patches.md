@@ -2,11 +2,11 @@
 title: Commerce雲端修補程式
 description: 請參閱「雲端修補程式」套裝軟體的最新改良專案清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-01-16T00:00:00Z
+last-substantial-update: 2024-04-08T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: 1e06545340cb63df483d1db5b2a890499e99e6d3
+source-git-commit: d5ab7c4f1d2edbd85eab5a4ca098b3d156e562e5
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce雲端修補程式套件相依於ECE-Tools套件，會在您安裝或更
 
 <!--Add release notes below-->
 
-## v1.0.25 {#latest}
+## v1.0.26 {#latest}
+
+發行日期： 2024年4月8日
+
+- ![新圖示](../../assets/new.svg) **PHP**  — 新增對PHP 8.3的支援。
+
+## v1.0.25
 
 發行日期： 2024年1月16日
 
