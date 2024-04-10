@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4dc60128f93f4595b0ed3e1a42cd64bb660e788f
+source-git-commit: ab9e2c8ca8c9a9c527aaa8b4cd5e2c2bc35bb718
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ ht-degree: 0%
 
 此 `composer.json` 檔案會宣告套件清單，而 `composer.lock` file會儲存用來建置Adobe Commerce或Magento Open Source安裝的套件完整清單（每個套件的完整版本及其相依性）。
 
-下列參考檔案產生自 `composer.lock` 檔案，並涵蓋雲端基礎結構2.4.6上Adobe Commerce中所包含的必要套件。
+下列參考檔案產生自 `composer.lock` 檔案，並涵蓋雲端基礎結構2.4.7上Adobe Commerce中所包含的必要套件。
 
 ## 相依性
 
-`magento/magento-cloud-metapackage 2.4.6` 具有下列相依性：
+`magento/magento-cloud-metapackage 2.4.7` 具有下列相依性：
 
 ```config
 fastly/magento2: ^1.2.34
 magento/ece-tools: ^2002.1.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.6 <2.4.7
+magento/product-enterprise-edition: >=2.4.7 <2.4.8
 ```
 
 ## 協力廠商授權
@@ -51,7 +51,7 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   <tbody>
   <tr>
     <td>
-      elasticsearch/elasticsearch
+      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
     </td>
     <td>資料庫</td>
     <td>Elasticsearch的PHP使用者端</td>
@@ -132,13 +132,6 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     </td>
     <td>資料庫</td>
     <td>BaconQrCode是PHP的QR程式碼產生器。</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/beberlei/assert.git">beberlei/assert</a>
-    </td>
-    <td>資料庫</td>
-    <td>業務模型中用於輸入驗證的精簡宣告程式庫。</td>
   </tr>
   <tr>
     <td>
@@ -436,13 +429,6 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-zendframework-bridge.git">laminas/laminas-zendframework-bridge</a>
-    </td>
-    <td>資料庫</td>
-    <td>將舊版ZF類別名稱命名為Laminas專案對等項。</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/nikic/PHP-Parser.git">nikic/php-parser</a>
     </td>
     <td>資料庫</td>
@@ -482,6 +468,27 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     </td>
     <td>magento-module</td>
     <td>使用Redis的Zend_Cache後端，完全支援標籤。</td>
+  </tr>
+  </tbody>
+</table>
+
+### ISC
+
+<table>
+  <thead>
+    <tr>
+      <th>名稱</th>
+      <th>型別</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <a href="https://github.com/paragonie/sodium_compat.git">paragonie/na_compat</a>
+    </td>
+    <td>資料庫</td>
+    <td>libna的純PHP實作；使用PHP擴充功能（如果存在）</td>
   </tr>
   </tbody>
 </table>
@@ -545,6 +552,13 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     </td>
     <td>資料庫</td>
     <td>var_export()的強大替代方案，可在不使用__set_state()的情況下匯出關閉項和物件</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/CarbonPHP/carbon-doctrine-types.git">carbonphp/carbon-doctrine-types</a>
+    </td>
+    <td>資料庫</td>
+    <td>在原則中使用碳的型別</td>
   </tr>
   <tr>
     <td>
@@ -615,27 +629,6 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     </td>
     <td>資料庫</td>
     <td>在不使用Xdebug的情況下重新啟動程式。</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/doctrine/annotations.git">學說/註解</a>
-    </td>
-    <td>資料庫</td>
-    <td>Docblock註解剖析器</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/doctrine/deprecations.git">學說/過時</a>
-    </td>
-    <td>資料庫</td>
-    <td>在trigger_error(E_USER_DEPRECATED)或PSR-3記錄檔之上的一小層，提供可停用所有過時專案或選擇性地停用套裝程式的選項。</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/doctrine/lexer.git">學說/詞法分析器</a>
-    </td>
-    <td>資料庫</td>
-    <td>PHP Doctrine Lexer剖析器程式庫，可用於自上而下的遞回下降剖析器。</td>
   </tr>
   <tr>
     <td>
@@ -803,7 +796,14 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
       <a href="https://github.com/PhpGt/Dom.git">phpgt/dom</a>
     </td>
     <td>資料庫</td>
-    <td>PHP專案的現代DOM API。</td>
+    <td>新式DOM API。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/PhpGt/PropFunc.git">phpgt/propfunc</a>
+    </td>
+    <td>資料庫</td>
+    <td>屬性存取子與變數函式。</td>
   </tr>
   <tr>
     <td>
@@ -821,10 +821,10 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/php-fig/cache.git">psr/cache</a>
+      <a href="https://github.com/php-fig/clock.git">psr/clock</a>
     </td>
     <td>資料庫</td>
-    <td>快取程式庫的通用介面</td>
+    <td>讀取時鐘的通用介面。</td>
   </tr>
   <tr>
     <td>
@@ -905,7 +905,7 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/sabberworm/PHP-CSS-Parser.git">sabberworm/php-css-parser</a>
+      <a href="https://github.com/MyIntervals/PHP-CSS-Parser.git">sabberworm/php-css-parser</a>
     </td>
     <td>資料庫</td>
     <td>以PHP撰寫之CSS檔案的剖析器</td>
@@ -1024,6 +1024,20 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/http-client.git">symfony/http-client</a>
+    </td>
+    <td>資料庫</td>
+    <td>提供強大的方法來同步或非同步擷取HTTP資源</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/http-client-contracts.git">symfony/http-client-contracts</a>
+    </td>
+    <td>資料庫</td>
+    <td>與HTTP使用者端相關的一般抽象概念</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/http-foundation.git">symfony/http-foundation</a>
     </td>
     <td>資料庫</td>
@@ -1041,7 +1055,7 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
       <a href="https://github.com/symfony/intl.git">symfony/intl</a>
     </td>
     <td>資料庫</td>
-    <td>為C intl擴充功能提供PHP取代層，其中包含來自ICU程式庫的其他資料</td>
+    <td>提供ICU資料庫的本地化資料存取</td>
   </tr>
   <tr>
     <td>
@@ -1108,6 +1122,13 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/polyfill-php83.git">symfony/polyfill-php83</a>
+    </td>
+    <td>資料庫</td>
+    <td>Symfony polyfill將一些PHP 8.3+功能回移植到較低的PHP版本</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/process.git">symfony/process</a>
     </td>
     <td>資料庫</td>
@@ -1164,17 +1185,17 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/var-exporter.git">symfony/var-exporter</a>
+    </td>
+    <td>資料庫</td>
+    <td>允許將任何可序列化的PHP資料結構匯出為純PHP程式碼</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/yaml.git">symfony/yaml</a>
     </td>
     <td>資料庫</td>
     <td>載入和傾印YAML檔案</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/thecodingmachine/safe.git">編碼機器/保險箱</a>
-    </td>
-    <td>資料庫</td>
-    <td>擲回例外狀況而非錯誤時傳回FALSE的PHP核心函式</td>
   </tr>
   <tr>
     <td>
@@ -1220,17 +1241,31 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
   <tbody>
   <tr>
     <td>
-      paypal/module-braintree-graph-ql
+      paypal/module-braintree-customer-balance
     </td>
     <td>magento2-module</td>
     <td>不適用</td>
   </tr>
   <tr>
     <td>
-      Temando/module-shipping-remover
+      paypal/module-braintree-gift-card-account
     </td>
     <td>magento2-module</td>
-    <td>從Magento2移除Temando多承運商送貨擴充功能</td>
+    <td>不適用</td>
+  </tr>
+  <tr>
+    <td>
+      paypal/module-braintree-gift-wrapping
+    </td>
+    <td>magento2-module</td>
+    <td>不適用</td>
+  </tr>
+  <tr>
+    <td>
+      paypal/module-braintree-graph-ql
+    </td>
+    <td>magento2-module</td>
+    <td>不適用</td>
   </tr>
   </tbody>
 </table>
@@ -1246,13 +1281,6 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>
-      Temando/module-shipping
-    </td>
-    <td>中繼封裝</td>
-    <td>Magento2的Temando多承運商延長運送期</td>
-  </tr>
   </tbody>
 </table>
 
