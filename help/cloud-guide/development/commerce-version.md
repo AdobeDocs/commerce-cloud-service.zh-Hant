@@ -3,7 +3,7 @@ title: 升級Commerce版本
 description: 瞭解如何在雲端基礎結構專案中升級Adobe Commerce版本。
 feature: Cloud, Upgrade
 exl-id: 87821007-4979-4a20-940b-aa3c82c192d8
-source-git-commit: 745a9f08353bd5dfbb871ca88947157c145c7c70
+source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 0%
@@ -124,7 +124,7 @@ ht-degree: 0%
 
 ### .magento.app.yaml
 
-一律檢閱 [.magento.app.yaml](../application/configure-app-yaml.md) 已安裝版本的檔案，因為它可控制應用程式建置和部署到雲端基礎結構的方式。 以下範例適用於版本2.4.6，並使用撰寫器2.2.21。此 `build: flavor:` 屬性不用於Composer 2.x；請參閱 [安裝和使用Composer 2](../application/properties.md#installing-and-using-composer-2).
+一律檢閱 [.magento.app.yaml](../application/configure-app-yaml.md) 已安裝版本的檔案，因為它可控制應用程式建置和部署到雲端基礎結構的方式。 以下範例適用於版本2.4.7，並使用撰寫器2.7.2。此 `build: flavor:` 屬性不用於Composer 2.x；請參閱 [安裝和使用Composer 2](../application/properties.md#installing-and-using-composer-2).
 
 **若要更新 `.magento.app.yaml` 檔案**：
 
@@ -135,13 +135,13 @@ ht-degree: 0%
 1. 更新PHP選項。
 
    ```yaml
-   type: php:8.2
+   type: php:8.3
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.2.21'
+           composer/composer: '2.7.2'
    ```
 
 1. 修改 `hooks` 屬性 `build` 和 `deploy` 命令。

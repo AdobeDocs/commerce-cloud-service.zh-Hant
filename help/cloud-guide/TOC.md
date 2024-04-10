@@ -3,9 +3,9 @@ user-guide-title: 雲端基礎結構上的 Commerce 指南
 user-guide-description: 了解如何在雲端基礎結構上管理 Adobe Commerce 應用程式。
 product: magento
 feature: Cloud
-source-git-commit: 615a6525597c62cb6f151cc26ea2bdded3229350
+source-git-commit: ebd434e488b666d34df9562825a612b33495e44d
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 7%
    + [Cloud Docker包](release-notes/cloud-docker.md)
    + [雲端元件](release-notes/cloud-components.md)
    + [雲端套件](release-notes/cloud-packages.md)
-   + [雲端套件（測試版）](release-notes/cloud-packages-beta.md)
    + [與舊版不相容的變更](release-notes/backward-incompatible-changes.md)
    + [發行說明封存](release-notes/cloud-release-archive.md)
 + 雲端專案 {#project}

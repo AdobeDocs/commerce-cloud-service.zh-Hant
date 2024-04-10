@@ -3,7 +3,7 @@ title: 屬性
 description: 設定時，請使用屬性清單作為參考 [!DNL Commerce] 用於建置和部署至雲端基礎建設的應用程式。
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 58a86136-a9f9-4519-af27-2f8fa4018038
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 | [`name`](#name) | 定義應用程式名稱 | `mymagento` | 是 |
 | [`relationships`](#relationships) | 對應服務 | 服務：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
 | [`runtime`](#runtime) | 執行階段屬性包含 [!DNL Commerce] 應用程式。 | 擴充功能：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
-| [`type`](#type-and-build) | 設定基本容器影像 | `php:8.1` | 是 |
+| [`type`](#type-and-build) | 設定基本容器影像 | `php:8.3` | 是 |
 | [`variables`](variables-property.md) | 為特定Commerce版本套用環境變數 | — | 否 |
 | [`web`](web-property.md) | 處理外部請求 | — | 是 |
 | [`workers`](workers-property.md) | 處理外部請求 | — | 是（如果未使用Web屬性） |
@@ -55,13 +55,13 @@ type: php:<version>
 
 ```yaml
 # The toolstack used to build the application.
-type: php:8.1
+type: php:8.3
 build:
     flavor: none
 
 dependencies:
     php:
-        composer/composer: '2.2.4'
+        composer/composer: '2.7.2'
 ```
 
 ### 安裝和使用Composer 2

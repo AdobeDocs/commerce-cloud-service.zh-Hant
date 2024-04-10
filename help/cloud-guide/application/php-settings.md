@@ -3,9 +3,9 @@ title: PHP設定
 description: 瞭解在雲端基礎結構中用於Commerce應用程式配置的最佳PHP設定。
 feature: Cloud, Configuration, Extensions
 exl-id: b4180265-f7a1-48e4-8c23-27835253e171
-source-git-commit: 9b3772cf640ebc56063434e1aa8acb1ec51dc63c
+source-git-commit: 94c1e16a07567471d446478e3bd2a33977247ef3
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -110,9 +110,7 @@ php -m
 
 下表顯示在雲端平台上部署Adobe Commerce時支援的PHP擴充功能。
 
-| 預設副檔名 | 已安裝的擴充功能<br>無法解除安裝 | 可安裝的擴充功能<br>並視需要解除安裝 |
-| ------------------ | --------------------- | --------------------- |
-| `bcmath`<br>`bz2`<br>`calendar`<br>`exif`<br>`gd`<br>`gettext`<br> `intl`<br> `mysqli`<br> `openswoole`<br> `pcntl`<br> `pdo_mysql`<br> `soap`<br> `sockets`<br>  `sysvmsg`<br> `sysvsem`<br> `sysvshm`<br> `opcache`<br> `zip` | `ctype`<br> `curl`<br>`date`<br> `dom`<br> `fileinfo`<br> `filter`<br> `ftp`<br> `hash`<br> `iconv`<br> `json`<br> `mbstring`<br> `mysqlnd`<br> `openssl`<br> `pcre`<br> `pdo`<br> `pdo_sqlite`<br> `phar`<br>`posix`<br> `readline`<br> `session`<br> `sqlite3`<br> `tokenizer`<br> `xml`<br> `xmlreader`<br> `xmlwriter`<br> | `geoip`<br>`gmp`<br> `igbinary`<br> `imagick`<br> `imap`<br> `ioncube` <br>`ldap`<br> `mailparse`<br> `mcrypt`<br> `msgpack`<br> `mysqli`<br> `oauth`<br> `pdo_mysql`<br> `propro`<br> `pspell`<br> `raphf`<br> `recode`<br> `redis`<br> `shmop` `sockets`<br> `sodium`<br> `ssh2`<br>`tidy`<br> `xdebug`<br> `xmlrpc`<br> `xsl`<br> `yaml` |
+{{$include /help/_includes/templated/php-extensions-cloud.md}}
 
 PHP模組需求與Adobe Commerce版本繫結。 另請參閱 [PHP需求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html).
 
