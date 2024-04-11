@@ -6,9 +6,9 @@ feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
 exl-id: 3357a3ea-bf86-4a65-95d1-6b24f1152248
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b85a163ff62f8a63430dff7c96b5cf391cf38d79
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1454'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,11 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 按一下 **[!UICONTROL Add User]**.
 
-1. 新增使用者後，重新部署所有環境以套用變更。 新增使用者不會自動觸發部署。 重新部署是確保使用者可以使用SSH存取環境的重要步驟。
+   >[!IMPORTANT]
+   >
+   >新增使用者不會自動觸發部署。
+
+1. 新增使用者後，重新部署所有環境以套用變更。 新增使用者不會自動觸發部署。 重新部署是確保使用者可以使用SSH存取環境或執行管理員工作的重要步驟。
 
 新增使用者後，Adobe會傳送電子郵件至指定地址，附上存取雲端基礎結構專案上Adobe Commerce的說明。
 
