@@ -1,33 +1,64 @@
 ---
-source-git-commit: 28aaae20fa03f31107bcd3fb569350a68842b152
+source-git-commit: 78e19b0cb274caf3799882d1f5d8242225c936ad
 workflow-type: tm+mt
-source-wordcount: '3125'
+source-wordcount: '4098'
 ht-degree: 0%
 
 ---
 # ece-tools
 
 <!-- The template to render with above values -->
-**版本**：2002.1.14
+**版本**：2002.1.18
 
-此參照包含32個命令，這些命令可透過 `ece-tools` 命令列工具。
+此參照包含34個命令，這些命令可透過 `ece-tools` 命令列工具。
 初始清單會使用 `ece-tools list` 在雲端基礎結構上的Adobe Commerce執行命令。
 
 >[!NOTE]
 >
 >此參考是從應用程式程式碼基底產生的。 若要變更內容，您可以更新中對應命令實施的原始碼 [程式碼基底](https://github.com/magento/magento-cloud-cli) 存放庫並提交您的變更以供檢閱。 另一種方式是 _提供意見反應_ （尋找右上方的連結）。 如需貢獻准則，請參閱 [程式碼協助撰寫](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
 
-## `build`
+## `_complete`
 
-建置應用程式。
+提供殼層完成建議的內部命令
 
 ```bash
-ece-tools build
+ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-a|--api-version API-VERSION] [-S|--symfony SYMFONY]
 ```
+
+### `--shell`， `-s`
+
+殼層型別(「bash」、「fish」、「zsh」)
+
+- 需要值
+
+### `--input`， `-i`
+
+輸入權杖的陣列（例如COMP_WORDS或argv）
+
+- 預設： `[]`
+- 需要值
+
+### `--current`， `-c`
+
+游標所在的「輸入」陣列索引（例如COMP_CWORD）
+
+- 需要值
+
+### `--api-version`， `-a`
+
+完成指令碼的API版本
+
+- 需要值
+
+### `--symfony`， `-S`
+
+已棄用
+
+- 需要值
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -55,14 +86,140 @@ ece-tools build
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
+
+- 預設： `false`
+- 不接受值
+
+### `--no-interaction`， `-n`
+
+請勿詢問任何互動式問題
+
+- 預設： `false`
+- 不接受值
+
+
+## `build`
+
+建置應用程式。
+
+```bash
+ece-tools build
+```
+
+### `--help`， `-h`
+
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
+
+- 預設： `false`
+- 不接受值
+
+### `--quiet`， `-q`
+
+不輸出任何訊息
+
+- 預設： `false`
+- 不接受值
+
+### `--verbose`， `-v|-vv|-vvv`
+
+增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+
+- 預設： `false`
+- 不接受值
+
+### `--version`， `-V`
+
+顯示此應用程式版本
+
+- 預設： `false`
+- 不接受值
+
+### `--ansi`
+
+強制（或停用 — no-ansi） ANSI輸出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定「 — ansi」選項
+
+- 預設： `false`
+- 不接受值
+
+### `--no-interaction`， `-n`
+
+請勿詢問任何互動式問題
+
+- 預設： `false`
+- 不接受值
+
+
+## `completion`
+
+傾印殼層完成指令碼
+
+```bash
+ece-tools completion [--debug] [--] [<shell>]
+```
+
+
+### `shell`
+
+如果未指定shell型別（例如&quot;bash&quot;），則會使用&quot;$SHELL&quot;環境變數的值
+
+
+### `--debug`
+
+追蹤完成偵錯記錄
+
+- 預設： `false`
+- 不接受值
+
+### `--help`， `-h`
+
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
+
+- 預設： `false`
+- 不接受值
+
+### `--quiet`， `-q`
+
+不輸出任何訊息
+
+- 預設： `false`
+- 不接受值
+
+### `--verbose`， `-v|-vv|-vvv`
+
+增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+
+- 預設： `false`
+- 不接受值
+
+### `--version`， `-V`
+
+顯示此應用程式版本
+
+- 預設： `false`
+- 不接受值
+
+### `--ansi`
+
+強制（或停用 — no-ansi） ANSI輸出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -107,7 +264,7 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -135,14 +292,13 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -165,7 +321,7 @@ ece-tools deploy
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -193,14 +349,13 @@ ece-tools deploy
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -245,7 +400,7 @@ ece-tools help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -273,14 +428,13 @@ ece-tools help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -298,7 +452,7 @@ ece-tools help [--format FORMAT] [--raw] [--] [<command_name>]
 清單命令
 
 ```bash
-ece-tools list [--raw] [--format FORMAT] [--] [<namespace>]
+ece-tools list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
 
@@ -321,18 +475,16 @@ ece-tools list [--raw] [--format FORMAT] [--] [<namespace>]
 - 預設： `txt`
 - 需要值
 
+### `--short`
 
-## `patch`
+略過描述命令引數的方式
 
-套用自訂修補程式。
-
-```bash
-ece-tools patch
-```
+- 預設： `false`
+- 不接受值
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -360,14 +512,70 @@ ece-tools patch
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
+
+- 預設： `false`
+- 不接受值
+
+### `--no-interaction`， `-n`
+
+請勿詢問任何互動式問題
+
+- 預設： `false`
+- 不接受值
+
+
+## `patch`
+
+套用自訂修補程式。
+
+```bash
+ece-tools patch
+```
+
+### `--help`， `-h`
+
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
+
+- 預設： `false`
+- 不接受值
+
+### `--quiet`， `-q`
+
+不輸出任何訊息
+
+- 預設： `false`
+- 不接受值
+
+### `--verbose`， `-v|-vv|-vvv`
+
+增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+
+- 預設： `false`
+- 不接受值
+
+### `--version`， `-V`
+
+顯示此應用程式版本
+
+- 預設： `false`
+- 不接受值
+
+### `--ansi`
+
+強制（或停用 — no-ansi） ANSI輸出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -390,7 +598,7 @@ ece-tools post-deploy
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -418,14 +626,13 @@ ece-tools post-deploy
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -458,7 +665,7 @@ ece-tools run <scenario>...
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -486,14 +693,13 @@ ece-tools run <scenario>...
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -516,7 +722,7 @@ ece-tools backup:list
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -544,14 +750,13 @@ ece-tools backup:list
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -587,7 +792,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -615,14 +820,13 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -645,7 +849,7 @@ ece-tools build:generate
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -673,14 +877,13 @@ ece-tools build:generate
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -703,7 +906,7 @@ ece-tools build:transfer
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -731,14 +934,13 @@ ece-tools build:transfer
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -768,7 +970,7 @@ JSON格式的設定
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -796,14 +998,13 @@ JSON格式的設定
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -833,7 +1034,7 @@ JSON格式的設定
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -861,14 +1062,13 @@ JSON格式的設定
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -891,7 +1091,7 @@ ece-tools cloud:config:validate
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -919,14 +1119,13 @@ ece-tools cloud:config:validate
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -954,7 +1153,7 @@ ece-tools dump
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -982,14 +1181,13 @@ ece-tools dump
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1012,7 +1210,7 @@ ece-tools cron:disable
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1040,14 +1238,13 @@ ece-tools cron:disable
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1070,7 +1267,7 @@ ece-tools cron:enable
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1098,14 +1295,13 @@ ece-tools cron:enable
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1128,7 +1324,7 @@ ece-tools cron:kill
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1156,14 +1352,13 @@ ece-tools cron:kill
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1193,7 +1388,7 @@ ece-tools cron:unlock [--job-code [JOB-CODE]]
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1221,14 +1416,13 @@ ece-tools cron:unlock [--job-code [JOB-CODE]]
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1251,7 +1445,7 @@ ece-tools dev:generate:schema-error
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1279,14 +1473,13 @@ ece-tools dev:generate:schema-error
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1309,7 +1502,7 @@ ece-tools dev:git:update-composer
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1337,14 +1530,13 @@ ece-tools dev:git:update-composer
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1376,7 +1568,7 @@ ece-tools env:config:show [<variable>...]
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1404,14 +1596,13 @@ ece-tools env:config:show [<variable>...]
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1447,7 +1638,7 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1475,14 +1666,13 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1505,7 +1695,7 @@ ece-tools module:refresh
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1533,14 +1723,13 @@ ece-tools module:refresh
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1563,7 +1752,7 @@ ece-tools schema:generate
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1591,14 +1780,13 @@ ece-tools schema:generate
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1621,7 +1809,7 @@ ece-tools wizard:ideal-state
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1649,14 +1837,13 @@ ece-tools wizard:ideal-state
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1679,7 +1866,7 @@ ece-tools wizard:master-slave
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1707,14 +1894,13 @@ ece-tools wizard:master-slave
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1737,7 +1923,7 @@ ece-tools wizard:scd-on-build
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1765,14 +1951,13 @@ ece-tools wizard:scd-on-build
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1795,7 +1980,7 @@ ece-tools wizard:scd-on-demand
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1823,14 +2008,13 @@ ece-tools wizard:scd-on-demand
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1853,7 +2037,7 @@ ece-tools wizard:scd-on-deploy
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1881,14 +2065,13 @@ ece-tools wizard:scd-on-deploy
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
@@ -1911,7 +2094,7 @@ ece-tools wizard:split-db-state
 
 ### `--help`， `-h`
 
-顯示此說明訊息
+顯示指定指令的說明。 當沒有命令指定時，會顯示\&lt;info>list\&lt;/info> 命令
 
 - 預設： `false`
 - 不接受值
@@ -1939,14 +2122,13 @@ ece-tools wizard:split-db-state
 
 ### `--ansi`
 
-強制ANSI輸出
+強制（或停用 — no-ansi） ANSI輸出
 
-- 預設： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-停用ANSI輸出
+否定「 — ansi」選項
 
 - 預設： `false`
 - 不接受值
