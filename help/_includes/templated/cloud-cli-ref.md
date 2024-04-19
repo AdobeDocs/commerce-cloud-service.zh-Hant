@@ -1,7 +1,7 @@
 ---
-source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
+source-git-commit: 6d8c082d78259f8f7adb0fb7f11ff4fcdb234124
 workflow-type: tm+mt
-source-wordcount: '21442'
+source-wordcount: '21171'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ magento-cloud cc
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -112,7 +112,7 @@ magento-cloud decode [-P|--property PROPERTY] [--] <value>
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -178,7 +178,7 @@ magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -244,7 +244,7 @@ magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -321,7 +321,7 @@ magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -402,7 +402,7 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -471,7 +471,7 @@ magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--envi
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -554,7 +554,7 @@ magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -609,7 +609,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 
 ### `--incomplete`， `-i`
 
-僅包含未完成的活動（選取預設活動時）。 這是\&lt;info>—state=in_progress，pending\&lt;/info>
+僅包含未完成的活動（選取預設活動時）。 這是 — state=in_progress，pending的簡稱
 
 - 預設： `false`
 - 不接受值
@@ -691,7 +691,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -829,7 +829,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -892,7 +892,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--incomplete`， `-i`
 
-僅包含未完成的活動（選取預設活動時）。 這是\&lt;info>—state=in_progress，pending\&lt;/info>
+僅包含未完成的活動（選取預設活動時）。 這是 — state=in_progress，pending的簡稱
 
 - 預設： `false`
 - 不接受值
@@ -953,7 +953,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1034,7 +1034,7 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1125,7 +1125,7 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1169,7 +1169,7 @@ magento-cloud auth:api-token-login
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1233,7 +1233,7 @@ magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1324,7 +1324,7 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1382,7 +1382,7 @@ magento-cloud logout [-a|--all] [--other]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1458,7 +1458,7 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1541,7 +1541,7 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1612,7 +1612,7 @@ magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1682,7 +1682,7 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1820,7 +1820,7 @@ magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1897,7 +1897,7 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--e
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -1994,7 +1994,7 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2134,7 +2134,7 @@ magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTO
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2243,7 +2243,7 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--e
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2336,7 +2336,7 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2438,7 +2438,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2515,7 +2515,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2611,7 +2611,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2688,7 +2688,7 @@ magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2784,7 +2784,7 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2869,7 +2869,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -2969,7 +2969,7 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3025,7 +3025,7 @@ magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3167,7 +3167,7 @@ magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3257,7 +3257,7 @@ HTTP基本驗證認證，格式為「使用者名稱：密碼」。 使用0可�
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3373,7 +3373,7 @@ magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMA
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3456,7 +3456,7 @@ Git存放庫的URL
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3569,7 +3569,7 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3663,7 +3663,7 @@ magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environm
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3739,7 +3739,7 @@ magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3809,7 +3809,7 @@ magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRON
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -3946,7 +3946,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4016,7 +4016,7 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4103,7 +4103,7 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4173,7 +4173,7 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4269,7 +4269,7 @@ magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVI
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4372,7 +4372,7 @@ magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVI
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4458,7 +4458,7 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4534,7 +4534,7 @@ magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJ
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4621,7 +4621,7 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4722,7 +4722,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4859,7 +4859,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -4940,7 +4940,7 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -5289,7 +5289,7 @@ Syslog訊息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -5359,7 +5359,7 @@ magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -5442,7 +5442,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -5513,7 +5513,7 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -5868,7 +5868,7 @@ Syslog訊息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -5924,7 +5924,7 @@ magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6080,7 +6080,7 @@ Drush：建立或更新鎖定檔案（僅適用於Drush 7+版）
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6130,7 +6130,7 @@ magento-cloud dir [<subdir>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6138,7 +6138,7 @@ magento-cloud dir [<subdir>]
 
 ## `metrics:all`
 
-顯示環境的CPU、磁碟和記憶體測量結果
+測試版顯示環境的CPU、磁碟和記憶體測量結果
 
 ```bash
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6153,13 +6153,13 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ### `--range`， `-r`
 
-時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>5分鐘\&lt;/comment>，最大值\&lt;comment>8h\&lt;/comment> 或更多（視專案而定）、預設\&lt;comment>10分鐘\&lt;/comment>.
+時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
 ### `--interval`， `-i`
 
-時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>1分鐘\&lt;/comment>.
+時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
 - 需要值
 
@@ -6260,7 +6260,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6268,7 +6268,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ## `metrics:cpu`
 
-顯示環境的CPU使用狀況
+測試版顯示環境的CPU使用狀況
 
 ```bash
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6276,13 +6276,13 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 
 ### `--range`， `-r`
 
-時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>5分鐘\&lt;/comment>，最大值\&lt;comment>8h\&lt;/comment> 或更多（視專案而定）、預設\&lt;comment>10分鐘\&lt;/comment>.
+時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
 ### `--interval`， `-i`
 
-時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>1分鐘\&lt;/comment>.
+時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
 - 需要值
 
@@ -6383,7 +6383,7 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6406,13 +6406,13 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ### `--range`， `-r`
 
-時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>5分鐘\&lt;/comment>，最大值\&lt;comment>8h\&lt;/comment> 或更多（視專案而定）、預設\&lt;comment>10分鐘\&lt;/comment>.
+時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
 ### `--interval`， `-i`
 
-時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>1分鐘\&lt;/comment>.
+時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
 - 需要值
 
@@ -6520,7 +6520,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6528,7 +6528,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ## `metrics:memory`
 
-顯示環境的記憶體使用率
+BETA顯示環境的記憶體使用情況
 
 ```bash
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
@@ -6543,13 +6543,13 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 
 ### `--range`， `-r`
 
-時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>5分鐘\&lt;/comment>，最大值\&lt;comment>8h\&lt;/comment> 或更多（視專案而定）、預設\&lt;comment>10分鐘\&lt;/comment>.
+時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
 ### `--interval`， `-i`
 
-時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最小\&lt;comment>1分鐘\&lt;/comment>.
+時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
 - 需要值
 
@@ -6650,7 +6650,7 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6784,7 +6784,7 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -6893,7 +6893,7 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7008,7 +7008,7 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--column
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7128,7 +7128,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7136,7 +7136,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ## `operation:list`
 
-列出環境上的執行階段作業
+測試版列出環境上的執行階段作業
 
 ```bash
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
@@ -7224,7 +7224,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7232,7 +7232,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ## `operation:run`
 
-在環境中執行操作
+BETA在環境中執行操作
 
 ```bash
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
@@ -7312,7 +7312,7 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7362,7 +7362,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7448,7 +7448,7 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7558,7 +7558,7 @@ magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7689,7 +7689,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7739,7 +7739,7 @@ magento-cloud set-remote [<project>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7808,7 +7808,7 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environ
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7897,7 +7897,7 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -7965,7 +7965,7 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8072,7 +8072,7 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8162,7 +8162,7 @@ magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8212,7 +8212,7 @@ magento-cloud self:install [--shell-type SHELL-TYPE]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8289,7 +8289,7 @@ magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8380,7 +8380,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8474,7 +8474,7 @@ magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8574,7 +8574,7 @@ magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYP
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8654,7 +8654,7 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8734,7 +8734,7 @@ magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identit
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8814,7 +8814,7 @@ magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTIT
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8897,7 +8897,7 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -8973,7 +8973,7 @@ magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9048,7 +9048,7 @@ magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|-
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9132,7 +9132,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9220,7 +9220,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9304,7 +9304,7 @@ magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIR
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9326,7 +9326,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### `--variable`
 
-作業期間要設定的變數，格式為\&lt;info>type：name=value\&lt;/info>
+作業期間要設定的變數，格式為type：name=value
 
 - 預設： `[]`
 - 需要值
@@ -9387,7 +9387,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9452,7 +9452,7 @@ magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9508,7 +9508,7 @@ magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9558,7 +9558,7 @@ magento-cloud ssh-key:delete [<id>]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9623,7 +9623,7 @@ magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9718,7 +9718,7 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9787,7 +9787,7 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment E
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9862,7 +9862,7 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -9952,7 +9952,7 @@ magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRO
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10027,7 +10027,7 @@ magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--envi
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10114,7 +10114,7 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10198,7 +10198,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10269,7 +10269,7 @@ magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <e
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10364,7 +10364,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10435,7 +10435,7 @@ magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|-
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10512,7 +10512,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10661,7 +10661,7 @@ magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10744,7 +10744,7 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--en
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10846,7 +10846,7 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -10929,7 +10929,7 @@ magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUM
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -11066,7 +11066,7 @@ magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VA
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
@@ -11157,7 +11157,7 @@ magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environm
 
 ### `--no-interaction`
 
-請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數： \&lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1\&lt;/comment>
+請勿詢問任何互動式問題；接受預設值。 等同於使用環境變數：MAGENTO_CLOUD_CLI_NO_INTERACTION=1
 
 - 預設： `false`
 - 不接受值
