@@ -4,7 +4,7 @@ description: 瞭解Pro架構支援的環境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: 6807b572366d28fd54fbec89e7c119ec158b5e10
+source-git-commit: 95b033ba430cb5dc74fa654b9d519dfcd5b6d319
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -195,8 +195,6 @@ RTO取決於儲存的大小。 大型EBS磁碟區需要更多時間來還原。 
 - 大型資料庫(200+ GB)可能需要5個小時
 - 中型資料庫(150 GB)可能需要2.5小時
 - 小型資料庫(60 GB)可能需要1小時的時間
-
-{{pro-backups}}
 
 ## Pro叢集縮放
 
