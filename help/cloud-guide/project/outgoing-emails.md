@@ -2,9 +2,9 @@
 title: 設定傳出電子郵件
 description: 瞭解如何在雲端基礎結構上為Adobe Commerce啟用傳出電子郵件。
 exl-id: 814fe2a9-15bf-4bcb-a8de-ae288fd7f284
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: 59f82d891bb7b1953c1e19b4c1d0a272defb89c1
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,21 @@ ht-degree: 0%
 
 您可以透過為每個環境啟用和停用傳出電子郵件 [!DNL Cloud Console] 或從命令列。 啟用整合和中繼環境的傳出電子郵件，以傳送雙因素驗證或重設雲端專案使用者的密碼電子郵件。
 
-依預設，生產環境中會啟用外寄電子郵件。 此 [!UICONTROL Enable outgoing emails] 在您設定之前，無論狀態為何，環境設定中皆可能顯示為停用 [`enable_smtp` 屬性](#enable-emails-in-the-cli).
+外寄電子郵件預設會在生產和中繼環境中啟用。 不過， [!UICONTROL Enable outgoing emails] 在您設定之前，環境設定中可能會顯示為停用 `enable_smtp` 屬性透過 [命令列](#enable-emails-in-the-cli) 或 [雲端主控台](outgoing-emails.md#enable-emails-in-the-cloud-console).
+
+更新 [!UICONTROL enable_smtp] 屬性值依據 [命令列](#enable-emails-in-the-cli) 也會變更 [!UICONTROL Enable outgoing emails] 在Cloud Console上為此環境設定值。
 
 {{redeploy-warning}}
 
-## 在中啟用電子郵件 [!DNL Cloud Console]
+## 在Cloud Console中啟用電子郵件
 
 使用 **[!UICONTROL Outgoing emails]** 切換至 _設定環境_ 檢視以啟用或停用電子郵件支援。
+
+如果外寄電子郵件必須在Pro Production或Staging環境中停用或重新啟用，您可以提交 [Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+
+>[!TIP]
+>
+>Cloud Console上的Pro環境可能不會反映外寄電子郵件狀態。 請改用 [命令列](#enable-emails-in-the-cli) 用於啟用及測試外寄電子郵件。
 
 **若要管理來自的電子郵件支援[!DNL Cloud Console]**：
 
@@ -61,4 +69,10 @@ ht-degree: 0%
 
    ```bash
    php -r 'mail("mail@example.com", "test message", "just testing", "From: tester@example.com");'
+   ```
+
+1. 驗證SendGrid是否擷取電子郵件。
+
+   ```bash
+   grep mail@example.com /var/log/mail.log
    ```

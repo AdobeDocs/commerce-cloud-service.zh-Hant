@@ -2,9 +2,9 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: 7c22dc3b0e736043a3e176d2b7ae6c9dcbbf1eb5
+source-git-commit: 2b106edcaaacb63c0e785f094b7e1b755885abd0
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,21 @@ SendGrid SMTP Proxy並非旨在作為一般用途電子郵件伺服器來接收�
 
 ## 啟用或停用電子郵件
 
-預設情況下，在Pro生產和測試環境中會啟用傳出電子郵件。 此 [!UICONTROL Outgoing emails] 在您設定「 」之前，無論狀態為何，都會在「環境」設定中顯示「 」 `enable_smtp` 屬性。 您可以為其他環境啟用傳出電子郵件，以傳送雙因素驗證電子郵件給Cloud專案使用者。 另請參閱 [設定電子郵件以進行測試](outgoing-emails.md).
+您可以從Cloud Console或命令列為每個環境啟用或停用傳出電子郵件。
+
+依預設，在Pro生產和中繼環境中會啟用外寄電子郵件。 不過， [!UICONTROL Outgoing emails] 在您設定之前，環境設定中可能會顯示為停用 `enable_smtp` 屬性透過 [命令列](outgoing-emails.md#enable-emails-in-the-cli) 或 [雲端主控台](outgoing-emails.md#enable-emails-in-the-cloud-console). 您可以為整合和中繼環境啟用傳出電子郵件，以傳送雙因素驗證或為雲端專案使用者重設密碼電子郵件。 另請參閱 [設定電子郵件以進行測試](outgoing-emails.md).
+
+如果外寄電子郵件必須在Pro Production或Staging環境中停用或重新啟用，您可以提交 [Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+
+>[!TIP]
+>
+>更新 [!UICONTROL enable_smtp] 屬性值依據 [命令列](outgoing-emails.md#enable-emails-in-the-cli) 也會變更 [!UICONTROL Enable outgoing emails] 在上設定此環境的值 [雲端主控台](outgoing-emails.md#enable-emails-in-the-cloud-console).
 
 ## SendGrid控制面板
 
 所有雲端專案都可在中央帳戶下管理，因此只有「支援人員」可以存取SendGrid儀表板。 SendGrid不提供附屬帳戶限制功能。
 
-若要檢閱活動記錄檔的傳送狀態或退回、拒絕或封鎖的電子郵件地址清單， [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). 支援團隊 **無法** 擷取超過30天的活動記錄。
+若要檢閱活動記錄檔的傳送狀態或退回、拒絕或封鎖的電子郵件地址清單， [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket). 支援團隊 **無法** 擷取超過30天的活動記錄。
 
 可能的話，請在請求中加入下列資訊：
 
@@ -47,7 +55,7 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 
 >[!WARNING]
 >
->SendGrid DKIM簽章和網域驗證支援僅適用於Pro專案而非Starter。 因此，傳出異動電子郵件可能會被垃圾郵件篩選器標幟。 使用DKIM可改善已驗證電子郵件寄件者的傳送率。 若要改善郵件傳送率，您可以從Starter升級為Pro，或使用您自己的SMTP伺服器或電子郵件傳送服務提供者。 另請參閱 [設定電子郵件連線](https://experienceleague.adobe.com/docs/commerce-admin/systems/communications/email-communications.html) 在 _管理系統指南_.
+>SendGrid DKIM簽章和網域驗證支援僅適用於Pro專案而非Starter專案。 因此，傳出異動電子郵件可能會被垃圾郵件篩選器標幟。 使用DKIM可改善已驗證電子郵件寄件者的傳送率。 若要改善郵件傳送率，您可以從Starter升級為Pro，或使用您自己的SMTP伺服器或電子郵件傳送服務提供者。 另請參閱 [設定電子郵件連線](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications) 在 _管理系統指南_.
 
 ### 傳送者與網域驗證
 
@@ -55,7 +63,7 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 
 **若要啟用網域驗證**：
 
-1. 提交 [支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 要求為特定網域啟用DKIM (**僅限Pro測試和生產環境**)。
+1. 提交 [支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) 請求為特定網域啟用DKIM (**僅限Pro測試和生產環境**)。
 1. 更新您的DNS設定，使用 `TXT` 和 `CNAME` 支援票證中提供給您的記錄。
 
 **範例 `TXT` 具有帳戶ID的記錄**：
@@ -106,7 +114,7 @@ dig CNAME s2._domainkey.domain_name
 
 交易式電子郵件臨界值是指在特定時段內您可從Pro環境傳送的交易式電子郵件訊息數量，例如每月從非生產環境傳送12,000封電子郵件。 此臨界值旨在防止傳送垃圾郵件，並防止可能對您的電子郵件信譽造成損害。
 
-只要寄件者信譽分數超過95%，生產環境中可傳送的電子郵件數量就沒有嚴格限制。 信譽受退回或拒絕的電子郵件數量以及基於DNS的垃圾郵件註冊是否將您的網域標籤為潛在垃圾郵件來源的影響。 另請參閱 [Adobe Commerce上超過SendGrid點數時未傳送電子郵件](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded.html) 在 _Commerce支援知識庫_.
+只要寄件者信譽分數超過95%，生產環境中可傳送的電子郵件數量就沒有嚴格限制。 信譽受退回或拒絕的電子郵件數量以及基於DNS的垃圾郵件註冊是否將您的網域標籤為潛在垃圾郵件來源的影響。 另請參閱 [Adobe Commerce上超過SendGrid點數時未傳送電子郵件](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) 在 _Commerce支援知識庫_.
 
 **若要檢查是否已超過最大信用額度**：
 
@@ -120,8 +128,8 @@ dig CNAME s2._domainkey.domain_name
 
 1. 檢查 `/var/log/mail.log` 的 `authentication failed : Maxium credits exceeded` 個專案。
 
-   如果您看到任何 `authentication failed` 記錄專案和 **電子郵件傳送信譽** 最少95個，您可以 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以要求信用額度額度增加。
+   如果您看到任何 `authentication failed` 記錄專案和 **電子郵件傳送信譽** 最少95個，您可以 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) 以要求信用額度額度增加。
 
 ### 電子郵件傳送信譽
 
-電子郵件傳送信譽是由網際網路服務提供者(ISP)指派給傳送電子郵件訊息之公司的分數。 分數越高，ISP將訊息傳送到收件者收件匣的可能性就越大。 如果分數低於特定等級，ISP可能會將郵件路由到收件者的垃圾郵件資料夾，或甚至完全拒絕郵件。 信譽分數由數個因素決定，例如您的IP位址排名與其他IP位址的30天平均值和垃圾郵件投訴率。 另請參閱 [檢查您傳送信譽的5種方法](https://sendgrid.com/blog/5-ways-check-sending-reputation/).
+電子郵件傳送信譽是由網際網路服務提供者(ISP)指派給傳送電子郵件訊息之公司的分數。 分數越高，ISP將訊息傳送到收件者收件匣的可能性就越大。 如果分數低於特定等級，ISP可能會將郵件路由到收件者的垃圾郵件資料夾，或甚至完全拒絕郵件。 信譽分數由數個因素決定，例如您的IP位址排名與其他IP位址的30天平均值和垃圾郵件投訴率。 另請參閱 [檢查電子郵件傳送信譽的8種方法](https://sendgrid.com/en-us/blog/5-ways-check-sending-reputation).
