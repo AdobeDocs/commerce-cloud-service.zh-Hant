@@ -3,9 +3,9 @@ title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: 86af69eed16e8fe464de93bd0f33cfbfd4ed8f49
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->對於Pro環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。 入門環境沒有記錄輪換。 有關環境的記錄輪換和壓縮記錄檔有效期的完整詳細資訊，請參閱： `/etc/logrotate.conf` 和 `/etc/logrotate.d/<various>`
+>對於Pro Staging和生產環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。 入門環境沒有記錄輪換。 有關環境的記錄輪換和壓縮記錄檔有效期的完整詳細資訊，請參閱： `/etc/logrotate.conf` 和 `/etc/logrotate.d/<various>`. 無法在Pro Integration環境中設定記錄旋轉。 針對Pro整合，您必須實作自訂解決方案/指令碼並 [設定您的cron](../application/crons-property.md) 以視需要執行指令碼。
 
 ## 建置和部署記錄檔
 
