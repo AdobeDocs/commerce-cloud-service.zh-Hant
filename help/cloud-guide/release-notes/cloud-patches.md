@@ -2,11 +2,11 @@
 title: Commerce雲端修補程式
 description: 請參閱「雲端修補程式」套裝軟體的最新改良專案清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2024-05-21T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: d5ab7c4f1d2edbd85eab5a4ca098b3d156e562e5
+source-git-commit: 61c42a1bd1d5a28f90b8756032ee6f45be4565b2
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2208'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 此 [雲端修補程式](https://github.com/magento/magento-cloud-patches) 此套件提供一組必要的修補程式，可改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵修正。
 
-Commerce雲端修補程式套件相依於ECE-Tools套件，會在您安裝或更新ECE-Tools套件時安裝與更新。 您也可以使用和管理Commerce適用的Cloud Patches做為獨立的套件，將修補程式套用至不在Cloud平台上的Adobe Commerce專案。 以下發行說明說明說明此套裝軟體的最新改善。
+Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或更新ECE-Tools套件時安裝與更新。 您也可以使用和管理Commerce的雲端修補程式做為獨立的套件，將修補程式套用至不在雲端平台上的Adobe Commerce專案。 以下發行說明說明說明此套裝軟體的最新改善。
 
 >[!TIP]
 >
@@ -29,7 +29,13 @@ Commerce雲端修補程式套件相依於ECE-Tools套件，會在您安裝或更
 
 <!--Add release notes below-->
 
-## v1.0.26 {#latest}
+## v1.0.27 {#latest}
+
+發行日期： 2024年5月21日
+
+- **支援PHP 8.3** — 此修補程式解決php 8.3與composer套件版本之間的相容性錯誤。
+
+## v1.0.26
 
 發行日期： 2024年4月8日
 
@@ -210,7 +216,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
 - **Redis效能改善** — 將Redis最佳化功能新增至Adobe Commerce 2.3.3和2.3.4版。這些修正包含在Adobe Commerce 2.3.5版中。 另請參閱 [效能提升](https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html#performance-boosts) 在 _Adobe Commerce 2.3.5發行說明_.<!--MCLOUD-5771-->
 
-- **New Relic記錄擴充器** — 新增必要的單色處理器介面，以支援Commerce 1.0.4版雲端元件中引進的New Relic記錄功能改善。部署Adobe Commerce 2.1.x需要此修補程式。如果未套用修補程式，則建置會在 `di:compile` 程式。<!--MCLOUD-6029-->
+- **New Relic記錄擴充器** — 新增必要的Monolog ProcessorInterface，以支援Commerce 1.0.4版雲端元件中引進的New Relic記錄功能改善。部署Adobe Commerce 2.1.x需要此修補程式。如果未套用修補程式，則建置會在 `di:compile` 程式。<!--MCLOUD-6029-->
 
 ## v1.0.4
 
@@ -272,7 +278,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
 - **Elasticsearch目錄分頁修正**  — 以更有效的修正取代magento/magento-cloud-patches v1.0提供的Elasticsearch目錄分頁修補程式。<!--MAGECLOUD-4847-->
 
-- **Page Builder修補程式** — 在Commerce 1.0.0的Cloud Patches中，我們隨附了Page Builder修補程式，以解決已知的Page Builder遠端程式碼執行(RCE)弱點，並根據Adobe Commerce 2.3.3進行初始修正。我們已更新這些修補程式，並根據Adobe Commerce 2.3.4推出更穩定的實作，其中包括修正問題的多項最佳化措施。<!--MAGECLOUD-4884-->
+- **Page Builder修補程式** — 在Commerce 1.0.0的雲端修補程式中，我們隨附了Page Builder修補程式，以解決已知的Page Builder遠端程式碼執行(RCE)弱點，並根據Adobe Commerce 2.3.3進行初始修正。我們已更新這些修補程式，並根據Adobe Commerce 2.3.4推出更穩定的實作，其中包括修正問題的多項最佳化措施。<!--MAGECLOUD-4884-->
 
   如果您有magento/magento-cloud-patches 1.0.0套件，仍可防止Page Builder RCE弱點問題。 如果您更新至1.0.1或更新版本，相同修正的實作效果會更好。
 

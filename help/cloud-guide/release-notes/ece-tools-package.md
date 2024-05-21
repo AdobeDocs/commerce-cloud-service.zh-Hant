@@ -2,18 +2,18 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2024-05-21T00:00:00Z
 exl-id: a464b940-c56e-4a7c-9948-559539e25361
-source-git-commit: e21f21e34f89b62842bd22c99ff5705f984898e0
+source-git-commit: 923e2114270df22e134e0676ac97f84d770bb226
 workflow-type: tm+mt
-source-wordcount: '2905'
+source-wordcount: '2929'
 ht-degree: 0%
 
 ---
 
 # ECE-Tools發行說明
 
-此 [ece-tools](https://github.com/magento/ece-tools) package是一組指令碼和工具，用來管理和部署雲端專案。 此發行說明說明說明說明此套件的最新改善，此套件隸屬於 [Cloud Tools Suite for Commerce](cloud-tools-suite.md).
+此 [ece-tools](https://github.com/magento/ece-tools) package是一組指令碼和工具，用來管理和部署雲端專案。 此發行說明說明說明說明此套件的最新改善，此套件隸屬於 [適用於Commerce的Cloud Tools Suite](cloud-tools-suite.md).
 
 >[!NOTE]
 >
@@ -28,8 +28,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
+## v2002.1.19 {#latest}
 
-## v2002.1.18 {#latest}
+發行日期： 2024年5月21日
+
+- ![新圖示](../../assets/new.svg) **Lua** — 為CACHE_CONFIGURATION新增選項useLua。
+- ![修正圖示](../../assets/fix.svg) **驗證器** — 更新新版Redis和RabbitMQ的驗證器。
+
+## v2002.1.18
 
 發行日期： 2024年4月8日
 
@@ -47,7 +53,7 @@ ht-degree: 0%
 
 發行日期： 2023年10月16日
 
-- ![新圖示](../../assets/new.svg) **ENABLE_WEBHOOKS全域環境變數** — 已新增 [ENABLE_WEBHOOKS](../environment/variables-global.md#enable_webhooks) 與Commerce Webhook搭配使用以連線至外部端點的全域變數，例如App Builder執行階段動作或協力廠商詳細目錄管理系統。
+- ![新圖示](../../assets/new.svg) **ENABLE_WEBHOOKS全域環境變數** — 已新增 [ENABLE_WEBHOOKS](../environment/variables-global.md#enable_webhooks) 與Commerce webhook搭配使用以連線至外部端點的全域變數，例如App Builder執行階段動作或協力廠商詳細目錄管理系統。
 
 ## v2002.1.15
 
@@ -63,7 +69,7 @@ ht-degree: 0%
 發行日期： 2023年3月10日
 
 - ![新圖示](../../assets/new.svg) **PHP** — 新增對PHP 8.2的支援。
-- ![新圖示](../../assets/new.svg) **服務的驗證器** — 更新了Commerce 2.4.6所需服務的驗證器：MariaDB 10.6、Redis 7.0、PHP 8.2、OpenSearch 2.x和RabbitMQ 3.9。
+- ![新圖示](../../assets/new.svg) **服務的驗證器** — 更新Commerce 2.4.6必要服務的驗證器：MariaDB 10.6、Redis 7.0、PHP 8.2、OpenSearch 2.x和RabbitMQ 3.9。
 - ![修正圖示](../../assets/fix.svg) **ece-tools db-dump** — 修正導致 `db-dump` 提前停止的作業。
 
 ## v2002.1.13
@@ -87,7 +93,7 @@ ht-degree: 0%
 
 - ![修正圖示](../../assets/fix.svg) **ElasticSuite Validator和OpenSearch** — 修正安裝OpenSearch時的ElasticSuite完整性檢查驗證器問題。<!-- MCLOUD-8767 -->
 - ![修正圖示](../../assets/fix.svg) **部署命令的傳回型別** — 修正部署命令的傳回型別。<!-- AC-3208 -->
-- ![修正圖示](../../assets/fix.svg) **[!DNL RabbitMQ]新Commerce 2.4.5安裝的問題** — 固定 [!DNL RabbitMQ] 新Commerce 2.4.5安裝的當機問題。<!-- MCLOUD-9059 -->
+- ![修正圖示](../../assets/fix.svg) **[!DNL RabbitMQ]全新Commerce 2.4.5安裝的問題** — 固定 [!DNL RabbitMQ] 安裝新Commerce 2.4.5時發生當機問題。<!-- MCLOUD-9059 -->
 
 ## v2002.1.10
 
@@ -209,7 +215,7 @@ ht-degree: 0%
 
 **環境變數更新**—
 
-- ![新圖示](../../assets/new.svg) 已新增 [SKIP_COMPOSER_DUMP_AUTOLOAD](../environment/variables-build.md#skip_composer_dump_autoload) 組建變數。 將變數設為 `true` 停止應用程式執行 `composer dump-autoload` commerce適用的Cloud Docker安裝期間的命令。 變數僅與具有可寫入檔案系統（使用為測試和開發而建立）的Cloud Docker for Commerce容器相關 `./vendor/bin/ece-docker build:compose --with-test`)。 使用這類安裝，略過 `composer dump-autoload` command可防止執行其他命令時發生錯誤，這些命令會嘗試從已刪除的檔案存取檔案 `generated` 目錄。<!--MCLOUD-6939-->
+- ![新圖示](../../assets/new.svg) 已新增 [SKIP_COMPOSER_DUMP_AUTOLOAD](../environment/variables-build.md#skip_composer_dump_autoload) 組建變數。 將變數設為 `true` 停止應用程式執行 `composer dump-autoload` 適用於Commerce安裝的Cloud Docker期間的命令。 變數僅與具有可寫入檔案系統（使用為測試和開發而建立的）的Commerce容器的Cloud Docker相關 `./vendor/bin/ece-docker build:compose --with-test`)。 使用這類安裝，略過 `composer dump-autoload` command可防止執行其他命令時發生錯誤，這些命令會嘗試從已刪除的檔案存取檔案 `generated` 目錄。<!--MCLOUD-6939-->
 
 ## v2002.1.2
 
@@ -313,7 +319,7 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **基礎架構更新**—
 
-   - ![新圖示](../../assets/new.svg) **為Cloud Docker for Commerce新增了單獨的包** — 將Docker封裝與分離 `ece-tools` 套件以維護程式碼品質並提供獨立的發行版本。 相關更新與修正 `ece-tools` 管理自 [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存放庫。<!--MAGECLOUD-2927-->
+   - ![新圖示](../../assets/new.svg) **為Commerce的Cloud Docker新增了單獨的包** — 將Docker封裝與分離 `ece-tools` 套件以維護程式碼品質並提供獨立的發行版本。 相關更新與修正 `ece-tools` 管理自 [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存放庫。<!--MAGECLOUD-2927-->
 
    - ![新圖示](../../assets/new.svg) **更新的修補功能** — 將修補功能從ECE-Tools套件移至另一個套件 [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) 封裝。 部署期間， `ece-tools` 使用新套件套用修補程式。 另請參閱 [雲端修補程式發行說明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
