@@ -3,9 +3,9 @@ title: 設定RabbitMQ服務
 description: 瞭解如何啟用RabbitMQ服務，以管理雲端基礎結構上Adobe Commerce的訊息佇列。
 feature: Cloud, Services
 exl-id: 85794b8f-2260-4a6e-b5a6-a1b4c356594e
-source-git-commit: d4c36b084094846cfad69adc2bffd567a58fab26
+source-git-commit: adcfbb7217c70122a4003a66d1bec1a623fbf11a
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供�
    }
    ```
 
-1. 啟用本機連線埠轉送至RabbitMQ。
+1. 啟用本機連線埠轉送至RabbitMQ （如果您的專案位於其他區域，例如US-3、EU-5或AP-3區域，請代用） ``us-3``/``eu-5``/``ap-3`` 的 ``us``)
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
