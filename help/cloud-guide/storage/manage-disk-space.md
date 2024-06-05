@@ -3,9 +3,9 @@ title: 管理磁碟空間
 description: 瞭解如何使用命令列介面管理磁碟空間。
 feature: Cloud, Storage
 exl-id: 480cb33b-ac83-441d-946e-5b4de09ad84e
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: 8b40397796ee865aefbf8a7948cc9a3aceb1d35c
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->針對Pro生產和中繼環境，您必須 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以變更磁碟空間配置。 Pro生產與測試環境的大小增加只能在特定的間隔進行，因此，根據您目前的磁碟空間使用量，支援服務可能會建議將磁碟空間配置增加至少10 GB。 配置完畢後，就無法還原Pro測試和生產的儲存空間增加。
+>針對Pro生產和中繼環境，您必須 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以變更磁碟空間配置。 Pro生產與測試環境的大小增加只能在特定的間隔進行，因此，根據您目前的磁碟空間使用量，支援服務可能會建議將磁碟空間配置增加至少10 GB。 配置完畢後，就無法還原Pro測試和生產的儲存空間增加。 無法重新配置儲存裝置或在資源之間重新分配儲存裝置。 若要增加更多檔案儲存空間，請減少配置給MySQL的磁碟空間。
 
 ### 應用程式磁碟空間
 
