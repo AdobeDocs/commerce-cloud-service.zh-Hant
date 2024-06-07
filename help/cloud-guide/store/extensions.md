@@ -3,9 +3,9 @@ title: 管理擴充功能
 description: 瞭解如何在雲端基礎結構上的Adobe Commerce中安裝和管理擴充功能。
 feature: Cloud, Extensions, Upgrade
 exl-id: 9c6e98ca-85da-4342-8402-d576eb382ba2
-source-git-commit: bb7a866b1896a8a43d01ad3f83dc655bcf383374
+source-git-commit: f8fb9d4d43c85f91ff87686160bcddb7cd417635
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 0%
 # 管理擴充功能
 
 您可以透過以下方式新增擴充功能，以擴充您的Adobe Commerce應用程式功能： [Commerce Marketplace](https://marketplace.magento.com). 例如，您可以新增佈景主題來變更店面的外觀和風格，或新增語言套件來本地化您的店面和管理員。
+
+>[!NOTE]
+>
+>為避免安裝問題，所有Marketplace購買都必須使用擁有雲端專案的相同帳戶(MAGEID)完成。
 
 ## 副檔名的撰寫器名稱
 
