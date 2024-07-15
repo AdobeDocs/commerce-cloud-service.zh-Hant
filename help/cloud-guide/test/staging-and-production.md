@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## 記錄檔
 
-如果您在部署上遇到錯誤，或在測試時遇到其他問題，請檢視記錄檔。 記錄檔位於 `var/log` 目錄。
+如果您在部署上遇到錯誤，或在測試時遇到其他問題，請檢視記錄檔。 記錄檔位於`var/log`目錄下。
 
-部署記錄檔位於 `/var/log/platform/<prodject-ID>/deploy.log`. 的值 `<project-ID>` 取決於專案ID以及環境是「預備」還是「生產」。 例如，專案ID為 `yw1unoukjcawe`，測試使用者為 `yw1unoukjcawe_stg` 而生產使用者是 `yw1unoukjcawe`.
+部署記錄檔在`/var/log/platform/<prodject-ID>/deploy.log`中。 `<project-ID>`的值取決於專案ID，以及環境是中繼環境還是生產環境。 例如，專案識別碼為`yw1unoukjcawe`時，暫存使用者為`yw1unoukjcawe_stg`，生產使用者為`yw1unoukjcawe`。
 
-在生產或中繼環境中存取記錄時，請使用SSH登入三個節點中的每一個以找出記錄。 或者，您可以使用 [New Relic記錄管理](../monitor/log-management.md) 以檢視及查詢所有節點的彙總日誌資料。 另請參閱 [檢視記錄](log-locations.md#application-logs).
+在生產或中繼環境中存取記錄時，請使用SSH登入三個節點中的每一個以找出記錄。 或者，您可以使用[New Relic記錄管理](../monitor/log-management.md)檢視及查詢所有節點的彙總記錄資料。 檢視[檢視記錄](log-locations.md#application-logs)。
 
 ## 檢查程式碼基底
 
@@ -27,52 +27,52 @@ ht-degree: 0%
 
 ## 驗證組態設定
 
-透過「管理員」面板檢查組態設定，包括基本URL、基本管理員URL、多網站設定等。 如果您必須進行任何其他變更，請在本機Git分支中完成編輯，然後推送至 `master` 「整合」、「測試」和「生產」中的分支。
+透過「管理員」面板檢查組態設定，包括基本URL、基本管理員URL、多網站設定等。 如果您必須進行任何其他變更，請在本機Git分支中完成編輯，然後推送至「整合」、「測試」和「生產」中的`master`分支。
 
 ## 檢查Fastly快取
 
-[設定Fastly](../cdn/fastly-configuration.md) 需要謹慎關注細節：使用正確的Fastly服務ID和Fastly API權杖認證，上傳Fastly VCL代碼，更新DNS設定，並將SSL/TLS憑證套用至您的環境。 完成這些設定任務後，您可以驗證中繼和生產環境上的Fastly快取。
+[設定Fastly](../cdn/fastly-configuration.md)需要注意詳細資訊：使用正確的Fastly服務ID和Fastly API權杖認證、上傳Fastly VCL代碼、更新DNS設定，以及將SSL/TLS憑證套用至您的環境。 完成這些設定任務後，您可以驗證中繼和生產環境上的Fastly快取。
 
-**驗證Fastly服務設定的方式**：
+**驗證Fastly服務組態**：
 
-1. 透過以下URL登入「管理暫存和生產」： `/admin`，或 [已更新管理員URL](../environment/variables-admin.md#admin-url).
+1. 使用包含`/admin`的URL或[更新的管理員URL](../environment/variables-admin.md#admin-url)，登入Admin for Staging and Production。
 
-1. 瀏覽至 **商店** > **設定** > **設定** > **進階** > **系統**. 捲動並按一下 **完整頁面快取**.
+1. 瀏覽至&#x200B;**商店** > **設定** > **組態** > **進階** > **系統**。 捲動並按一下&#x200B;**整頁快取**。
 
-1. 確保 **快取應用程式** 值設定為 _Fastly CDN_ .
+1. 請確定&#x200B;**快取應用程式**&#x200B;值設定為&#x200B;_Fastly CDN_。
 
 1. 測試Fastly認證。
 
-   - 按一下 **Fastly設定**.
+   - 按一下&#x200B;**Fastly組態**。
 
-   - 驗證Fastly服務ID和Fastly API權杖憑證的值。 另請參閱 [取得Fastly認證](/help/cloud-guide/cdn/fastly-configuration.md#get-fastly-credentials).
+   - 驗證Fastly服務ID和Fastly API權杖憑證的值。 檢視[取得Fastly認證](/help/cloud-guide/cdn/fastly-configuration.md#get-fastly-credentials)。
 
-   - 按一下 **測試認證**.
+   - 按一下&#x200B;**測試認證**。
 
    >[!WARNING]
    >
    >請確定您在測試環境和生產環境中輸入了正確的Fastly服務ID和API權杖。 Fastly憑證會根據服務環境建立和對應。 如果您在生產環境中輸入測試認證，則無法上傳VCL代碼片段、快取無法正常運作，且快取設定指向錯誤的伺服器和存放區。
 
-**檢查Fastly快取行為**：
+**若要檢查Fastly快取行為**：
 
-1. 使用檢查標題 `dig` 命令列公用程式，以取得有關站台組態的資訊。
+1. 使用`dig`命令列公用程式檢查標頭，以取得有關站台組態的資訊。
 
-   您可以使用任何URL `dig` 命令。 下列範例使用Pro URL：
+   您可以使用任何具有`dig`命令的URL。 下列範例使用Pro URL：
 
-   - 分段： `dig https://mcstaging.<your-domain>.com`
+   - 正在暫存： `dig https://mcstaging.<your-domain>.com`
    - 生產： `dig https://mcprod.<your-domain>.com`
 
-   其他 `dig` 測試，請參閱Fastly的 [變更DNS前的測試](https://docs.fastly.com/en/guides/working-with-domains).
+   如需其他`dig`測試，請參閱Fastly的[測試，然後再變更DNS](https://docs.fastly.com/en/guides/working-with-domains)。
 
-1. 使用 `cURL` 以驗證回應標頭資訊。
+1. 使用`cURL`驗證回應標頭資訊。
 
    ```bash
    curl https://mcstaging.<your-domain>.com -H "host: mcstaging.<your-domain.com>" -k -vo /dev/null -H Fastly-Debug:1
    ```
 
-   另請參閱 [檢查回應標頭](../cdn/fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) 以取得有關驗證標題的詳細資訊。
+   請參閱[檢查回應標頭](../cdn/fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)，以取得有關驗證標頭的詳細資訊。
 
-1. 在您上線後，請使用 `cURL` 以檢查您的即時網站。
+1. 在您上線後，請使用`cURL`檢查您的上線網站。
 
    ```bash
    curl https://<your-domain> -k -vo /dev/null -H Fastly-Debug:1
@@ -198,20 +198,20 @@ ht-degree: 0%
 
 開始測試之前，請輸入票證並附上支援建議，告知您正在測試的環境、您使用的工具以及時間範圍。 使用結果和資訊更新票證以追蹤效能。 當您完成測試時，請新增更新後的結果，並在票證測試中註明完成並附上日期和時間戳記。
 
-檢閱 [Performance Toolkit](https://github.com/magento/magento2/tree/2.4/setup/performance-toolkit) 選項，作為啟動前整備程式的一部分。
+檢閱[Performance Toolkit](https://github.com/magento/magento2/tree/2.4/setup/performance-toolkit)選項，作為啟動前整備程式的一部分。
 
 為達到最佳效果，請使用下列工具：
 
-- [應用程式效能測試](../environment/variables-post-deploy.md#ttfb_tested_pages) — 藉由設定 `TTFB_TESTED_PAGES` 環境變數來測試網站回應時間。
-- [圍城](https://www.joedog.org/siege-home/) — 流量塑造和測試軟體，將您的商店推向極限。 使用可設定的模擬使用者端數目點選您的網站。 圍困支援基本驗證、Cookie、HTTP、HTTPS和FTP通訊協定。
-- [Jmeter](https://jmeter.apache.org) — 優異的負載測試，協助評估尖峰流量的效能，例如快閃銷售。 建立針對您的網站執行的自訂測試。
-- [New Relic](../monitor/new-relic-service.md) （已提供） — 協助找出造成效能緩慢的網站程式與區域，並追蹤每個動作（例如傳輸資料、查詢、Redis等）的逗留時間。
-- [WebPageTest](https://www.webpagetest.org) 和 [Pingdom](https://www.pingdom.com) — 即時分析不同來源位置的網站頁面載入時間。 Pingdom可能需要付費。 WebPageTest是免費工具。
+- [應用程式效能測試](../environment/variables-post-deploy.md#ttfb_tested_pages) — 設定`TTFB_TESTED_PAGES`環境變數以測試網站回應時間，以測試應用程式效能。
+- [圍攻](https://www.joedog.org/siege-home/) — 流量塑造和測試軟體以將您的商店推到極限。 使用可設定的模擬使用者端數目點選您的網站。 圍困支援基本驗證、Cookie、HTTP、HTTPS和FTP通訊協定。
+- [Jmeter](https://jmeter.apache.org) — 優異的負載測試，可協助評估尖峰流量的效能，如快閃銷售。 建立針對您的網站執行的自訂測試。
+- [New Relic](../monitor/new-relic-service.md) （已提供） — 透過每個動作（例如傳輸資料、查詢、Redis等）的追蹤逗留時間，協助找出造成效能緩慢的網站程式與區域。
+- [WebPageTest](https://www.webpagetest.org)與[Pingdom](https://www.pingdom.com) — 即時分析不同來源位置的網站頁面載入時間。 Pingdom可能需要付費。 WebPageTest是免費工具。
 
 ## 功能測試
 
-您可以使用Magento功能測試架構(MFTF)從Cloud Docker環境完成Adobe Commerce的功能測試。 另請參閱 [應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) 在 _Cloud Docker for Commerce指南_.
+您可以使用Magento功能測試架構(MFTF)從Cloud Docker環境完成Adobe Commerce的功能測試。 請參閱&#x200B;_Commerce適用的Cloud Docker指南_&#x200B;中的[應用程式測試](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)。
 
 ## 設定安全性掃描工具
 
-您的網站有免費的安全性掃描工具。 若要新增網站並執行工具，請參閱 [安全性掃描工具](../launch/overview.md#set-up-the-security-scan-tool).
+您的網站有免費的安全性掃描工具。 若要新增網站並執行工具，請參閱[安全性掃描工具](../launch/overview.md#set-up-the-security-scan-tool)。

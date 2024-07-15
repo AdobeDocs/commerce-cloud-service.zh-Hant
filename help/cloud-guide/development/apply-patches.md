@@ -12,34 +12,34 @@ ht-degree: 0%
 
 # 套用修補程式
 
-[Commerce雲端修補程式](https://github.com/magento/magento-cloud-patches) 和 [品質修補工具](https://github.com/magento/quality-patches) 為已安裝的Adobe Commerce應用程式提供修補程式。
+[適用於Commerce](https://github.com/magento/magento-cloud-patches)的雲端修補程式[品質修補程式](https://github.com/magento/quality-patches)可將修補程式傳送至您安裝的Adobe Commerce應用程式。
 
-- Commerce雲端修補程式套件提供必要修補程式和關鍵修正
-- 品質修補程式提供選購且低影響的品質修正，例如 [個別修補程式](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html#individual-patch) 不包含回溯不相容的變更
+- Commerce套件的雲端修補程式提供必要修補程式，並包含關鍵修正
+- 品質修補程式提供選用的低影響品質修正，作為[不含回溯不相容變更的個別修補程式](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html#individual-patch)
 
-另請參閱 [可用的修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 在 _Commerce Operations工具指南_ 以檢視已發行修補程式的完整清單。
+請參閱&#x200B;_Commerce Operations Tools Guide_&#x200B;中的[可用修補程式](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以檢閱已發行修補程式的完整清單。
 
-這兩個套件都改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵、選用和自訂修正。 您可以使用這些套裝軟體套用、還原和檢視有關Commerce可用的所有個別修補程式的一般資訊。
+這兩個套件都改善所有Adobe Commerce版本與雲端環境的整合，並支援快速傳送關鍵、選用和自訂修正。 您可以使用這些套裝程式來套用、還原和檢視Commerce可用的所有個別修補程式的一般資訊。
 
 >[!TIP]
 >
->您可以使用 [品質修補工具](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 和Cloud Patches for Commerce作為Magento Open Source和Adobe Commerce專案的獨立套件。 我們建議針對非雲端專案使用品質修補工具。
+>您可以將Commerce的[品質修補工具](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)和雲端修補程式用作Magento Open Source和Adobe Commerce專案的獨立套件。 我們建議針對非雲端專案使用品質修補工具。
 
-將變更部署到遠端環境時， `ece-tools` 套件使用 `magento/magento-cloud-patches` 和 `magento/quality-patches` 若要檢查暫止的修補程式，並依照下列順序自動套用它們：
+當您部署變更至遠端環境時，`ece-tools`封裝會使用`magento/magento-cloud-patches`和`magento/quality-patches`來檢查擱置的修補程式，並依照下列順序自動套用它們：
 
-1. 套用Commerce雲端修補程式套件中包含的所有必要Commerce修補程式。
+1. 套用Commerce套裝軟體適用的Commerce修補程式套件中包含的所有必要Cloud修補程式。
 1. 套用「品質修補工具」中所選的Commerce修補程式。
-1. 在中套用自訂修補程式 `/m2-hotfixes` 目錄，依修補程式名稱的字母順序。
+1. 按修補程式名稱的字母順序在`/m2-hotfixes`目錄中套用自訂修補程式。
 
 >[!NOTE]
 >
->當您更新 `ece-tools` package或Cloud Patches for Commerce套件，下次部署專案時會套用最新的必要修補程式，或者您可以使用 `ece-patches apply` CLI命令並重新部署您的雲端環境。 您無法略過 [必要的修補程式](https://github.com/magento/magento-cloud-patches/tree/develop/patches) 部署過程中。
+>當您更新`ece-tools`套件或Commerce套件的雲端修補程式時，會在您下次部署專案時套用最新的必要修補程式，或者您可以使用`ece-patches apply` CLI命令立即部署它們並重新部署您的雲端環境。 您不能在部署過程中略過[必要的修補程式](https://github.com/magento/magento-cloud-patches/tree/develop/patches)。
 
 ## 必要條件
 
 {{upgrade-tip}}
 
-Quality Patches Tool依賴Commerce的雲端修補程式和 `ece-tools` 封裝。 若要套用最新的修補程式，您必須有 [最新版的ECE-Tools](../dev-tools/update-package.md) 已安裝。 ECE-Tools的最低要求版本為2002.1.2。
+品質修補程式工具是Commerce雲端修補程式和`ece-tools`套件的相依性。 若要套用最新的修補程式，您必須安裝[最新版本的ECE-Tools](../dev-tools/update-package.md)。 ECE-Tools的最低要求版本為2002.1.2。
 
 ## 檢視可用的修補程式和狀態
 
@@ -92,28 +92,28 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 狀態表格包含下列資訊型別：
 
 - **型別**：
-   - `Optional`—Adobe Commerce和Magento Open Source安裝可選擇使用「品質修補程式工具」和「雲端修補程式套件」的所有修補程式。 對於雲端基礎結構上的Adobe Commerce，所有修補程式均為選購。
-   - `Required`—Cloud客戶需要Commerce適用的Cloud Patches套件中的所有修補程式。
-   - `Deprecated` — 個別修補程式會標示為已棄用，若您已套用，建議您加以回覆。 回覆已棄用的修補程式後，該修補程式將不再顯示在狀態表格中。
+   - `Optional` — 在Adobe Commerce和Magento Open Source安裝中，Quality Patches Tool和Cloud Patches套件中的所有修補程式都是選用的。 對於雲端基礎結構上的Adobe Commerce，所有修補程式均為選購。
+   - `Required`—Cloud客戶需要Commerce套件的Cloud Patches中的所有修補程式。
+   - `Deprecated` — 個別修補程式已標示為已棄用，若您已套用它，我們建議您還原它。 回覆已棄用的修補程式後，該修補程式將不再顯示在狀態表格中。
    - `Custom` — 來自&#39;m2-hotfix&#39;目錄的所有修補程式。
 
 - **狀態**：
    - `Applied` — 已套用修補程式。
    - `Not applied` — 尚未套用修補程式。
-   - `N/A` — 由於衝突，無法定義修補程式的狀態。
+   - `N/A` — 由於發生衝突，無法定義修補程式的狀態。
 
 - **詳細資料**：
    - `Affected components` — 受影響模組的清單。
-   - `Required patches` — 所需的修補程式（相依性）清單。
+   - `Required patches` — 必要的修補程式（相依性）清單。
    - `Recommended replacement` — 建議用來取代已棄用修補程式的修補程式。
 
 ## 在本機環境中套用修補程式
 
 您可以在本機環境中手動套用修補程式，並在部署之前對其進行測試。
 
-**在本機開發環境中套用個別修補程式**：
+**若要在本機開發環境中套用個別修補程式**：
 
-1. 將&#39;QUALITY_PATCH&#39;變數新增至 `.magento.env.yaml` 並列出底下所需的修補程式。
+1. 將&#39;QUALITY_PATCH&#39;變數新增至`.magento.env.yaml`檔案，並在下方列出必要的修補程式。
 
    ```yaml
    stage:
@@ -129,10 +129,10 @@ Magento 2 Enterprise Edition, version 2.3.5.0
    php ./vendor/bin/ece-patches apply
    ```
 
-   此 `ece-patches apply` 指令會以下列順序套用修補程式：
+   `ece-patches apply`命令會依下列順序套用修補程式：
    - 必要的修補程式
    - 選用的個別修補程式
-   - 來自的自訂修補程式 `/m2-hotfixes` 目錄
+   - 來自`/m2-hotfixes`目錄的自訂修補程式
 
 1. 清除快取。
 
@@ -148,9 +148,9 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 >
 >我們強烈建議先在整合或中繼環境中測試所有修補程式，再部署至生產環境。
 
-**在遠端環境中套用修補程式**：
+**若要在遠端環境中套用修補程式**：
 
-1. 新增 `QUALITY_PATCHES` 變數至 `.magento.env.yaml` 並列出底下所需的修補程式。
+1. 將`QUALITY_PATCHES`變數新增至`.magento.env.yaml`檔案，並在下方列出必要的修補程式。
 
    ```yaml
    stage:
@@ -164,7 +164,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
    >
    >升級至新版Adobe Commerce後，如果新版本未包含修補程式，您必須重新套用修補程式。
 
-1. 新增、認可及推送已更新的 `.magento.env.yaml` 檔案。
+1. 新增、認可及推播更新的`.magento.env.yaml`檔案。
 
    ```bash
    git add .magento.env.yaml
@@ -180,21 +180,21 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 ## 套用自訂修補程式
 
-部署時，ECE-Tools會套用所有Adobe修補程式，以及您新增至的任何自訂修補程式 `/m2-hotfixes` 目錄。
+當您部署時，ECE-Tools會套用您新增至專案根目錄`/m2-hotfixes`目錄的所有Adobe修補程式及任何自訂修補程式。
 
 >[!NOTE]
 >
->所有修補程式檔案名稱都必須以 `.patch` 副檔名。
+>所有修補檔名稱必須以`.patch`副檔名結尾。
 
 **若要在雲端環境中套用及測試自訂修補程式**：
 
-1. 在專案根目錄中，建立名為的目錄 `m2-hotfixes` 如果它不存在
+1. 在專案根目錄中，建立一個名為`m2-hotfixes`的目錄（如果沒有）
 
    ```bash
    mkdir m2-hotfixes
    ```
 
-1. 將修補程式檔案複製到 `/m2-hotfixes` 目錄。
+1. 將修補程式檔案複製到`/m2-hotfixes`目錄。
 
 1. 新增、提交和推送程式碼變更。
 
@@ -212,13 +212,13 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
    >[!NOTE]
    >
-   >請務必在預先生產環境中測試所有修補程式。 對於雲端基礎結構上的Adobe Commerce，您可以使用以下專案建立分支： `magento-cloud environment:branch <branch-name>` CLI命令。
+   >請務必在預先生產環境中測試所有修補程式。 對於雲端基礎結構上的Adobe Commerce，您可以使用`magento-cloud environment:branch <branch-name>` CLI命令建立分支。
 
 ## 還原自訂修補程式
 
 若要還原或解除安裝先前套用的自訂修補程式：
 
-1. 從刪除修補程式檔案 `/m2-hotfixes` 目錄。
+1. 從`/m2-hotfixes`目錄中刪除修補程式檔案。
 
 1. 新增、提交和推送程式碼變更。
 
@@ -236,15 +236,15 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
    >[!NOTE]
    >
-   >請務必在生產前環境中測試。 對於雲端基礎結構上的Adobe Commerce，您可以使用以下專案建立分支： `magento-cloud environment:branch <branch-name>` CLI命令。
+   >請務必在生產前環境中測試。 對於雲端基礎結構上的Adobe Commerce，您可以使用`magento-cloud environment:branch <branch-name>` CLI命令建立分支。
 
 ## 將修補程式套用至非雲端專案
 
-使用 [品質修補工具](https://github.com/magento/quality-patches) 用於Magento Open Source和Adobe Commerce專案。
+針對Magento Open Source和Adobe Commerce專案使用[品質修補工具](https://github.com/magento/quality-patches)。
 
 ## 還原本機環境中的修補程式
 
-您可以使用還原本機開發環境中先前套用的所有修補程式 `ece-patches` CLI
+您可以使用`ece-patches` CLI還原本機開發環境中先前套用的所有修補程式。
 
 若要還原所有套用的修補程式：
 
@@ -260,4 +260,4 @@ php ./vendor/bin/ece-patches revert
 
 ## 記錄
 
-「品質修補程式」工具會將所有作業記錄到 `<Project_root>/var/log/patch.log` 檔案。
+品質修補程式工具會將所有作業記錄到`<Project_root>/var/log/patch.log`檔案。

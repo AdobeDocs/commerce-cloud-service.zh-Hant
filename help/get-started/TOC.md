@@ -1,6 +1,6 @@
 ---
-user-guide-title: 開始使用商務
-user-guide-description: 開始您的初始設定 [!DNL Commerce] 雲端基礎結構中的應用程式。
+user-guide-title: 開始使用Commerce
+user-guide-description: 在雲端基礎結構中開始您對 [!DNL Commerce] 應用程式的初始設定。
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# 開始使用商務 {#start}
+# 開始使用Commerce {#start}
 
-+ [開始使用商務](overview.md)
++ [開始使用Commerce](overview.md)
 + [在雲端上布建Commerce](new-project.md)
 + [入門](onboarding.md)
 + [登入 [!DNL Cloud Console]](cloud-console.md)

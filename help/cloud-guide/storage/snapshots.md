@@ -12,32 +12,32 @@ ht-degree: 0%
 
 # 備份管理
 
-您可以隨時使用手動備份使用中的入門環境 **[!UICONTROL Backup]** 中的按鈕 [!DNL Cloud Console] 或使用 `magento-cloud snapshot:create` 命令。
+您可以隨時使用[!DNL Cloud Console]中的&#x200B;**[!UICONTROL Backup]**&#x200B;按鈕或使用`magento-cloud snapshot:create`命令，執行使用中Starter環境的手動備份。
 
-備份或 _快照_ 是環境資料的完整備份，包含執行中服務（MySQL資料庫）的所有持續性資料，以及任何儲存在掛載磁碟區(var、pub/media、app/etc)上的檔案。 快照可以 _非_ 包含程式碼，因為程式碼已儲存在Git型存放庫中。 您無法下載快照的復本。
+備份或&#x200B;_快照_&#x200B;是環境資料的完整備份，包含執行中服務（MySQL資料庫）的所有持續性資料，以及任何儲存在掛載磁碟區(var、pub/media、app/etc)上的檔案。 快照集&#x200B;_不_&#x200B;包含程式碼，因為程式碼已儲存在Git型存放庫中。 您無法下載快照的復本。
 
-備份/快照功能可以 **非** 適用於Pro預備和生產環境，依預設會接收定期備份以用於災難回覆。 請參閱 [專業備份與災難回覆](../architecture/pro-architecture.md#backup-and-disaster-recovery) 以取得詳細資訊。 與Pro測試環境和生產環境上的自動即時備份不同，備份是 **非** 自動。 它是 _您的_ 負責手動建立備份或設定cron工作，以定期建立Starter或Pro整合環境的備份。
+備份/快照功能&#x200B;**不**&#x200B;適用於Pro中繼和生產環境，依預設會接收定期備份以供災難回覆之用。 如需詳細資訊，請參閱[專業備份與災難回覆](../architecture/pro-architecture.md#backup-and-disaster-recovery)。 不同於Pro測試環境和生產環境上的自動即時備份，備份&#x200B;**不是**&#x200B;自動。 _您的_&#x200B;職責是手動建立備份或設定cron工作，以定期建立Starter或Pro整合環境的備份。
 
 ## 建立手動備份
 
-您可以從以下位置建立任何使用中Starter環境和整合Pro環境的手動備份： [!DNL Cloud Console] 或從Cloud CLI建立快照。 您必須擁有 [管理員角色](../project/user-access.md) 適用於環境。
+您可以從[!DNL Cloud Console]建立任何使用中Starter環境和整合Pro環境的手動備份，或從Cloud CLI建立快照。 您必須擁有環境的[管理員角色](../project/user-access.md)。
 
-**若要建立任何Starter環境的備份，請使用[!DNL Cloud Console]**：
+**若要使用[!DNL Cloud Console]**&#x200B;建立任何Starter環境的備份：
 
-1. 登入 [[!DNL Cloud Console]](https://console.adobecommerce.com).
+1. 登入[[!DNL Cloud Console]](https://console.adobecommerce.com)。
 1. 從專案導覽列選取環境。 環境必須為作用中。
-1. 在 _備份_ 檢視，按一下 **[!UICONTROL Backup]**. 此選項不適用於Pro環境。
+1. 在&#x200B;_備份_&#x200B;檢視中，按一下&#x200B;**[!UICONTROL Backup]**。 此選項不適用於Pro環境。
 
    ![備份](../../assets/button-backup.png){width="150"}
 
-**若要使用建立整合環境的備份[!DNL Cloud Console]**：
+**若要使用[!DNL Cloud Console]**&#x200B;建立整合環境的備份：
 
-1. 登入 [[!DNL Cloud Console]](https://console.adobecommerce.com).
+1. 登入[[!DNL Cloud Console]](https://console.adobecommerce.com)。
 1. 從專案導覽列選取整合/開發環境。 環境必須為作用中。
-1. 選取 **[!UICONTROL Backup]** 選項。 此選項適用於Starter和Pro環境。
-1. 按一下 **[!UICONTROL Yes]** 按鈕。
+1. 選取右上方功能表中的&#x200B;**[!UICONTROL Backup]**&#x200B;選項。 此選項適用於Starter和Pro環境。
+1. 按一下&#x200B;**[!UICONTROL Yes]**&#x200B;按鈕。
 
-**若要使用建立快照 `magento-cloud` CLI**：
+**若要使用`magento-cloud` CLI建立快照**：
 
 1. 在本機工作站上，變更至專案目錄。
 1. 簽出要建立快照的環境分支。
@@ -47,7 +47,7 @@ ht-degree: 0%
    magento-cloud snapshot:create --live
    ```
 
-   或者，您可以使用 `magento-cloud backup` 簡短命令。 此 `--live` 選項讓環境得以執行以避免停機時間。 如需完整的選項清單，請輸入 `magento-cloud snapshot:create --help`.
+   或者，您可以使用`magento-cloud backup`短指令。 `--live`選項讓環境保持執行，以避免停機時間。 如需完整的選項清單，請輸入`magento-cloud snapshot:create --help`。
 
    範例回應：
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 ## 還原手動備份
 
-您必須擁有 [管理員存取權](../project/user-access.md) 至環境。 您最多可 **七天** 至 _還原_ 手動備份。 還原備份不會變更目前Git分支的程式碼。 以這種方式還原備份不適用於Pro中繼和生產環境；請參閱 [專業備份與災難回覆](../architecture/pro-architecture.md#backup-and-disaster-recovery).
+您必須擁有環境的[管理員存取權](../project/user-access.md)。 您最多有&#x200B;**7天**&#x200B;到&#x200B;_還原_&#x200B;手動備份。 還原備份不會變更目前Git分支的程式碼。 以這種方式還原備份不適用於Pro中繼和生產環境；請參閱[Pro備份與災難回覆](../architecture/pro-architecture.md#backup-and-disaster-recovery)。
 
 還原時間會依資料庫的大小而有所不同：
 
@@ -93,16 +93,16 @@ ht-degree: 0%
 >
 >不使用備份還原：
 >
->- 若要回覆至先前的程式碼，或移除環境中新增的擴充功能，請參閱 [回覆代碼](#roll-back-code).
->- 還原不穩定環境，此環境會 _非_ 有備份，請參閱 [還原環境](../development/restore-environment.md).
+>- 若要回復到先前的程式碼，或移除環境中新增的擴充功能，請參閱[回覆程式碼](#roll-back-code)。
+>- 若要還原&#x200B;_沒有_&#x200B;備份的不穩定環境，請參閱[還原環境](../development/restore-environment.md)。
 
-**若要使用還原備份[!DNL Cloud Console]**：
+**若要使用[!DNL Cloud Console]**&#x200B;還原備份：
 
-1. 登入 [[!DNL Cloud Console]](https://console.adobecommerce.com).
+1. 登入[[!DNL Cloud Console]](https://console.adobecommerce.com)。
 1. 從專案導覽列選取環境。
-1. 在 _備份_ 檢視，從中選擇備份 _已儲存_ 清單。 備份功能可以 **非** 適用於Pro環境。
-1. 在 ![更多](../../assets/icon-more.png){width="32"} (_更多_)功能表，按一下 **還原**.
-1. 檢閱「從備份還原」資訊，然後按一下 **是，還原**.
+1. 在&#x200B;_備份_&#x200B;檢視中，從&#x200B;_已儲存_&#x200B;清單中選擇備份。 備份功能&#x200B;**不**&#x200B;適用於Pro環境。
+1. 在![更多](../../assets/icon-more.png){width="32"} （_更多_）功能表中，按一下&#x200B;**還原**。
+1. 檢閱從備份還原資訊，然後按一下&#x200B;**是，還原**。
 
 **若要使用Cloud CLI還原快照**：
 
@@ -133,10 +133,10 @@ ht-degree: 0%
 
 ## 還原災難回覆快照
 
-若要在Pro中繼和生產環境中還原災難回覆快照， [直接從伺服器匯入資料庫傾印](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+若要在Pro中繼和生產環境中還原災害復原快照，[直接從伺服器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)匯入資料庫傾印。
 
 ## 回覆代碼
 
-備份和快照可以 _非_ 包含程式碼的副本。 您的程式碼已儲存在Git型存放庫中，因此您可以使用Git型命令來回覆（或還原）程式碼。 例如，使用 `git log --oneline` 捲動先前的認可，然後使用 [`git revert`](https://git-scm.com/docs/git-revert) 從特定認可還原程式碼。
+備份和快照&#x200B;_不_&#x200B;包含您的程式碼復本。 您的程式碼已儲存在Git型存放庫中，因此您可以使用Git型命令來回覆（或還原）程式碼。 例如，使用`git log --oneline`捲動先前的認可；然後使用[`git revert`](https://git-scm.com/docs/git-revert)從特定認可還原程式碼。
 
-此外，您也可以選擇將程式碼儲存在 _非使用中_ 分支。 使用Git命令來建立分支，而非使用 `magento-cloud` 命令。 請參閱關於 [Git命令](../dev-tools/cloud-cli-overview.md#git-commands) （在Cloud CLI主題中）。
+此外，您也可以選擇將程式碼儲存在&#x200B;_非使用中_&#x200B;分支中。 使用Git命令來建立分支，而不使用`magento-cloud`命令。 請參閱雲端CLI主題中的關於[Git命令](../dev-tools/cloud-cli-overview.md#git-commands)。

@@ -22,11 +22,11 @@ ht-degree: 0%
 
 | 命令 | 說明 |
 | ------- | ------------|
-| `wizard:ideal-state` | 檢查SCD是否位於 _版本編號_ 階段， `SKIP_HTML_MINIFICATION` 變數為 `true`，以及在雲端環境中設定的post_deploy掛接。 不用於本機開發環境。 |
-| `wizard:master-slave` | 檢查 `REDIS_USE_SLAVE_CONNECTION` 變數和 `MYSQL_USE_SLAVE_CONNECTION` 變數為 `true`. |
-| `wizard:scd-on-demand` | 檢查 `SCD_ON_DEMAND` 全域環境變數為 `true`. |
-| `wizard:scd-on-build` | 檢查 `SCD_ON_DEMAND` 全域環境變數為 `false` 和 `SKIP_SCD` 環境變數為 `false` 針對 _版本編號_ 階段。 驗證 `config.php` 檔案包含商店、商店群組和網站的資訊。 |
-| `wizard:scd-on-deploy` | 檢查 `SCD_ON_DEMAND` 全域環境變數為 `false` 和 `SKIP_SCD` 環境變數為 `false` 針對 _部署_ 階段。 驗證 `config.php` 檔案會 _NOT_ 包含商店、商店群組和網站清單及相關資訊。 |
+| `wizard:ideal-state` | 檢查SCD是否在&#x200B;_組建_&#x200B;階段中，`SKIP_HTML_MINIFICATION`變數為`true`，以及在雲端環境中設定的post_deploy掛接。 不用於本機開發環境。 |
+| `wizard:master-slave` | 檢查`REDIS_USE_SLAVE_CONNECTION`變數和`MYSQL_USE_SLAVE_CONNECTION`變數是否為`true`。 |
+| `wizard:scd-on-demand` | 檢查`SCD_ON_DEMAND`全域環境變數為`true`。 |
+| `wizard:scd-on-build` | 檢查&#x200B;_組建_&#x200B;階段的`SCD_ON_DEMAND`全域環境變數為`false`，`SKIP_SCD`環境變數為`false`。 驗證`config.php`檔案是否包含商店、商店群組和網站的資訊。 |
+| `wizard:scd-on-deploy` | 檢查&#x200B;_部署_&#x200B;階段的`SCD_ON_DEMAND`全域環境變數為`false`，`SKIP_SCD`環境變數為`false`。 驗證`config.php`檔案是否包含&#x200B;_NOT_&#x200B;包含包含相關資訊的商店、商店群組和網站清單。 |
 
 例如，您可以驗證您的設定是否正確啟用SCD隨選功能：
 
@@ -48,7 +48,7 @@ SCD on-demand is disabled
 
 ## 驗證理想的設定
 
-此 _理想_ 您的雲端專案設定可讓快取暖身分並在使用者要求時產生靜態內容，藉此將部署停機時間降至最低。 此精靈會在部署過程中自動執行。 如果您的雲端未針對此設定 _理想狀態_，接著您會收到類似下列的訊息：
+您的Cloud專案的&#x200B;_理想_&#x200B;設定可讓快取暖身，並在使用者要求時產生靜態內容，協助將部署停機時間降到最低。 此精靈會在部署過程中自動執行。 如果您的雲端未針對此&#x200B;_理想狀態_&#x200B;進行設定，則您會收到類似下列的訊息：
 
 ```terminal
 - SCD on build is not configured
@@ -79,7 +79,7 @@ Ideal state is not configured
            php ./vendor/bin/ece-tools post-deploy
    ```
 
-1. 推送您的程式碼變更，然後再次執行測試。 當您的設定為 _理想_，您會收到下列訊息。
+1. 推送您的程式碼變更，然後再次執行測試。 當您的設定是&#x200B;_理想_&#x200B;時，您會收到下列訊息。
 
    ```terminal
    Ideal state is configured

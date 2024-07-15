@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # 還原環境
 
-如果您在整合環境中遇到問題且沒有 [有效備份](../storage/snapshots.md)，請嘗試使用下列其中一種方法來還原環境：
+如果您在整合環境中遇到問題，而且沒有[有效的備份](../storage/snapshots.md)，請嘗試使用下列其中一種方法來還原環境：
 
 - 重設或還原Git分支中的程式碼
-- 解除安裝 [!DNL Commerce] 應用計畫
+- 解除安裝[!DNL Commerce]應用程式
 - 強制重新部署
 - 手動重設資料庫
 
@@ -26,11 +26,11 @@ ht-degree: 0%
 
 重設您的Git分支會將程式碼回復到過去的穩定狀態。
 
-**重設分支的方式**：
+**若要重設您的分支**：
 
 1. 在本機工作站上，變更至專案目錄。
 
-1. 檢閱Git認可歷史記錄。 使用 `--oneline` 若要在一行中顯示縮寫的認可：
+1. 檢閱Git認可歷史記錄。 使用`--oneline`在一行中顯示縮寫的認可：
 
    ```bash
    git log --oneline
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 1. 選擇代表程式碼最後已知穩定狀態的認可雜湊。
 
-   若要將分支重設為原始初始化狀態，請尋找建立分支的第一個認可。 您可以使用 `--reverse` 以反向時間順序顯示歷史記錄。
+   若要將分支重設為原始初始化狀態，請尋找建立分支的第一個認可。 您可以使用`--reverse`以反向時間順序顯示歷史記錄。
 
 1. 使用硬重設選項來重設您的分支。 使用此命令時請小心，因為它會捨棄自選取認可後所做的所有變更。
 
@@ -65,15 +65,15 @@ ht-degree: 0%
 
 ## 解除安裝Commerce
 
-解除安裝 [!DNL Commerce] 應用程式會還原資料庫、移除部署設定並清除 `var/` 子目錄。 本指引也會將您的Git分支重設為先前的穩定狀態。 如果您最近沒有備份，但可以使用SSH存取遠端環境，請依照下列步驟還原您的環境：
+解除安裝[!DNL Commerce]應用程式會還原資料庫、移除部署組態並清除`var/`子目錄，讓您的環境回到原始狀態。 本指引也會將您的Git分支重設為先前的穩定狀態。 如果您最近沒有備份，但可以使用SSH存取遠端環境，請依照下列步驟還原您的環境：
 
 - 停用設定管理
 - 解除安裝Adobe Commerce
 - 重設Git分支
 
-解除安裝Adobe Commerce軟體會捨棄並還原資料庫、移除部署設定，並清除 `var/` 子目錄。 請務必停用 [設定管理](../store/store-settings.md) 以便在下次部署時不會自動套用先前的組態設定。 確定您的 `app/etc/` 目錄不包含 `config.php` 檔案。
+解除安裝Adobe Commerce軟體會捨棄並還原資料庫、移除部署設定，以及清除`var/`子目錄。 請務必停用[組態管理](../store/store-settings.md)，這樣它就不會在下次部署期間自動套用先前的組態設定。 確定您的`app/etc/`目錄不包含`config.php`檔案。
 
-**解除安裝Adobe Commerce軟體**：
+**若要解除安裝Adobe Commerce軟體**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -110,7 +110,7 @@ ht-degree: 0%
    [SUCCESS]: Magento uninstallation complete.
    ```
 
-1. 清除 `var/` 子目錄。
+1. 清除`var/`子目錄。
 
    ```bash
    rm -rf var/*
@@ -138,7 +138,7 @@ git commit --allow-empty -m "<message>" && git push <origin> <branch>
 
 如果您嘗試解除安裝Adobe Commerce，但命令失敗或無法完成，您可以手動重設資料庫。
 
-**重設資料庫**：
+**要重設資料庫**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -154,13 +154,13 @@ git commit --allow-empty -m "<message>" && git push <origin> <branch>
    mysql -h database.internal
    ```
 
-1. 放下 `main` 資料庫。
+1. 卸除`main`資料庫。
 
    ```shell
    drop database main;
    ```
 
-1. 建立空白 `main` 資料庫。
+1. 建立空的`main`資料庫。
 
    ```shell
    create database main;

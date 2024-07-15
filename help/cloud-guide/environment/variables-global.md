@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 全域變數
 
-全域變數可控制每個階段的 [!DNL Commerce] 部署程式：建置、部署和部署後。 由於全域變數會影響每個階段，因此您必須在 `global` 的階段 `.magento.env.yaml` 檔案：
+全域變數可控制[!DNL Commerce]部署流程每個階段的動作：建置、部署和部署後。 由於全域變數會影響每個階段，因此您必須在`.magento.env.yaml`檔案的`global`階段中設定它們：
 
 ```yaml
 stage:
@@ -32,11 +32,11 @@ stage:
 - **預設**-_未設定_
 - **版本**—Adobe Commerce 2.4.5和更新版本
 
-當設定為 `true`，可讓cron執行訊息佇列取用者。 Adobe Commerce的Adobe I/O事件使用訊息佇列來加速傳送關鍵事件。
+設定為`true`時，可讓cron執行訊息佇列取用者。 Adobe Commerce的Adobe I/O事件使用訊息佇列來加速傳送關鍵事件。
 
-Adobe建議您同時新增 [`CRON_CONSUMERS_RUNNER`](./variables-deploy.md#cron_consumers_runner) 變數至 `deploy` 的階段 `.magento.env.yaml` 檔案與 `cron_run` 設為 `true`.
+Adobe建議您也將[`CRON_CONSUMERS_RUNNER`](./variables-deploy.md#cron_consumers_runner)變數新增至`.magento.env.yaml`檔案的`deploy`階段（其中`cron_run`設定為`true`）。
 
-下列範例顯示已完整設定的 `ENABLE_EVENTING` 變數中。
+下列範例顯示完整設定的`ENABLE_EVENTING`變數。
 
 ```yaml
 stage:
@@ -54,7 +54,7 @@ stage:
 - **預設**-_未設定_
 - **版本**—Adobe Commerce 2.4.4和更新版本
 
-當設定為 `true`，會啟用Commerce Webhook。 webhook會在外部端點上執行，例如App Builder執行階段動作或協力廠商詳細目錄管理系統。 此 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks) 詳細說明此功能。
+設定為`true`時，啟用Commerce Webhook。 webhook會在外部端點上執行，例如App Builder執行階段動作或第三方清查管理系統。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks)詳細說明此功能。
 
 ```yaml
 stage:
@@ -67,7 +67,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-覆寫所有輸出資料流的最低記錄層級，而不變更程式碼，這在疑難排解部署問題時很有幫助。 例如，如果您的部署失敗，您可以使用此變數在全域提高記錄粒度。 另請參閱 [記錄層級](log-handlers.md#log-levels). 此 `min_level` 記錄處理常式中的值會覆寫此設定。
+覆寫所有輸出資料流的最低記錄層級，而不變更程式碼，這在疑難排解部署問題時很有幫助。 例如，如果您的部署失敗，您可以使用此變數在全域提高記錄粒度。 請參閱[記錄層級](log-handlers.md#log-levels)。 記錄處理常式中的`min_level`值會覆寫此設定。
 
 ```yaml
 stage:
@@ -77,7 +77,7 @@ stage:
 
 >[!WARNING]
 >
->的設定 `MIN_LOGGING_LEVEL` 變數不會變更檔案處理常式的記錄層級組態，其設定為 `debug` 依預設。
+>`MIN_LOGGING_LEVEL`變數的設定不會變更檔案處理常式的記錄層級組態，預設為`debug`。
 
 ## `SCD_ON_DEMAND`
 
@@ -86,7 +86,7 @@ stage:
 
 當使用者(SCD)要求時，啟用產生靜態內容的功能。 隨選靜態內容最適合用於開發和測試工作流程，因為這可縮短部署時間。
 
-使用預先載入快取 [`post_deploy` 勾點](../application/hooks-property.md) 減少網站停機時間。 快取預熱僅適用於包含中繼和生產環境的Pro專案 [!DNL Cloud Console] 和適用於入門專案。 新增 `SCD_ON_DEMAND` 環境變數至 `global` 中的階段 `.magento.env.yaml` 檔案：
+使用[`post_deploy`鉤點](../application/hooks-property.md)預先載入快取，可減少網站停機時間。 快取暖功能僅適用於[!DNL Cloud Console]中包含「測試」與「生產」環境的Pro專案，以及入門專案。 將`SCD_ON_DEMAND`環境變數新增至`.magento.env.yaml`檔案中的`global`階段：
 
 ```yaml
 stage:
@@ -94,7 +94,7 @@ stage:
     SCD_ON_DEMAND: true
 ```
 
-此 `SCD_ON_DEMAND` 變數會以兩個階段（建置和部署）略過SCD，並清除 `pub/static` 和 `var/view_preprocessed` 資料夾，並將下列內容寫入 `app/etc/env.php` 檔案：
+`SCD_ON_DEMAND`變數在兩個階段（建置和部署）中都會略過SCD，清除`pub/static`和`var/view_preprocessed`資料夾，並將下列內容寫入`app/etc/env.php`檔案：
 
 ```php?start_inline=1
 return array(
@@ -126,7 +126,7 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.4.2和更新版本
 
-將設為 `true` 以防止在建置和部署階段期間為父級主題產生靜態內容。 當此選項設定為 `true`，產生的靜態內容較少，因此可縮短您的整體建置和部署時間。
+設定為`true`以防止在建置和部署階段期間產生父系主題的靜態內容。 當此選項設定為`true`時，產生的靜態內容較少，這會改善您的整體建置和部署時間。
 
 ```yaml
 stage:
@@ -139,9 +139,9 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.3.0和更新版本
 
-[貝勒](https://github.com/magento/baler) 是一個模組，可掃描您產生的JavaScript程式碼並建立最佳化的JavaScript套件組合。 將最佳化的套件組合部署至您的網站，可以減少載入網站時的網路要求數目，並改善頁面載入時間。
+[Baler](https://github.com/magento/baler)是掃描您產生的JavaScript程式碼並建立最佳化JavaScript套件的模組。 將最佳化的套件組合部署至您的網站，可以減少載入網站時的網路要求數目，並改善頁面載入時間。
 
-將設為 `true` 以在執行靜態內容部署後執行Baler。
+設定為`true`以執行靜態內容部署後執行Baler。
 
 ```yaml
 stage:
@@ -156,16 +156,16 @@ stage:
 ## `SKIP_HTML_MINIFICATION`
 
 - **預設**：
-   - `true`—for `ece-tools` 2002.0.13和更新版本
-   - `false` — 適用於舊版的 `ece-tools`
+   - `true` — 適用於`ece-tools` 2002.0.13和更新版本
+   - `false` — 適用於舊版`ece-tools`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用將靜態檢視檔案複製到 `<magento_root>/init/` 建置階段結束時的目錄。 如果設為 `true`，不會複製檔案，且可依請求提供HTML縮制。 將此值設為 `true` 以減少部署到中繼和生產環境時的停機時間。
+啟用或停用在建置階段結束時複製靜態檢視檔案至`<magento_root>/init/`目錄。 如果設為`true`，將不會複製檔案，而且可依請求使用HTML縮制。 將此值設為`true`可減少部署至中繼和生產環境時的停機時間。
 
-- **`false`** — 複製 `view_preprocessed` 目錄到 `<magento_root>/init/` 目錄，並還原中的目錄 `<magento_root>/var` 部署階段開始的目錄。
-- **`true`** — 啟用隨選HTML縮制；執行 _非_ 複製 `<magento_root>var/view_preprocessed` 至 `<magento_root>/init/` 建置階段結束時的目錄。
+- **`false`** — 在建置階段結束時，將`view_preprocessed`目錄複製到`<magento_root>/init/`目錄，並在部署階段開始時還原`<magento_root>/var`目錄中的目錄。
+- **`true`** — 啟用隨選HTML縮制；會&#x200B;_不會_&#x200B;將`<magento_root>var/view_preprocessed`複製到建置階段結束時的`<magento_root>/init/`目錄。
 
-新增 `SKIP_HTML_MINIFICATION` 環境變數至 `global` 中的階段 `.magento.env.yaml` 檔案：
+將`SKIP_HTML_MINIFICATION`環境變數新增至`.magento.env.yaml`檔案中的`global`階段：
 
 ```yaml
 stage:
@@ -178,16 +178,16 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-使用 `X_FRAME_CONFIGURATION` 變數變更 [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) Adobe Commerce網站的標題設定。 此設定可控制瀏覽器如何呈現 `<frame>`， `<iframe>`，或 `<object>`. 使用下列其中一個選項：
+使用`X_FRAME_CONFIGURATION`變數來變更Adobe Commerce網站的[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html)標頭設定。 此設定控制瀏覽器如何呈現`<frame>`、`<iframe>`或`<object>`中的頁面。 使用下列其中一個選項：
 
 - `DENY` — 頁面無法顯示在框架中。
-- `SAMEORIGIN`—(預設的Adobe Commerce設定。) 頁面只能在與頁面本身相同原點的框架中顯示。
+- `SAMEORIGIN`—(預設Adobe Commerce設定。) 頁面只能在與頁面本身相同原點的框架中顯示。
 
 >[!WARNING]
 >
->此 `ALLOW-FROM <uri>` 選項已淘汰，因為Adobe Commerce支援的瀏覽器不再支援它。 另請參閱 [瀏覽器相容性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility).
+>`ALLOW-FROM <uri>`選項已過時，因為Adobe Commerce支援的瀏覽器不再支援。 檢視[瀏覽器相容性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)。
 
-新增 `X_FRAME_CONFIGURATION` 環境變數至 `global` 中的階段 `.magento.env.yaml` 檔案：
+將`X_FRAME_CONFIGURATION`環境變數新增至`.magento.env.yaml`檔案中的`global`階段：
 
 ```yaml
 stage:

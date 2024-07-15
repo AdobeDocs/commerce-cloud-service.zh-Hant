@@ -21,13 +21,13 @@ ht-degree: 0%
 
 雲端基礎結構上的Adobe Commerce使用Composer來管理PHP套件。
 
-此 `composer.json` 檔案會宣告套件清單，而 `composer.lock` 檔案會儲存用來建置Adobe Commerce安裝的套件完整清單（每個套件的完整版本及其相依性）。
+`composer.json`檔案會宣告套件清單，而`composer.lock`檔案會儲存用來建置Adobe Commerce安裝的套件完整清單（每個套件的完整版本及其相依性）。
 
-下列參考檔案產生自 `composer.lock` 檔案，並涵蓋雲端基礎結構2.4.7上Adobe Commerce中所包含的必要套件。
+下列參考檔案是從`composer.lock`檔案產生，其中涵蓋雲端基礎結構2.4.7上Adobe Commerce中所包含的必要套件。
 
 ## 相依性
 
-`magento/magento-cloud-metapackage 2.4.7` 具有下列相依性：
+`magento/magento-cloud-metapackage 2.4.7`有下列相依性：
 
 ```config
 fastly/magento2: ^1.2.34
@@ -198,28 +198,28 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">拉米納斯/拉米納斯 — 驗證碼</a>
+      <a href="https://github.com/laminas/laminas-captcha.git">laminas/laminas-captcha</a>
     </td>
     <td>資料庫</td>
     <td>使用Figlet、影像、ReCaptcha等專案產生及驗證驗證碼</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-code.git">laminas/laminas碼</a>
+      <a href="https://github.com/laminas/laminas-code.git">laminas/laminas-code</a>
     </td>
     <td>資料庫</td>
     <td>PHP Reflection API、靜態程式碼掃描和程式碼產生的擴充功能</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-config.git">層板/層板 — 組態</a>
+      <a href="https://github.com/laminas/laminas-config.git">laminas/laminas-config</a>
     </td>
     <td>資料庫</td>
     <td>提供巢狀物件屬性型使用者介面，用於存取應用程式程式碼內的此設定資料</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">層粘連體/層粘連體</a>
+      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
     </td>
     <td>資料庫</td>
     <td>強大的加密工具和密碼雜湊功能</td>
@@ -233,7 +233,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-di.git">萊米納斯/萊米納斯 — 迪</a>
+      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
     </td>
     <td>資料庫</td>
     <td>PSR-11容器的自動化相依性插入</td>
@@ -268,7 +268,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-filter.git">層疊/層疊 — 濾鏡</a>
+      <a href="https://github.com/laminas/laminas-filter.git">層疊/層疊 — 篩選</a>
     </td>
     <td>資料庫</td>
     <td>以程式設計方式篩選及標準化資料和檔案</td>
@@ -282,7 +282,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-i18n.git">雷米納斯/雷米納斯 — i18n</a>
+      <a href="https://github.com/laminas/laminas-i18n.git">laminas/laminas-i18n</a>
     </td>
     <td>資料庫</td>
     <td>提供應用程式的翻譯，並篩選及驗證國際化值</td>
@@ -296,14 +296,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-loader.git">層疊/層疊 — 載入器</a>
+      <a href="https://github.com/laminas/laminas-loader.git">laminas/laminas-loader</a>
     </td>
     <td>資料庫</td>
     <td>自動載入和外掛程式載入策略</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">層疊/層疊 — 郵件</a>
+      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas-mail</a>
     </td>
     <td>資料庫</td>
     <td>提供一般化的功能，以撰寫及傳送文字和MIME相容的多部分電子郵件訊息</td>
@@ -317,7 +317,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mime.git">層板/層板MIME</a>
+      <a href="https://github.com/laminas/laminas-mime.git">laminas/laminas-mime</a>
     </td>
     <td>資料庫</td>
     <td>建立和剖析MIME訊息和部分</td>
@@ -338,7 +338,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">雷米納斯/雷米納斯 — 奧auth</a>
+      <a href="https://github.com/laminas/laminas-oauth.git">laminas/laminas-oauth</a>
     </td>
     <td>資料庫</td>
     <td></td>
@@ -352,14 +352,14 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-recaptcha.git">拉米納斯/拉米納斯 — 雷卡普查</a>
+      <a href="https://github.com/laminas/laminas-recaptcha.git">laminas/laminas-recaptcha</a>
     </td>
     <td>資料庫</td>
     <td>ReCaptcha Web服務的OOP包裝函式</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">laminas/laminas路由器</a>
+      <a href="https://github.com/laminas/laminas-router.git">層疊/層疊 — 路由器</a>
     </td>
     <td>資料庫</td>
     <td>適用於HTTP和主控台應用程式的彈性路由系統</td>
@@ -387,7 +387,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-soap.git">羊皮面/羊皮面</a>
+      <a href="https://github.com/laminas/laminas-soap.git">laminas/laminas-soap</a>
     </td>
     <td>資料庫</td>
     <td></td>
@@ -422,7 +422,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-view.git">萊米納斯/萊米納斯維尤</a>
+      <a href="https://github.com/laminas/laminas-view.git">laminas/laminas-view</a>
     </td>
     <td>資料庫</td>
     <td>彈性檢視層可支援並提供多個檢視層、協助程式等</td>
@@ -506,7 +506,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/ezyang/htmlpurifier.git">額則陽/htmlpurifier</a>
+      <a href="https://github.com/ezyang/htmlpurifier.git">ezyang/htmlpurifier</a>
     </td>
     <td>資料庫</td>
     <td>以PHP撰寫的符合標準的HTML篩選器</td>
@@ -548,7 +548,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/brick/varexporter.git">磚/varexporter</a>
+      <a href="https://github.com/brick/varexporter.git">brick/varexporter</a>
     </td>
     <td>資料庫</td>
     <td>var_export()的強大替代方案，可在不使用__set_state()的情況下匯出關閉項和物件</td>
@@ -590,7 +590,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/composer.git">作曲者/作曲者</a>
+      <a href="https://github.com/composer/composer.git">撰寫器/撰寫器</a>
     </td>
     <td>資料庫</td>
     <td>Composer可協助您宣告、管理和安裝PHP專案的相依性。 它可確保您隨時隨地擁有正確的棧疊。</td>
@@ -604,7 +604,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/pcre.git">composer/pcre</a>
+      <a href="https://github.com/composer/pcre.git">作曲者/pcre</a>
     </td>
     <td>資料庫</td>
     <td>提供型別安全預浸料取代的PCRE包裝程_*庫。</td>
@@ -618,7 +618,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/spdx-licenses.git">composer/spdx-licenses</a>
+      <a href="https://github.com/composer/spdx-licenses.git">作曲者/spdx — 授權</a>
     </td>
     <td>資料庫</td>
     <td>SPDX授權清單和驗證程式庫。</td>
@@ -695,7 +695,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/config.git">illuminate/config</a>
+      <a href="https://github.com/illuminate/config.git">照明/設定</a>
     </td>
     <td>資料庫</td>
     <td>Illuminate設定套件。</td>
@@ -709,7 +709,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/macroable.git">照明/可放大</a>
+      <a href="https://github.com/illuminate/macroable.git">照明/可巨集</a>
     </td>
     <td>資料庫</td>
     <td>Illuminate Macroable套件。</td>
@@ -723,7 +723,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/thephpleague/flysystem.git">league/flysystem</a>
+      <a href="https://github.com/thephpleague/flysystem.git">聯盟/飛控系統</a>
     </td>
     <td>資料庫</td>
     <td>PHP的檔案儲存抽象</td>
@@ -779,7 +779,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/MyIntervals/emogrifier.git">pelago/emogrifier</a>
+      <a href="https://github.com/MyIntervals/emogrifier.git">pelago/表情符號</a>
     </td>
     <td>資料庫</td>
     <td>將CSS樣式轉換為HTML程式碼中的內嵌樣式屬性</td>
@@ -821,21 +821,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/php-fig/cache.git">psr/cache</a>
+      <a href="https://github.com/php-fig/cache.git">psr/快取</a>
     </td>
     <td>資料庫</td>
     <td>快取程式庫的通用介面</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/php-fig/clock.git">psr/clock</a>
+      <a href="https://github.com/php-fig/clock.git">psr/時鐘</a>
     </td>
     <td>資料庫</td>
     <td>讀取時鐘的通用介面。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/php-fig/container.git">psr/container</a>
+      <a href="https://github.com/php-fig/container.git">psr/容器</a>
     </td>
     <td>資料庫</td>
     <td>通用容器介面（PHP圖PSR-11）</td>
@@ -891,7 +891,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ramsey/collection.git">拉姆齊/collection</a>
+      <a href="https://github.com/ramsey/collection.git">ramsey/collection</a>
     </td>
     <td>資料庫</td>
     <td>用於表示和處理集合的PHP程式庫。</td>
@@ -989,7 +989,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/deprecation-contracts.git">symfony/deprecation-contract</a>
+      <a href="https://github.com/symfony/deprecation-contracts.git">symfony/deprecation-contracts</a>
     </td>
     <td>資料庫</td>
     <td>用於觸發淘汰通知的通用函式和慣例</td>
@@ -1157,21 +1157,21 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/service-contracts.git">交響曲/服務合約</a>
+      <a href="https://github.com/symfony/service-contracts.git">symfony/服務合約</a>
     </td>
     <td>資料庫</td>
     <td>與撰寫服務相關的一般抽象概念</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/string.git">symfony/string</a>
+      <a href="https://github.com/symfony/string.git">symfony/字串</a>
     </td>
     <td>資料庫</td>
     <td>為字串提供物件導向的API，並以統一的方式處理位元組、UTF-8字碼點和字首叢集</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/translation.git">交響曲/翻譯</a>
+      <a href="https://github.com/symfony/translation.git">symfony/translation</a>
     </td>
     <td>資料庫</td>
     <td>提供工具，將您的應用程式國際化</td>
@@ -1227,7 +1227,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/zordius/lightncandy.git">佐迪烏斯/光糖果</a>
+      <a href="https://github.com/zordius/lightncandy.git">zordius/lightncandy</a>
     </td>
     <td>資料庫</td>
     <td>handlebars ( http://handlebarsjs.com/ )和mustache ( http://mustache.github.io/ )的超快PHP實作。</td>

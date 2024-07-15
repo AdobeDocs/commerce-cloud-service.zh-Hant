@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 設定Elasticsearch服務
 
-[Elasticsearch](https://www.elastic.co) 是開放原始碼產品，可讓您從任何來源取得資料、任何格式，並即時搜尋和視覺化資料。
+[Elasticsearch](https://www.elastic.co)是開放原始碼產品，可讓您從任何來源取得資料、任何格式，並即時搜尋和視覺化資料。
 
 {{elasticsearch-support}}
 
-如需Adobe Commerce 2.4.4版和更新版本的相關資訊，請參閱 [設定OpenSearch服務](opensearch.md).
+若為Adobe Commerce 2.4.4版或更新版本，請參閱[設定OpenSearch服務](opensearch.md)。
 
 - Elasticsearch會對產品目錄中的產品執行快速和進階搜尋
 - Elasticsearch分析器支援多種語言
@@ -29,9 +29,9 @@ ht-degree: 0%
 
 {{service-instruction}}
 
-**啟用Elasticsearch的方式**：
+**若要啟用Elasticsearch**：
 
-1. 對於入門專案，請新增 `elasticsearch` 服務至 `.magento/services.yaml` Elasticsearch版本的檔案和配置的磁碟空間（以MB為單位）。
+1. 對於入門專案，將`elasticsearch`服務新增到Elasticsearch版本且已配置磁碟空間為MB的`.magento/services.yaml`檔案。
 
    ```yaml
    elasticsearch:
@@ -41,7 +41,7 @@ ht-degree: 0%
 
    對於Pro專案，您必須提交Adobe Commerce支援票證以在預備和生產環境中變更Elasticsearch版本。
 
-1. 設定 `relationships` 中的屬性 `.magento.app.yaml` 檔案。
+1. 設定`.magento.app.yaml`檔案中的`relationships`屬性。
 
    ```yaml
    relationships:
@@ -54,7 +54,7 @@ ht-degree: 0%
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable Elasticsearch" && git push origin <branch-name>
    ```
 
-   如需這些變更如何影響您環境的詳細資訊，請參閱 [服務](services-yaml.md).
+   如需這些變更如何影響您環境的詳細資訊，請參閱[服務](services-yaml.md)。
 
 1. 部署程式完成後，請使用SSH登入遠端環境。
 
@@ -78,15 +78,15 @@ ht-degree: 0%
 
 ## Elasticsearch軟體相容性
 
-在雲端基礎結構專案上安裝或升級Adobe Commerce時，請務必檢查Elasticsearch服務版本與 [ELASTICSEARCHPHP](https://github.com/elastic/elasticsearch-php) Adobe Commerce使用者端。
+在雲端基礎結構專案上安裝或升級Adobe Commerce時，請務必檢查Adobe Commerce的Elasticsearch服務版本與[ElasticsearchPHP](https://github.com/elastic/elasticsearch-php)使用者端之間的相容性。
 
-- **首次設定** Elasticsearch — 確認 `services.yaml` 檔案與為Adobe Commerce設定的ElasticsearchPHP使用者端相容。
+- **首次安裝** — 確認`services.yaml`檔案中指定的Elasticsearch版本與為Adobe Commerce設定的ElasticsearchPHP使用者端相容。
 
-- **專案升級** — 確認新應用程式版本中的ElasticsearchPHP使用者端與雲端基礎結構上安裝的Elasticsearch服務版本相容。
+- **專案升級** — 確認新應用程式版本中的ElasticsearchPHP使用者端與安裝在雲端基礎結構上的Elasticsearch服務版本相容。
 
-雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 另請參閱 [服務版本](services-yaml.md#service-versions).
+雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 請參閱[服務版本](services-yaml.md#service-versions)。
 
-**檢查Elasticsearch軟體相容性**：
+**若要檢查Elasticsearch軟體相容性**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -102,13 +102,13 @@ ht-degree: 0%
    magento-cloud ssh
    ```
 
-1. 檢查Composer套件版本 `elasticsearch/elasticsearch`.
+1. 檢查`elasticsearch/elasticsearch`的Composer封裝版本。
 
    ```bash
    composer show elasticsearch/elasticsearch
    ```
 
-   在回應中，檢查中已安裝的版本 `versions` 屬性。
+   在回應中，檢查`versions`屬性中已安裝的版本。
 
    ```terminal
    name     : elasticsearch/elasticsearch
@@ -125,7 +125,7 @@ ht-degree: 0%
    names    : elasticsearch/elasticsearch
    ```
 
-   此外，您也可以在以下位置找到ElasticsearchPHP使用者端版本：  `composer.lock` 環境根目錄中的檔案。
+   您也可以在環境根目錄的`composer.lock`檔案中找到ElasticsearchPHP使用者端版本。
 
 1. 從命令列擷取Elasticsearch服務連線詳細資料。
 
@@ -156,7 +156,7 @@ ht-degree: 0%
    +------------------------------------------+----------------------------------------------------------------------+
    ```
 
-1. 擷取已安裝的Elasticsearch服務 `version:number` 服務端點。
+1. 從服務端點擷取已安裝的Elasticsearch服務`version:number`。
 
    ```bash
    curl -XGET <elasticsearch-service-endpoint-ip-address>:9200/
@@ -192,23 +192,23 @@ ht-degree: 0%
      composer require "elasticsearch/elasticsearch:~<version>"
      ```
 
-   - 變更中的Elasticsearch服務版本 `services.yaml` 檔案到與ElasticsearchPHP使用者端相容的版本。
+   - 將`services.yaml`檔案中的Elasticsearch服務版本變更為與ElasticsearchPHP使用者端相容的版本。
 
      {{pro-update-service}}
 
 ## 重新啟動Elasticsearch服務
 
-如果您需要重新啟動 [Elasticsearch](https://www.elastic.co) 服務，您必須聯絡Adobe Commerce支援。
+如果您需要重新啟動[Elasticsearch](https://www.elastic.co)服務，必須聯絡Adobe Commerce支援。
 
 ## 其他搜尋設定
 
-- 根據預設，雲端環境的搜尋設定會在您每次部署時重新產生。 您可以使用 `SEARCH_CONFIGURATION` 部署變數，以在部署之間保留自訂搜尋設定。 另請參閱 [部署變數](../environment/variables-deploy.md#search_configuration).
+- 根據預設，雲端環境的搜尋設定會在您每次部署時重新產生。 您可以使用`SEARCH_CONFIGURATION`部署變數，在部署之間保留自訂搜尋設定。 請參閱[部署變數](../environment/variables-deploy.md#search_configuration)。
 
 - 在您為專案設定Elasticsearch服務後，請使用管理員UI來測試Elasticsearch連線並自訂Adobe Commerce的Elasticsearch設定。
 
 ### 新增Elasticsearch的外掛程式
 
-您可以視需要選擇新增外掛程式以進行Elasticsearch， `configuration:plugins` 區段至中的Elasticsearch服務 `.magento/services.yaml` 檔案。 例如，下列程式碼會啟用ICU分析和注音分析外掛程式。
+您可以選擇將`configuration:plugins`區段新增至`.magento/services.yaml`檔案中的Elasticsearch服務，以新增外掛程式以進行Elasticsearch。 例如，下列程式碼會啟用ICU分析和注音分析外掛程式。
 
 ```yaml
 elasticsearch:
@@ -220,16 +220,16 @@ elasticsearch:
             - analysis-phonetic
 ```
 
-如果您使用Elastic Suite協力廠商外掛程式，則必須 [更新 `ece-tools` 封裝](../dev-tools/update-package.md) 至2002.0.19版或更新版本。
-設定Elastic Suite時，將組態設定新增至 `ELASTICSUITE_CONFIGURATION` 部署變數。 此設定可跨部署儲存設定。
+如果您使用Elastic Suite協力廠商外掛程式，您必須[將`ece-tools`套件](../dev-tools/update-package.md)更新至2002.0.19或更新版本。
+設定Elastic Suite時，請將組態設定新增至`ELASTICSUITE_CONFIGURATION`部署變數。 此設定可跨部署儲存設定。
 
 ### 移除Elasticsearch的外掛程式
 
-從移除外掛程式專案 `elasticsearch:` 在 `.magento/services.yaml` 不會如您預期解除安裝或停用它們。 您必須重新索引Elasticsearch資料。 此行為旨在防止依賴這些外掛程式的資料可能遺失或損毀。
+從`.magento/services.yaml`中的`elasticsearch:`移除外掛程式專案，並不會如您預期解除安裝或停用它們。 您必須重新索引Elasticsearch資料。 此行為旨在防止依賴這些外掛程式的資料可能遺失或損毀。
 
-**移除Elasticsearch外掛程式的方式**：
+**若要移除Elasticsearch外掛程式**：
 
-1. 從您的Elasticsearch中移除外掛程式專案 `.magento/services.yaml` 檔案。
+1. 從您的`.magento/services.yaml`檔案中移除Elasticsearch外掛程式專案。
 1. 新增、提交和推送您的程式碼變更。
 
    ```bash
@@ -244,7 +244,7 @@ elasticsearch:
    git push origin <branch-name>
    ```
 
-1. 認可 `.magento/services.yaml` 對您的雲端存放庫進行變更。
+1. 將`.magento/services.yaml`變更提交至您的雲端存放庫。
 1. 重新索引目錄搜尋索引。
 
    ```bash
@@ -259,13 +259,13 @@ elasticsearch:
 
 >[!TIP]
 >
->如需搭配Adobe Commerce使用或疑難排解Elastic Suite外掛程式的詳細資訊，請參閱 [Elastic Suite檔案](https://github.com/Smile-SA/elasticsuite).
+>如需搭配Adobe Commerce使用或疑難排解Elastic Suite外掛程式的詳細資訊，請參閱[Elastic Suite檔案](https://github.com/Smile-SA/elasticsuite)。
 
 ## 疑難排解
 
 請參閱下列Adobe Commerce支援文章，以取得疑難排解Elasticsearch問題的說明：
 
-- [已設定Elasticsearch5，但搜尋頁面未載入「Fielddata已停用……」錯誤](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html)
-- [使用Elasticsearch6.x時，目錄分頁無法運作](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/catalog-pagination-doesn-t-work-when-elasticsearch-6.x-is-used.html)
-- [Adobe Commerce疑難排解員中的Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch索引狀態為 `yellow` 或 `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html)
+- 已設定[Elasticsearch5，但搜尋頁面未載入，並顯示「Fielddata已停用……」錯誤](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html)
+- 使用Elasticsearch6.x時，[目錄分頁無法運作](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/catalog-pagination-doesn-t-work-when-elasticsearch-6.x-is-used.html)
+- Adobe Commerce疑難排解員中的[Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
+- [Elasticsearch索引狀態為`yellow`或`red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html)

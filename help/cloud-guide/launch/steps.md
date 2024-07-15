@@ -21,7 +21,7 @@ Adobe支援人員會透過程式與您合作、檢查狀態，並在發生任何
 
 ## 將DNS切換至新站台
 
-存留時間變更值對於檢查您變更的網域很重要。 當您修改A和CNAME記錄時，更新需要TTL設定的時間才能正確更新。 如需DNS設定的詳細資訊，請參閱 [DNS設定](checklist.md#update-dns-configuration-with-production-settings).
+存留時間變更值對於檢查您變更的網域很重要。 當您修改A和CNAME記錄時，更新需要TTL設定的時間才能正確更新。 如需DNS設定的詳細資訊，請參閱[DNS設定](checklist.md#update-dns-configuration-with-production-settings)。
 
 ### 若要變更為新網站：
 
@@ -35,9 +35,9 @@ Adobe支援人員會透過程式與您合作、檢查狀態，並在發生任何
 
 ## 測試即時存放區
 
-在即時存放區中完成一些UAT測試，以確認所有內容都在載入中，且動作正確完成。 如需測試清單，請參閱 [測試部署](../test/staging-and-production.md#complete-uat-testing).
+在即時存放區中完成一些UAT測試，以確認所有內容都在載入中，且動作正確完成。 如需測試清單，請參閱[測試部署](../test/staging-and-production.md#complete-uat-testing)。
 
-## 啟動後
+## Post-Launch
 
 Adobe會檢查及監控網站，確保所有服務和存取許可權都呈綠色。 我們會隨時為您提供所需資訊，協助您瀏覽及檢查所有系統記錄、服務、快取及功能是否都能依您及客戶需求運作。
 

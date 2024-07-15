@@ -12,56 +12,56 @@ ht-degree: 0%
 
 # 新增網站地圖和搜尋引擎自動機制
 
-嘗試產生並寫入 `sitemap.xml` 檔案到根目錄會導致下列錯誤：
+嘗試產生`sitemap.xml`檔案並將其寫入根目錄會導致下列錯誤：
 
 ```terminal
 Please make sure that "/" is writable by the web-server.
 ```
 
-在雲端基礎結構上使用Adobe Commerce，您只能寫入特定目錄，例如 `var`， `pub/media`， `pub/static`，或 `app/etc`. 當您產生 `sitemap.xml` 使用「管理」面板的檔案，您必須指定 `/media/` 路徑。
+使用雲端基礎結構上的Adobe Commerce，您只能寫入特定目錄，例如`var`、`pub/media`、`pub/static`或`app/etc`。 當您使用[管理]面板產生`sitemap.xml`檔案時，必須指定`/media/`路徑。
 
-您不需要產生 `robots.txt` 因為會產生 `robots.txt` 隨選內容並將其儲存在資料庫中。 您可以在瀏覽器中使用檢視內容 `<domain.your.project>/robots.txt` 或 `<domain.your.project>/robots` 連結。
+您不必產生`robots.txt`檔案，因為它會隨選產生`robots.txt`內容並將其儲存在資料庫中。 您可以使用`<domain.your.project>/robots.txt`或`<domain.your.project>/robots`連結在瀏覽器中檢視內容。
 
-這需要ECE-Tools 2002.0.12版和更新版本 `.magento.app.yaml` 檔案。 請參閱以下檔案中的這些規則範例 [magento-cloud存放庫](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49).
+這需要ECE-Tools 2002.0.12版和更新版本，並包含更新的`.magento.app.yaml`檔案。 在[magento-cloud存放庫](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49)中檢視這些規則的範例。
 
-**產生 `sitemap.xml` 2.2版及更新版本中的檔案**：
+**若要產生2.2版和更新版本的`sitemap.xml`檔案**：
 
 1. 存取「管理員」。
-1. 在 _行銷_ 功能表，按一下 **網站地圖** 在 _SEO與搜尋_ 區段。
-1. 在 _網站地圖_ 檢視，按一下 **新增Sitemap**.
-1. 在 _新增網站地圖_ 檢視，請輸入下列值：
+1. 在&#x200B;_行銷_&#x200B;功能表上，按一下&#x200B;_SEO和搜尋_&#x200B;區段中的&#x200B;**網站地圖**。
+1. 在&#x200B;_網站地圖_&#x200B;檢視中，按一下&#x200B;**新增網站地圖**。
+1. 在&#x200B;_新網站地圖_&#x200B;檢視中，輸入下列值：
 
    - **檔案名稱**：`sitemap.xml`
    - **路徑**：`/media/`
 
-1. 按一下 **儲存並產生**. 新的網站地圖會在 _網站地圖_ 格線。
-1. 按一下 _適用於Google的連結_ 欄。
+1. 按一下&#x200B;**儲存並產生**。 新的網站地圖可在&#x200B;_網站地圖_&#x200B;格線中使用。
+1. 按一下Google _資料行_&#x200B;連結中的路徑。
 
-**若要將內容新增至 `robots.txt` 檔案**：
+**若要將內容新增至`robots.txt`檔案**：
 
 1. 存取「管理員」。
-1. 在 _內容_ 功能表，按一下 **設定** 在 _設計_ 區段。
-1. 在 _設計組態_ 檢視，按一下 **編輯** 中的網站 _動作_ 欄。
-1. 在 _主要網站_ 檢視，按一下 **搜尋引擎自動機制**.
-1. 更新 **編輯robots.txt的自訂指令** 欄位。
-1. 按一下 **儲存設定**.
-1. 驗證 `<domain.your.project>/robots.txt` 檔案或 `<domain.your.project>/robots` 瀏覽器中的URL。
+1. 在&#x200B;_Content_&#x200B;功能表上，按一下&#x200B;_設計_&#x200B;區段中的&#x200B;**組態**。
+1. 在&#x200B;_設計組態_&#x200B;檢視中，按一下&#x200B;_動作_&#x200B;欄位中的網站&#x200B;**編輯**。
+1. 在&#x200B;_主要網站_&#x200B;檢視中，按一下&#x200B;**搜尋引擎機器人**。
+1. 更新robots.txt **欄位的**&#x200B;編輯自訂指令。
+1. 按一下&#x200B;**儲存組態**。
+1. 驗證瀏覽器中的`<domain.your.project>/robots.txt`檔案或`<domain.your.project>/robots` URL。
 
 >[!NOTE]
 >
->如果 `<domain.your.project>/robots.txt` 檔案產生 `404 error`， [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以移除重新導向 `/robots.txt` 至 `/media/robots.txt`.
+>如果`<domain.your.project>/robots.txt`檔案產生`404 error`，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除從`/robots.txt`到`/media/robots.txt`的重新導向。
 
 ## 使用Fastly VCL程式碼片段重新寫入
 
-如果您有不同的網域，而且需要個別的網站地圖，您可以建立VCL以路由至適當的網站地圖。 產生 `sitemap.xml` 檔案，然後建立自訂Fastly VCL程式碼片段來管理重新導向。 另請參閱 [自訂Fastly VCL片段](../cdn/fastly-vcl-custom-snippets.md).
+如果您有不同的網域，而且需要個別的網站地圖，您可以建立VCL以路由至適當的網站地圖。 如上所述，在管理面板中產生`sitemap.xml`檔案，然後建立自訂Fastly VCL程式碼片段以管理重新導向。 請參閱[自訂Fastly VCL片段](../cdn/fastly-vcl-custom-snippets.md)。
 
 >[!NOTE]
 >
-> 您可以從管理員UI或使用Fastly API上傳自訂VCL程式碼片段。 另請參閱 [自訂VCL程式碼片段範例與教學課程](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code).
+> 您可以從管理員UI或使用Fastly API上傳自訂VCL程式碼片段。 請參閱[自訂VCL程式碼片段範例和教學課程](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code)。
 
 ### 使用Fastly VCL程式碼片段重新導向
 
-建立自訂VCL程式碼片段來重寫路徑 `sitemap.xml` 至 `/media/sitemap.xml` 使用 `type` 和 `content` 機碼值組。
+建立自訂VCL程式碼片段，以使用`type`和`content`機碼值組將`sitemap.xml`的路徑重寫為`/media/sitemap.xml`。
 
 ```json
 {
@@ -73,7 +73,7 @@ Please make sure that "/" is writable by the web-server.
 }
 ```
 
-下列範例示範如何重寫的路徑 `robots.txt` 和 `sitemap.xml` 至 `/media/robots.txt` 和 `/media/sitemap.xml`
+下列範例示範如何將`robots.txt`和`sitemap.xml`的路徑重寫為`/media/robots.txt`和`/media/sitemap.xml`
 
 ```json
 {
@@ -85,9 +85,9 @@ Please make sure that "/" is writable by the web-server.
 }
 ```
 
-**若要針對特定網域重新導向使用Fastly VCL程式碼片段**：
+**若要針對特定網域重新導向**&#x200B;使用Fastly VCL程式碼片段：
 
-建立 `pub/media/domain_robots.txt` 檔案，其中網域為 `domain.com`，並使用下一個VCL程式碼片段：
+建立`pub/media/domain_robots.txt`檔案（網域為`domain.com`），並使用下一個VCL程式碼片段：
 
 ```json
 {
@@ -99,9 +99,9 @@ Please make sure that "/" is writable by the web-server.
 }
 ```
 
-VCL程式碼片段路由 `http://domain.com/robots.txt` 並呈現 `pub/media/domain_robots.txt` 檔案。
+VCL程式碼片段路由`http://domain.com/robots.txt`並顯示`pub/media/domain_robots.txt`檔案。
 
-若要設定的重新導向 `robots.txt` 和 `sitemap.xml` 在單一片段中，建立 `pub/media/domain_robots.txt` 和 `pub/media/domain_sitemap.xml` 檔案，其中網域為 `domain.com` 並使用下一個VCL程式碼片段：
+若要在單一程式碼片段中設定`robots.txt`和`sitemap.xml`的重新導向，請建立`pub/media/domain_robots.txt`和`pub/media/domain_sitemap.xml`檔案，其中網域為`domain.com`，並使用下一個VCL程式碼片段：
 
 ```json
 {
@@ -113,14 +113,14 @@ VCL程式碼片段路由 `http://domain.com/robots.txt` 並呈現 `pub/media/dom
 }
 ```
 
-在 `sitemap` admin config，您必須使用指定檔案的位置 `pub/media/` 而非 `/`.
+在`sitemap`管理設定中，您必須使用`pub/media/` （而非`/`）指定檔案的位置。
 
 ### 依搜尋引擎設定索引
 
-啟動 `robots.txt` 自訂，您必須啟用 **已開啟搜尋引擎的索引`<environment-name>`** 選項。
+若要啟用`robots.txt`自訂，您必須啟用專案設定中&#x200B;`<environment-name>`**的**&#x200B;索引由搜尋引擎開啟。
 
-![使用 [!DNL Cloud Console] 管理環境](../../assets/robots-indexing-by-search-engine.png)
+![使用[!DNL Cloud Console]管理環境](../../assets/robots-indexing-by-search-engine.png)
 
 >[!NOTE]
 >
->如果您正在使用PWA Studio且無法存取您已設定的 `robots.txt` 檔案，新增 `robots.txt` 至 [前方名稱允許清單](https://github.com/magento/magento2-upward-connector#front-name-allowlist) 在 **商店** >設定> **一般** > **Web** >向上PWA設定。
+>如果您使用PWA Studio且無法存取您設定的`robots.txt`檔案，請將`robots.txt`新增至[前方名稱允許清單](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位於&#x200B;**商店** >設定> **一般** > **網頁** >上層PWA設定。

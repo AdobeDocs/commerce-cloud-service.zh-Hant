@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## 清理、移除和重新部署
 
-若要從先前的部署中清除，請識別已新增或更新之元件，然後將其移除。 首先，登入遠端環境，並手動清除 `var` 目錄。 然後從中移除元件 `composer.json` 檔案並重新部署環境。
+若要從先前的部署中清除，請識別已新增或更新之元件，然後將其移除。 首先，登入遠端環境，並手動清除`var`目錄的內容。 然後從`composer.json`檔案中移除元件，並重新部署環境。
 
-**若要清除 `var` 目錄**：
+**若要清除`var`目錄**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
    magento-cloud ssh
    ```
 
-1. 清除 `var` 目錄。
+1. 清除`var`目錄。
 
    ```shell
    rm -rf var/*
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 1. 登出。
 
-**移除元件的方式**：
+**若要移除元件**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -51,7 +51,7 @@ ht-degree: 0%
    composer clear-cache
    ```
 
-1. 從移除元件 `composer.json` 檔案。
+1. 從`composer.json`檔案移除元件。
 
    ```bash
    composer remove <component-name>:<version>
@@ -81,6 +81,6 @@ ht-degree: 0%
 
 {{redeploy-warning}}
 
-請參閱中有關還原環境而不進行備份的詳細資訊 [還原環境](../development/restore-environment.md).
+在[還原環境](../development/restore-environment.md)中，檢視有關還原環境而不使用備份的詳細資訊。
 
 {{stuck-deployment-tip}}

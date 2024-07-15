@@ -13,29 +13,29 @@ ht-degree: 0%
 
 # 使用CLI管理分支
 
-若要安裝 `magento-cloud` CLI，請參閱 [雲端CLI參考](../dev-tools/cloud-cli-overview.md). 安裝之後 `magento-cloud` CLI和設定SSH金鑰來遠端存取您的雲端基礎結構，您可以使用 `magento-cloud` 用於管理專案環境的CLI命令。 如需有關環境架構的資訊，請參閱 [入門架構](../architecture/starter-architecture.md) 或 [Pro架構](../architecture/pro-architecture.md).
+若要安裝`magento-cloud` CLI，請參閱[雲端CLI參考](../dev-tools/cloud-cli-overview.md)。 安裝`magento-cloud` CLI並設定SSH金鑰以遠端存取雲端基礎結構後，您就可以使用`magento-cloud` CLI命令來管理專案的環境。 如需有關環境架構的資訊，請參閱[入門架構](../architecture/starter-architecture.md)或[專業架構](../architecture/pro-architecture.md)。
 
-若要使用管理分支和環境 [!DNL Cloud Console]，請參閱 [使用管理分支 [!DNL Cloud Console]](../project/console-branches.md).
+若要使用[!DNL Cloud Console]管理分支和環境，請參閱[使用 [!DNL Cloud Console]](../project/console-branches.md)管理分支。
 
 ## 使用CLI命令
 
-此 `magento-cloud` CLI命令與Git命令類似。 您可以使用這些專案來連線至您的專案並管理您的環境。 雖然您可以從任何目錄執行命令，但建議您從專案目錄執行這些命令。 從專案目錄執行時，您可以省略 `-p <project-ID>` 引數。 請參閱 [雲端CLI參考](../dev-tools/cloud-cli-overview.md).
+`magento-cloud` CLI命令與Git命令類似。 您可以使用這些專案來連線至您的專案並管理您的環境。 雖然您可以從任何目錄執行命令，但建議您從專案目錄執行這些命令。 從專案目錄執行時，您可以省略`-p <project-ID>`引數。 請參閱[雲端CLI參考](../dev-tools/cloud-cli-overview.md)。
 
 ## 複製專案
 
-下列指示使用 `magento-cloud` CLI指令和Git指令可將您的專案複製到本機工作站。 若要檢視以下專案的完整清單： `magento-cloud` CLI命令，使用 `magento-cloud list` 命令。
+下列指示使用`magento-cloud` CLI指令與Git指令的組合，將專案複製到本機工作站。 若要檢視`magento-cloud` CLI命令的完整清單，請使用`magento-cloud list`命令。
 
 >[!IMPORTANT]
 >
->有些Git命令無法在Adobe Commerce的雲端基礎結構專案中完成動作。 例如，您可以使用Git指令建立分支，但無法建立和啟動新環境。 您必須使用建立環境 `magento-cloud environment:branch <branch-name>` 讓環境成為 _主要_. 或者，您可以使用 [!DNL Cloud Console] 以建立作用中的環境。 另請參閱 [雲端CLI參考](../dev-tools/cloud-cli-overview.md#git-commands).
+>有些Git命令無法在Adobe Commerce的雲端基礎結構專案中完成動作。 例如，您可以使用Git指令建立分支，但無法建立和啟動新環境。 您必須使用`magento-cloud environment:branch <branch-name>`命令建立環境，環境才能變成&#x200B;_作用中_。 或者，您可以使用[!DNL Cloud Console]來建立使用中的環境。 請參閱[雲端CLI參考](../dev-tools/cloud-cli-overview.md#git-commands)。
 
-**複製專案 `master` 環境**：
+**若要複製專案`master`環境**：
 
-1. 使用登入您的本機工作站 [檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) 帳戶。
+1. 使用[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)帳戶登入您的本機工作站。
 
-1. 變更為Web伺服器或虛擬主機 _docroot_ 目錄。
+1. 變更至網頁伺服器或虛擬主機&#x200B;_docroot_&#x200B;目錄。
 
-1. 使用登入 `magento-cloud` CLI
+1. 使用`magento-cloud` CLI登入。
 
    ```bash
    magento-cloud login
@@ -55,7 +55,7 @@ ht-degree: 0%
 
    出現提示時，請提供目錄名稱。
 
-1. 變更為 `magento2` 目錄。
+1. 變更至`magento2`目錄。
 
 1. 列出專案的可用環境。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >此 `magento-cloud environment:list` 命令會顯示環境階層，而 `git branch` 命令沒有。
+   >`magento-cloud environment:list`命令顯示環境階層，而`git branch`命令不顯示。
 
 1. 擷取遠端分支。
 
@@ -81,16 +81,16 @@ ht-degree: 0%
 
 >[!TIP]
 >
->另請參閱 [整合](../integrations/overview.md) 如需在雲端基礎結構上搭配Adobe Commerce使用Git型託管服務的相關資訊。
+>如需在雲端基礎結構上搭配Adobe Commerce使用Git型託管服務的相關資訊，請參閱[整合](../integrations/overview.md)。
 
 ## 建立開發分支
 
-複製專案並更新Adobe Commerce管理員帳戶設定後，您可以分支進行開發。 如前所述，您必須使用 `magento-cloud environment:branch <branch-name>` 命令或 [!DNL Cloud Console] 讓環境變成 _主要_.
+複製專案並更新Adobe Commerce管理員帳戶設定後，您可以分支進行開發。 如前所述，您必須使用`magento-cloud environment:branch <branch-name>`命令或[!DNL Cloud Console]建立環境，環境才能變成&#x200B;_使用中_。
 
-- 的 [入門者](../architecture/starter-develop-deploy-workflow.md#clone-and-branch)，考慮建立分支 `staging`，然後依據以下內容建立開發分支： `staging` 分支。
-- 的 [Pro](../architecture/pro-develop-deploy-workflow.md#development-workflow)，根據下列專案建立開發分支： `Integration` 分支。
+- 對於[入門者](../architecture/starter-develop-deploy-workflow.md#clone-and-branch)，請考慮為`staging`建立分支，然後根據`staging`分支建立開發分支。
+- 針對[Pro](../architecture/pro-develop-deploy-workflow.md#development-workflow)，根據`Integration`分支建立開發分支。
 
-**建立開發分支的方式**：
+**若要建立開發分支**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
    composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
    ```
 
-1. [_可選_] 建立 [備份](../storage/snapshots.md) 環境的。
+1. [_選擇性_]&#x200B;建立環境的[備份](../storage/snapshots.md)。
 
 ### 合併分支
 
@@ -134,13 +134,13 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->您無法刪除 `master` 任何專案的分支。
+>您無法刪除任何專案的`master`分支。
 
-您必須是專案管理員、環境管理員或帳戶擁有者才能執行此工作。 另請參閱 [管理使用者對雲端專案的存取](../project/user-access.md).
+您必須是專案管理員、環境管理員或帳戶擁有者才能執行此工作。 請參閱[管理雲端專案的使用者存取權](../project/user-access.md)。
 
-當您刪除環境時，環境會設為 _非使用中_. 程式碼仍可在Git分支中使用，但不再包含服務或資料庫。 若要完全刪除環境，您也必須刪除對應的遠端Git分支。
+當您刪除環境時，環境會設為&#x200B;_非使用中_。 程式碼仍可在Git分支中使用，但不再包含服務或資料庫。 若要完全刪除環境，您也必須刪除對應的遠端Git分支。
 
-**刪除環境**：
+**若要刪除環境**：
 
 1. 在本機工作站上，變更至專案目錄。
 
@@ -169,7 +169,7 @@ ht-degree: 0%
    Are you sure you want to delete the environment <environment-ID>? [Y/n]
    ```
 
-   刪除環境會將其置於 _非使用中_ 州別。
+   刪除環境會使其處於&#x200B;_非作用中_&#x200B;狀態。
 
    ```terminal
    Delete the remote Git branch too? [Y/n]
@@ -192,8 +192,8 @@ ht-degree: 0%
 
 >[!TIP]
 >
->若要啟用非使用中環境，請使用 `magento-cloud environment:activate` 命令。
+>若要啟用非使用中的環境，請使用`magento-cloud environment:activate`命令。
 
 ## 與遠端環境互動
 
-在您之後 [設定SSH金鑰](../development/secure-connections.md)，您可以 [從您的本機工作區連線到遠端環境](../development/secure-connections.md#connect-to-a-remote-environment) 與您的專案服務互動，並修改設定。
+在您[設定SSH金鑰](../development/secure-connections.md)之後，您可以[從本機工作區連線到遠端環境](../development/secure-connections.md#connect-to-a-remote-environment)，並與您的專案服務互動並修改設定。

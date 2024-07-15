@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 設定快取
 
-若要啟用應用程式的快取，請在以下位置設定快取規則： `.magento/routes.yaml` 檔案如下所示：
+透過在`.magento/routes.yaml`檔案中設定快取規則來啟用應用程式的快取，如下所示：
 
 ```yaml
 http://{default}/:
@@ -61,24 +61,24 @@ http://{default}/path/more/:
 - `http://{default}/path/more/`
 - `http://{default}/path/more/etc/`
 
-下列路由為 **非** 快取：
+而且下列路由是&#x200B;**不是**&#x200B;快取：
 
 - `http://{default}/path/`
 - `http://{default}/path/etc/`
 
 >[!NOTE]
 >
->路由中的規則運算式為 **非** 支援。
+>路由中的規則運算式&#x200B;**不支援**。
 
 ## 快取持續時間
 
-快取持續時間由以下決定 `Cache-Control` 回應標頭值。 若否 `Cache-Control` 標題在回應中， `default_ttl` 金鑰已使用。
+快取期間由`Cache-Control`回應標頭值決定。 如果回應中沒有`Cache-Control`標頭，則會使用`default_ttl`金鑰。
 
 ## 快取金鑰
 
-為決定如何快取回應，Adobe Commerce會根據數個因素建立快取金鑰，並儲存與此金鑰相關聯的回應。 當請求帶有相同的快取金鑰時，將重複使用回應。 其用途與HTTP類似 [`Vary` 頁首](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44).
+為決定如何快取回應，Adobe Commerce會根據數個因素建立快取金鑰，並儲存與此金鑰相關聯的回應。 當請求帶有相同的快取金鑰時，將重複使用回應。 其用途與HTTP [`Vary`標頭](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44)類似。
 
-引數 `headers` 和 `cookies` 金鑰可讓您變更此快取金鑰。
+引數`headers`和`cookies`金鑰可讓您變更此快取金鑰。
 
 這些鍵的預設值如下：
 
@@ -93,13 +93,13 @@ cache:
 
 ### `enabled`
 
-當設定為 `true`，啟用此路由的快取。 當設定為 `false`，停用此路由的快取。
+設定為`true`時，啟用此路由的快取。 設定為`false`時，停用此路由的快取。
 
 ### `headers`
 
 定義快取索引鍵必須相依的值。
 
-例如，如果 `headers` 索引鍵如下：
+例如，如果`headers`索引鍵如下：
 
 ```yaml
 cache:
@@ -107,11 +107,11 @@ cache:
     headers: ["Accept"]
 ```
 
-接著Adobe Commerce會針對的每個值快取不同的回應 `Accept` HTTP標頭。
+然後Adobe Commerce會為`Accept` HTTP標頭的每個值快取不同的回應。
 
 ### `cookies`
 
-此 `cookies` key會定義快取索引鍵必須相依的值。
+`cookies`索引鍵定義快取索引鍵必須相依的值。
 
 例如：
 
@@ -121,19 +121,19 @@ cache:
     cookies: ["value"]
 ```
 
-快取金鑰取決於 `value` 請求中的Cookie。
+快取金鑰取決於要求中`value` Cookie的值。
 
-如果符合下列條件，則存在特殊情況： `cookies` 金鑰具有 `["*"]` 值。 此值表示任何具有Cookie的請求都會繞過快取。 這是預設值。
+如果`cookies`機碼具有`["*"]`值，則為特殊情況。 此值表示任何具有Cookie的請求都會繞過快取。 這是預設值。
 
 >[!NOTE]
 >
->Cookie名稱中不能使用萬用字元。 使用精確的Cookie名稱或比對具有星號(`*`)。 例如， `SESS*` 或 `~SESS` 目前為 **非** 有效值。
+>Cookie名稱中不能使用萬用字元。 請使用精確的Cookie名稱，或比對具有星號(`*`)的所有Cookie。 例如，`SESS*`或`~SESS`目前是&#x200B;**不是**&#x200B;個有效值。
 
 Cookie有下列限制：
 
-- 您最多可以設定 **50個Cookie** 在系統中。 否則，應用程式會擲回 `Unable to send the cookie. Maximum number of cookies would be exceeded` 例外。
-- Cookie大小的上限為 **4096位元組**. 否則，應用程式會擲回 `Unable to send the cookie. Size of '%name' is %size bytes` 例外。
+- 您最多可以在系統中設定&#x200B;**50 Cookie**。 否則，應用程式會擲回`Unable to send the cookie. Maximum number of cookies would be exceeded`例外狀況。
+- Cookie大小上限為&#x200B;**4096位元組**。 否則，應用程式會擲回`Unable to send the cookie. Size of '%name' is %size bytes`例外狀況。
 
 ### `default_ttl`
 
-如果回應沒有 `Cache-Control` 標題， `default_ttl` 索引鍵可用來定義快取持續時間（以秒為單位）。 預設值為 `0`，表示不會快取任何內容。
+如果回應沒有`Cache-Control`標頭，則會使用`default_ttl`索引鍵來定義快取持續時間（以秒為單位）。 預設值為`0`，這表示不會快取任何內容。

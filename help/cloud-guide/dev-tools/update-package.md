@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # 更新ECE工具套件
 
-的更新 `ece-tools` 套件也會更新其他 [Commerce套件的Cloud Tools Suite](../release-notes/cloud-tools-suite.md)，為的相依性 `ece-tools`. Adobe Commerce因此，您必須在支援 `ece-tools` 封裝。
+`ece-tools`套件的更新也會更新Commerce套件的其他[雲端工具套裝](../release-notes/cloud-tools-suite.md)，它們是`ece-tools`的相依性。 因此，您必須在支援`ece-tools`套件的雲端基礎結構上使用版本的Adobe Commerce。
 
 {{ece-tools-package}}
 
 **必要條件**：
 
-- 更新之前 `ece-tools`，檢閱 [Cloud Tools Suite for Commerce發行說明](../release-notes/cloud-tools-suite.md).
-- 如果您正在從更新 `ece-tools` 2002.0.22或更早版本至2002.1.0，檢閱 [與舊版不相容的變更](../release-notes/backward-incompatible-changes.md) 並對雲端基礎結構專案中的Adobe Commerce進行任何必要的變更。
-- 檢閱 [升級與修補程式](../development/commerce-version.md#upgrade-from-older-versions) 決定與雲端基礎結構專案上Adobe Commerce相容的ECE-Tools版本。
+- 更新`ece-tools`之前，請先檢閱Commerce的[Cloud Tools Suite發行說明](../release-notes/cloud-tools-suite.md)。
+- 如果您是從`ece-tools` 2002.0.22或更舊版本更新至2002.1.0，請檢閱[回溯不相容的變更](../release-notes/backward-incompatible-changes.md)，並對雲端基礎結構專案上的Adobe Commerce進行任何必要的變更。
+- 檢閱[升級和修補程式](../development/commerce-version.md#upgrade-from-older-versions)，以決定與雲端基礎結構專案上的Adobe Commerce相容的ECE-Tools版本。
 
 {{upgrade-tip}}
 
-**若要更新 `ece-tools` 封裝**：
+**若要更新`ece-tools`封裝**：
 
 1. 在您的本機工作站上，使用Composer執行更新。
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果您無法更新超過以下時間 `ece-tools` 2002.0.8版，請參閱 [升級專案以使用ECE-Tools套件](install-package.md).
+   >如果您無法更新超過`ece-tools` 2002.0.8版，請參閱[升級專案以使用ECE-Tools套件](install-package.md)。
 
 1. 新增、提交和推送程式碼變更。
 

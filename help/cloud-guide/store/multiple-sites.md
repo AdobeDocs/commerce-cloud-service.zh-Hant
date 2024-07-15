@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 設定多個網站或商店
 
-您可以將Adobe Commerce設定為擁有多個網站或商店，例如英文商店、法文商店和德文商店。 另請參閱 [瞭解網站、商店和商店檢視](best-practices.md#store-views).
+您可以將Adobe Commerce設定為擁有多個網站或商店，例如英文商店、法文商店和德文商店。 請參閱[瞭解網站、商店和商店檢視](best-practices.md#store-views)。
 
 >[!WARNING]
 >
@@ -36,7 +36,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 另請參閱 [將商店程式碼新增至基底URL](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) 在 _設定指南_.
+>若要將商店檢視新增至網站基底URL，您不必建立多個目錄。 請參閱&#x200B;_組態指南_&#x200B;中的[將存放區程式碼新增至基底URL](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)。
 
 ## 新增網域
 
@@ -46,15 +46,15 @@ https://store.com/second/
 
 - 適用於Pro測試與生產
 
-  將新網域新增到Fastly，請參見 [管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或開啟支援票證以請求協助。 此外，您必須 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以請求將新網域新增至叢集。
+  將新網域新增到Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或開啟支援票證以請求協助。 此外，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，才能要求將新網域新增至叢集。
 
 - 僅供入門級生產使用
 
-  將新網域新增到Fastly，請參見 [管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以請求協助。 此外，您必須將新網域新增到 **網域** 索引標籤中的 [!DNL Cloud Console]： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  新增網域至Fastly，請參閱[管理網域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求協助。 此外，您必須新增網域至[!DNL Cloud Console]中的&#x200B;**網域**&#x200B;索引標籤： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 設定本機安裝
 
-若要設定本機安裝以使用多個存放區，請參閱 [多個網站或商店][config-multiweb] 在 _設定指南_.
+若要設定本機安裝以使用多個商店，請參閱&#x200B;_設定指南_&#x200B;中的[多個網站或商店][config-multiweb]。
 
 成功建立並測試本機安裝以使用多個存放區後，您必須準備整合環境：
 
@@ -63,13 +63,13 @@ https://store.com/second/
    - [不同網域的路由](#configure-routes-for-separate-domains)
    - [共用網域的位置](#configure-locations-for-shared-domains)
 
-1. **設定網站、商店和商店檢視** — 使用Adobe Commerce管理UI進行設定
-1. **修改變數** — 指定 `MAGE_RUN_TYPE` 和 `MAGE_RUN_CODE` 中的變數 `magento-vars.php` 檔案
-1. **部署和測試環境** — 部署和測試 `integration` 分支
+1. **設定網站、商店和商店檢視** — 使用Adobe Commerce管理UI設定
+1. **修改變數** — 在`magento-vars.php`檔案中指定`MAGE_RUN_TYPE`和`MAGE_RUN_CODE`變數的值
+1. **部署和測試環境** — 部署和測試`integration`分支
 
 >[!TIP]
 >
->您可以使用本機環境來設定多個網站或商店。 請參閱Cloud Docker指令，以 [設定多個網站或商店](https://developer.adobe.com/commerce/cloud-tools/docker/configure/multiple-sites/).
+>您可以使用本機環境來設定多個網站或商店。 請參閱Cloud Docker指示，以[設定多個網站或商店](https://developer.adobe.com/commerce/cloud-tools/docker/configure/multiple-sites/)。
 
 ### Pro環境的設定更新
 
@@ -77,13 +77,13 @@ https://store.com/second/
 
 ### 設定不同網域的路由
 
-路由會定義如何處理傳入的URL。 多個具有唯一網域的存放區需要您定義 `routes.yaml` 檔案。 您設定路由的方式取決於您想要的網站運作方式。
+路由會定義如何處理傳入的URL。 多個具有唯一網域的存放區需要您定義`routes.yaml`檔案中的每個網域。 您設定路由的方式取決於您想要的網站運作方式。
 
-**在整合環境中設定路由**：
+**若要在整合環境中設定路由**：
 
-1. 在本機工作站上，開啟 `.magento/routes.yaml` 文字編輯器中的檔案。
+1. 在本機工作站上，以文字編輯器開啟`.magento/routes.yaml`檔案。
 
-1. 定義網域和子網域。 此 `mymagento` 上游值與中的name屬性相同 `.magento.app.yaml` 檔案。
+1. 定義網域和子網域。 `mymagento`上游值與`.magento.app.yaml`檔案中的name屬性值相同。
 
    ```yaml
    "http://{default}/":
@@ -95,17 +95,17 @@ https://store.com/second/
        upstream: "mymagento:http"
    ```
 
-1. 將變更儲存至 `routes.yaml` 檔案。
+1. 將變更儲存至`routes.yaml`檔案。
 
-1. 繼續至 [設定網站、商店和商店檢視](#set-up-websites-stores-and-store-views).
+1. 繼續[設定網站、商店和商店檢視](#set-up-websites-stores-and-store-views)。
 
 ### 設定共用網域的位置
 
-路由設定會定義URL的處理方式， `web` 中的屬性 `.magento.app.yaml` 檔案會定義應用程式向網頁公開的方式。 Web _位置_ 允許傳入請求的更精細度。 例如，如果您的網域為 `store.com`，您可以使用 `/first` （預設網站）和 `/second` 將請求傳送給共用網域的兩個不同存放區。
+路由設定會定義如何處理URL，`.magento.app.yaml`檔案中的`web`屬性會定義您的應用程式如何公開至網路。 網頁&#x200B;_位置_&#x200B;允許傳入要求的詳細程度。 例如，如果您的網域是`store.com`，您可以針對共用網域的兩個不同存放區之要求，使用`/first` （預設網站）和`/second`。
 
-**設定新網站位置**：
+**若要設定新的網站位置**：
 
-1. 建立根的別名(`/`)。 在此範例中，別名為 `&app` 第3行。
+1. 為根(`/`)建立別名。 在此範例中，第3行的別名為`&app`。
 
    ```yaml
    web:
@@ -119,9 +119,9 @@ https://store.com/second/
                ...
    ```
 
-1. 為網站建立傳遞(`/website`)並使用上一步驟中的別名來參照根。
+1. 為網站(`/website`)建立傳遞，並使用上一步驟中的別名來參照根目錄。
 
-   別名允許 `website` 以從根位置存取值。 在此範例中，網站 `passthru` 為第21行。
+   別名可讓`website`從根位置存取值。 在此範例中，網站`passthru`在第21行上。
 
    ```yaml
    web:
@@ -148,9 +148,9 @@ https://store.com/second/
              ...
    ```
 
-**使用不同的目錄設定位置**：
+**若要使用不同的目錄設定位置**：
 
-1. 建立根的別名(`/`)和適用於靜態(`/static`)位置。
+1. 為根(`/`)和靜態(`/static`)位置建立別名。
 
    ```yaml
    web:
@@ -166,9 +166,9 @@ https://store.com/second/
                root: "pub/static"
    ```
 
-1. 在下建立網站的子目錄 `pub` 目錄： `pub/<website>`
+1. 在`pub`目錄下建立網站的子目錄： `pub/<website>`
 
-1. 複製 `pub/index.php` 將檔案移入 `pub/<website>` 目錄並更新 `bootstrap` 路徑(`/../../app/bootstrap.php`)。
+1. 將`pub/index.php`檔案複製到`pub/<website>`目錄中並更新`bootstrap`路徑(`/../../app/bootstrap.php`)。
 
    ```
    try {
@@ -176,7 +176,7 @@ https://store.com/second/
    } catch (\Exception $e) { 
    ```
 
-1. 為建立傳遞 `index.php` 檔案。
+1. 為`index.php`檔案建立傳遞。
 
    ```yaml
    web:
@@ -208,24 +208,24 @@ https://store.com/second/
 
 1. 提交並推送已變更的檔案。
 
-   - `pub/<website>/index.php` (若此檔案位於 `.gitignore`，推送可能需要強制選項)。
+   - `pub/<website>/index.php` （如果此檔案位於`.gitignore`，則推送可能需要強制選項。）
    - `.magento.app.yaml`
 
 ### 設定網站、商店和商店檢視
 
-在 _管理員UI_，設定您的Adobe Commerce **網站**， **商店**、和 **存放區檢視**. 另請參閱 [在管理員中設定多個網站、商店和商店檢視](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) 在 _設定指南_.
+在&#x200B;_管理UI_&#x200B;中，設定您的Adobe Commerce **網站**、**商店**&#x200B;和&#x200B;**商店檢視**。 請參閱&#x200B;_設定指南_&#x200B;的Admin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)中的[設定多個網站、商店和商店檢視。
 
-當您設定本機安裝時，請務必使用管理員提供的相同名稱和程式碼，代表您的網站、商店和商店檢視。 更新「 」時需要這些值 `magento-vars.php` 檔案。
+當您設定本機安裝時，請務必使用管理員提供的相同名稱和程式碼，代表您的網站、商店和商店檢視。 更新`magento-vars.php`檔案時需要這些值。
 
 ### 修改變數
 
-不要設定NGINX虛擬主機，請傳遞 `MAGE_RUN_CODE` 和 `MAGE_RUN_TYPE` 變數使用 `magento-vars.php` 檔案的根目錄。
+請使用專案根目錄中的`magento-vars.php`檔案傳遞`MAGE_RUN_CODE`和`MAGE_RUN_TYPE`變數，而不設定NGINX虛擬主機。
 
-**若要使用傳遞變數 `magento-vars.php` 檔案**：
+**若要使用`magento-vars.php`檔案傳遞變數**：
 
-1. 開啟 `magento-vars.php` 文字編輯器中的檔案。
+1. 在文字編輯器中開啟`magento-vars.php`檔案。
 
-   此 [預設 `magento-vars.php` 檔案](https://github.com/magento/magento-cloud/blob/master/magento-vars.php) 應如下所示：
+   [預設`magento-vars.php`檔案](https://github.com/magento/magento-cloud/blob/master/magento-vars.php)應該如下所示：
 
    ```php
    <?php
@@ -244,7 +244,7 @@ https://store.com/second/
    }
    ```
 
-1. 移動註解 `if` 封鎖，因此它 _晚於_ 此 `function` 區塊且不再註解。
+1. 移動註解的`if`區塊，使其位於`function`區塊的&#x200B;_之後_&#x200B;且不再註解。
 
    ```php
    <?php
@@ -265,12 +265,12 @@ https://store.com/second/
    }
    ```
 
-1. 將下列值取代為 `if (isHttpHost("example.com"))` 區塊：
-   - `example.com` — 使用您的基底URL _網站_
-   - `default` — 含您的專屬程式碼 _網站_ 或 _存放區檢視_
+1. 取代`if (isHttpHost("example.com"))`區塊中的下列值：
+   - `example.com` — 使用您&#x200B;_網站_&#x200B;的基本URL
+   - `default` — 具有您&#x200B;_網站_&#x200B;或&#x200B;_商店檢視_&#x200B;的唯一代碼
    - `store` — 使用下列其中一個值：
-      - `website` — 載入 _網站_ 店面
-      - `store` — 載入 _存放區檢視_ 店面
+      - `website` — 載入店面中的&#x200B;_網站_
+      - `store` — 在店面中載入&#x200B;_商店檢視_
 
    針對使用唯一網域的多個網站：
 
@@ -293,7 +293,7 @@ https://store.com/second/
    }
    ```
 
-   針對具有相同網域的多個網站，您必須檢查 _主機_ 和 _URI_：
+   對於具有相同網域的多個網站，您必須檢查&#x200B;_主機_&#x200B;和&#x200B;_URI_：
 
    ```php
    <?php
@@ -319,7 +319,7 @@ https://store.com/second/
    }
    ```
 
-1. 將變更儲存至 `magento-vars.php` 檔案。
+1. 將變更儲存至`magento-vars.php`檔案。
 
 ### 在整合伺服器上部署和測試
 
@@ -335,19 +335,19 @@ https://store.com/second/
 
 1. 部署後，在網頁瀏覽器中開啟您的商店URL。
 
-   如果是不重複網域，請使用格式： `http://<magento-run-code>.<site-URL>`
+   具有唯一網域，請使用格式： `http://<magento-run-code>.<site-URL>`
 
    例如， `http://french.master-name-projectID.us.magentosite.cloud/`
 
-   在共用網域中，請使用格式： `http://<site-URL>/<magento-run-code>`
+   在共用網域中，使用格式： `http://<site-URL>/<magento-run-code>`
 
    例如， `http://master-name-projectID.us.magentosite.cloud/french/`
 
-1. 徹底測試您的網站，並將程式碼合併至 `integration` 分支以供進一步部署。
+1. 徹底測試您的網站，並將程式碼合併至`integration`分支以進行進一步部署。
 
 ## 部署至測試與生產
 
-遵循部署流程 [部署到中繼和生產環境](../deploy/staging-production.md). 對於入門和專業環境，您使用 [!DNL Cloud Console] 以跨環境推送程式碼。
+執行[部署至中繼及生產環境](../deploy/staging-production.md)的部署程式。 對於入門和Pro環境，您可使用[!DNL Cloud Console]跨環境推送程式碼。
 
 Adobe建議先在中繼環境中進行全面測試，然後再推送至生產環境。 在整合環境中變更程式碼，然後再次開始跨環境部署的程式。
 

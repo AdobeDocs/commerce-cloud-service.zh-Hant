@@ -10,12 +10,12 @@ ht-degree: 0%
 <!-- The template to render with above values -->
 **版本**： 1.46.1
 
-此參考包含119個指令，這些指令可透過 `magento-cloud` 命令列工具。
-初始清單會使用 `magento-cloud list` 在雲端基礎結構上的Adobe Commerce執行命令。
+此參考包含119個可透過`magento-cloud`命令列工具使用的命令。
+在雲端基礎結構上的Adobe Commerce中使用`magento-cloud list`命令會自動產生初始清單。
 
 >[!NOTE]
 >
->此參考是從應用程式程式碼基底產生的。 若要變更內容，您可以更新中對應命令實施的原始碼 [程式碼基底](https://github.com/magento/magento-cloud-cli) 存放庫並提交您的變更以供檢閱。 另一種方式是 _提供意見反應_ （尋找右上方的連結）。 如需貢獻准則，請參閱 [程式碼協助撰寫](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>此參考是從應用程式程式碼基底產生的。 若要變更內容，您可以更新[程式碼基底](https://github.com/magento/magento-cloud-cli)存放庫中對應命令實作的原始程式碼，並提交變更以供檢閱。 另一種方式是&#x200B;_提供意見反應_ （在右上角尋找連結）。 如需貢獻准則，請參閱[程式碼貢獻](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)。
 
 ## `clear-cache`
 
@@ -25,28 +25,28 @@ ht-degree: 0%
 magento-cloud cc
 ```
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -76,34 +76,34 @@ magento-cloud decode [-P|--property PROPERTY] [--] <value>
 
 - 必填
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要在變數中檢視的屬性
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -148,28 +148,28 @@ magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -214,28 +214,28 @@ magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -291,28 +291,28 @@ magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -345,7 +345,7 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 - 必填
 - 陣列
 
-### `--projects`， `-p`
+### `--projects`，`-p`
 
 專案ID清單，以逗號和/或空格分隔
 
@@ -372,28 +372,28 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -429,40 +429,40 @@ magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--envi
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -491,61 +491,61 @@ magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] 
 活動ID。 預設為最近的可取消活動。
 
 
-### `--type`， `-t`
+### `--type`，`-t`
 
 依型別篩選（選取預設活動時）。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 %或*字元可作為此型別的萬用字元，例如&#39;%var%&#39;以選取變數相關的活動。
 
 - 預設： `[]`
 - 需要值
 
-### `--exclude-type`， `-x`
+### `--exclude-type`，`-x`
 
 依型別排除（選取預設活動時）。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 %或*字元可作為萬用字元來排除型別。
 
 - 預設： `[]`
 - 需要值
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 檢查所有環境上最近的活動（當選取預設活動時）
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -574,20 +574,20 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 活動ID。 預設為最近的活動。
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的屬性
 
 - 需要值
 
-### `--type`， `-t`
+### `--type`，`-t`
 
 依型別篩選（選取預設活動時）。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 %或*字元可作為此型別的萬用字元，例如&#39;%var%&#39;以選取變數相關的活動。
 
 - 預設： `[]`
 - 需要值
 
-### `--exclude-type`， `-x`
+### `--exclude-type`，`-x`
 
 依型別排除（選取預設活動時）。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 %或*字元可作為萬用字元來排除型別。
 
@@ -607,27 +607,27 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 
 - 需要值
 
-### `--incomplete`， `-i`
+### `--incomplete`，`-i`
 
 僅包含未完成的活動（選取預設活動時）。 這是 — state=in_progress，pending的簡稱
 
 - 預設： `false`
 - 不接受值
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 檢查所有環境上最近的活動（當選取預設活動時）
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -640,7 +640,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -661,28 +661,28 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -705,14 +705,14 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-### `--type`， `-t`
+### `--type`，`-t`
 
 依型別篩選活動值可能會以逗號（例如&quot;a，b，c&quot;）和/或空白字元分割。 活動名稱的第一部分可以省略，例如，「cron」可以選擇「environment.cron」活動。 %或*字元可作為萬用字元使用，例如&#39;%var%&#39;以選取與變數相關的活動。
 
 - 預設： `[]`
 - 需要值
 
-### `--exclude-type`， `-x`
+### `--exclude-type`，`-x`
 
 依型別排除活動。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 活動名稱的第一部分可以省略，例如，「cron」可以排除「environment.cron」活動。 %或*字元可作為萬用字元來排除型別。
 
@@ -745,14 +745,14 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 - 需要值
 
-### `--incomplete`， `-i`
+### `--incomplete`，`-i`
 
 僅列出未完成的活動
 
 - 預設： `false`
 - 不接受值
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 列出所有環境上的活動
 
@@ -766,7 +766,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用欄： id*、created*、description*、progress*、state*、result*、completed、environments、type （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -787,40 +787,40 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -856,7 +856,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 - 預設： `3`
 - 需要值
 
-### `--timestamps`， `-t`
+### `--timestamps`，`-t`
 
 在每個訊息旁邊顯示時間戳記
 
@@ -870,7 +870,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 - 預設： `[]`
 - 需要值
 
-### `--exclude-type`， `-x`
+### `--exclude-type`，`-x`
 
 依型別排除（選取預設活動時）。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 %或*字元可作為萬用字元來排除型別。
 
@@ -890,14 +890,14 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 - 需要值
 
-### `--incomplete`， `-i`
+### `--incomplete`，`-i`
 
 僅包含未完成的活動（選取預設活動時）。 這是 — state=in_progress，pending的簡稱
 
 - 預設： `false`
 - 不接受值
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 檢查所有環境上最近的活動（當選取預設活動時）
 
@@ -911,40 +911,40 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -967,7 +967,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的設定屬性
 
@@ -980,52 +980,52 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 [已棄用的選項，不再使用]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1062,13 +1062,13 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -1081,7 +1081,7 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： name*、type*、disk、path、size （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -1095,28 +1095,28 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1139,28 +1139,28 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 magento-cloud auth:api-token-login
 ```
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1183,7 +1183,7 @@ magento-cloud auth:api-token-login
 magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
 ```
 
-### `--force`， `-f`
+### `--force`，`-f`
 
 再次登入，即使已登入
 
@@ -1203,28 +1203,28 @@ magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1260,7 +1260,7 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 - 預設： `false`
 - 不接受值
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的帳戶屬性（替代語法）
 
@@ -1280,7 +1280,7 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -1294,28 +1294,28 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1338,7 +1338,7 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 magento-cloud logout [-a|--all] [--other]
 ```
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 從所有本機工作階段登出
 
@@ -1352,28 +1352,28 @@ magento-cloud logout [-a|--all] [--other]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1408,13 +1408,13 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -1428,28 +1428,28 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1491,13 +1491,13 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -1511,28 +1511,28 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1562,13 +1562,13 @@ magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 - 必填
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -1582,28 +1582,28 @@ magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1633,7 +1633,7 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 
 - 必填
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的憑證屬性
 
@@ -1646,34 +1646,34 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1770,7 +1770,7 @@ magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：已建立、網域、過期、ID、簽發者。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -1784,34 +1784,34 @@ magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1842,19 +1842,19 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--e
 - 預設： `HEAD`
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要顯示的認可屬性。
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -1867,28 +1867,28 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--e
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -1924,13 +1924,13 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 - 預設： `10`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -1943,7 +1943,7 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用欄：作者、日期、sha、摘要。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -1964,28 +1964,28 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2014,33 +2014,33 @@ magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTO
 
 - 需要值
 
-### `--file`， `-f`
+### `--file`，`-f`
 
 傾印的自訂檔案名稱
 
 - 需要值
 
-### `--directory`， `-d`
+### `--directory`，`-d`
 
 傾印的自訂目錄
 
 - 需要值
 
-### `--gzip`， `-z`
+### `--gzip`，`-z`
 
 使用gzip壓縮傾印
 
 - 預設： `false`
 - 不接受值
 
-### `--timestamp`， `-t`
+### `--timestamp`，`-t`
 
 將時間戳記新增到傾印檔案名稱
 
 - 預設： `false`
 - 不接受值
 
-### `--stdout`， `-o`
+### `--stdout`，`-o`
 
 輸出到STDOUT而非檔案
 
@@ -2074,58 +2074,58 @@ magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTO
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2148,39 +2148,39 @@ magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTO
 magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
 ```
 
-### `--bytes`， `-B`
+### `--bytes`，`-B`
 
 以位元組為單位顯示大小。
 
 - 預設： `false`
 - 不接受值
 
-### `--cleanup`， `-C`
+### `--cleanup`，`-C`
 
 檢查是否可以清除資料表並顯示建議（僅限InnoDb）。
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
@@ -2193,7 +2193,7 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--e
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用欄：max、percent_used、used。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -2207,34 +2207,34 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--e
 - 預設： `false`
 - 不接受值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2276,58 +2276,58 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2382,19 +2382,19 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -2408,28 +2408,28 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2459,19 +2459,19 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 - 必填
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -2485,28 +2485,28 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2535,7 +2535,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 網域名稱
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的網域屬性
 
@@ -2548,7 +2548,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -2569,40 +2569,40 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2632,7 +2632,7 @@ magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的資料欄： name*、ssl*、created_at*、registered_name、replacement_for、type、updated_at （* =預設資料欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -2646,40 +2646,40 @@ magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2728,19 +2728,19 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -2754,28 +2754,28 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2813,19 +2813,19 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -2839,28 +2839,28 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2913,19 +2913,19 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -2939,28 +2939,28 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -2989,34 +2989,34 @@ magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 要簽出之環境的ID。 例如：「sprint2」
 
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3069,7 +3069,7 @@ magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type 
 - 預設： `[]`
 - 需要值
 
-### `--only-type`， `-t`
+### `--only-type`，`-t`
 
 只有特定型別的刪除環境值才可以分割為逗號（例如&quot;a，b，c&quot;）和/或空格。
 
@@ -3111,19 +3111,19 @@ magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3137,28 +3137,28 @@ magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3201,19 +3201,19 @@ HTTP基本驗證認證，格式為「使用者名稱：密碼」。 使用0可�
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3227,28 +3227,28 @@ HTTP基本驗證認證，格式為「使用者名稱：密碼」。 使用0可�
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3303,7 +3303,7 @@ magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMA
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -3317,19 +3317,19 @@ magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMA
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3343,28 +3343,28 @@ magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMA
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3400,19 +3400,19 @@ Git存放庫的URL
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3426,28 +3426,28 @@ Git存放庫的URL
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3470,7 +3470,7 @@ Git存放庫的URL
 magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
-### `--no-inactive`， `-I`
+### `--no-inactive`，`-I`
 
 不要顯示非使用中的環境
 
@@ -3519,7 +3519,7 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： id*、title*、status*、type*、created、machine_name、updated （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -3533,34 +3533,34 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3603,19 +3603,19 @@ magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environm
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -3627,34 +3627,34 @@ magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environm
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3683,19 +3683,19 @@ magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--
 要合併的環境
 
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3709,28 +3709,28 @@ magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3753,19 +3753,19 @@ magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--
 magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3779,28 +3779,28 @@ magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRON
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3837,7 +3837,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 - 需要值
 
-### `--force`， `-f`
+### `--force`，`-f`
 
 允許非快轉更新
 
@@ -3851,7 +3851,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 - 預設： `false`
 - 不接受值
 
-### `--set-upstream`， `-u`
+### `--set-upstream`，`-u`
 
 將目標環境設定為來源分支的上游。 這也會將目標專案設定為本機存放庫的遠端。
 
@@ -3884,7 +3884,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 - 預設： `false`
 - 不接受值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3898,46 +3898,46 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -3960,19 +3960,19 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -3986,28 +3986,28 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4036,7 +4036,7 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 環境
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的關係屬性
 
@@ -4049,52 +4049,52 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4117,19 +4117,19 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -4143,28 +4143,28 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4196,26 +4196,26 @@ magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVI
 
 - 陣列
 
-### `--recursive`， `-r`
+### `--recursive`，`-r`
 
 遞回複製整個目錄
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -4227,40 +4227,40 @@ magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVI
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4306,19 +4306,19 @@ magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVI
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -4330,40 +4330,40 @@ magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVI
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4402,19 +4402,19 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -4428,28 +4428,28 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4472,7 +4472,7 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-### `--primary`， `-1`
+### `--primary`，`-1`
 
 只傳回主要路由的URL
 
@@ -4492,40 +4492,40 @@ magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJ
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4555,19 +4555,19 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 - 預設： `9000`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -4579,40 +4579,40 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4646,19 +4646,19 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 活動ID。 預設為最近的整合活動。
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的屬性
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 [已棄用的選項，未使用]
 
@@ -4671,7 +4671,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -4692,28 +4692,28 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4749,7 +4749,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 - 預設： `[]`
 - 需要值
 
-### `--exclude-type`， `-x`
+### `--exclude-type`，`-x`
 
 依型別排除活動。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。 %或*字元可作為萬用字元來排除型別。
 
@@ -4782,7 +4782,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 
 - 需要值
 
-### `--incomplete`， `-i`
+### `--incomplete`，`-i`
 
 僅列出未完成的活動
 
@@ -4796,7 +4796,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： id*、created*、description*、type*、state*、result*、completed （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -4817,40 +4817,40 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 [已棄用的選項，未使用]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -4884,7 +4884,7 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 活動ID。 預設為最近的整合活動。
 
 
-### `--timestamps`， `-t`
+### `--timestamps`，`-t`
 
 在每個訊息旁邊顯示時間戳記
 
@@ -4898,40 +4898,40 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 [已棄用的選項，未使用]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5138,7 +5138,7 @@ Webhook： JWS共用秘密金鑰
 
 ### `--from-address`
 
-[可選] 警示電子郵件的自訂寄件者地址
+警示電子郵件的[選用]自訂寄件者地址
 
 - 需要值
 
@@ -5239,13 +5239,13 @@ Syslog訊息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -5259,28 +5259,28 @@ Syslog訊息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5309,13 +5309,13 @@ magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 整合ID。 保留空白以從清單中選擇。
 
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -5329,28 +5329,28 @@ magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5379,7 +5379,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 整合ID。 保留空白以從清單中選擇。
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的整合屬性
 
@@ -5392,7 +5392,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -5406,34 +5406,34 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5463,7 +5463,7 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：id、摘要、型別。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -5477,34 +5477,34 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5717,7 +5717,7 @@ Webhook： JWS共用秘密金鑰
 
 ### `--from-address`
 
-[可選] 警示電子郵件的自訂寄件者地址
+警示電子郵件的[選用]自訂寄件者地址
 
 - 需要值
 
@@ -5818,13 +5818,13 @@ Syslog訊息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -5838,28 +5838,28 @@ Syslog訊息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5888,34 +5888,34 @@ magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
 整合ID。 保留空白以從清單中選擇。
 
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -5947,26 +5947,26 @@ magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTI
 
 - 陣列
 
-### `--abslinks`， `-a`
+### `--abslinks`，`-a`
 
 使用絕對連結
 
 - 預設： `false`
 - 不接受值
 
-### `--source`， `-s`
+### `--source`，`-s`
 
 來源目錄。 預設為目前的專案根目錄。
 
 - 需要值
 
-### `--destination`， `-d`
+### `--destination`，`-d`
 
 每個應用程式的Web根目錄將與其符號連結的目的地。 預設： _www
 
 - 需要值
 
-### `--copy`， `-c`
+### `--copy`，`-c`
 
 複製到組建目錄，而非從來源同步連結
 
@@ -6050,28 +6050,28 @@ Drush：建立或更新鎖定檔案（僅適用於Drush 7+版）
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6100,28 +6100,28 @@ magento-cloud dir [<subdir>]
 要尋找的子目錄（&#39;local&#39;、&#39;web&#39;或&#39;shared&#39;）
 
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6138,26 +6138,26 @@ magento-cloud dir [<subdir>]
 
 ## `metrics:all`
 
-測試版顯示環境的CPU、磁碟和記憶體測量結果
+Beta顯示環境的CPU、磁碟和記憶體測量結果
 
 ```bash
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-### `--bytes`， `-B`
+### `--bytes`，`-B`
 
 以位元組為單位顯示大小
 
 - 預設： `false`
 - 不接受值
 
-### `--range`， `-r`
+### `--range`，`-r`
 
 時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
-### `--interval`， `-i`
+### `--interval`，`-i`
 
 時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
@@ -6169,14 +6169,14 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 - 需要值
 
-### `--latest`， `-1`
+### `--latest`，`-1`
 
 僅顯示最新的單一資料點
 
 - 預設： `false`
 - 不接受值
 
-### `--service`， `-s`
+### `--service`，`-s`
 
 依服務或應用程式名稱篩選%或*字元可當作萬用字元。
 
@@ -6190,13 +6190,13 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -6209,7 +6209,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的資料欄：timestamp*、service*、cpu_percent*、mem_percent*、disk_percent*、tmp_disk_percent*、cpu_limit、cpu_used、disk_limit、disk_used、inodes_limit、inodes_percent、inodes_used、mem_limit、mem_used、tmp_disk_used、tmp_inodes_limit、tmp_inodes_percent、tmp_inodes_used、型別（* =預設資料欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -6230,28 +6230,28 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6268,19 +6268,19 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ## `metrics:cpu`
 
-測試版顯示環境的CPU使用狀況
+Beta顯示環境的CPU使用量
 
 ```bash
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-### `--range`， `-r`
+### `--range`，`-r`
 
 時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
-### `--interval`， `-i`
+### `--interval`，`-i`
 
 時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
@@ -6292,14 +6292,14 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 
 - 需要值
 
-### `--latest`， `-1`
+### `--latest`，`-1`
 
 僅顯示最新的單一資料點
 
 - 預設： `false`
 - 不接受值
 
-### `--service`， `-s`
+### `--service`，`-s`
 
 依服務或應用程式名稱篩選%或*字元可當作萬用字元。
 
@@ -6313,13 +6313,13 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -6332,7 +6332,7 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： timestamp*、service*、used*、limit*、%*、type （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -6353,28 +6353,28 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6397,20 +6397,20 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [--tmp] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-### `--bytes`， `-B`
+### `--bytes`，`-B`
 
 以位元組為單位顯示大小
 
 - 預設： `false`
 - 不接受值
 
-### `--range`， `-r`
+### `--range`，`-r`
 
 時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
-### `--interval`， `-i`
+### `--interval`，`-i`
 
 時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
@@ -6422,14 +6422,14 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 - 需要值
 
-### `--latest`， `-1`
+### `--latest`，`-1`
 
 僅顯示最新的單一資料點
 
 - 預設： `false`
 - 不接受值
 
-### `--service`， `-s`
+### `--service`，`-s`
 
 依服務或應用程式名稱篩選%或*字元可當作萬用字元。
 
@@ -6450,13 +6450,13 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -6469,7 +6469,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：timestamp*、service*、used*、limit*、percent*、tmp_percent*、ilimit、iused、tmp_ilimit、tmp_ipercent、tmp_iused、tmp_limit、tmp_used、type （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -6490,28 +6490,28 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6528,26 +6528,26 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ## `metrics:memory`
 
-BETA顯示環境的記憶體使用情況
+Beta顯示環境的記憶體使用情況
 
 ```bash
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-### `--bytes`， `-B`
+### `--bytes`，`-B`
 
 以位元組為單位顯示大小
 
 - 預設： `false`
 - 不接受值
 
-### `--range`， `-r`
+### `--range`，`-r`
 
 時間範圍。 此期間將載入量度，直到結束時間(—to)為止。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少5分鐘，最多8小時或更多（視專案而定），預設為10分鐘。
 
 - 需要值
 
-### `--interval`， `-i`
+### `--interval`，`-i`
 
 時間間隔。 預設為範圍的除法。 您可以指定單位：小時(h)、分鐘(m)或秒(s)。 最少1分鐘。
 
@@ -6559,14 +6559,14 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 
 - 需要值
 
-### `--latest`， `-1`
+### `--latest`，`-1`
 
 僅顯示最新的單一資料點
 
 - 預設： `false`
 - 不接受值
 
-### `--service`， `-s`
+### `--service`，`-s`
 
 依服務或應用程式名稱篩選%或*字元可當作萬用字元。
 
@@ -6580,13 +6580,13 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -6599,7 +6599,7 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： timestamp*、service*、used*、limit*、%*、type （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -6620,28 +6620,28 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6664,14 +6664,14 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 從所有掛載下載
 
 - 預設： `false`
 - 不接受值
 
-### `--mount`， `-m`
+### `--mount`，`-m`
 
 掛載（作為應用程式相對路徑）
 
@@ -6718,19 +6718,19 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -6742,40 +6742,40 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6819,7 +6819,7 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：定義、路徑。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -6833,19 +6833,19 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -6857,34 +6857,34 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -6907,7 +6907,7 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
-### `--bytes`， `-B`
+### `--bytes`，`-B`
 
 以位元組為單位顯示大小
 
@@ -6928,7 +6928,7 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--column
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用欄： available、max、mounts、percent_used、sizes、used。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -6942,25 +6942,25 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--column
 - 預設： `false`
 - 不接受值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -6972,34 +6972,34 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--column
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7028,7 +7028,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 - 需要值
 
-### `--mount`， `-m`
+### `--mount`，`-m`
 
 掛載（作為應用程式相對路徑）
 
@@ -7062,19 +7062,19 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -7086,40 +7086,40 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 - 需要值
 
-### `--instance`， `-I`
+### `--instance`，`-I`
 
 例項ID
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7136,7 +7136,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ## `operation:list`
 
-測試版列出環境上的執行階段作業
+Beta列出環境上的執行階段作業
 
 ```bash
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
@@ -7149,19 +7149,19 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -7180,7 +7180,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： service*、name*、start*、role、stop （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -7194,28 +7194,28 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7232,7 +7232,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ## `operation:run`
 
-BETA在環境中執行操作
+Beta在環境中執行操作
 
 ```bash
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
@@ -7244,19 +7244,19 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 作業名稱
 
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -7268,7 +7268,7 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -7282,28 +7282,28 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7326,34 +7326,34 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ```
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7387,7 +7387,7 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 要複製的目標目錄。 預設為專案標題
 
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 要複製的環境ID。 預設為專案預設值，或第一個可用的環境
 
@@ -7406,40 +7406,40 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7494,7 +7494,7 @@ magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -7508,13 +7508,13 @@ magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -7528,28 +7528,28 @@ magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7625,7 +7625,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 - 需要值
 
-### `--count`， `-c`
+### `--count`，`-c`
 
 每頁要顯示的專案數目。 使用0停用分頁。 若指定 — page，則忽略。
 
@@ -7659,28 +7659,28 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7709,28 +7709,28 @@ magento-cloud set-remote [<project>]
 專案ID
 
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7760,46 +7760,46 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environ
 
 - 必填
 
-### `--commit`， `-c`
+### `--commit`，`-c`
 
 認可SHA。 這也可以接受父項認可的「HEAD」，以及插入符號(^)或波狀符號(~)尾碼。
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7828,14 +7828,14 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 子目錄的路徑
 
 
-### `--directories`， `-d`
+### `--directories`，`-d`
 
 僅顯示目錄
 
 - 預設： `false`
 - 不接受值
 
-### `--files`， `-f`
+### `--files`，`-f`
 
 僅顯示檔案
 
@@ -7849,46 +7849,46 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 - 預設： `false`
 - 不接受值
 
-### `--commit`， `-c`
+### `--commit`，`-c`
 
 認可SHA。 這也可以接受父項認可的「HEAD」，以及插入符號(^)或波狀符號(~)尾碼。
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7917,46 +7917,46 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 目錄或檔案的路徑
 
 
-### `--commit`， `-c`
+### `--commit`，`-c`
 
 認可SHA。 這也可以接受父項認可的「HEAD」，以及插入符號(^)或波狀符號(~)尾碼。
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -7991,14 +7991,14 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 
 - 需要值
 
-### `--primary`， `-1`
+### `--primary`，`-1`
 
 選取主要路由
 
 - 預設： `false`
 - 不接受值
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要顯示的屬性
 
@@ -8018,52 +8018,52 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 [已棄用的選項，不再使用]
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 [已棄用的選項，不再使用]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8106,7 +8106,7 @@ magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： route*、type*、to*、url （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -8120,40 +8120,40 @@ magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8182,28 +8182,28 @@ magento-cloud self:install [--shell-type SHELL-TYPE]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8259,28 +8259,28 @@ magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-
 - 預設： `30`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8317,13 +8317,13 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -8336,7 +8336,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：磁碟、名稱、大小、型別。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -8350,28 +8350,28 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8394,78 +8394,78 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
-### `--collection`， `-c`
+### `--collection`，`-c`
 
 要傾印的集合
 
 - 需要值
 
-### `--gzip`， `-z`
+### `--gzip`，`-z`
 
 使用gzip壓縮傾印
 
 - 預設： `false`
 - 不接受值
 
-### `--stdout`， `-o`
+### `--stdout`，`-o`
 
 輸出到STDOUT而非檔案
 
 - 預設： `false`
 - 不接受值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8488,7 +8488,7 @@ magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [
 magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
-### `--collection`， `-c`
+### `--collection`，`-c`
 
 要匯出的集合
 
@@ -8507,65 +8507,65 @@ magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYP
 
 - 需要值
 
-### `--fields`， `-f`
+### `--fields`，`-f`
 
 要匯出的欄位
 
 - 預設： `[]`
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8588,64 +8588,64 @@ magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYP
 magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
-### `--collection`， `-c`
+### `--collection`，`-c`
 
 要還原的集合
 
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8670,62 +8670,62 @@ magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identit
 
 ### `--eval`
 
-將JavaScript片段傳遞至Shell
+將JavaScript片段傳遞至殼層
 
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8754,58 +8754,58 @@ magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTIT
 要新增到Redis命令的引數
 
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8841,19 +8841,19 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -8867,28 +8867,28 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8917,19 +8917,19 @@ magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONME
 快照識別碼。 在非互動模式中是必要的。
 
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -8943,28 +8943,28 @@ magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONME
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -8993,19 +8993,19 @@ magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|-
 快照識別碼。 預設為最近一個。
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要顯示的屬性。
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -9018,28 +9018,28 @@ magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|-
 - 預設： `c`
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9069,7 +9069,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -9090,40 +9090,40 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 - 預設： `c`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9164,19 +9164,19 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -9190,28 +9190,28 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9241,13 +9241,13 @@ magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIR
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -9260,7 +9260,7 @@ magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIR
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：應用程式、命令、作業。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -9274,28 +9274,28 @@ magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIR
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9331,19 +9331,19 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -9357,28 +9357,28 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9417,33 +9417,33 @@ magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 
 ### `--new-key`
 
-[已棄用] 使用 — 改用新增
+[已棄用]請改用 — new
 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9478,28 +9478,28 @@ magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9528,28 +9528,28 @@ magento-cloud ssh-key:delete [<id>]
 要刪除的SSH金鑰ID
 
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9579,7 +9579,7 @@ magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： id*、title*、path*、指紋（* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -9593,28 +9593,28 @@ magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9648,7 +9648,7 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 設定屬性的新值
 
 
-### `--id`， `-s`
+### `--id`，`-s`
 
 訂閱ID
 
@@ -9668,7 +9668,7 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -9682,34 +9682,34 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9732,53 +9732,53 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 關閉所有通道
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9801,59 +9801,59 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment E
 magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 要檢視的關係屬性
 
 - 需要值
 
-### `--encode`， `-c`
+### `--encode`，`-c`
 
 以base64編碼的JSON輸出
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9876,26 +9876,26 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
-### `--all`， `-a`
+### `--all`，`-a`
 
 檢視所有通道
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
@@ -9908,7 +9908,7 @@ magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRO
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄： port*、project*、environment*、app*、relationship*、url （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -9922,28 +9922,28 @@ magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRO
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -9966,59 +9966,59 @@ magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRO
 magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
-### `--gateway-ports`， `-g`
+### `--gateway-ports`，`-g`
 
 允許遠端主機連線到本機轉送的連線埠
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10047,65 +10047,65 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 - 需要值
 
-### `--gateway-ports`， `-g`
+### `--gateway-ports`，`-g`
 
 允許遠端主機連線到本機轉送的連線埠
 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--app`， `-A`
+### `--app`，`-A`
 
 遠端應用程式名稱
 
 - 需要值
 
-### `--relationship`， `-r`
+### `--relationship`，`-r`
 
 要使用的服務關係
 
 - 需要值
 
-### `--identity-file`， `-i`
+### `--identity-file`，`-i`
 
 要使用的SSH身分識別（私密金鑰）
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10134,7 +10134,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 使用者的電子郵件地址
 
 
-### `--role`， `-r`
+### `--role`，`-r`
 
 使用者的專案角色（「管理員」或「檢視者」）或環境型別角色（例如「staging：contributor」或「production：viewer」）。 若要從環境型別中移除使用者，請將角色設定為「無」。 %或*字元可作為環境型別的萬用字元，例如&#39;%：viewer&#39;，為所有型別賦予使用者「檢視者」角色。 角色可縮寫，例如「production：v」。
 
@@ -10148,13 +10148,13 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -10168,28 +10168,28 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10219,13 +10219,13 @@ magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <e
 
 - 必填
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -10239,28 +10239,28 @@ magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <e
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10289,7 +10289,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 使用者的電子郵件地址
 
 
-### `--level`， `-l`
+### `--level`，`-l`
 
 角色層級（「專案」或「環境」）
 
@@ -10302,19 +10302,19 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -10328,34 +10328,34 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 - 預設： `false`
 - 不接受值
 
-### `--role`， `-r`
+### `--role`，`-r`
 
 [已棄用：使用user：update變更使用者的角色]
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10385,7 +10385,7 @@ magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|-
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：email*、name*、role*、id*、granted_at、updated_at （* =預設欄）。 字元「+」可作為預設欄的預留位置。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -10399,34 +10399,34 @@ magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|-
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10455,20 +10455,20 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 使用者的電子郵件地址
 
 
-### `--role`， `-r`
+### `--role`，`-r`
 
 使用者的專案角色（「管理員」或「檢視者」）或環境型別角色（例如「staging：contributor」或「production：viewer」）。 若要從環境型別中移除使用者，請將角色設定為「無」。 %或*字元可作為環境型別的萬用字元，例如&#39;%：viewer&#39;，為所有型別賦予使用者「檢視者」角色。 角色可縮寫，例如「production：v」。
 
 - 預設： `[]`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -10482,28 +10482,28 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10532,14 +10532,14 @@ magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--
 變數名稱
 
 
-### `--update`， `-u`
+### `--update`，`-u`
 
 如果變數已存在，請更新變數
 
 - 預設： `false`
 - 不接受值
 
-### `--level`， `-l`
+### `--level`，`-l`
 
 設定變數的等級（「專案」或「環境」）
 
@@ -10605,19 +10605,19 @@ magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--
 - 預設： `true`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -10631,28 +10631,28 @@ magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10682,25 +10682,25 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--en
 
 - 必填
 
-### `--level`， `-l`
+### `--level`，`-l`
 
 變數層級（「專案」、「環境」、「p」或「e」）
 
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -10714,28 +10714,28 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--en
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10764,13 +10764,13 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 變數的名稱
 
 
-### `--property`， `-P`
+### `--property`，`-P`
 
 檢視單一變數屬性
 
 - 需要值
 
-### `--level`， `-l`
+### `--level`，`-l`
 
 變數層級（「專案」、「環境」、「p」或「e」）
 
@@ -10783,7 +10783,7 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -10797,13 +10797,13 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -10811,33 +10811,33 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 
 ### `--pipe`
 
-[已棄用的選項] 僅輸出變數值
+[已棄用的選項]僅輸出變數值
 
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10860,7 +10860,7 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-### `--level`， `-l`
+### `--level`，`-l`
 
 變數層級（「專案」、「環境」、「p」或「e」）
 
@@ -10873,7 +10873,7 @@ magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUM
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：is_enabled、level、name、value。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -10887,40 +10887,40 @@ magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUM
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -10957,7 +10957,7 @@ magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VA
 - 預設： `false`
 - 不接受值
 
-### `--level`， `-l`
+### `--level`，`-l`
 
 變數層級（「專案」、「環境」、「p」或「e」）
 
@@ -11010,19 +11010,19 @@ magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VA
 - 預設： `true`
 - 需要值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
 - 需要值
 
-### `--no-wait`， `-W`
+### `--no-wait`，`-W`
 
 請勿等待作業完成
 
@@ -11036,28 +11036,28 @@ magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VA
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 
@@ -11094,13 +11094,13 @@ magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environm
 - 預設： `false`
 - 不接受值
 
-### `--project`， `-p`
+### `--project`，`-p`
 
 專案ID或URL
 
 - 需要值
 
-### `--environment`， `-e`
+### `--environment`，`-e`
 
 環境識別碼。 使用「。」 以選取專案的預設環境。
 
@@ -11113,7 +11113,7 @@ magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environm
 - 預設： `table`
 - 需要值
 
-### `--columns`， `-c`
+### `--columns`，`-c`
 
 要顯示的欄。 可用的欄：命令、名稱、型別。 %或*字元可作為萬用字元使用。 值可能會以逗號（例如「a，b，c」）和/或空白字元分割。
 
@@ -11127,28 +11127,28 @@ magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environm
 - 預設： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 顯示此說明訊息
 
 - 預設： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加訊息的詳細程度
 
 - 預設： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 顯示此應用程式版本
 
 - 預設： `false`
 - 不接受值
 
-### `--yes`， `-y`
+### `--yes`，`-y`
 
 對確認問題回答「是」；接受其他問題的預設值；停用互動
 

@@ -14,9 +14,9 @@ ht-degree: 0%
 
 寫入資料庫時，執行設定檔以識別這些變更的影響可能會有所幫助。 程式碼剖析會維護資料庫查詢的記錄，並提高執行時間精確度。
 
-**啟用資料庫查詢效能分析**：
+**若要啟用資料庫查詢設定檔分析**：
 
-1. [登入資料庫](../services/mysql.md#connect-to-the-database).
+1. [登入資料庫](../services/mysql.md#connect-to-the-database)。
 
 1. 啟用設定檔分析。
 

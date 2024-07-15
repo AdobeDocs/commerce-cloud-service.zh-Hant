@@ -15,29 +15,29 @@ ht-degree: 0%
 
 您必須擁有驗證金鑰才能存取Adobe Commerce存放庫，並在雲端基礎結構專案上為Adobe Commerce啟用安裝和更新命令。 指定Composer授權認證有兩個方法。
 
-- **驗證檔案** — 包含您的Adobe Commerce的檔案 [授權認證](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html) 位於雲端基礎結構根目錄的Adobe Commerce中。
-- **環境變數** — 一個環境變數，可在Adobe Commerce的雲端基礎結構專案中設定驗證金鑰，以防止意外曝光。
+- **驗證檔案** — 在雲端基礎結構根目錄上的Adobe Commerce中，包含您的Adobe Commerce [授權認證](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)的檔案。
+- **環境變數** — 一個環境變數，可在Adobe Commerce雲端基礎結構專案中設定驗證金鑰，以防止意外曝光。
 
 >[!BEGINSHADEBOX]
 
 **安全性注意事項**
 
-Adobe建議使用 [環境變數](#composer-auth-environment-variable) 雲端專案用來防止意外洩露您的授權憑證的方法。
+Adobe建議將[環境變數](#composer-auth-environment-variable)方法與您的雲端專案搭配使用，以防止您的授權認證意外曝光。
 
-使用Cloud Docker for Commerce作為本機開發工具時，驗證檔案方法非常理想，但請注意，不要上傳 `auth.json` 檔案至公用的Git存放庫。 您可以新增 `auth.json` 檔案到 [`.gitignore` 檔案](../project/file-structure.md#ignoring-files).
+使用Commerce的Cloud Docker作為本機開發工具時，驗證檔案方法非常理想，但請注意，不要將`auth.json`檔案上傳到公用的Git型存放庫。 您可以將`auth.json`檔案新增至[`.gitignore`檔案](../project/file-structure.md#ignoring-files)。
 
 >[!ENDSHADEBOX]
 
 ## 驗證檔案
 
-**若要建立 `auth.json` 檔案**：
+**若要建立`auth.json`檔案**：
 
-1. 如果您沒有 `auth.json` 檔案建立您的專案根目錄中。
+1. 如果您的專案根目錄中沒有`auth.json`檔案，請建立一個。
 
-   - 使用文字編輯器建立 `auth.json` 檔案的根目錄。
-   - 複製 [範例 `auth.json`](https://github.com/magento/magento2/blob/2.3/auth.json.sample) 至新的 `auth.json` 檔案。
+   - 使用文字編輯器，在您的專案根目錄中建立`auth.json`檔案。
+   - 將[範例`auth.json`](https://github.com/magento/magento2/blob/2.3/auth.json.sample)的內容複製到新的`auth.json`檔案中。
 
-1. 取代 `<public-key>` 和 `<private-key>` 連同您的Adobe Commerce驗證認證。
+1. 將`<public-key>`和`<private-key>`取代為您的Adobe Commerce驗證認證。
 
    ```json
    {
@@ -56,19 +56,19 @@ Adobe建議使用 [環境變數](#composer-auth-environment-variable) 雲端專�
 
 以下方法是防止在公開Git型存放庫中意外暴露敏感憑證的最佳方法。
 
-**使用環境變數新增驗證金鑰的方式**：
+**若要使用環境變數**&#x200B;新增驗證金鑰：
 
-1. 在 _[!DNL Cloud Console]_，按一下專案導覽右側的設定圖示。
+1. 在&#x200B;_[!DNL Cloud Console]_中，按一下專案導覽右側的設定圖示。
 
    ![設定專案](../../assets/icon-configure.png){width="36"}
 
-1. 在 _專案設定_ 清單，按一下 **[!UICONTROL Variables]**.
+1. 在&#x200B;_專案設定_&#x200B;清單中，按一下&#x200B;**[!UICONTROL Variables]**。
 
-1. 按一下 **[!UICONTROL Create variable]**.
+1. 按一下&#x200B;**[!UICONTROL Create variable]**。
 
-1. 在 **[!UICONTROL Variable name]** 欄位，輸入 `env:COMPOSER_AUTH`.
+1. 在&#x200B;**[!UICONTROL Variable name]**&#x200B;欄位中，輸入`env:COMPOSER_AUTH`。
 
-1. 在 _值_ 欄位，新增以下內容並取代 `<public-key>` 和 `<private-key>` 連同您的Adobe Commerce驗證認證：
+1. 在&#x200B;_Value_&#x200B;欄位中，新增下列專案，並將`<public-key>`和`<private-key>`取代為您的Adobe Commerce驗證認證：
 
    ```json
    {
@@ -81,8 +81,8 @@ Adobe建議使用 [環境變數](#composer-auth-environment-variable) 雲端專�
    }
    ```
 
-1. 選取 **[!UICONTROL Available during buildtime]** 並取消選取 **[!UICONTROL Available during runtime]**.
+1. 選取&#x200B;**[!UICONTROL Available during buildtime]**&#x200B;並取消選取&#x200B;**[!UICONTROL Available during runtime]**。
 
-1. 按一下 **[!UICONTROL Create variable]**.
+1. 按一下&#x200B;**[!UICONTROL Create variable]**。
 
-1. 移除 `auth.json` 來自每個環境的檔案。
+1. 從每個環境中移除`auth.json`檔案。

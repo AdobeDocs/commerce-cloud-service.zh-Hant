@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->為維持部署在雲端平台上的Adobe Commerce網站的PCI相容性，請在您的入門主要分支、Pro生產和Pro測試環境中設定Fastly。 如果您在Headless部署中使用Adobe Commerce，強烈建議您使用Fastly來快取GraphQL回應。 另請參閱 [使用Fastly快取](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly) 在 *GraphQL開發人員指南*.
+>為維持部署在雲端平台上的Adobe Commerce網站的PCI相容性，請在您的入門主要分支、Pro生產和Pro測試環境中設定Fastly。 如果您在Headless部署中使用Adobe Commerce，強烈建議您使用Fastly來快取GraphQL回應。 請參閱&#x200B;*GraphQL開發人員指南*&#x200B;中的[使用Fastly](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly)快取。
 
 Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結構專案上的內容傳遞作業安全。 這些服務包含在雲端基礎結構的Adobe Commerce中，不需額外付費。
 
@@ -22,45 +22,45 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 - **快取管理** — 在您設定的後端資料中心快取您的網站頁面、資產、CSS等，以降低頻寬負載和成本
 
-   - 使用 [Fastly自訂VCL片段](fastly-vcl-custom-snippets.md) （符合Varnish 2.1），可修改快取回應要求的方式
+   - 使用[Fastly自訂VCL片段](fastly-vcl-custom-snippets.md) （符合Varnish 2.1）來修改快取回應要求的方式
 
-   - 設定 [GeoIP服務支援](fastly-custom-cache-configuration.md#configure-geoip-handling)
+   - 設定[GeoIP服務支援](fastly-custom-cache-configuration.md#configure-geoip-handling)
 
    - [強制未加密的請求傳送至TLS](fastly-custom-cache-configuration.md#force-tls)
 
-   - [自訂Fastly逾時](fastly-custom-cache-configuration.md#extend-fastly-timeout) 避免在大量作業要求上出現503回應的設定
+   - [自訂Fastly逾時](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定，以防止大量作業請求出現503個回應
 
-   - 建立 [自訂錯誤回應頁面](fastly-custom-response.md)
+   - 建立[自訂錯誤回應頁面](fastly-custom-response.md)
 
-- **安全性** — 為Adobe Commerce網站啟用Fastly服務後，可使用其他安全性功能來保護您的網站和網路：
+- **安全性** — 在您啟用Adobe Commerce網站的Fastly服務後，可以使用其他安全性功能來保護您的網站和網路：
 
-   - [Web應用程式防火牆](fastly-waf-service.md) (WAF)：受管理的Web應用程式防火牆服務，可提供PCI相容的保護，在惡意流量可能損害雲端基礎結構網站和網路上的生產Adobe Commerce之前加以封鎖。 WAF服務僅適用於Pro和Starter Production環境。
+   - [Web應用程式防火牆](fastly-waf-service.md) (WAF) — 受管理的Web應用程式防火牆服務，可提供PCI相容的保護，在惡意流量可能損害雲端基礎結構網站與網路上的生產Adobe Commerce之前，封鎖惡意流量。 WAF服務僅適用於Pro和Starter Production環境。
 
-   - [分散式拒絕服務(DDoS)保護](#ddos-protection) — 內建的DDoS保護功能，可抵禦Ping of Death、Smurf攻擊和其他基於ICMP的洪水攻擊。
+   - [分散式阻斷服務(DDoS)保護](#ddos-protection) — 內建DDoS保護，可抵禦Ping of Death、Smurf攻擊和其他以ICMP為基礎的泛濫攻擊。
 
-   - [SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)— Fastly服務需要SSL/TLS憑證才能透過HTTPS提供安全流量。
+   - [SSL/TLS憑證](fastly-configuration.md#provision-ssltls-certificates)—Fastly服務需要SSL/TLS憑證才能透過HTTPS提供安全流量。
 
      Adobe Commerce提供網域驗證讓我們為每個中繼和生產環境加密SSL/TLS憑證。 Adobe Commerce會在Fastly設定過程中完成網域驗證和憑證布建。
 
-- **來源遮罩** — 防止流量略過Fastly WAF並隱藏原始伺服器的IP位址，以保護它們免受直接存取和DDoS攻擊。
+- **原始遮罩** — 防止流量略過Fastly WAF並隱藏原始伺服器的IP位址，以保護它們免受直接存取和DDoS攻擊。
 
-  雲端基礎結構Pro Production專案的Adobe Commerce預設會啟用來源遮蓋。 若要在雲端基礎結構入門生產專案上啟用Adobe Commerce上的來源遮蔽，請提交 [Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). 如果您的流量不需要快取，您可以自訂Fastly服務設定以允許請求 [略過Fastly快取](fastly-vcl-bypass-to-origin.md).
+  雲端基礎結構Pro Production專案的Adobe Commerce預設會啟用來源遮蓋。 若要在雲端基礎結構入門生產專案上啟用Adobe Commerce上的來源遮蔽，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 如果您的流量不需要快取，您可以自訂Fastly服務設定，以允許請求[略過Fastly快取](fastly-vcl-bypass-to-origin.md)。
 
-- **[影像最佳化](fastly-image-optimization.md)** — 將影像處理和調整負載大小解除安裝到Fastly服務，讓伺服器可以更有效率地處理訂單和轉換。
+- **[影像最佳化](fastly-image-optimization.md)** — 將影像處理和調整負載解除安裝到Fastly服務，讓伺服器可以更有效率地處理訂單和轉換。
 
-- **[Fastly CDN和WAF記錄](../monitor/new-relic-service.md#new-relic-log-management)** — 針對雲端基礎結構專業版專案的Adobe Commerce，您可以使用New Relic記錄服務來檢閱和分析Fastly CDN和WAF記錄資料。
+- **[Fastly CDN和WAF記錄](../monitor/new-relic-service.md#new-relic-log-management)** — 對於雲端基礎結構Pro專案上的Adobe Commerce，您可以使用New Relic記錄服務來檢閱和分析Fastly CDN和WAF記錄資料。
 
 ## Magento2的Fastly CDN模組
 
-雲端基礎結構上Adobe Commerce的Fastly服務使用 [Magento2的Fastly CDN模組] 安裝在以下環境中： Pro Staging and Production， Starter Production (`master` 分支)。
+雲端基礎結構上Adobe Commerce的Fastly服務使用安裝在以下環境中的Magento2]的[Fastly CDN模組： Pro Staging and Production， Starter Production （`master`分支）。
 
-在初始布建或升級您的Adobe Commerce專案時，Adobe會在您的中繼和生產環境中安裝最新版本的Fastly CDN模組。 Fastly發行模組更新時，您會在管理員中收到環境的通知。 Adobe建議您更新環境以使用最新版本。 另請參閱 [Fastly升級](fastly-configuration.md#upgrade-the-fastly-module).
+在初始布建或升級您的Adobe Commerce專案時，Adobe會在您的中繼和生產環境中安裝最新版本的Fastly CDN模組。 Fastly發行模組更新時，您會在管理員中收到環境的通知。 Adobe建議您更新環境以使用最新版本。 請參閱[Fastly升級](fastly-configuration.md#upgrade-the-fastly-module)。
 
 ## Fastly服務帳戶和認證
 
 雲端基礎結構專案上的Adobe商業不需要專用的Fastly帳戶或帳戶所有者。 相反，每個測試和生產環境都有唯一的Fastly憑證（API權杖和服務ID），可向管理員設定和管理Fastly服務。 您也需要認證才能提交Fastly API請求。
 
-在專案布建期間，Adobe會將您的專案新增到雲端基礎結構上Adobe Commerce的Fastly服務帳戶，並將Fastly憑證新增到中繼和生產環境的設定中。 另請參閱 [取得Fastly認證](fastly-configuration.md#get-fastly-credentials).
+在專案布建期間，Adobe會將您的專案新增到雲端基礎結構上Adobe Commerce的Fastly服務帳戶，並將Fastly憑證新增到中繼和生產環境的設定中。 檢視[取得Fastly認證](fastly-configuration.md#get-fastly-credentials)。
 
 ### 變更Fastly API權杖
 
@@ -68,13 +68,13 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 **若要變更Fastly API權杖認證**：
 
-1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 要求新的Fastly API認證。
+1. [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，要求新的Fastly API認證。
 
    在雲端基礎結構專案ID和需要新認證的環境上包含您的Adobe Commerce。
 
-1. 收到新的API權杖後，請更新 [Fastly認證設定](fastly-configuration.md#test-the-fastly-credentials) 在管理員中或從 [[!DNL Cloud Console] 環境變數](../project/overview.md#configure-environment).
+1. 收到新的API Token後，請在「管理員」的[Fastly認證設定](fastly-configuration.md#test-the-fastly-credentials)中或從[[!DNL Cloud Console] 環境變數](../project/overview.md#configure-environment)更新API Token值。
 
-1. [測試新認證](fastly-configuration.md#test-the-fastly-credentials).
+1. [測試新認證](fastly-configuration.md#test-the-fastly-credentials)。
 
 1. 更新認證後，請提交Adobe Commerce支援票證以刪除舊的API權杖。
 
@@ -82,7 +82,7 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 Fastly只允許您將一個頂點網域和關聯的子網域指派給一個Fastly服務和帳戶。 如果您有現有的Fastly帳戶，該帳戶連結了用於Adobe Commerce網站的相同頂點和子網域，則您有以下選項：
 
-- 在雲端基礎結構專案環境中請求Adobe Commerce的Fastly服務憑證之前，請從現有帳戶中移除頂點和子網域。 另請參閱 [使用網域] 在Fastly檔案中。
+- 在雲端基礎結構專案環境中請求Adobe Commerce的Fastly服務憑證之前，請從現有帳戶中移除頂點和子網域。 請參閱Fastly檔案中的[使用網域]
 
   使用此選項將Apex網域和所有子網域連結到雲端基礎結構上Adobe Commerce的Fastly服務帳戶。
 
@@ -94,15 +94,15 @@ Fastly只允許您將一個頂點網域和關聯的子網域指派給一個Fastl
 
 *案例1：*
 
-Apex網域(`testweb.com` 和 `www.testweb.com`)連結至現有的Fastly帳戶。 您在雲端基礎結構專案上有Adobe Commerce，設定了下列子網域： `mcstaging.testweb.com` 和 `mcprod.testweb.com`. 您不想在雲端基礎結構上將Apex網域移動到Adobe Commerce的Fastly服務帳戶。
+Apex網域（`testweb.com`和`www.testweb.com`）連結到現有的Fastly帳戶。 您已在雲端基礎結構專案上設定Adobe Commerce，包含下列子網域： `mcstaging.testweb.com`和`mcprod.testweb.com`。 您不想在雲端基礎結構上將Apex網域移動到Adobe Commerce的Fastly服務帳戶。
 
-提交 [Fastly支援票證] 要求將子網域從現有的Fastly帳戶委派給雲端基礎結構上Adobe Commerce的Fastly帳戶。 在票證中包含您的Adobe Commerce專案ID。
+提交[Fastly支援票證]，要求將子網域從現有的Fastly帳戶委派給雲端基礎結構上Adobe Commerce的Fastly帳戶。 在票證中包含您的Adobe Commerce專案ID。
 
-委派完成後，您的專案子網域可以新增到雲端基礎結構上Adobe Commerce的Fastly服務帳戶。 另請參閱 [取得Fastly認證](fastly-configuration.md#get-fastly-credentials).
+委派完成後，您的專案子網域可以新增到雲端基礎結構上Adobe Commerce的Fastly服務帳戶。 檢視[取得Fastly認證](fastly-configuration.md#get-fastly-credentials)。
 
 *案例2：*
 
-Apex網域(`testweb.com` 和 `www.testweb.com`)已連結至雲端基礎結構上的Adobe Commerce Fastly服務帳戶。 您想要管理Fastly服務的 `service.testweb.com` 和 `product-updates.testweb.com` 來自不同Fastly帳戶的子網域。
+Apex網域（`testweb.com`和`www.testweb.com`）已連結到雲端基礎結構上的Adobe Commerce Fastly服務帳戶。 您要管理其他Fastly帳戶中`service.testweb.com`和`product-updates.testweb.com`子網域的Fastly服務。
 
 提交Adobe Commerce支援票證，要求從雲端基礎結構上的Adobe Commerce將子網域委派到Fastly服務帳戶。 在票證中包含Fastly帳戶的服務ID。
 
@@ -114,7 +114,7 @@ Fastly CDN服務內建了DDOS保護。 一旦您為Adobe Commerce網站啟用了
 
   Fastly在快取層管理TCP層級攻擊。 此策略為每個使用者端提供必要的規模和情境，以處理SYN泛洪攻擊及其許多變體，包括TCP棧疊、資源攻擊和Fastly系統內的TLS攻擊。
 
-- Fastly也提供第7層攻擊的保護。 如果您的商店發生效能問題，而且您懷疑是第7層DDoS攻擊，請提交Adobe Commerce支援票證。 Adobe可以建立自訂規則並套用至Fastly服務，以根據標頭、裝載或可識別攻擊流量的屬性組合來檢查並篩選掉惡意請求。 另請參閱 [檢查DDoS攻擊] 和 [如何封鎖惡意流量] 在 *Adobe Commerce說明中心*.
+- Fastly也提供第7層攻擊的保護。 如果您的商店發生效能問題，而且您懷疑是第7層DDoS攻擊，請提交Adobe Commerce支援票證。 Adobe可以建立自訂規則並套用至Fastly服務，以根據標頭、裝載或可識別攻擊流量的屬性組合來檢查並篩選掉惡意請求。 請參閱&#x200B;*Adobe Commerce說明中心*&#x200B;中的[檢查DDoS攻擊]和[如何封鎖惡意流量]。
 
 <!--Link definitions-->
 

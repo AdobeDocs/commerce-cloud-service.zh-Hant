@@ -10,21 +10,21 @@ ht-degree: 0%
 
 ---
 
-# 設定 [!DNL RabbitMQ] 服務
+# 設定[!DNL RabbitMQ]服務
 
-此 [訊息佇列架構(MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) 是Adobe Commerce中的系統，可允許 [模組](https://glossary.magento.com/module) 以發佈訊息至佇列。 它也會定義非同步接收訊息的消費者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系統，可讓[模組](https://glossary.magento.com/module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
 
-MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供可擴充的平台以傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL RabbitMQ] 是以進階訊息佇列通訊協定(AMQP) 0.9.1規格為基礎。
+MQF使用[RabbitMQ](https://www.rabbitmq.com/)作為傳訊代理人，提供可擴充的平台來傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL RabbitMQ]是以進階訊息佇列通訊協定(AMQP) 0.9.1規格為基礎。
 
 >[!WARNING]
 >
->如果您偏好使用現有的AMQP型服務，例如 [!DNL RabbitMQ]，您不必仰賴Adobe Commerce基礎建設來為您建立，只需使用 [`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration) 環境變數來將它連線至您的網站。
+>如果您偏好使用現有的AMQP型服務（例如[!DNL RabbitMQ]），而不仰賴Adobe Commerce的雲端基礎結構為您建立它，請使用[`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration)環境變數將其連線到您的網站。
 
 {{service-instruction}}
 
-**啟用RabbitMQ的方式**：
+**若要啟用RabbitMQ**：
 
-1. 將所需的名稱、型別和磁碟值（以MB為單位）新增至 `.magento/services.yaml` 連同已安裝的RabbitMQ版本一起安裝。
+1. 將所需的名稱、型別和磁碟值（以MB為單位）連同安裝的RabbitMQ版本新增至`.magento/services.yaml`檔案。
 
    ```yaml
    rabbitmq:
@@ -32,7 +32,7 @@ MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供�
        disk: 1024
    ```
 
-1. 設定以下專案中的關係： `.magento.app.yaml` 檔案。
+1. 設定`.magento.app.yaml`檔案中的關聯性。
 
    ```yaml
    relationships:
@@ -53,7 +53,7 @@ MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供�
    git push origin <branch-name>
    ```
 
-1. [驗證服務關係](services-yaml.md#service-relationships).
+1. [驗證服務關係](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 
@@ -67,7 +67,7 @@ MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供�
 
 ### 從您的本機開發環境連線
 
-1. 登入 `magento-cloud` CLI和專案：
+1. 登入`magento-cloud` CLI與專案：
 
    ```bash
    magento-cloud login
@@ -85,7 +85,7 @@ MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供�
    magento-cloud ssh
    ```
 
-1. 擷取RabbitMQ連線詳細資料和登入認證，從 [$MAGENTO_CLOUD_RELATIONSHIPS](../application/properties.md#relationships) 變數：
+1. 從[$RabbitMQ_CLOUD_RELATIONSHIPS](../application/properties.md#relationships)變數擷取MAGENTO連線詳細資料和登入認證：
 
    ```bash
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
@@ -114,23 +114,23 @@ MQF使用 [RabbitMQ](https://www.rabbitmq.com/) 作為傳訊代理人，提供�
    }
    ```
 
-1. 啟用本機連線埠轉送至RabbitMQ （如果您的專案位於其他區域，例如US-3、EU-5或AP-3區域，請代用） ``us-3``/``eu-5``/``ap-3`` 的 ``us``)
+1. 啟用本機連線埠轉送至RabbitMQ （如果您的專案位於其他區域，例如US-3、EU-5或AP-3區域，請以``us-3``/``eu-5``/``ap-3``取代``us``）
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-   存取RabbitMQ管理網頁介面的範例，位於 `http://localhost:15672` 為：
+   在`http://localhost:15672`存取RabbitMQ管理Web介面的範例是：
 
    ```bash
    ssh -L 15672:rabbitmq.internal:15672 <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-1. 在工作階段開啟時，您可以從本機工作站啟動您選擇的RabbitMQ使用者端，並設定為連線至 `localhost:<portnumber>` 使用MAGENTO_CLOUD_RELATIONSHIPS變數中的連線埠號碼、使用者名稱和密碼資訊。
+1. 在工作階段開啟時，您可以從本機工作站啟動您選擇的RabbitMQ使用者端，設定為使用MAGENTO_CLOUD_RELATIONSHIPS變數的連線埠號碼、使用者名稱和密碼資訊連線至`localhost:<portnumber>`。
 
 ### 從應用程式連線
 
-若要連線到應用程式中執行的RabbitMQ，請安裝使用者端，例如 [amqp-utils](https://github.com/dougbarth/amqp-utils)，作為您專案中的相依性 `.magento.app.yaml` 檔案。
+若要連線到應用程式中執行的RabbitMQ，請在您的`.magento.app.yaml`檔案中安裝使用者端（例如[amqp-utils](https://github.com/dougbarth/amqp-utils)）作為專案相依性。
 
 例如，
 
@@ -140,8 +140,8 @@ dependencies:
         amqp-utils: "0.5.1"
 ```
 
-當您登入PHP容器時，您輸入任何 `amqp-` 可用來管理佇列的命令。
+當您登入PHP容器時，您輸入任何`amqp-`命令可用於管理您的佇列。
 
 ### 從您的PHP應用程式連線
 
-若要使用PHP應用程式連線到RabbitMQ，請新增PHP [資料庫](https://glossary.magento.com/library) 到您的來源樹狀結構。
+若要使用PHP應用程式連線到RabbitMQ，請將PHP [程式庫](https://glossary.magento.com/library)新增到來源樹狀結構。

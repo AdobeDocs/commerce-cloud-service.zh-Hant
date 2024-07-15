@@ -1,6 +1,6 @@
 ---
 title: Crons屬性
-description: 請參閱中如何設定'crons'屬性的範例 [!DNL Commerce] 應用程式組態檔。
+description: 請參閱如何在 [!DNL Commerce] 應用程式組態檔中設定'crons'屬性的範例。
 feature: Cloud, Configuration
 exl-id: 67d592c1-2933-4cdf-b4f6-d73cd44b9f59
 source-git-commit: 1c0e05c3d8461bea473bcf6ec35162d65ef2774f
@@ -12,22 +12,22 @@ ht-degree: 0%
 
 # Crons屬性
 
-Adobe Commerce使用 `crons` 用於排程重複式作業的屬性。 它非常適合用於排程在一天中的特定時間執行的特定工作。 由於唯讀環境的性質，在雲端基礎結構專案的Adobe Commerce的Web執行個體上一次只能執行一個cron工作。 最佳實務是將長期執行的工作分解為較小的已排入佇列的工作。 或者，您也可以建置 [工作者執行個體](workers-property.md).
+Adobe Commerce使用`crons`屬性來排程重複活動。 它非常適合用於排程在一天中的特定時間執行的特定工作。 由於唯讀環境的性質，在雲端基礎結構專案的Adobe Commerce的Web執行個體上一次只能執行一個cron工作。 最佳實務是將長期執行的工作分解為較小的已排入佇列的工作。 或者，您也可以建置[背景工作執行個體](workers-property.md)。
 
-Adobe建議您執行 `crons` 作為 [檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html). 執行 _非_ 執行 `crons` 作為 `root` 或以web伺服器使用者的身分。
+Adobe建議您以[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)身分執行`crons`。 請&#x200B;_不要_&#x200B;以`root`或網頁伺服器使用者的身分執行`crons`。
 
-此設定不同於Adobe Commerce的內部部署，後者有多個預設的cron工作。 另請參閱 [設定cron作業](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html) 在 _設定指南_.
+此設定不同於Adobe Commerce的內部部署，後者有多個預設的cron工作。 請參閱&#x200B;_設定指南_&#x200B;中的[設定cron工作](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html)。
 
 ## 設定cron工作
 
-此 `crons` 屬性說明依排程觸發的程式。 每個工作都需要名稱和下列選項：
+`crons`屬性說明排程觸發的處理序。 每個工作都需要名稱和下列選項：
 
 - `spec` — 用於排程的cron運算式。
-- `cmd` — 要執行的指令 `start` 和 `stop`.
-- `shutdown_timeout`—(_可選_)如果cron工作已取消，這是傳送SIGKILL訊號以停止工作或程式之後的秒數。 預設值為10秒。
-- `timeout`—(_可選_)逾時前cron工作可以執行的最長時間。 預設為允許的最大值86400秒（24小時）。
+- `cmd` — 要在`start`和`stop`上執行的命令。
+- `shutdown_timeout`—(_Optional_)如果cron工作已取消，這是傳送SIGKILL訊號以停止工作或處理序的秒數。 預設值為10秒。
+- `timeout`—(_Optional_)逾時前cron工作可以執行的最長時間。 預設為允許的最大值86400秒（24小時）。
 
-依預設，每個Commerce雲端專案都有以下預設值 `crons` 中的設定 `.magento.app.yaml` 檔案：
+依預設，每個Commerce雲端專案在`.magento.app.yaml`檔案中具有下列預設`crons`設定：
 
 ```yaml
 crons:
@@ -36,17 +36,17 @@ crons:
         cmd: "php bin/magento cron:run"
 ```
 
-如果您的專案需要自訂cron工作，您可以將其新增到預設值 `crons` 設定。 另請參閱 [建立cron工作](#build-a-cron-job).
+如果您的專案需要自訂cron工作，您可以將其新增到預設`crons`設定。 請參閱[建置cron工作](#build-a-cron-job)。
 
 ### `crontab`
 
-Adobe Commerce僅在Pro專案中新增了auto-crons設定選項，以支援自助服務 `crons` 測試和生產環境中的設定。 如果已啟用此選項，您可以使用 `crontab` 以檢閱cron設定。 這是 _非_ 適用於入門專案。
+Adobe Commerce僅將auto-crons設定選項新增至Pro專案，以支援中繼和生產環境中的自助`crons`設定。 如果已啟用此選項，您可以使用`crontab`來檢閱cron組態。 這是&#x200B;_無法_&#x200B;用於入門專案。
 
-雖然您可以使用 `crontab` 若要檢閱Pro專案的設定，Adobe Commerce不會使用 `crontab` 為部署在雲端基礎結構上的網站執行cron工作。
+雖然您可以使用`crontab`檢閱Pro專案的組態，但Adobe Commerce不會使用`crontab`針對部署在雲端基礎結構上的網站執行cron工作。
 
-**檢閱Pro環境的cron組態**：
+**若要檢閱Pro環境上的cron設定**：
 
-1. 使用 [SSH](../development/secure-connections.md#use-an-ssh-command) 以登入遠端環境。
+1. 使用[SSH](../development/secure-connections.md#use-an-ssh-command)登入遠端環境。
 
 1. 列出已排程的cron程式。
 
@@ -56,9 +56,9 @@ Adobe Commerce僅在Pro專案中新增了auto-crons設定選項，以支援自�
 
    >[!NOTE]
    >
-   >如果 `crontab -l` 命令傳回 `Command not found` 錯誤（僅在Pro測試和生產環境中），您必須 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以在您的專案上啟用auto-crons自助設定選項。
+   >如果`crontab -l`命令傳回`Command not found`錯誤（僅適用於Pro測試和生產環境），您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以在您的專案上啟用auto-crons自助設定選項。
 
-下列範例顯示 `crontab` 僅具有預設值的環境的輸出 `crons` 設定：
+下列範例顯示僅具有預設`crons`組態之環境的`crontab`輸出：
 
 ```terminal
 username@hostname:~$ crontab -l
@@ -73,11 +73,11 @@ MAILTO=""
 
 ## 建立cron工作
 
-cron作業包括排程和計時規格以及在排程時間執行的命令。 適用於入門環境和Pro `integration` 環境時，最小間隔為每5分鐘一次。 對於Pro測試和生產環境，最小間隔為每分鐘一次。 在雲端基礎結構上的Adobe Commerce上，您將自訂cron工作新增到 `.magento.app.yaml` 中的檔案 `crons` 區段。 一般格式為 `spec` 用於排程和 `cmd` 指定要執行的命令或自訂指令碼。
+cron作業包括排程和計時規格以及在排程時間執行的命令。 對於入門環境和Pro `integration`環境，最小間隔為每5分鐘一次。 對於Pro測試和生產環境，最小間隔為每分鐘一次。 在雲端基礎結構上的Adobe Commerce上，您將自訂cron工作新增到`crons`區段中的`.magento.app.yaml`檔案。 一般格式為排程的`spec`，以及指定要執行的命令或自訂指令碼`cmd`。
 
 ### 規格
 
-Adobe Commerce使用五值運算式作為 `crons` 規格（規格）： `* * * * *`
+Adobe Commerce對`crons`規格（規格）使用五值運算式： `* * * * *`
 
 1. 分鐘（0到59）對於所有入門和Pro環境，cron工作支援的最低頻率是五分鐘。 您可能需要在「管理員」中進行設定。
 2. 小時（0到23）
@@ -87,20 +87,20 @@ Adobe Commerce使用五值運算式作為 `crons` 規格（規格）： `* * * *
 
 部分範例：
 
-- `00 */3 * * *` 每三小時於第一分鐘執行（上午12:00、凌晨3:00、早上6:00）
-- `20 */8 * * *` 每隔8小時於第20分鐘執行（上午12:20、上午8:20、下午4:20）
-- `00 00 * * *` 每天午夜執行一次
-- `00 * * * 1` 在星期一的午夜每週執行一次。
+- `00 */3 * * *`會在第一分鐘（上午12:00、凌晨3:00、早上6:00）每三小時執行一次
+- `20 */8 * * *`在分鐘20每8小時執行一次（上午12:20、上午8:20、下午4:20）
+- `00 00 * * *`每天午夜執行一次
+- `00 * * * 1`在星期一的午夜每週執行一次。
 
 >[!NOTE]
 >
->此 `crons` 時間指定於 `.magento.app.yaml` 檔案是根據伺服器時區，而不是資料庫中存放區設定值所指定的時區。
+>`.magento.app.yaml`檔案中指定的`crons`時間是根據伺服器時區，而不是資料庫中存放區組態值中指定的時區。
 
 決定排程時，請考慮完成工作所需的時間。 例如，如果您每三小時執行一次工作，而工作需要40分鐘來完成，則可以考慮變更排程時間。
 
 ### 命令
 
-此 `cmd` 指定要執行的命令或自訂指令碼。 指令碼格式可包含下列內容：
+`cmd`指定要執行的命令或自訂指令碼。 指令碼格式可包含下列內容：
 
 ```text
 <path-to-php-binary> <project-dir>/<script-command>
@@ -114,23 +114,23 @@ crons:
     cmd: "/usr/bin/php /app/abc123edf890/bin/magento export:start catalog_category_product"
 ```
 
-在此範例中， `<path-to-php-binary>` 是 `/usr/bin/php`. 包含專案ID的安裝目錄為 `/app/abc123edf890/bin/magento`，而指令碼動作為 `export:start catalog_category_product`.
+在此範例中，`<path-to-php-binary>`是`/usr/bin/php`。 包含專案識別碼的安裝目錄為`/app/abc123edf890/bin/magento`，而指令碼動作為`export:start catalog_category_product`。
 
 ### 新增自訂cron工作至您的專案
 
-在雲端基礎結構平台上的Adobe Commerce上，您可以將自訂專案新增到 `crons` 的區段 [`.magento.app.yaml`](../application/configure-app-yaml.md) 檔案。
+在雲端基礎結構平台上的Adobe Commerce上，您可以將自訂新增到[`.magento.app.yaml`](../application/configure-app-yaml.md)檔案的`crons`區段。
 
 >[!NOTE]
 >
->適用於入門環境和Pro `integration` 環境時，最小間隔為每5分鐘一次。 對於Pro測試和生產環境，最小間隔為每分鐘一次。 您無法設定比預設最小值更頻繁的間隔。
+>對於入門環境和Pro `integration`環境，最小間隔為每5分鐘一次。 對於Pro測試和生產環境，最小間隔為每分鐘一次。 您無法設定比預設最小值更頻繁的間隔。
 
-在Adobe Commerce Pro專案上， [auto-crons功能](#set-up-cron-jobs) 您必須在專案上啟用，才能使用將自訂cron作業新增到測試和生產環境 `.magento.app.yaml` 檔案。 如果未啟用此功能， [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以啟用auto-crons。
+在Adobe Commerce Pro專案上，您必須先在您的專案上啟用[自動程式碼功能](#set-up-cron-jobs)，才能使用`.magento.app.yaml`檔案將自訂cron工作新增到中繼和生產環境。 如果未啟用此功能，請[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以啟用自動確認。
 
-**新增自訂cron工作的方式**：
+**若要新增自訂cron工作**：
 
-1. 在本機開發環境中，編輯 `.magento.app.yaml` Adobe Commerce中的檔案 `/app` 目錄。
+1. 在本機開發環境中，編輯Adobe Commerce `/app`目錄中的`.magento.app.yaml`檔案。
 
-1. 在 `crons` 區段，使用下列格式新增自訂內容：
+1. 在`crons`區段中，使用下列格式新增您的自訂專案：
 
    ```yaml
    crons:
@@ -142,7 +142,7 @@ crons:
            cmd: "<schedule_command>"
    ```
 
-   在以下範例中， `productcatalog` 工作每八小時匯出一次產品目錄，也就是一小時後的20分鐘。
+   在下列範例中，`productcatalog`工作每八小時匯出一次產品目錄，即該小時後的20分鐘。
 
    ```yaml
    crons:
@@ -162,11 +162,11 @@ crons:
 
 ### 更新cron工作
 
-若要新增、移除或更新自訂工作，請在 `crons` 的區段 `.magento.app.yaml` 檔案。 然後，在遠端測試更新 `integration` 將變更推送至預備和生產環境前的環境。
+若要新增、移除或更新自訂工作，請在`.magento.app.yaml`檔案的`crons`區段中變更設定。 然後，在將變更推播到中繼和生產環境之前，在遠端`integration`環境中測試更新。
 
 ## 停用cron工作
 
-您可以在完成維護任務（例如重新索引或清除快取）之前手動停用cron工作，以避免效能問題。 您可以使用 `ece-tools` CLI命令 `cron:disable` 以停用所有cron工作並停止任何作用中的cron程式。
+您可以在完成維護任務（例如重新索引或清除快取）之前手動停用cron工作，以避免效能問題。 您可以使用`ece-tools` CLI命令`cron:disable`來停用所有cron工作並停止任何作用中的cron處理序。
 
 **若要停用cron工作**：
 
@@ -192,9 +192,9 @@ crons:
 
 ## cron工作疑難排解
 
-Adobe已更新雲端基礎結構上的Adobe Commerce套件，以最佳化雲端基礎結構上的Adobe Commerce上的cron處理並修正cron相關問題。 如果您遇到cron處理問題，請確定您的專案使用的是最新版本的 `ece-tools` 封裝。 另請參閱 [更新ECE-Tools](../dev-tools/update-package.md).
+Adobe已更新雲端基礎結構上的Adobe Commerce套件，以最佳化雲端基礎結構上的Adobe Commerce上的cron處理並修正cron相關問題。 如果您遇到cron處理問題，請確定您的專案使用的是最新版本的`ece-tools`封裝。 請參閱[更新ECE-Tools](../dev-tools/update-package.md)。
 
-您可以在每個環境的應用程式層級記錄檔中檢閱cron處理資訊。 另請參閱 [應用程式記錄](../test/log-locations.md#application-logs).
+您可以在每個環境的應用程式層級記錄檔中檢閱cron處理資訊。 檢視[應用程式記錄](../test/log-locations.md#application-logs)。
 
 請參閱下列Adobe Commerce支援文章，以取得疑難排解cron相關問題的說明：
 

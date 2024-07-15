@@ -11,42 +11,42 @@ ht-degree: 0%
 
 # 專案結構
 
-雲端基礎結構專案上的Adobe Commerce包含認證和應用程式設定的基本檔案。 根據Adobe Commerce版本，這些檔案可在中以範本的形式提供。 請參閱以下網站中，以Adobe Commerce版本為基礎的雲端範本： [`magento/magento-cloud` GitHub存放庫](https://github.com/magento/magento-cloud).
+雲端基礎結構專案上的Adobe Commerce包含認證和應用程式設定的基本檔案。 根據Adobe Commerce版本，這些檔案可在中以範本的形式提供。 在[`magento/magento-cloud` GitHub存放庫](https://github.com/magento/magento-cloud)中檢視以Adobe Commerce版本為基礎的雲端範本。
 
 下表說明雲端專案中包含的檔案：
 
 | 檔案 | 說明 |
 | ------------------------- | ------------ |
-| `/.magento/routes.yaml` | 重新導向的組態檔 `www` 到apex網域和 `php` 應用程式來提供HTTP。 另請參閱 [設定路由](../routes/routes-yaml.md). |
-| `/.magento/services.yaml` | 定義MySQL執行個體(MariaDB)、Redis和OpenSearch或Elasticsearch的組態檔。 另請參閱 [設定服務](../services/services-yaml.md). |
-| `/app` | 此 `code` 資料夾用於自訂模組。 此 `design` 資料夾用於 [自訂主題](../store/custom-theme.md). 此 `etc` 資料夾包含應用程式的組態檔。 |
+| `/.magento/routes.yaml` | 將`www`重新導向至Apex網域和`php`應用程式以提供HTTP的組態檔。 請參閱[設定路由](../routes/routes-yaml.md)。 |
+| `/.magento/services.yaml` | 定義MySQL執行個體(MariaDB)、Redis和OpenSearch或Elasticsearch的組態檔。 請參閱[設定服務](../services/services-yaml.md)。 |
+| `/app` | `code`資料夾用於自訂模組。 `design`資料夾用於[自訂主題](../store/custom-theme.md)。 `etc`資料夾包含應用程式的組態檔。 |
 | `/m2-hotfixes` | 用於自訂修補程式。 |
 | `/update` | 支援模組使用的服務資料夾。 |
-| `.gitignore` | 指定要忽略的檔案和目錄。 另請參閱 [`.gitignore` 參考](#ignoring-files). |
-| `.magento.app.yaml` | 定義建置應用程式之屬性的組態檔。 另請參閱 [設定應用程式](../application/configure-app-yaml.md). |
-| `.magento.env.yaml` | 建置、部署和部署後階段的設定檔。 此 `ece-tools` 套件包含此檔案的範例。 另請參閱 [設定環境](../environment/configure-env-yaml.md). |
-| `composer.json` | 擷取Adobe Commerce和設定指令碼，以準備您的應用程式。 另請參閱 [必要的套件](../development/overview.md#required-packages). |
-| `composer.lock` | 儲存每個套件的版本相依性。 另請參閱 [必要的套件](../development/overview.md#required-packages). |
-| `magento-vars.php` | 用於定義 [多個商店](../store/multiple-sites.md) 和網站使用變數。 |
+| `.gitignore` | 指定要忽略的檔案和目錄。 請參閱[`.gitignore`參考](#ignoring-files)。 |
+| `.magento.app.yaml` | 定義建置應用程式之屬性的組態檔。 請參閱[設定應用程式](../application/configure-app-yaml.md)。 |
+| `.magento.env.yaml` | 建置、部署和部署後階段的設定檔。 `ece-tools`封裝包含此檔案的範例。 請參閱[設定環境](../environment/configure-env-yaml.md)。 |
+| `composer.json` | 擷取Adobe Commerce和設定指令碼，以準備您的應用程式。 請參閱[必要的封裝](../development/overview.md#required-packages)。 |
+| `composer.lock` | 儲存每個套件的版本相依性。 請參閱[必要的封裝](../development/overview.md#required-packages)。 |
+| `magento-vars.php` | 用來定義[多個商店](../store/multiple-sites.md)和使用變數的網站。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->當您將本機變更推送至遠端伺服器時，部署指令碼會使用由中的組態檔所定義的值。 `.magento` 目錄，然後指令碼會刪除目錄及其內容。 您的本機開發環境不受影響。
+>當您將本機變更推送到遠端伺服器時，部署指令碼會使用`.magento`目錄中組態檔定義的值，然後指令碼會刪除目錄及其內容。 您的本機開發環境不受影響。
 
 ## 應用程式根目錄
 
 應用程式根目錄的位置取決於環境。
 
-- **Starter與Pro整合**： `/app`
-- **入門級生產**： `/<project-ID>`
-- **Pro Staging**： `/<project-ID>_stg`
+- **入門和Pro整合**： `/app`
+- **入門產品**： `/<project-ID>`
+- **Pro暫存**： `/<project-ID>_stg`
 - **Pro Production**： `/<project-ID>`
 
 ### 可寫入的目錄
 
-遠端整合、測試和生產環境為唯讀。 下列目錄為 *僅限* 基於安全性原因的可寫入目錄：
+遠端整合、測試和生產環境為唯讀。 基於安全理由，下列目錄是&#x200B;*僅*&#x200B;可寫入的目錄：
 
 - `var`
 - `pub/static`
@@ -56,11 +56,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在生產和中繼環境中，三節點叢集中的每個節點都有 `/tmp` 未與其他節點共用的目錄。
+>在生產和中繼環境中，三節點叢集中的每個節點都有一個`/tmp`目錄，不與其他節點共用。
 
 ## 忽略檔案
 
-有一個基礎 `.gitignore` 雲端基礎結構專案存放庫上的Adobe Commerce檔案。 檢視最新消息 [magento-cloud存放庫中的.gitignore檔案](https://github.com/magento/magento-cloud/blob/master/.gitignore). 若要新增位於「 」中的 `.gitignore` 清單中，您可以使用 `-f` 暫存認可時（強制）選項：
+雲端基礎結構專案存放庫中有具有Adobe Commerce的基底`.gitignore`檔案。 檢視magento-cloud存放庫](https://github.com/magento/magento-cloud/blob/master/.gitignore)中的最新[.gitignore檔案。 若要新增位於`.gitignore`清單中的檔案，您可以在暫存認可時使用`-f` （強制）選項：
 
 ```bash
 git add <path/filename> -f
@@ -72,7 +72,7 @@ git add <path/filename> -f
 
 1. 將專案複製到本機工作站。
 
-1. 更新 `composer.json` 檔案的下列值 `extra` 區段。
+1. 使用下列`extra`區段的值更新`composer.json`檔案。
 
    ```json
    "extra": {
@@ -81,7 +81,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 新增 `.gitignore` 為基底範本設計的檔案。 例如，如果您需要 `.gitignore` 2.2.6版範本的檔案，請使用 [適用於2.2.6的.gitignore](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) 檔案作為參考。
+1. 新增為基底範本設計的`.gitignore`檔案。 例如，如果您需要2.2.6版範本的`.gitignore`檔案，請使用2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)檔案的[.gitignore作為參考。
 
 1. 清除Git快取。
 

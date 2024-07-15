@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 地區IP位址
 
-下表列出Adobe Commerce在雲端基礎結構上使用的傳入和傳出IP位址 [整合環境](../architecture/pro-architecture.md#integration-environment). 這些IP位址穩定，但可能會變更。 Adobe會在進行任何IP位址變更前通知客戶。
+下表列出Adobe Commerce在雲端基礎結構[整合環境](../architecture/pro-architecture.md#integration-environment)上使用的傳入和傳出IP位址。 這些IP位址穩定，但可能會變更。 Adobe會在進行任何IP位址變更前通知客戶。
 
 處理整合環境的語法如下：
 
@@ -20,10 +20,10 @@ ht-degree: 0%
 ```
 
 - **唯一識別碼** = 7個隨機英數字元
-- **專案ID** = 13個字元的專案識別碼
-- **地區** =AWS或Azure地區名稱
+- **專案識別碼** = 13字元的專案識別碼
+- **地區** = AWS或Azure地區名稱
 
-您可以使用 `ping` 擷取傳入IP位址的命令：
+您可以使用`ping`命令來擷取傳入的IP位址：
 
 ```bash
 ping integration-abcd123-abcd78910.us-3.magentosite.cloud

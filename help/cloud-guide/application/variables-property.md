@@ -1,6 +1,6 @@
 ---
 title: 變數屬性
-description: 使用variables屬性來自訂下列專案的存放區設定選項： [!DNL Commerce] 應用程式。
+description: 使用variables屬性自訂 [!DNL Commerce] 應用程式的存放區組態選項。
 feature: Cloud, Configuration
 exl-id: 5cd92fbb-8bff-48b1-9658-500140591344
 source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # 變數屬性
 
-您可以使用應用程式型環境變數來自訂商店設定。 這些變數使用特定語法。 另請參閱 [覆寫組態設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) 在 _設定指南_.
+您可以使用應用程式型環境變數來自訂商店設定。 這些變數使用特定語法。 請參閱&#x200B;_組態指南_&#x200B;中的[覆寫組態設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html)。
 
-下列包含在中的環境變數 `.magento.app.yaml` 的特定版本需要檔案 [!DNL Commerce] 應用程式。
+[!DNL Commerce]應用程式的特定版本需要`.magento.app.yaml`檔案中包含的下列環境變數。
 
 Adobe Commerce 2.2.x至2.3.x的必要專案：
 

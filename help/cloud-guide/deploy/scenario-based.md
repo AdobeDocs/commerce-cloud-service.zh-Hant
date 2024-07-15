@@ -12,20 +12,20 @@ ht-degree: 0%
 
 # 以案例為基礎的部署
 
-替換為 `ece-tools` 2002.1.0和更新版本，您可以使用情境式部署功能來自訂預設部署行為。
-此功能使用 **情境** 和 **步驟** 在設定中：
+透過`ece-tools` 2002.1.0和更新版本，您可以使用情境式部署功能來自訂預設部署行為。
+此功能在設定中使用**案例**&#x200B;和&#x200B;**步驟**：
 
-- **案例設定** — 每個部署掛接都是 *情境*，此XML組態檔說明完成部署任務的順序和組態引數。 您可以在「 」中設定案例 `hooks` 的區段 `.magento.app.yaml` 檔案。
+- **案例組態** — 每個部署勾點都是&#x200B;*案例*，這是描述完成部署工作的順序和組態引數的XML組態檔。 您可以在`.magento.app.yaml`檔案的`hooks`區段中設定情境。
 
-- **步驟設定** — 每個案例使用的序列為 *步驟* 以程式設計方式說明完成部署任務所需的作業。 您可以在以XML為基礎的案例組態檔案中設定步驟。
+- **步驟組態** — 每個案例都使用一系列&#x200B;*步驟*，以程式設計方式說明完成部署工作所需的作業。 您可以在以XML為基礎的案例組態檔案中設定步驟。
 
-雲端基礎結構上的Adobe Commerce提供了一組 [預設情境](https://github.com/magento/ece-tools/tree/2002.1/scenario) 和 [預設步驟](https://github.com/magento/ece-tools/tree/2002.1/src/Step) 在 `ece-tools` 封裝。 您可以建立自訂XML組態檔來覆寫或自訂預設組態，以自訂部署行為。 您也可以使用案例和步驟，從自訂模組執行程式碼。
+雲端基礎結構上的Adobe Commerce在`ece-tools`套件中提供一組[預設情境](https://github.com/magento/ece-tools/tree/2002.1/scenario)和[預設步驟](https://github.com/magento/ece-tools/tree/2002.1/src/Step)。 您可以建立自訂XML組態檔來覆寫或自訂預設組態，以自訂部署行為。 您也可以使用案例和步驟，從自訂模組執行程式碼。
 
 ## 使用建立和部署鉤點新增案例
 
-您將建置和部署Adobe Commerce的情境新增至 `hooks` 的區段 `.magento.app.yaml` 檔案。 每個掛接會指定每個階段要執行的情境。 下列範例顯示預設案例設定。
+您將建置和部署Adobe Commerce的案例新增至`.magento.app.yaml`檔案的`hooks`區段。 每個掛接會指定每個階段要執行的情境。 下列範例顯示預設案例設定。
 
-> `magento.app.yaml` 勾點
+> `magento.app.yaml`個鉤點
 
 ```yaml
 hooks:
@@ -41,11 +41,11 @@ hooks:
 
 >[!NOTE]
 >
->隨著版本的 `ece-tools` 2002.1.x推出全新 [勾點設定](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property.html) 格式。 舊版格式來自 `ece-tools` 仍支援2002.0.x版本。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
+>隨著`ece-tools` 2002.1.x的發行，有新的[鉤點組態](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/hooks-property.html)格式。 仍支援`ece-tools` 2002.0.x版的舊版格式。 不過，您必須更新為新格式，才能使用以案例為基礎的部署功能。
 
 ## 檢閱案例步驟
 
-在掛接設定中，每個案例都是XML檔案，其中包含執行建置、部署或部署後工作的步驟。 例如， `scenario/transfer` 檔案包含三個步驟： `compress-static-content`， `clear-init-directory`、和 `backup-data`
+在掛接設定中，每個案例都是XML檔案，其中包含執行建置、部署或部署後工作的步驟。 例如，`scenario/transfer`檔案包含三個步驟： `compress-static-content`、`clear-init-directory`和`backup-data`
 
 > `scenario/transfer.xml`
 
@@ -90,9 +90,9 @@ hooks:
 
 ### 移除預設步驟
 
-您可使用將步驟從預設案例移除 `skip` 引數。
+您使用`skip`引數從預設案例移除步驟。
 
-例如，若要略過 `enable-maintenance-mode` 和 `set-production-mode` 步驟：在預設的部署情境中，建立包含下列設定的設定檔。
+例如，若要略過預設部署案例中的`enable-maintenance-mode`和`set-production-mode`步驟，請建立包含下列設定的設定檔。
 
 > `vendor/vendor-name/module-name/deploy-custom-mode-config.xml`
 
@@ -104,9 +104,9 @@ hooks:
 </scenario>
 ```
 
-若要使用自訂組態檔，請更新預設值 `.magento.app.yaml` 檔案。
+若要使用自訂組態檔，請更新預設的`.magento.app.yaml`檔案。
 
-> `.magento.app.yaml` 使用自訂部署情境
+> 具有自訂部署情境的`.magento.app.yaml`
 
 ```yaml
 hooks:
@@ -124,13 +124,13 @@ hooks:
 
 自訂案例可以取代預設步驟，以提供自訂實施。 要執行此操作，請使用預設步驟名稱作為自訂步驟的名稱。
 
-例如，在 [預設部署案例] 此 `enable-maintenance-mode` 步驟執行預設值 [EnableMaintenanceMode PHP指令碼].
+例如，在[預設部署案例]中，`enable-maintenance-mode`步驟會執行預設的[EnableMaintenanceMode PHP指令碼]。
 
 ```xml
 <step name="enable-maintenance-mode" type="Magento\MagentoCloud\Step\EnableMaintenanceMode" priority="300"/>
 ```
 
-若要覆寫此步驟，請建立自訂情境設定檔案，以便在 `enable-maintenance-mode` 步驟執行。
+若要覆寫此步驟，請建立自訂案例設定檔，以便在`enable-maintenance-mode`步驟執行時執行不同的指令碼。
 
 ```xml
 <?xml version="1.0"?>
@@ -142,7 +142,7 @@ hooks:
 
 ### 變更步驟優先順序
 
-自訂案例可以變更預設步驟的優先順序。 下列步驟會變更 `enable-maintenance-mode` 步驟自 `300` 至 `10` 如此一來，該步驟就會在部署情境中提早執行。
+自訂案例可以變更預設步驟的優先順序。 下列步驟會將`enable-maintenance-mode`步驟的優先順序從`300`變更為`10`，讓步驟在部署情境中執行得更早。
 
 ```xml
 <?xml version="1.0"?>
@@ -152,16 +152,16 @@ hooks:
 </scenario>
 ```
 
-在此範例中， `enable-maintenance-mode` 步驟會移至情境的開頭，因為其優先順序低於預設部署情境中的所有其他步驟。
+在此範例中，`enable-maintenance-mode`步驟會移至情境的開頭，因為其優先順序低於預設部署情境中的所有其他步驟。
 
 ### 範例：擴充部署案例
 
-以下範例自訂 [預設部署案例] ，變更如下：
+下列範例使用下列變更自訂[預設部署案例]：
 
-- 取代 `remove-deploy-failed-flag` 具有自訂步驟的步驟
-- 略過 `clean-redis-cache` 預先部署步驟中的子步驟
-- 略過 `unlock-cron-jobs` 步驟
-- 略過 `validate-config` 停用重要驗證程式的步驟
+- 以自訂步驟取代`remove-deploy-failed-flag`步驟
+- 略過預先部署步驟中的`clean-redis-cache`子步驟
+- 略過`unlock-cron-jobs`步驟
+- 略過`validate-config`步驟以停用重要驗證器
 - 新增預先部署步驟
 
 > `vendor/vendor-name/module-name/deploy-extended.xml`
@@ -203,7 +203,7 @@ hooks:
 </scenario>
 ```
 
-若要在您的專案中使用此指令碼，請將下列設定新增至 `.magento.app.yaml` 雲端基礎結構專案中Adobe Commerce的檔案：
+若要在您的專案中使用此指令碼，請將以下設定新增至雲端基礎結構專案上Adobe Commerce的`.magento.app.yaml`檔案：
 
 ```yaml
 hooks:
@@ -219,23 +219,23 @@ hooks:
 
 >[!TIP]
 >
->您可以檢閱 [預設情境](https://github.com/magento/ece-tools/tree/2002.1/scenario) 和 [預設步驟設定](https://github.com/magento/ece-tools/tree/2002.1/src/Step) 在 `ece-tools` GitHub存放庫可決定要為您的專案建置、部署和部署後任務自訂哪些案例和步驟。
+>您可以檢閱`ece-tools` GitHub存放庫中的[預設案例](https://github.com/magento/ece-tools/tree/2002.1/scenario)和[預設步驟設定](https://github.com/magento/ece-tools/tree/2002.1/src/Step)，以決定針對您的專案建置、部署和部署後任務自訂哪些案例和步驟。
 
-## 新增要擴充的自訂模組 `ece-tools`
+## 新增自訂模組以延伸`ece-tools`
 
-此 `ece-tools` package提供遵循語意版本標準的預設API介面。 所有API介面皆標有 **@api** 註解。 您可以建立自訂模組，並視需要修改預設程式碼，藉此將預設API實作取代為您自己的API。
+`ece-tools`套件提供遵循語意版本標準的預設API介面。 所有API介面都標示有&#x200B;**@api**&#x200B;註解。 您可以建立自訂模組，並視需要修改預設程式碼，藉此將預設API實作取代為您自己的API。
 
-若要在雲端基礎結構上將自訂模組與Adobe Commerce搭配使用，您必須在擴充功能清單中註冊您的模組， `ece-tools` 封裝。 註冊程式與在Adobe Commerce中註冊模組時所用的程式類似。
+若要在雲端基礎結構上透過Adobe Commerce使用自訂模組，您必須在`ece-tools`套件的擴充功能清單中註冊您的模組。 註冊程式與在Adobe Commerce中註冊模組時所用的程式類似。
 
-**若要向註冊模組 `ece-tools` 封裝**：
+**若要使用`ece-tools`封裝註冊模組**：
 
-1. 建立或擴充 `registration.php` 模組的根目錄中的檔案。
+1. 在模組的根目錄中建立或擴充`registration.php`檔案。
 
    ```php?start_inline=1
    \Magento\MagentoCloud\ExtensionRegistrar::register('module-name', __DIR__);
    ```
 
-1. 更新 `autoload` 區段供您的模組設定檔案包含 `registration.php` 要自動載入模組檔案的檔案 `composer.json`.
+1. 更新模組組態檔的`autoload`區段以包含`registration.php`檔案，以便在`composer.json`中自動載入模組檔案。
 
    ```json
    {
@@ -253,7 +253,7 @@ hooks:
    }
    ```
 
-1. 新增 `config/services.xml` 檔案放入您的模組中。 此設定已合併到 `config/services.xml` 從 `ece-tools` 封裝。
+1. 將`config/services.xml`檔案新增至模組。 此設定已合併到`ece-tools`封裝中的`config/services.xml`上。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8" ?>
@@ -271,7 +271,7 @@ hooks:
    </container>
    ```
 
-若要進一步瞭解相依性插入，請參閱 [Symfony相依性插入](https://symfony.com/doc/current/components/dependency_injection.html).
+若要深入瞭解相依性插入，請參閱[Symfony相依性插入](https://symfony.com/doc/current/components/dependency_injection.html)。
 
 <!-- link definitions -->
 

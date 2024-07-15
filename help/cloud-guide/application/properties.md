@@ -1,6 +1,6 @@
 ---
 title: 屬性
-description: 設定時，請使用屬性清單作為參考 [!DNL Commerce] 用於建置和部署至雲端基礎建設的應用程式。
+description: 設定 [!DNL Commerce] 應用程式以建置並部署至雲端基礎結構時，請使用屬性清單作為參考。
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 58a86136-a9f9-4519-af27-2f8fa4018038
 source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 應用程式設定的屬性
 
-此 `.magento.app.yaml` 檔案使用屬性來管理環境支援 [!DNL Commerce] 應用程式。
+`.magento.app.yaml`檔案使用屬性來管理[!DNL Commerce]應用程式的環境支援。
 
 | 名稱 | 說明 | 預設 | 必填 |
 | ------ | --------------------------------- | ------- | -------- |
@@ -25,7 +25,7 @@ ht-degree: 0%
 | [`mounts`](#mounts) | 設定路徑 | 路徑：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | 否 |
 | [`name`](#name) | 定義應用程式名稱 | `mymagento` | 是 |
 | [`relationships`](#relationships) | 對應服務 | 服務：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
-| [`runtime`](#runtime) | 執行階段屬性包含 [!DNL Commerce] 應用程式。 | 擴充功能：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
+| [`runtime`](#runtime) | 執行階段屬性包含[!DNL Commerce]應用程式所需的擴充功能。 | 擴充功能：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
 | [`type`](#type-and-build) | 設定基本容器影像 | `php:8.3` | 是 |
 | [`variables`](variables-property.md) | 為特定Commerce版本套用環境變數 | — | 否 |
 | [`web`](web-property.md) | 處理外部請求 | — | 是 |
@@ -35,23 +35,23 @@ ht-degree: 0%
 
 ## `name`
 
-此 `name` 屬性提供在 [`routes.yaml`](../routes/routes-yaml.md) 檔案定義HTTP上游(預設為 `mymagento:http`)。 例如，如果 `name` 是 `app`，您必須使用 `app:http` 在上游欄位中。
+`name`屬性提供在[`routes.yaml`](../routes/routes-yaml.md)檔案中使用以定義HTTP上游的應用程式名稱（預設為`mymagento:http`）。 例如，如果`name`的值為`app`，您必須在上游欄位中使用`app:http`。
 
 >[!WARNING]
 >
 >部署應用程式後，請勿變更其名稱。 這麼做會導致資料遺失。
 
-## `type` 和 `build`
+## `type`和`build`
 
-此 `type`  和 `build` 屬性會提供基本容器影像的相關資訊，以建置和執行專案。
+`type`和`build`屬性提供基礎容器影像的相關資訊，以建置和執行專案。
 
-支援的 `type` 語言是PHP。 請依照以下步驟指定PHP版本：
+支援的`type`語言是PHP。 請依照以下步驟指定PHP版本：
 
 ```yaml
 type: php:<version>
 ```
 
-此 `build` 屬性會決定建立專案時預設執行的動作。 此 `flavor` 指定要執行的預設組建工作集。 下列範例顯示預設設定 `type` 和 `build` 從 `magento-cloud/.magento.app.yaml`：
+`build`屬性決定建置專案時預設的情況。 `flavor`指定要執行的預設組建工作集。 下列範例顯示來自`magento-cloud/.magento.app.yaml`的`type`與`build`的預設組態：
 
 ```yaml
 # The toolstack used to build the application.
@@ -66,13 +66,13 @@ dependencies:
 
 ### 安裝和使用Composer 2
 
-此 `build: flavor:` 屬性不用於Composer 2.x；因此，您必須在建置階段手動安裝Composer。 若要在Starter和Pro專案中安裝及使用Composer 2.x，您必須對進行三項變更 `.magento.app.yaml` 設定：
+`build: flavor:`屬性不用於Composer 2.x；因此，您必須在建置階段期間手動安裝Composer。 若要在您的Starter和Pro專案中安裝及使用Composer 2.x，您必須對`.magento.app.yaml`設定進行三項變更：
 
-1. 移除 `composer` 作為 `build: flavor:` 並新增 `none`. 這項變更導致Cloud無法使用預設的1.x Composer版本來執行組建工作。
-1. 新增 `composer/composer: '^2.0'` as a `php` 安裝Composer 2.x的相依性。
-1. 新增 `composer` 將任務建置到 `build` 勾選以使用Composer 2.x執行建置工作。
+1. 移除`composer`作為`build: flavor:`並新增`none`。 這項變更導致Cloud無法使用預設的1.x Composer版本來執行組建工作。
+1. 將`composer/composer: '^2.0'`新增為安裝Composer 2.x的`php`相依性。
+1. 將`composer`組建工作新增至`build`鉤點，以使用Composer 2.x執行組建工作。
 
-在自己中使用以下設定片段 `.magento.app.yaml` 設定：
+在您自己的`.magento.app.yaml`設定中使用下列設定片段：
 
 ```yaml
 # 1. Change flavor to none.
@@ -91,7 +91,7 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 ```
 
-另請參閱 [必要的套件](../development/overview.md#required-packages) 以取得有關Composer的詳細資訊。
+如需有關Composer的詳細資訊，請參閱[必要的套件](../development/overview.md#required-packages)。
 
 ## `dependencies`
 
@@ -103,7 +103,7 @@ Adobe Commerce支援下列語言的相依性：
 - 拼音
 - Node.js
 
-這些相依性與應用程式的最終相依性無關，並且可在以下位置找到： `PATH`，會在建置程式期間和應用程式的執行階段環境中進行。
+這些相依性與應用程式的最終相依性無關，可在`PATH`、建置程式期間和應用程式的執行階段環境中使用。
 
 您可以依照以下方式指定這些相依性：
 
@@ -126,7 +126,7 @@ runtime:
         - sodium
 ```
 
-另請參閱 [PHP設定](php-settings.md) 以取得啟用擴充功能的詳細資訊。
+如需啟用擴充功能的詳細資訊，請參閱[PHP設定](php-settings.md)。
 
 ## `disk`
 
@@ -136,17 +136,17 @@ runtime:
 disk: 5120
 ```
 
-建議的磁碟大小下限為256 MB。 如果您看到錯誤 `UserError: Error building the project: Disk size may not be smaller than 128MB`，將大小增加到256 MB。
+建議的磁碟大小下限為256 MB。 如果您看到錯誤`UserError: Error building the project: Disk size may not be smaller than 128MB`，請將大小增加到256 MB。
 
 >[!NOTE]
 >
->對於Pro測試和生產環境，您必須 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 更新 `mounts` 和 `disk` 應用程式的設定。 當您提交票證時，請指出所需的設定變更，並包含更新版本的 `.magento.app.yaml` 檔案。
+>對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
 
 ## `relationships`
 
 定義應用程式中的服務對應。
 
-關係 `name` 可供應用程式使用 `MAGENTO_CLOUD_RELATIONSHIPS` 環境變數。 此 `<service-name>:<endpoint-name>` 關係對應至中定義的名稱和型別值 `.magento/services.yaml` 檔案。
+關係`name`可用於`MAGENTO_CLOUD_RELATIONSHIPS`環境變數中的應用程式。 `<service-name>:<endpoint-name>`關聯性對應到`.magento/services.yaml`檔案中定義的名稱和型別值。
 
 ```yaml
 relationships:
@@ -163,11 +163,11 @@ relationships:
     rabbitmq: "rabbitmq:rabbitmq"
 ```
 
-另請參閱 [服務](../services/services-yaml.md) 以取得目前支援的服務型別和端點的完整清單。
+如需目前支援的服務型別和端點的完整清單，請參閱[服務](../services/services-yaml.md)。
 
 ## `mounts`
 
-其索引鍵是相對於應用程式根目錄的路徑的物件。 掛載是磁碟上檔案的可寫入區域。 以下是在中設定的預設掛載清單 `magento.app.yaml` 檔案使用 `volume_id[/subpath]` 語法：
+其索引鍵是相對於應用程式根目錄的路徑的物件。 掛載是磁碟上檔案的可寫入區域。 以下是使用`volume_id[/subpath]`語法在`magento.app.yaml`檔案中設定的預設掛接清單：
 
 ```yaml
  # The mounts that will be performed when the package is deployed.
@@ -184,28 +184,28 @@ mounts:
 "/public/sites/default/files": "shared:files/files"
 ```
 
-- `shared` — 在環境中的應用程式之間共用磁碟區。
+- `shared` — 在環境內的應用程式之間共用磁碟區。
 - `disk` — 定義共用磁碟區可用的大小。
 
 >[!NOTE]
 >
->對於Pro測試和生產環境，您必須 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 更新 `mounts` 和 `disk` 應用程式的設定。 當您提交票證時，請指出所需的設定變更，並包含更新版本的 `.magento.app.yaml` 檔案。
+>對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
 
-您可以將掛載網頁新增至 [`web`](web-property.md) 位置區塊。
+您可以將掛載網頁新增至位置的[`web`](web-property.md)區塊，使其可供存取。
 
 >[!WARNING]
 >
->一旦您的網站擁有資料，請勿變更 `subpath` 裝載名稱的一部分。 此值是的唯一識別碼， `files` 區域。 如果您變更此名稱，將會遺失所有儲存在舊位置的網站資料。
+>一旦您的網站有資料，請勿變更掛載名稱的`subpath`部分。 此值是`files`區域的唯一識別碼。 如果您變更此名稱，將會遺失所有儲存在舊位置的網站資料。
 
 ## `access`
 
-此 `access` 屬性指出最低使用者角色層級，可允許對環境進行SSH存取。 可用的使用者角色包括：
+`access`屬性指出允許SSH存取環境的最低使用者角色層級。 可用的使用者角色包括：
 
-- `admin` — 可以在環境中變更設定並執行動作；具有 _投稿人_ 和 _檢視者_ 權利。
-- `contributor` — 可以將程式碼推送至此環境，並從環境分支；具有 _檢視者_ 權利。
+- `admin` — 可以在環境中變更設定並執行動作；具有&#x200B;_參與者_&#x200B;和&#x200B;_檢視者_&#x200B;許可權。
+- `contributor` — 可以將程式碼推送至此環境，並從環境分支；具有&#x200B;_檢視器_&#x200B;許可權。
 - `viewer` — 只能檢視環境。
 
-預設的使用者角色為 `contributor`，會限制僅具有的使用者的SSH存取 _檢視者_ 權利。 您可以將使用者角色變更為 `viewer` 僅允許具有的使用者使用SSH存取 _檢視者_ 權利：
+預設的使用者角色為`contributor`，這會限制僅具有&#x200B;_檢視者_&#x200B;許可權的使用者的SSH存取。 您可以將使用者角色變更為`viewer`，以允許只有&#x200B;_檢視者_&#x200B;許可權的使用者使用SSH存取：
 
 ```yaml
 access:

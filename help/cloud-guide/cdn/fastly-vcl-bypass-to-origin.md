@@ -20,19 +20,19 @@ ht-degree: 0%
 >
 >將自訂VCL組態合併到生產環境之前，請務必在中繼環境中測試程式碼。
 
-**先決條件：**
+**必要條件：**
 
 {{$include /help/_includes/vcl-snippet-prerequisites.md}}
 
-**根據IP位址或URL略過Fastly快取**：
+**若要根據IP位址或URL略過Fastly快取**：
 
 {{admin-login-step}}
 
-1. 按一下 **商店** >設定> **設定** > **進階** > **系統**.
+1. 按一下&#x200B;**商店** >設定> **組態** > **進階** > **系統**。
 
-1. 展開 **完整頁面快取** > **Fastly設定** > **自訂VCL程式碼片段**.
+1. 展開&#x200B;**完整頁面快取** > **Fastly組態** > **自訂VCL程式碼片段**。
 
-1. 按一下 **建立自訂程式碼片段**.
+1. 按一下&#x200B;**建立自訂程式碼片段**。
 
 1. 新增VCL程式碼片段值：
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
    - **優先順序** — `5`
 
-   - **VCL** 程式碼片段內容 — 
+   - **VCL**&#x200B;程式碼片段內容 — 
 
      以下範例略過Fastly尋找特定的IP位址：
 
@@ -58,13 +58,13 @@ ht-degree: 0%
      if (req.url ~ "/media/feeds/GoogleShoppingHiVisNew.xml") {  return (pass);}
      ```
 
-     如需完全相符的URL，請使用 `==` 運運算元，而非 `~` 運運算元。 請參閱 [Fastly VCL參照] 以取得詳細資訊。
+     若要取得完全相符的URL，請使用`==`運運算元，而不是`~`運運算元。 如需詳細資訊，請參閱[Fastly VCL參考]。
 
-1. 按一下 **建立**.
+1. 按一下&#x200B;**建立**。
 
-   ![建立Fastly略過VCL片段](/help/assets/cdn/fastly-create-bypass-snippet.png)
+   ![建立Fastly略過VCL程式碼片段](/help/assets/cdn/fastly-create-bypass-snippet.png)
 
-1. 重新載入頁面後，按一下 **將VCL上傳到Fastly** 在 *Fastly設定* 區段。
+1. 頁面重新載入後，在&#x200B;*Fastly組態*&#x200B;區段中按一下&#x200B;**上傳VCL到Fastly**。
 
 1. 上傳完成後，請根據頁面頂端的通知重新整理快取。
 

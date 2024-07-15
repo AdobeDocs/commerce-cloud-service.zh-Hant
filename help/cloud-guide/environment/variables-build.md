@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 建立變數
 
-下列專案 _版本編號_ 變數可控制建置階段中的動作，並可繼承及覆寫以下專案的值： [全域變數](variables-global.md). 將這些變數插入 `build` 的階段 `.magento.env.yaml` 檔案：
+下列&#x200B;_組建_&#x200B;變數控制建置階段中的動作，可以繼承及覆寫來自[全域變數](variables-global.md)的值。 在`.magento.env.yaml`檔案的`build`階段中插入這些變數：
 
 ```yaml
 stage:
@@ -37,7 +37,7 @@ stage:
 - **預設**—`1`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-設定儲存錯誤報告檔案的目錄巢狀層級，以避免報告目錄填入數萬個檔案，這會使管理和檢閱資料變得困難。 此設定預設為 `1`. 通常您不需要變更預設值，除非您在管理錯誤報告檔案時遇到問題。 `<magento_root>/var/report/` 目錄。
+設定儲存錯誤報告檔案的目錄巢狀層級，以避免報告目錄填入數萬個檔案，這會使管理和檢閱資料變得困難。 此設定預設為`1`。 一般而言，除非您在管理`<magento_root>/var/report/`目錄中的錯誤報告檔案時遇到問題，否則不需要變更預設值。
 
 ```yaml
 stage:
@@ -69,14 +69,14 @@ stage:
       - MC-456345
 ```
 
-另請參閱 [套用修補程式](../development/apply-patches.md).
+請參閱[套用修補程式](../development/apply-patches.md)。
 
 ## `SCD_COMPRESSION_LEVEL`
 
 - **預設**—`6`
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-指定哪些 [gzip](https://www.gnu.org/software/gzip) 壓縮等級(`0` 至 `9`)來使用於壓縮靜態內容； `0` 停用壓縮。
+指定壓縮靜態內容時要使用的[gzip](https://www.gnu.org/software/gzip)壓縮等級（`0`到`9`）；`0`會停用壓縮。
 
 ```yaml
 stage:
@@ -102,9 +102,9 @@ stage:
 - **預設**—`false`
 - **版本**—Adobe Commerce 2.4.2和更新版本
 
-將設為 `true` 以防止在建置階段為父系主題產生靜態內容。
+設定為`true`以防止在建置階段產生父系主題的靜態內容。
 
-設定 `SCD_NO_PARENT: false` 在建置階段期間，為父系主題產生靜態內容不會影響網站部署或造成不必要的網站停機時間。 另請參閱 [靜態內容部署](../deploy/static-content.md).
+在建置階段設定`SCD_NO_PARENT: false`，以便父系主題產生靜態內容不會影響網站部署或造成不必要的網站停機。 請參閱[靜態內容部署](../deploy/static-content.md)。
 
 ```yaml
 stage:
@@ -117,9 +117,9 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-您可以為每個主題設定多個地區設定。 此自訂功能可減少不必要的佈景主題檔案數目，有助於加速建置流程。 例如，您可以建置 _magento/後端_ 英文佈景主題以及其他語言的自訂佈景主題。
+您可以為每個主題設定多個地區設定。 此自訂功能可減少不必要的佈景主題檔案數目，有助於加速建置流程。 例如，您可以建置英文的&#x200B;_magento/backend_&#x200B;佈景主題，以及其他語言的自訂佈景主題。
 
-下列範例會建置 `Magento/backend` 三種地區設定的主題：
+下列範例會建置具有三種地區設定的`Magento/backend`主題：
 
 ```yaml
 stage:
@@ -155,7 +155,7 @@ stage:
           - af_ZA
 ```
 
-或者，您可以選擇 _非_ 部署主題：
+或者，您可以選擇&#x200B;_不_&#x200B;部署佈景主題：
 
 ```yaml
 stage:
@@ -186,13 +186,13 @@ stage:
 - **預設**—`quick`
 - **版本**—Adobe Commerce 2.2.0和更新版本
 
-自訂 [部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) 用於靜態內容。 另請參閱 [部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html).
+自訂靜態內容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 請參閱[部署靜態檢視檔案](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
 
-使用這些選項 _僅限_ 如果您有多個地區設定：
+如果您有多個地區設定，請只使用這些選項&#x200B;_1}：_
 
 - `standard` — 為所有封裝部署所有靜態檢視檔案。
-- `quick`—(_預設_)將部署時間縮到最短。
-- `compact` — 節省伺服器上的磁碟空間。 在Adobe Commerce 2.2.4版和更早版本中，此設定會覆寫以下專案的值： `scd_threads` ，值為 `1`.
+- `quick` — （_預設_）可縮短部署時間。
+- `compact` — 節省伺服器上的磁碟空間。 在Adobe Commerce 2.2.4版和更早版本中，此設定會以`1`的值覆寫`scd_threads`的值。
 
 ```yaml
 stage:
@@ -213,16 +213,16 @@ stage:
     SCD_THREADS: 2
 ```
 
-若要進一步縮短部署時間，請使用 [設定管理](../store/store-settings.md) 使用 `scd-dump` 將靜態部署移至建置階段的命令。
+若要進一步縮短部署時間，請使用[組態管理](../store/store-settings.md)搭配`scd-dump`命令，將靜態部署移至建置階段。
 
 ## `SCD_USE_BALER`
 
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.3.0和更新版本
 
-[貝勒](https://github.com/magento/baler) 會掃描您產生的JavaScript程式碼並建立最佳化的JavaScript套件組合。 將最佳化的套件組合部署至您的網站，可以減少載入網站時的網路要求數目，並改善頁面載入時間。
+[Baler](https://github.com/magento/baler)會掃描您產生的JavaScript程式碼並建立最佳化的JavaScript套件組合。 將最佳化的套件組合部署至您的網站，可以減少載入網站時的網路要求數目，並改善頁面載入時間。
 
-將設為 `true` 以在執行靜態內容部署後執行Baler。
+設定為`true`以執行靜態內容部署後執行Baler。
 
 ```yaml
 stage:
@@ -239,9 +239,9 @@ stage:
 - **預設**— _未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-將設為 `true` 跳過 `composer dump-autoload` Cloud Docker安裝期間的命令。 此變數僅與具有可寫入檔案系統的Cloud Docker容器相關。 在這種情況下，略過指令可防止嘗試從已刪除的存取程式碼的其他指令發生錯誤 `generated` 目錄。
+設定為`true`以在Cloud Docker安裝期間略過`composer dump-autoload`命令。 此變數僅與具有可寫入檔案系統的Cloud Docker容器相關。 在這種情況下，略過命令可防止其他命令嘗試從已刪除的`generated`目錄存取程式碼時發生錯誤。
 
-Adobe Commerce執行時 `composer dump-autoload`，它會建立自動載入檔案，並包含中產生的類別的連結 `generated` 資料夾，這在擁有唯讀檔案系統的生產環境中不是問題。 但是，對於具有可寫入檔案系統的Cloud Docker安裝（僅針對使用進行測試和開發而建立） `./vendor/bin/ece-docker build:compose --with-test`)，您可以執行 `bin/magento -n setup:upgrade` 命令不包含 `--keep-generated` 選項，會刪除 `generated` 目錄。 如果刪除目錄， `composer dump-autoload` 命令失敗，因為自動載入包含已刪除目錄中檔案的連結。
+當Adobe Commerce執行`composer dump-autoload`時，它會建立自動載入檔案，並包含到`generated`資料夾中產生的類別的連結，這在具有唯讀檔案系統的生產環境中不是問題。 但是，對於具有可寫入檔案系統的Cloud Docker安裝（僅針對使用`./vendor/bin/ece-docker build:compose --with-test`的測試和開發而建立），您可以執行`bin/magento -n setup:upgrade`命令而不使用`--keep-generated`選項，這會刪除`generated`目錄。 如果刪除目錄，則`composer dump-autoload`命令會失敗，因為自動載入包含已刪除目錄中檔案的連結。
 
 ```yaml
 stage:
@@ -254,11 +254,11 @@ stage:
 - **預設**— _未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-將設為 `true` 跳過建置階段的靜態內容部署。
+設為`true`會在建置階段期間略過靜態內容部署。
 
-如果您已在建置階段期間使用部署靜態內容 [設定管理](../store/store-settings.md)，您可以略過靜態內容部署，以進行快速建置測試。
+如果您已在使用[組態管理](../store/store-settings.md)的建置階段中部署靜態內容，您可以略過靜態內容部署以進行快速建置測試。
 
-在建置階段，設定 `SKIP_SCD: false` 因此靜態內容建置會在建置階段進行，而程式不會影響網站部署或造成不必要的網站停機。 另請參閱 [靜態內容部署](../deploy/static-content.md).
+在建置階段中，設定`SKIP_SCD: false`，以便在建置階段期間進行靜態內容建置，該程式不會影響網站部署或造成不必要的網站停機。 請參閱[靜態內容部署](../deploy/static-content.md)。
 
 ```yaml
 stage:
@@ -271,17 +271,17 @@ stage:
 - **預設**—_未設定_
 - **版本**—Adobe Commerce 2.1.4和更新版本
 
-啟用或停用 [Symfony](https://symfony.com/doc/current/console/verbosity.html) 偵錯詳細資訊層級 `bin/magento` 在部署階段執行的CLI命令。
+啟用或停用部署階段所執行`bin/magento` CLI命令的[Symfony](https://symfony.com/doc/current/console/verbosity.html)偵錯詳細程度。
 
 >[!NOTE]
 >
->若要使用VERBOSE_COMMANDS來控制命令輸出中成功和失敗的細節 `bin/magento` CLI命令，您必須設定 [MIN_LOGGING_LEVEL](variables-global.md#minlogginglevel) `debug`.
+>若要使用VERBOSE_COMMANDS來控制命令輸出中成功和失敗的`bin/magento` CLI命令的詳細資料，您必須設定[MIN_LOGGING_LEVEL](variables-global.md#minlogginglevel) `debug`。
 
 選擇記錄中提供的詳細資訊等級：
 
 - `-v`=一般輸出
-- `-vv`=更多詳細資訊輸出
-- `-vvv` =詳細輸出適用於偵錯
+- `-vv`=其他詳細資訊輸出
+- `-vvv` =詳細輸出，適用於偵錯
 
 ```yaml
 stage:

@@ -25,7 +25,7 @@ ht-degree: 0%
 
 - 整合環境不支援測試和生產環境中提供的某些服務，例如Fastly和New Relic。
 
-- [完整測試](../test/guidance.md) 您的網站，提供測試中的各種工具，用於負載、壓力、效能和網站資產。
+- [使用測試中的各種工具，針對負載、壓力、效能和網站資產，完整測試](../test/guidance.md)您的網站。
 
 - 由於整合環境可能僅填入了包含測試資料的資料庫，不符合類似生產的環境，因此在中繼或生產環境中進行測試時，您可能會發現其他錯誤或意外行為。
 
@@ -39,11 +39,11 @@ ht-degree: 0%
 
 - SSL/TLS憑證
 
-在雲端基礎結構訂閱方面，Adobe CommerceAdobe提供Let&#39;s Encrypt發出的網域已驗證SSL/TLS憑證。 每個Pro生產、測試和入門生產(`master`)環境有唯一憑證，可涵蓋該環境中的所有網域和子網域。 在您更新用於開發和生產的DNS設定後，這些憑證會自動布建並上傳到您的網站。 另請參閱 [布建SSL/TLS憑證](../cdn/fastly-configuration.md#provision-ssltls-certificates).
+在雲端基礎結構訂閱方面，Adobe CommerceAdobe提供Let&#39;s Encrypt發出的網域已驗證SSL/TLS憑證。 每個Pro Production、Staging和Starter Production (`master`)環境都有唯一憑證，涵蓋該環境中的所有網域和子網域。 在您更新用於開發和生產的DNS設定後，這些憑證會自動布建並上傳到您的網站。 請參閱[布建SSL/TLS憑證](../cdn/fastly-configuration.md#provision-ssltls-certificates)。
 
 >[!NOTE]
 >
->如果您想為貴公司部署自己的擴展驗證SSL憑證，而不是使用Let&#39;s Encrypt憑證，請聯絡您的CTA或 [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+>如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請聯絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 ## 設定安全性掃描工具
 
@@ -59,13 +59,13 @@ ht-degree: 0%
 >
 >將這些IP位址新增至網路防火牆規則的允許清單，以允許工具掃描您的網站。 此工具只會向連線埠80和443張貼請求。
 
-安全性掃描工具可讓您定期監視商店網站，並接收已知安全性風險、惡意程式碼和過時軟體的更新。 此工具是免費服務，適用於雲端基礎結構上所有實施和版本的Adobe Commerce。 您可透過 [Commerce Marketplace帳戶](https://account.magento.com/customer/account/login).
+安全性掃描工具可讓您定期監視商店網站，並接收已知安全性風險、惡意程式碼和過時軟體的更新。 此工具是免費服務，適用於雲端基礎結構上所有實施和版本的Adobe Commerce。 您透過您的[Commerce Marketplace帳戶](https://account.magento.com/customer/account/login)存取工具。
 
 - 監視您的網站安全性狀態和套用的安全性更新
 
 - 接收安全性更新和網站特定通知
 
-請參閱 [使用手冊](https://docs.magento.com/user-guide/magento/security-scan.html) 以取得關於設定及使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
+請參閱[使用手冊](https://docs.magento.com/user-guide/magento/security-scan.html)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
 
 您掃描的每個站台都必須透過[安全性掃描]索引標籤登入。 在註冊過程中，您必須接受免責宣告，才能開始掃描。 您可以控制排程並授權使用者在每次掃描完成時接收通知。 您可以排程特定週期性日期與時間的掃描，或視需要執行掃描。
 
@@ -80,17 +80,17 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## 掃描您的網站
 
-1. 存取您的 [Commerce Marketplace帳戶](https://account.magento.com/customer/account/login).
+1. 存取您的[Commerce Marketplace帳戶](https://account.magento.com/customer/account/login)。
 
-1. 按一下「安全性掃描」標籤並選取 **前往安全性掃描**.
+1. 按一下[安全性掃描]索引標籤，然後選取&#x200B;**移至安全性掃描**。
 
-1. 在 _動作_ 欄中，選取 **執行掃描**. 通知狀態會顯示排定的掃描。
+1. 在網站的&#x200B;_動作_&#x200B;欄中，選取&#x200B;**執行掃描**。 通知狀態會顯示排定的掃描。
 
 ### 若要檢閱報表：
 
 1. 報告完成時，會顯示通知。
 
-1. 在網站列中，選取您要檢視的報告 **報表** 欄。 順序從最新到最舊。
+1. 在網站列中，從&#x200B;**報表**&#x200B;欄選取您要檢視的報表。 順序從最新到最舊。
 
 報告會列出問題，包括失敗的掃描、無法識別的結果和成功的掃描。 每個專案都會提供掃描的詳細資訊、要調查的問題清單以及要採取的動作。 有些動作可能需要下載並安裝安全性修補程式。 將任何必要的修補程式新增至本機工作站的開發分支，再新增至生產分支。
 

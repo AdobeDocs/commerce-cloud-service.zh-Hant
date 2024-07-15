@@ -34,14 +34,14 @@ ht-degree: 0%
                 libxml<br>
                 mysqli<br>
                 opcache<br>
-                openswool<br>
+                openswoole<br>
                 pcntl<br>
                 pdo_mysql<br>
                 反射<br>
                 soap<br>
                 通訊端<br>
                 SPL<br>
-                標準<br>
+                standard<br>
                 sysvmsg<br>
                 sysvsem<br>
                 sysvshm<br>
@@ -55,7 +55,7 @@ ht-degree: 0%
                 dba<br>
                 dom<br>
                 檔案資訊<br>
-                篩選<br>
+                篩選器<br>
                 ftp<br>
                 雜湊<br>
                 iconv<br>
@@ -63,13 +63,13 @@ ht-degree: 0%
                 mbstring<br>
                 mysqlnd<br>
                 openssl<br>
-                密碼<br>
+                pcre<br>
                 pdo<br>
                 pdo_sqlite<br>
                 phar<br>
                 posix<br>
                 readline<br>
-                session<br>
+                工作階段<br>
                 sqlite3<br>
                 tokenizer<br>
                 xml<br>
@@ -90,14 +90,14 @@ ht-degree: 0%
                 oauth<br>
                 pdo_mysql<br>
                 propro<br>
-                拼字<br>
+                pspell<br>
                 raphf<br>
-                recode<br>
+                重新編碼<br>
                 redis<br>
-                購物插座<br>
+                shmop通訊端<br>
                 鈉<br>
                 ssh2<br>
-                整潔<br>
+                整齊<br>
                 xdebug<br>
                 xmlrpc<br>
                 xsl<br>

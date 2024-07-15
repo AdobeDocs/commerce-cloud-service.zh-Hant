@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!TAB CLI]
 
-**使用Cloud CLI新增整合的方式**：
+**若要使用Cloud CLI新增整合**：
 
 下列指令會啟動互動式提示，以選取新整合的型別和選項。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 magento-cloud integration:add
 ```
 
-**列出為專案設定的整合**：
+**若要列出專案設定的整合**：
 
 ```bash
 magento-cloud integration:list
@@ -52,11 +52,11 @@ magento-cloud integration:list
 
 >[!TAB 主控台]
 
-**若要使用新增整合[!DNL Cloud Console]**：
+**若要使用[!DNL Cloud Console]**&#x200B;新增整合：
 
-1. 在 _專案設定_，按一下 **[!UICONTROL Integrations]**.
+1. 在&#x200B;_專案設定_&#x200B;中，按一下&#x200B;**[!UICONTROL Integrations]**。
 
-1. 按一下整合型別，或按一下 **[!UICONTROL Add integration]**.
+1. 按一下整合型別或按一下&#x200B;**[!UICONTROL Add integration]**。
 
 1. 逐步完成整合型別選取和設定步驟。
 
@@ -64,26 +64,26 @@ magento-cloud integration:list
 
 >[!ENDTABS]
 
-## Commerce Webhook
+## Commerce webhook
 
-您可以使用在雲端專案中設定Commerce Webhook [ENABLE_WEBHOOKS全域變數](../environment/variables-global.md#enable_webhooks). Commerce Webhook會傳送請求至外部伺服器，以回應Commerce產生的事件。 此 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks) 詳細說明此功能。
+您可以使用[ENABLE_WEBHOOKS全域變數](../environment/variables-global.md#enable_webhooks)在雲端專案中設定Commerce Webhooks。 Commerce webhook會傳送請求至外部伺服器，以回應Commerce產生的事件。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks)詳細說明此功能。
 
 ## 通用Webhook
 
-您可以使用自訂webhook整合，擷取並報告Cloud基礎結構和存放庫事件，並用於 `POST` 將JSON訊息傳送至 _webhook_ URL。
+您可以使用自訂Webhook整合，將`POST` JSON訊息擷取並報告至&#x200B;_Webhook_ URL的Cloud基礎結構和存放庫事件。
 
-**若要新增webhook URL，請使用以下語法**：
+**若要新增webhook URL，請使用下列語法**：
 
 ```bash
 magento-cloud integration:add --type=webhook --url=https://hook-url.example.com
 ```
 
-- `type` — 指定 `webhook` 整合型別。
+- `type` — 指定`webhook`整合型別。
 - `url` — 提供可接收JSON訊息的webhook URL。
 
 範例回應會顯示一系列提示，提供自訂整合的機會。 使用預設（空白）回應會傳送有關專案中所有環境之所有事件的訊息。
 
-您可以自訂報表特定整合 [事件](#events-to-report)，例如將程式碼推送至分支。 例如，您可以指定 `environment.push` 事件，在使用者將程式碼推送至分支時傳送訊息：
+您可以自訂整合，以報告特定的[事件](#events-to-report)，例如推送程式碼至分支。 例如，您可以指定`environment.push`事件，以便在使用者將程式碼推播至分支時傳送訊息：
 
 ```terminal
 Events to report (--events)
@@ -93,7 +93,7 @@ Enter comma-separated values (or leave this blank)
 >
 ```
 
-您可以選擇在中報告事件 `pending`， `in_progress`，或 `complete` 狀態：
+您可以選擇報告`pending`、`in_progress`或`complete`狀態的事件：
 
 ```terminal
 States to report (--states)
@@ -103,7 +103,7 @@ Enter comma-separated values (or leave this blank)
 >
 ```
 
-您可以 _包含_ 或 _排除_ 適用於特定環境的訊息：
+您可以&#x200B;_包含_&#x200B;或&#x200B;_排除_&#x200B;特定環境的訊息：
 
 ```terminal
 Included environments (--environments)
@@ -137,7 +137,7 @@ Created integration integration-ID (type: webhook)
 
 ### 更新現有的整合
 
-您可以更新現有的整合。 例如，將狀態從 `complete` 至 `pending` 使用下列專案：
+您可以更新現有的整合。 例如，使用以下專案將狀態從`complete`變更為`pending`：
 
 ```bash
 magento-cloud integration:update --states=pending <int-id>
@@ -171,14 +171,14 @@ Integration integration-ID (webhook) updated
 | `environment.branch` | 已使用管理主控台建立分支 |
 | `environment.deactivate` | 已「停用」分支。 程式碼仍存在，但環境已損毀 |
 | `environment.delete` | 已刪除分支 |
-| `environment.initialize` | 此 `master` 使用第一個認可初始化的專案分支 |
+| `environment.initialize` | 使用第一個認可初始化的專案的`master`分支 |
 | `environment.merge` | 使用中的分支已使用管理控制檯或API合併 |
 | `environment.push` | 使用者將程式碼推送至分支 |
 | `environment.restore` | 使用者已還原快照 |
 | `environment.route.create` | 已使用管理主控台建立路由 |
 | `environment.route.delete` | 已經使用管理主控台刪除路由 |
 | `environment.route.update` | 已使用管理主控台修改路由 |
-| `environment.subscription.update` | 此 `master` 環境已重新調整大小，因為訂閱已變更，但此處沒有內容變更 |
+| `environment.subscription.update` | `master`環境已重新調整大小，因為訂閱已變更，但此處沒有內容變更 |
 | `environment.synchronize` | 環境已從其父環境中重新複製資料或程式碼 |
 | `environment.update.http_access` | 已修改環境的HTTP存取規則 |
 | `environment.update.restrict_robots` | 已啟用或停用block-all-robots功能 |
