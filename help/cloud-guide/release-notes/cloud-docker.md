@@ -5,7 +5,7 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-04-08T00:00:00Z
 exl-id: 907d977f-2e9c-4553-a46b-000bc6a57b28
-source-git-commit: bc76cba0219f16fd055c20289811b51c35c9b026
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '3662'
 ht-degree: 0%
@@ -146,14 +146,14 @@ ht-degree: 0%
 
 - ![新圖示](../../assets/new.svg) **NGINX命令選項** — 已新增組建命令選項，以變更TLS和Web服務的NGINX `worker_processes`和NGINX `worker_connections`數目。 `worker_process`引數保留將值設定為`auto`的能力。 範例： <!--MCLOUD-7259-->
 
-  ```terminal
+  ```bash
   ./vendor/bin/ece-docker build:compose --nginx-worker-processes=2
   ./vendor/bin/ece-docker build:compose --nginx-worker-connections=2048
   ```
 
 - ![新圖示](../../assets/new.svg) **TLS命令選項** — 已新增組建命令選項，以便在沒有TLS服務的情況下建立組態。 範例： <!--MCLOUD-7259-->
 
-  ```terminal
+  ```bash
   ./vendor/bin/ece-docker build:compose --no-tls
   ```
 

@@ -3,7 +3,7 @@ title: 套用修補程式
 description: 瞭解如何在雲端基礎結構專案上套用Adobe Commerce中的修補程式。
 feature: Cloud, Upgrade
 exl-id: a7bf672f-7b89-45cd-8436-e885bca9029d
-source-git-commit: e67d3259b1b5195147e4e441fe9efd82e48241ab
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -51,7 +51,7 @@ php ./vendor/bin/ece-patches status
 
 範例回應：
 
-```terminal
+```
 More detailed information about patches you can find on https://support.magento.com/
 ╔════════════════╤═════════════════════════════════════════════════╤══════════╤═════════════╤═════════════════════════════════╗
 ║ Id             │ Title                                           │ Type     │ Status      │ Details                         ║

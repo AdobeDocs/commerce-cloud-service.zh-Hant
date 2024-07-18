@@ -3,7 +3,7 @@ title: 防火牆屬性
 description: 請參閱範例，瞭解如何在Commerce應用程式設定檔案中設定防火牆屬性。
 feature: Cloud, Configuration, Security
 exl-id: f169c008-c62a-41b7-a98d-cccd81c7291a
-source-git-commit: 74d88560db3b65294673a1e1827f9cea098d707a
+source-git-commit: a8ecebc87bfae5deaf0fc7ff3e7dd3b255fe3f24
 workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 0%
@@ -32,7 +32,7 @@ magento-cloud p:curl --project PROJECT_ID /settings | grep -i outbound
 
 除非您要求您原則的`deny`，否則命令應該顯示您的原則設定為`allow`：
 
-```terminal
+```json
 "outbound_restrictions_default_policy": "allow"
 ```
 
@@ -157,7 +157,7 @@ firewall:
 
 若要指定單一IP位址，請將`/32` CIDR首碼新增至您的IP位址結尾：
 
-```terminal
+```
 172.217.11.174/32  # google.com
 ```
 
@@ -189,7 +189,7 @@ awk '($5 ~/query/)' /var/log/dns.log | awk '{print $6}' | sort | uniq -c | sort 
 
 這個命令也會顯示已發出但遭到輸出篩選規則封鎖的DNS要求。 輸出不會顯示哪些網域遭到封鎖，只會顯示已提出的要求。 輸出不會顯示使用IP位址發出的要求。
 
-```terminal
+```
 Example output:
 
 97 magento.com

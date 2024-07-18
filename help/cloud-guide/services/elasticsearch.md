@@ -3,7 +3,7 @@ title: 設定Elasticsearch服務
 description: 瞭解如何在雲端基礎結構上啟用Adobe Commerce的Elasticsearch服務。
 feature: Cloud, Search, Services
 exl-id: ac559cbb-342a-4756-ade5-49eba4827965
-source-git-commit: 8147b43b26370d9305c3c7dc47865ddcbae1904d
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 0%
@@ -110,7 +110,7 @@ ht-degree: 0%
 
    在回應中，檢查`versions`屬性中已安裝的版本。
 
-   ```terminal
+   ```
    name     : elasticsearch/elasticsearch
    descrip. : PHP Client for Elasticsearch
    keywords : client, elasticsearch, search
@@ -135,7 +135,7 @@ ht-degree: 0%
 
    在回應中，尋找Elasticsearch服務端點的IP位址：
 
-   ```terminal
+   ```
    | elasticsearch:                                                                                                  |
    +------------------------------------------+----------------------------------------------------------------------+
    | username                                 | null                                                                 |
@@ -162,7 +162,7 @@ ht-degree: 0%
    curl -XGET <elasticsearch-service-endpoint-ip-address>:9200/
    ```
 
-   ```terminal
+   ```json
    {
       "name" : "-AqGi9D",
       "cluster_name" : "elasticsearch",

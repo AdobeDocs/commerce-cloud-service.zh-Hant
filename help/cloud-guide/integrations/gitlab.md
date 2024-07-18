@@ -3,7 +3,7 @@ title: GitLab整合
 description: 瞭解如何將雲端基礎結構專案上的Adobe Commerce與GitLab整合。
 feature: Cloud, Integration
 exl-id: 37fda8a0-7274-422f-9049-243f2e409f26
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '777'
 ht-degree: 0%
@@ -69,7 +69,7 @@ ht-degree: 0%
 
    預期回應：
 
-   ```terminal
+   ```
    origin git@gitlab.com:<user-name>/<repo-name>.git (fetch)
    origin git@gitlab.com:<user-name>/<repo-name>.git (push)
    ```
@@ -117,7 +117,7 @@ magento-cloud integration:add --type=gitlab --project=<project-ID> --token=<your
 
 1. 出現提示時，請輸入`y`以新增整合。
 
-   ```terminal
+   ```
    Warning: adding a 'gitlab' integration will automatically synchronize code from the external Git repository.
    This means it can overwrite all the code in your project.
    Are you sure you want to continue? [y/N] y
@@ -125,7 +125,7 @@ magento-cloud integration:add --type=gitlab --project=<project-ID> --token=<your
 
 1. 複製傳回輸出顯示的&#x200B;**連結URL**。
 
-   ```terminal
+   ```
    Hook URL: https://eu-3.magento.cloud/api/projects/3txxjf32gtryos/integrations/eolmpfizzg9lu/hook
    Created integration eolmpfizzg9lu (type: gitlab)
    +----------------------------------+---------------------------------------------------------------------------------------+

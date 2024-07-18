@@ -3,7 +3,7 @@ title: 設定路由
 description: 瞭解如何在雲端基礎結構環境中為Adobe Commerce定義傳入HTTPS要求的路由。
 feature: Cloud, Configuration, Routes
 exl-id: a33797e5-14cc-45eb-a048-96180b872a4a
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -286,8 +286,8 @@ http://bar.add-theme-projectID.us.magentosite.cloud/
 
 您可以建立與環境的SSH連線，並使用`magento-cloud` CLI列出路由，來檢視未對應網域的路由模式：
 
-```terminal
-web@mymagento.0:~$ vendor/bin/ece-tools env:config:show routes
+```bash
+vendor/bin/ece-tools env:config:show routes
 
 Magento Cloud Routes:
 +------------------------------------------+--------------------------------------------------------------+

@@ -3,7 +3,7 @@ title: 從元件失敗復原
 description: 瞭解如果元件無法在雲端基礎結構上的Adobe Commerce中正確部署，如何復原。
 feature: Cloud, Deploy
 exl-id: 4855be0c-6883-4ab1-a364-316d10e97250
-source-git-commit: b44d97f82ef09288807c648010202422c9ac04eb
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    如果顯示下列訊息，您就不需要再進行任何動作：
 
-   ```terminal
+   ```
    Package "<name>:<version>" listed for update is not installed. Ignoring.
    ```
 

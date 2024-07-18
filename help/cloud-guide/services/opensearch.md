@@ -3,7 +3,7 @@ title: 設定OpenSearch服務
 description: 瞭解如何在雲端基礎結構上啟用Adobe Commerce的OpenSearch服務。
 feature: Cloud, Search, Services
 exl-id: 10dc6367-3f90-4ab6-a84e-15e8c3b32a38
-source-git-commit: d4c36b084094846cfad69adc2bffd567a58fab26
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -118,7 +118,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
 
    在回應中，尋找OpenSearch服務端點的IP位址和連線埠：
 
-   ```terminal
+   ```
    +------------------------------------------+--------------------------------------------------------+
    | opensearch:                                                                                       |
    +------------------------------------------+--------------------------------------------------------+
@@ -146,7 +146,7 @@ OpenSearch可讓您從任何來源、任何格式取得資料，並即時搜尋�
    curl -XGET <opensearch-service-endpoint-ip-address>:9200
    ```
 
-   ```terminal
+   ```json
    {
       "name" : "opensearch.0",
       "cluster_name" : "opensearch",

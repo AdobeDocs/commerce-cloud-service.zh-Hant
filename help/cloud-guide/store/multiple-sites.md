@@ -3,7 +3,7 @@ title: 設定多個網站或商店
 description: 瞭解如何在雲端基礎結構上為Adobe Commerce設定多個網站或商店。
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 16e932ef-f083-44d7-977f-0c78899e151a
-source-git-commit: 85aa54af10e7ea44adde5403b69ff03d4a0c622f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -22,14 +22,14 @@ ht-degree: 0%
 
 具有唯一網域的多家商店：
 
-```terminal
+```
 https://first.store.com/
 https://second.store.com/
 ```
 
 具有相同網域的多個商店：
 
-```terminal
+```
 https://store.com/first/
 https://store.com/second/
 ```

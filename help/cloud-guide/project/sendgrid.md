@@ -2,7 +2,7 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: 2b106edcaaacb63c0e785f094b7e1b755885abd0
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -104,7 +104,7 @@ m1._mydomain.com | TXT | k=rsa; t=s; p=<public-key>
 
 若要測試您的DNS設定：
 
-```terminal
+```
 dig CNAME em.domain_name
 dig CNAME s1._domainkey.domain_name
 dig CNAME s2._domainkey.domain_name

@@ -3,7 +3,7 @@ title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: 86af69eed16e8fe464de93bd0f33cfbfd4ed8f49
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -44,7 +44,7 @@ magento-cloud ssh -p <project-ID> -e <environment-ID> --all
 
 範例回應：
 
-```terminal
+```
 1.ent-project-environment-id@ssh.region.magento.cloud
 2.ent-project-environment-id@ssh.region.magento.cloud
 3.ent-project-environment-id@ssh.region.magento.cloud
@@ -84,7 +84,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 檢查記錄專案的時間戳記，驗證並尋找特定部署的記錄。 以下是可用於疑難排解的記錄輸出壓縮範例：
 
-```terminal
+```
 Re-deploying environment project-integration-ID
   Executing post deploy hook for service `mymagento`
     [2019-01-03 19:44:11] NOTICE: Starting post-deploy.
@@ -129,7 +129,7 @@ magento-cloud log -e <environment-ID> deploy
 
 範例回應：
 
-```terminal
+```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
 [2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
@@ -153,7 +153,7 @@ magento-cloud ssh -e <environment-ID> "./vendor/bin/ece-tools error:show"
 
 範例回應：
 
-```terminal
+```
 errorCode: 1001
 stage: build
 step: validate-config
@@ -187,19 +187,19 @@ type: warning
 | 記錄檔 | Starter與Pro整合 | 說明 |
 | ------------------- | --------------------------- | ------------------------------------------------- |
 | **部署記錄檔** | `/var/log/deploy.log` | 來自[部署勾點](../application/hooks-property.md)的活動。 |
-| **Post — 部署記錄檔** | `/var/log/post_deploy.log` | 來自[部署後勾點](../application/hooks-property.md)的活動。 |
+| **部署後記錄檔** | `/var/log/post_deploy.log` | 來自[部署後勾點](../application/hooks-property.md)的活動。 |
 | **Cron記錄檔** | `/var/log/cron.log` | cron作業的輸出。 |
 | **Nginx存取記錄檔** | `/var/log/access.log` | 在Nginx啟動時，遺失目錄和排除的檔案型別會出現HTTP錯誤。 |
 | **Nginx錯誤記錄** | `/var/log/error.log` | 啟動訊息有助於偵錯與Nginx相關的設定錯誤。 |
 | **PHP存取記錄檔** | `/var/log/php.access.log` | 對PHP服務的請求。 |
 | **PHP FPM記錄檔** | `/var/log/app.log` | |
 
-對於Pro測試和生產環境，部署、Post部署和Cron記錄僅可在叢集中的第一個節點上使用：
+對於Pro測試環境和生產環境，部署、部署後和Cron記錄僅可在叢集中的第一個節點上使用：
 
 | 記錄檔 | Pro Staging | Pro Production |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
 | **部署記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **Post — 部署記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **部署後記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
 | **Cron記錄檔** | 僅第一個節點：<br>`/var/log/platform/<project-ID>_stg/cron.log` | 僅第一個節點：<br>`/var/log/platform/<project-ID>/cron.log` |
 | **Nginx存取記錄檔** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
 | **Nginx錯誤記錄** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
@@ -210,7 +210,7 @@ type: warning
 
 應用程式記錄檔每天會壓縮並封存一次，並保留一年。 壓縮的記錄檔使用對應至`Number of Days Ago + 1`的唯一識別碼來命名。 例如，在Pro生產環境中，過去21天的PHP存取記錄會儲存起來，並命名如下：
 
-```terminal
+```
 /var/log/platform/<project-ID>/php.access.log.22.gz
 ```
 
@@ -218,7 +218,7 @@ type: warning
 
 >[!NOTE]
 >
->**部署**&#x200B;和&#x200B;**Post — 部署**&#x200B;記錄檔未輪換及封存。 整個部署歷史記錄會寫入這些記錄檔中。
+>**部署**&#x200B;和&#x200B;**部署後**&#x200B;記錄檔未輪換及封存。 整個部署歷史記錄會寫入這些記錄檔中。
 
 ## 服務記錄
 

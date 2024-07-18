@@ -3,7 +3,7 @@ title: 智慧型精靈
 description: 瞭解如何使用智慧型精靈，評估雲端基礎結構專案上的Adobe Commerce是否遵循部署最佳實務。
 feature: Cloud, Build, Deploy, SCD
 exl-id: eb79431c-8835-4ae4-b453-9c4932c5d5ac
-source-git-commit: 225fba1acfd8b3ce4d7ce989c7851e7b0b218680
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 成功的設定傳回：
 
-```terminal
+```
 SCD on-demand is enabled
 ```
 
 失敗的設定傳回：
 
-```terminal
+```
 SCD on-demand is disabled
 ```
 
@@ -50,7 +50,7 @@ SCD on-demand is disabled
 
 您的Cloud專案的&#x200B;_理想_&#x200B;設定可讓快取暖身，並在使用者要求時產生靜態內容，協助將部署停機時間降到最低。 此精靈會在部署過程中自動執行。 如果您的雲端未針對此&#x200B;_理想狀態_&#x200B;進行設定，則您會收到類似下列的訊息：
 
-```terminal
+```
 - SCD on build is not configured
 - Post-deploy hook is not configured
 - Skip HTML minification is disabled
@@ -81,6 +81,6 @@ Ideal state is not configured
 
 1. 推送您的程式碼變更，然後再次執行測試。 當您的設定是&#x200B;_理想_&#x200B;時，您會收到下列訊息。
 
-   ```terminal
+   ```
    Ideal state is configured
    ```

@@ -3,7 +3,7 @@ title: 升級專案以使用ECE-Tools
 description: 瞭解如何在雲端基礎結構專案上升級Adobe Commerce，以使用ECE-Tools套件並利用最新的修正和功能。
 feature: Cloud, Install
 exl-id: 820cca84-2817-4881-829f-ebb78400d8c7
-source-git-commit: bcdb59f0d2a17e55e8b0479ee69fac06c710638f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`封�
 
 每個Adobe Commerce版本都需要不同的限制，基礎如下：
 
-```terminal
+```
 >=current_version <next_version
 ```
 
@@ -105,7 +105,7 @@ Adobe已棄用`magento/magento-cloud-configuration`和`magento/ece-patches`封�
 
 1. 新增並認可程式碼變更。 在此範例中，已更新下列檔案：
 
-   ```terminal
+   ```
    .magento.app.yaml
    composer.json
    composer.lock

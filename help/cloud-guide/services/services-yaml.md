@@ -3,7 +3,7 @@ title: 設定服務
 description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務。
 feature: Cloud, Configuration, Services
 exl-id: 48091c10-c53f-4aad-afbe-b4516653bda1
-source-git-commit: 4d790bff2ba5d02ef10de5c36a2f0d140e31a407
+source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -129,7 +129,7 @@ mysql:
 
    >縮寫的範例回應
 
-   ```terminal
+   ```yaml
    redis:
        -
    ...

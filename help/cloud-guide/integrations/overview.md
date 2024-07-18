@@ -5,7 +5,7 @@ role: Developer
 feature: Cloud, Integration
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 2dddba73-5b88-4b5d-a0e1-2f1c1f52354c
-source-git-commit: abe9aa36b907be8bdfdf42e6f28f1e1eac68fecf
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -38,7 +38,7 @@ magento-cloud integration:list
 
 範例回應：
 
-```terminal
+```
 +----------+--------------+---------------------------------------------------------------------------+
 | ID       | Type         | Summary                                                                   |
 +----------+--------------+---------------------------------------------------------------------------+
@@ -85,7 +85,7 @@ magento-cloud integration:add --type=webhook --url=https://hook-url.example.com
 
 您可以自訂整合，以報告特定的[事件](#events-to-report)，例如推送程式碼至分支。 例如，您可以指定`environment.push`事件，以便在使用者將程式碼推播至分支時傳送訊息：
 
-```terminal
+```
 Events to report (--events)
 A list of events to report, e.g. environment.push
 Default: *
@@ -95,7 +95,7 @@ Enter comma-separated values (or leave this blank)
 
 您可以選擇報告`pending`、`in_progress`或`complete`狀態的事件：
 
-```terminal
+```
 States to report (--states)
 A list of states to report, e.g. pending, in_progress, complete
 Default: complete
@@ -105,7 +105,7 @@ Enter comma-separated values (or leave this blank)
 
 您可以&#x200B;_包含_&#x200B;或&#x200B;_排除_&#x200B;特定環境的訊息：
 
-```terminal
+```
 Included environments (--environments)
 The environment IDs to include
 Default: *
@@ -120,7 +120,7 @@ Enter comma-separated values (or leave this blank)
 
 整合完成後，您會收到值的摘要：
 
-```terminal
+```
 Created integration integration-ID (type: webhook)
 +-----------------------+------------------------------+
 | Property              | Value                        |
@@ -145,7 +145,7 @@ magento-cloud integration:update --states=pending <int-id>
 
 範例回應：
 
-```terminal
+```
 Integration integration-ID (webhook) updated
 +-----------------------+------------------------------+
 | Property              | Value                        |

@@ -3,7 +3,7 @@ title: 雲端基礎結構專案
 description: 閱讀雲端基礎結構上Adobe Commerce的概觀 [!DNL Cloud Console] ，並瞭解如何存取帳戶設定。
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: ae862898-9b4d-45ed-b370-e82cc6f99017
-source-git-commit: abe9aa36b907be8bdfdf42e6f28f1e1eac68fecf
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -81,7 +81,7 @@ _所有專案_&#x200B;檢視會列出您有權存取的所有專案。 您可以
 
 Web Access URL可能包含下列專案：
 
-```terminal
+```
 https://<branch>-<unique-ID>-<project-ID>.<region>.magentosite.cloud/
 ```
 

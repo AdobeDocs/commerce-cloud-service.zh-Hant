@@ -3,7 +3,7 @@ title: 存放區設定管理
 description: 瞭解如何在雲端基礎結構環境中跨所有Adobe Commerce管理和同步處理存放區組態設定。
 feature: Cloud, Configuration, SCD
 exl-id: f2dd876d-24ee-4d47-b9ac-44fcf77b61b5
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 0%
@@ -162,7 +162,7 @@ ht-degree: 0%
 
 原始`app/etc/env.php`和`app/etc/config.php`檔案的復本是在部署過程中建立的，並儲存在相同的資料夾中。 以下顯示相同`app/etc`資料夾中的BAK （備份檔案）和PHP （原始檔案）：
 
-```terminal
+```
 ...
 config.php.bak
 di.xml
@@ -192,7 +192,7 @@ env.php
 
    範例回應：
 
-   ```terminal
+   ```
    The list of backup files:
    app/etc/env.php
    app/etc/config.php

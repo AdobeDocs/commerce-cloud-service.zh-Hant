@@ -3,7 +3,7 @@ title: Crons屬性
 description: 請參閱如何在 [!DNL Commerce] 應用程式組態檔中設定'crons'屬性的範例。
 feature: Cloud, Configuration
 exl-id: 67d592c1-2933-4cdf-b4f6-d73cd44b9f59
-source-git-commit: 1c0e05c3d8461bea473bcf6ec35162d65ef2774f
+source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Adobe Commerce僅將auto-crons設定選項新增至Pro專案，以支援中繼�
 
 下列範例顯示僅具有預設`crons`組態之環境的`crontab`輸出：
 
-```terminal
+```
 username@hostname:~$ crontab -l
 # Crontab is managed by the system, attempts to edit it directly will fail.
 SHELL=/etc/platform/6fck2obu3244c/cron-run
