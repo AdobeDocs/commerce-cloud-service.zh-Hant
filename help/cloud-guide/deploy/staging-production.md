@@ -3,9 +3,9 @@ title: 部署至測試與生產
 description: 瞭解如何將雲端基礎結構上的Adobe Commerce程式碼部署到中繼和生產環境，以供進一步測試。
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 4b82289f-ee04-4b14-a0ed-7a8a19fc6a6a
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: ae7eb6a0c3de773377c8e1efb5ce2e92c06506bd
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -340,6 +340,8 @@ Adobe **建議**&#x200B;將資料從生產環境移轉至測試環境，以完�
    create database main;
    ```
 
+1. 匯入資料庫。
+
    為生產匯入：
 
    ```shell
@@ -351,3 +353,5 @@ Adobe **建議**&#x200B;將資料從生產環境移轉至測試環境，以完�
    ```shell
    zcat <cluster-ID_stg>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <database-username> <database-name>;
    ```
+
+   這些命令會解壓縮資料庫傾印檔案、移除`DEFINER`陳述式，並使用指定的認證匯入資料庫。
