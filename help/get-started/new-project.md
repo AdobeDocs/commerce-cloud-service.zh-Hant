@@ -4,7 +4,7 @@ description: 瞭解如何準備Adobe客戶技術顧問，以在雲端基礎結�
 recommendations: noDisplay, catalog
 role: Admin
 exl-id: cfb354b0-c255-4b6e-94aa-c5a6bf7230d6
-source-git-commit: 374cbe4a119b43ab446905fd6b9e51840094ce61
+source-git-commit: da1dec76b9389244f9d5a65428e09f1bc897fa5f
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 請參閱&#x200B;_雲端基礎結構上的Commerce_&#x200B;指南中的[設定多個網站或商店](../cloud-guide/store/multiple-sites.md)，以取得多個或唯一網域的進一步指引。
 
-如果您有現有的Fastly帳戶，連結您Adobe Commerce網站上使用的相同頂點和子網域，請參閱[多個Fastly帳戶和指派的網域](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains)。
+如果您有現有的Fastly帳戶連結您Adobe Commerce網站上使用的相同頂點和子網域，請參閱[多個Fastly帳戶和指派的網域](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
 
 ## 異動電子郵件網域
 
