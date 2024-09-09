@@ -1,5 +1,5 @@
 ---
-source-git-commit: 6d8c082d78259f8f7adb0fb7f11ff4fcdb234124
+source-git-commit: a58ad3254cb00a8fcafd11f1541f55ea86ad18eb
 workflow-type: tm+mt
 source-wordcount: '4030'
 ht-degree: 0%
@@ -8,7 +8,7 @@ ht-degree: 0%
 # ece-tools
 
 <!-- The template to render with above values -->
-**版本**： 2002.1.18
+**版本**： 2002.1.19
 
 此參考包含34個可透過`ece-tools`命令列工具使用的命令。
 在雲端基礎結構上的Adobe Commerce中使用`ece-tools list`命令會自動產生初始清單。
@@ -33,14 +33,14 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 ### `--input`，`-i`
 
-輸入權杖陣列(例如COMP_WORDS或argv)
+輸入權杖的陣列（例如COMP_WORDS或argv）
 
 - 預設： `[]`
 - 需要值
 
 ### `--current`，`-c`
 
-游標所在的「輸入」陣列索引(例如COMP_CWORD)
+游標所在的「輸入」陣列索引（例如COMP_CWORD）
 
 - 需要值
 
