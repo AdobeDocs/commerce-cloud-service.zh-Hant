@@ -4,9 +4,9 @@ description: 瞭解如何存取您的New Relic帳戶，並管理雲端基礎結�
 feature: Cloud, Observability
 role: Admin
 exl-id: ee639e2e-4074-4384-8f68-152bc3bac93b
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 1fc488d7e13952ad70d4c864327899f38ea48af1
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -17,20 +17,9 @@ ht-degree: 0%
 
 ## 管理使用者存取權
 
-一個New Relic帳戶只能有一個人員指派給擁有者角色。 如果您必須變更帳戶擁有者，請將管理員角色指派給目前的擁有者，然後將擁有者角色指派給其他使用者。 請參閱&#x200B;_New Relic檔案_&#x200B;中的[更新帳戶擁有者](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/)以取得指示。
-
-管理New Relic存取許可權的准則：
-
-- 專案所有者和管理員使用者可以從New Relic帳戶新增和移除使用者。
-- 請勿建立超過五個完整存取權&#x200B;**使用者**。
-- 僅授予嚴格要求存取完整功能集的使用者完整存取權。
-- 沒有針對免費&#x200B;**受限制的**&#x200B;使用者的特定指引。
-
->[!TIP]
+>[!NOTE]
 >
->在將擁有者角色指派給使用者之前，請確認該使用者存在於雲端基礎結構上Adobe Commerce的New Relic帳戶中。 如果您必須新增使用者至該帳戶，而現有的帳戶擁有者或管理員無法提供協助，則任何有權存取New Relic的[Adobe合作擁有者帳戶](https://account.newrelic.com/accounts/1311131/users)的使用者都可以代表客戶新增使用者。
-
-將至少一個&#x200B;**管理員**&#x200B;使用者新增至您的New Relic帳戶，以便管理所有存取權、整合和工具使用。
+>僅授予嚴格要求存取完整功能集的使用者完整存取權。
 
 **若要存取New Relic中的使用者管理**：
 
