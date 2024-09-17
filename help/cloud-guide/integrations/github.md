@@ -4,9 +4,9 @@ description: 瞭解如何在雲端基礎結構專案上將Adobe Commerce與GitHu
 feature: Cloud, Integration
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: 5305452f-4c8d-438c-ac78-e2e1ec2f8cd9
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: b162faadf114423a7da23ecf94c96eccbcaeb72b
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ GitHub整合可讓您直接從GitHub存放庫在雲端基礎結構環境中管�
 
 您必須取得GitHub權杖和webhook才能繼續此程式。
 
-## 必要條件
+## 先決條件
 
 - 雲端基礎結構專案上Adobe Commerce的管理員存取權
 - GitHub存放庫
@@ -108,7 +108,7 @@ GitHub整合可讓您直接從GitHub存放庫在雲端基礎結構環境中管�
 
 | 選項 | 必填？ | 說明 |
 | ----------------------- | --------- | --------------------------------- |
-| `--base-url` | 是 | 伺服器安裝的基底URL，可能是`https://github.com/`或自訂。 如果您的存放庫是透過公開Github託管，請忽略此選項。 |
+| `--base-url` | 是 | 伺服器安裝的基底URL，可能是`https://github.com/`或自訂。 如果您的存放庫是由公用Github託管，或您的存放庫並非由私人伺服器託管，請忽略此選項。 如果您的存放庫URL類似於`https://github.com/{account}/{repository-name}`，請省略此選項。 這可能會造成`Unable to connect to GitHub: repository not found`等錯誤。 |
 | `--token` | 是 | 您為GitHub產生的個人存取權杖 |
 | `--repository` | 是 | 存放庫名稱： `owner-or-organisation/repository` |
 | `--build-pull-requests` | 可選 | 在合併提取請求（預設為`true`）之後，指示雲端基礎結構上的Adobe Commerce進行部署 |
