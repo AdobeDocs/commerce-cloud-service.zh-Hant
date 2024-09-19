@@ -3,7 +3,7 @@ title: Fastly疑難排解
 description: 瞭解如何疑難排解和管理Adobe Commerce的Fastly CDN模組和服務。
 feature: Cloud, Configuration, Cache, Services
 exl-id: e4c47035-cbad-4838-8d44-fa5eaaac42d1
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: e066e9c7e1a6010c9d316f66f1632e28a0c40652
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 使用以下資訊來疑難排解和管理雲端基礎結構專案環境中Adobe Commerce中用於Magento2的Fastly CDN模組。 例如，您可以調查回應標頭值和快取行為來解決Fastly服務和效能問題。
 
-在Pro生產和測試環境中，您可以使用[New Relic記錄](../monitor/log-management.md)來檢視和分析Fastly CDN和WAF記錄資料，以疑難排解錯誤和效能問題。
+在Pro生產和中繼環境中，您可以使用[New Relic記錄](../monitor/log-management.md)來檢視和分析Fastly CDN和WAF記錄資料，以疑難排解錯誤和效能問題。
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 如果雲端基礎結構專案中Adobe Commerce的頂點網域和子網域已與一個指派的服務ID相關聯的現有Fastly帳戶，您必須更新Fastly設定才能啟動：
 
-- 更新現有Fastly帳戶上的Apex和子網域設定。 檢視[多個Fastly帳戶和指派的網域](fastly.md#domain)。
+- 更新現有Fastly帳戶上的Apex和子網域設定。 檢視[多個Fastly帳戶和指派的網域](fastly.md#multiple-fastly-accounts-and-assigned-domains)。
 
 - [啟用並設定Fastly](fastly-configuration.md#enable-fastly-caching)並完成[DNS設定](../launch/checklist.md#update-dns-configuration-with-production-settings)
 
