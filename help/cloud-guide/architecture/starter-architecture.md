@@ -3,9 +3,9 @@ title: 入門架構
 description: 瞭解入門架構支援的環境。
 feature: Cloud, Paas
 exl-id: 03365d32-4eb4-42d4-82a7-771df5e7b3da
-source-git-commit: c61d711b1041ecf76ec6468cd225a34fd77c24b1
+source-git-commit: e5cb79cab4e22d1c787859ab98e6bab6cd2dc2eb
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,9 @@ Adobe建議從`master`建立名為`staging`的分支。 `staging`分支將程式
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
+
+- 減少客戶群組數量 — 擁有過多客戶群組可能會影響索引效能和整體效能。
 
 - 限制使用一或兩名同時使用者
 
