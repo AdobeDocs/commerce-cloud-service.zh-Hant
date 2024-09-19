@@ -4,9 +4,9 @@ description: 瞭解Pro架構支援的環境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: 95b033ba430cb5dc74fa654b9d519dfcd5b6d319
+source-git-commit: eccf69d792f5f8bbd32fb24ac731fffa1eeb91ba
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1511'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,9 @@ ht-degree: 0%
 
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
-- 限制目錄大小
+- 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
+
+- 減少客戶群組數量 — 擁有過多客戶群組可能會影響索引效能和整體效能。
 
 - 限制使用一或兩名同時使用者
 
