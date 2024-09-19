@@ -2,9 +2,9 @@
 title: 雲端CLI
 description: 瞭解magento-cloud CLI，以及它如何協助您在雲端基礎結構專案上管理Adobe Commerce的本機開發環境。
 exl-id: 70dddd62-0269-4af4-bd2a-1a4fbf11a131
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: f09c461c3b9cafd773cbed6c9dee1e514415bcde
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -12,11 +12,17 @@ ht-degree: 0%
 
 # 雲端CLI
 
-`magento-cloud` CLI工具可讓開發人員和系統管理員管理Cloud專案和環境、執行常式並執行自動化工作。 `magento-cloud` CLI擴充[[!DNL Cloud Console]](../../get-started/cloud-console.md)的特性和功能。 在您在本機工作站上安裝`magento-cloud` CLI之後，就可以在雲端基礎結構Starter和Pro整合環境中用它來管理您的Adobe Commerce。
+`magento-cloud` CLI工具可讓開發人員和系統管理員管理Cloud專案和環境、執行常式，以及在本機執行自動化工作。 `magento-cloud` CLI擴充[[!DNL Cloud Console]](../../get-started/cloud-console.md)的特性和功能。 在您在本機工作站上安裝`magento-cloud` CLI之後，就可以在雲端基礎結構Starter和Pro整合環境中用它來管理您的Adobe Commerce。
+
+>[!NOTE]
+>
+>這是本機工具，無法使用此方法安裝在雲端環境（唯讀）上。 您只能透過&#x200B;**部署工作流程**&#x200B;在雲端環境上安裝模組
+>- [專業部署工作流程](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [入門部署工作流程](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow)
 
 **若要安裝`magento-cloud` CLI**：
 
-1. 在本機工作站上，變更至您要複製雲端專案且[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)具有&#x200B;_寫入_&#x200B;存取權的目錄。
+1. 在您的&#x200B;_本機工作站_&#x200B;上，變更至您要複製雲端專案的目錄，且[檔案系統擁有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)具有&#x200B;_寫入_&#x200B;存取權。
 
 1. 安裝`magento-cloud` CLI。
 
