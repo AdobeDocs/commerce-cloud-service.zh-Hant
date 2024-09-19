@@ -3,16 +3,21 @@ title: 設定服務
 description: 瞭解如何在雲端基礎結構上設定Adobe Commerce使用的服務。
 feature: Cloud, Configuration, Services
 exl-id: 48091c10-c53f-4aad-afbe-b4516653bda1
-source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
+source-git-commit: 0262fca6e94d9815e8af0fb0c026e36fecc1f939
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
 
 # 設定服務
 
-`services.yaml`檔案定義Adobe Commerce在雲端基礎結構上支援及使用的服務，例如MySQL、Redis以及Elasticsearch或OpenSearch。 您不需要訂閱外部服務提供者。 此檔案位於專案的`.magento`目錄中。
+`services.yaml`檔案定義Adobe Commerce在雲端基礎結構上支援及使用的服務，例如MySQL、Redis以及Elasticsearch或OpenSearch。 您不需要訂閱外部服務提供者。
+
+>[!NOTE]
+>
+>`.magento/services.yaml`檔案是在您專案的`.magento`目錄中本機管理的。 在建置過程中可存取設定，以便僅在整合環境中定義所需的服務版本，部署完成後便會移除設定，導致您在伺服器上找不到這些設定。
+
 
 部署指令碼使用`.magento`目錄中的組態檔，以設定的服務布建環境。 如果服務包含在`.magento.app.yaml`檔案的[`relationships`](../application/properties.md#relationships)屬性中，您的應用程式便可使用它。 `services.yaml`檔案包含&#x200B;_型別_&#x200B;和&#x200B;_磁碟_&#x200B;值。 服務型別定義服務&#x200B;_名稱_&#x200B;和&#x200B;_版本_。
 
