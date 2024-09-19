@@ -2,9 +2,9 @@
 title: 設定 [!DNL Xdebug]
 description: 瞭解如何設定Xdebug擴充功能，以便在雲端基礎結構專案開發上偵錯Adobe Commerce。
 exl-id: bf2d32d8-fab7-439e-8df3-b039e53009d4
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 7b42174663b79b673ee5af05b794090ddc5bdd75
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1765'
 ht-degree: 0%
 
 ---
@@ -272,6 +272,12 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
    ```bash
    ssh -R /run/platform/USERNAME/xdebug.sock:localhost:9000 -N USERNAME@CLUSTER.ent.magento.cloud
    ```
+
+>[!NOTE]
+>
+>若要取得`USERNAME@CLUSTER.ent.magento.cloud`的正確值：
+>- 方法1： magento-cloud CLI： `magento-cloud ssh --all`
+>- 方法2： Commerce主控台： https://CONSOLE-URL/ENVIRONMENT，按一下`SSH v`下拉式清單
 
 **若要使用環境URL**&#x200B;開始偵錯：
 
