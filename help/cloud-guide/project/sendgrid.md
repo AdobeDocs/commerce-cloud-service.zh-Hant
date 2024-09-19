@@ -2,9 +2,9 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: 1226be333deb1b1da402b4c0d2e141f9be1eb93b
+source-git-commit: 34d1895592c83fa27b52d0f2e0f38445294b3782
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 
 >[!WARNING]
 >
->SendGrid DKIM簽章和網域驗證支援僅適用於Pro專案而非Starter專案。 因此，傳出異動電子郵件可能會被垃圾郵件篩選器標幟。 使用DKIM可改善已驗證電子郵件寄件者的傳送率。 若要改善郵件傳送率，您可以從Starter升級為Pro，或使用您自己的SMTP伺服器或電子郵件傳送服務提供者。 請參閱&#x200B;_系統管理系統指南_&#x200B;中的[設定電子郵件連線](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)。
+>SendGrid DKIM簽章和網域驗證支援僅適用於Pro專案的生產和中繼環境，不適用於所有入門環境。 因此，傳出異動電子郵件可能會被垃圾郵件篩選器標幟。 使用DKIM可改善已驗證電子郵件寄件者的傳送率。 若要改善郵件傳送率，您可以從Starter升級為Pro，或使用您自己的SMTP伺服器或電子郵件傳送服務提供者。 請參閱&#x200B;_系統管理系統指南_&#x200B;中的[設定電子郵件連線](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)。
 
 ### 傳送者與網域驗證
 
