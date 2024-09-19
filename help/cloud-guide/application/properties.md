@@ -3,9 +3,9 @@ title: 屬性
 description: 設定 [!DNL Commerce] 應用程式以建置並部署至雲端基礎結構時，請使用屬性清單作為參考。
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 58a86136-a9f9-4519-af27-2f8fa4018038
-source-git-commit: 99272d08a11f850a79e8e24857b7072d1946f374
+source-git-commit: 1d671d7d2b9ef8742f50b23aa56020d82c701fa4
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,8 @@ disk: 5120
 >[!NOTE]
 >
 >對於Pro測試和生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更新應用程式的`mounts`和`disk`設定。 當您提交票證時，請指出必要的組態變更，並包含更新版本的`.magento.app.yaml`檔案。
+>
+>暫時無法在預備或生產環境中增加磁碟儲存空間；此程式無法還原。
 
 ## `relationships`
 
