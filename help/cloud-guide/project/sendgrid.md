@@ -2,9 +2,9 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 1226be333deb1b1da402b4c0d2e141f9be1eb93b
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,10 @@ DKIM是一種電子郵件驗證技術，可讓網際網路服務提供者(ISP)�
 ### 傳送者與網域驗證
 
 若要讓SendGrid代表您從Pro Production或Staging環境傳送交易式電子郵件，您必須設定DNS設定以包含三個SendGrid子網域DNS專案。 每個SendGrid帳戶都會被指派唯一的`TXT`記錄，用於驗證傳出電子郵件。
+
+>[!TIP]
+>
+>請確定您使用&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中的適當網域來設定&#x200B;**[!UICONTROLS儲存電子郵件地址]**。 對寄件者的電子郵件地址執行網域驗證。 如果設定了預設設定(`example.com`)，Sendgrid將會封鎖來自`example.com`的電子郵件。
 
 **若要啟用網域驗證**：
 
