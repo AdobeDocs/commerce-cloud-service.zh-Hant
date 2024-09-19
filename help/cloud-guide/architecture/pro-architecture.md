@@ -4,9 +4,9 @@ description: 瞭解Pro架構支援的環境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: eccf69d792f5f8bbd32fb24ac731fffa1eeb91ba
+source-git-commit: 66b1f86c8c674d0de4e2895e328a5a850eadf903
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -167,6 +167,10 @@ ht-degree: 0%
 雲端基礎結構上的Adobe Commerce使用高可用性架構，該架構會複製三個獨立AWS或Azure可用性區上的每個Pro專案，每個區有一個獨立的資料中心。 除了此備援之外，Pro中繼和生產環境還會接收定期的即時備份，這些備份是針對&#x200B;_災難性失敗_&#x200B;的情況而設計。
 
 **自動備份**&#x200B;包含來自所有執行中服務的永久資料，例如MySQL資料庫和儲存在掛載磁碟區上的檔案。 備份會儲存至與生產環境位於相同區域的加密彈性區塊儲存(EBS)。 無法公開存取自動備份，因為它們儲存在不同的系統中。
+
+>[!NOTE]
+>
+>掛接的磁碟區僅包含/參考[可寫入的掛接](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/properties#mounts)，不會包含所有`app/`目錄。 至於其他檔案，它們是由[建置和部署程式](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)所建立/產生，您也必須檢查Git存放庫中的剩餘檔案。
 
 {{pro-backups}}
 
