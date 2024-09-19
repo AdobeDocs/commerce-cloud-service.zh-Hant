@@ -6,9 +6,9 @@ feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
 exl-id: 3357a3ea-bf86-4a65-95d1-6b24f1152248
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 5e4be034a392716ea55e2878d336cb9ecac1e052
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 雲端基礎結構上的Adobe Commerce專案使用角色型存取。 專案層級有兩個可用的角色：
 
-- **專案管理員** — 寫入所有專案環境的存取權，並可管理使用者、推送代碼和更新專案設定。
+- **專案管理員** — 寫入所有專案環境的存取權，並可管理使用者、推送代碼和更新專案設定。 （先前稱為&#x200B;**超級管理員**）
 - **專案檢視器** — 所有專案環境的僅限檢視存取權。
 
 專案檢視器無法在任何環境中執行任務；不過，您可以授予專案檢視器特定環境型別的寫入許可權。
