@@ -3,9 +3,9 @@ title: 封鎖要求的自訂VCL
 description: 使用具有自訂VCL片段的Edge存取控制清單(ACL)，依IP位址封鎖傳入要求。
 feature: Cloud, Configuration, Security
 exl-id: 1f637612-3858-49d0-91f7-9b8823933cc9
-source-git-commit: 0e9ace747cc56808108781e42b97c86756089818
+source-git-commit: 16c34b6c693c4d4d5c67b21c79e0cd5d198e047b
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,15 @@ Fastly會在上傳過程中驗證VCL程式碼的更新版本。 如果驗證失�
 
 >[!WARNING]
 >
->在這些範例中，VCL程式碼會格式化為JSON裝載，可儲存至檔案並以Fastly API請求提交。 您可以從Admin](#add-the-custom-vcl-snippet)提交[VCL程式碼片段，或使用Fastly API以JSON字串形式提交。 若要防止在搭配JSON字串使用Fastly API時進行驗證，您必須使用反斜線來逸出特殊字元。
+>在這些範例中，VCL程式碼會格式化為JSON裝載，可儲存至檔案並以Fastly API請求提交。 您可以從Admin](#add-the-custom-vcl-snippet)提交[VCL程式碼片段，或使用Fastly API以JSON字串形式提交。 若要避免在搭配JSON字串使用Fastly API時出現驗證錯誤，您必須使用反斜線來逸出特殊字元。
+
+>[!NOTE]
+>如果您要從Admin提交VCL程式碼片段，請從範例VCL程式碼中擷取個別值，並將它們輸入到對應的欄位中。 例如：
+>- 名稱： `<name of the VCL>`
+>- 動態： `<0/1>`
+>- 型別： `<type>`
+>- 優先順序： `<priority>`
+>- 內容： `<content>`
 
 請參閱Fastly VCL檔案中的[使用動態VCL片段](https://docs.fastly.com/vcl/vcl-snippets/)。
 
