@@ -3,9 +3,9 @@ title: 設定應用程式部署
 description: 瞭解如何在應用程式設定檔案中設定屬性，以控制 [!DNL Commerce] 應用程式建置和部署到雲端環境的方式。
 feature: Cloud, Configuration, Build, Deploy
 exl-id: 900da20d-98d2-4c9f-97ec-578aee775b55
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: c9339137d957840a9ae33ed45950c613eea93660
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
@@ -22,3 +22,7 @@ ht-degree: 0%
 - [變數屬性](variables-property.md) — 檢閱[!DNL Commerce]應用程式版本所需的環境變數。
 - [PHP設定](php-settings.md) — 設定執行階段PHP選項。
 - [設定靜態檔案的快取](set-cache.md) — 設定您媒體和靜態檔案的快取TTL。
+
+>[!NOTE]
+>
+>`.magento.app.yaml`檔案是在本機或Git存放庫中管理的。 系統僅會針對部署和建置流程讀取設定，並在部署完成後移除設定，因此您在伺服器上找不到該設定。
