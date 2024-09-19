@@ -2,9 +2,9 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: 34d1895592c83fa27b52d0f2e0f38445294b3782
+source-git-commit: b5c8dc062a940e9e202d9bd4cca6901b07109e07
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -137,3 +137,13 @@ dig CNAME s2._domainkey.domain_name
 ### 電子郵件傳送信譽
 
 電子郵件傳送信譽是由網際網路服務提供者(ISP)指派給傳送電子郵件訊息之公司的分數。 分數越高，ISP將訊息傳送到收件者收件匣的可能性就越大。 如果分數低於特定等級，ISP可能會將郵件路由到收件者的垃圾郵件資料夾，或甚至完全拒絕郵件。 信譽分數由數個因素決定，例如您的IP位址排名與其他IP位址的30天平均值和垃圾郵件投訴率。 檢視[8檢查電子郵件傳送信譽的方法](https://sendgrid.com/en-us/blog/5-ways-check-sending-reputation)。
+
+### 電子郵件隱藏清單
+
+電子郵件隱藏清單是如果傳送電子郵件會影響您的傳送信譽和傳送率，則不應向其傳送電子郵件的收件者清單。 CAN-SPAM Act要求確保電子郵件寄件者有選擇退出收件者的方法，這些收件者會取消訂閱電子郵件或將電子郵件標示為垃圾郵件。 隱藏清單也會收集跳出、遭封鎖或無效的電子郵件。
+
+若要防止電子郵件從一開始就傳送到垃圾郵件資料夾，請遵循Sendgrid的最佳實務文章，[為什麼我的電子郵件會傳送至垃圾郵件？](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder)。
+
+如果某些收件者沒有收到您的電子郵件，您可以[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以要求檢閱隱藏清單，並視需要移除收件者。
+
+如需詳細資訊，請參閱[什麼是隱藏清單？](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)
