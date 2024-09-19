@@ -3,9 +3,9 @@ title: Fastly服務總覽
 description: 瞭解Adobe Commerce雲端基礎結構中包含的Fastly服務如何協助您最佳化及保護Adobe Commerce網站的內容傳遞作業。
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
 exl-id: dc4500bf-f037-47f0-b7ec-5cd1291f73a1
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: dc331df378074af8a8776a33784b73082a39cf10
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 - **安全性** — 在您啟用Adobe Commerce網站的Fastly服務後，可以使用其他安全性功能來保護您的網站和網路：
 
-   - [Web應用程式防火牆](fastly-waf-service.md) (WAF) — 受管理的Web應用程式防火牆服務，可提供PCI相容的保護，在惡意流量可能損害雲端基礎結構網站與網路上的生產Adobe Commerce之前，封鎖惡意流量。 WAF服務僅適用於Pro和Starter Production環境。
+   - [Web應用程式防火牆](fastly-waf-service.md) (WAF) — 受管理的Web應用程式防火牆服務，可提供PCI相容的保護，在惡意流量可能損害雲端基礎結構網站與網路上的生產Adobe Commerce之前，先封鎖惡意流量。 WAF服務僅適用於Pro和Starter Production環境。
 
    - [分散式阻斷服務(DDoS)保護](#ddos-protection) — 內建DDoS保護，可抵禦Ping of Death、Smurf攻擊和其他以ICMP為基礎的泛濫攻擊。
 
@@ -42,7 +42,7 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
      Adobe Commerce提供網域驗證讓我們為每個中繼和生產環境加密SSL/TLS憑證。 Adobe Commerce會在Fastly設定過程中完成網域驗證和憑證布建。
 
-- **原始遮罩** — 防止流量略過Fastly WAF並隱藏原始伺服器的IP位址，以保護它們免受直接存取和DDoS攻擊。
+- **原始遮罩** — 防止流量略過Fastly WAF，並隱藏原始伺服器的IP位址，以保護它們免受直接存取和DDoS攻擊。
 
   雲端基礎結構Pro Production專案的Adobe Commerce預設會啟用來源遮蓋。 若要在雲端基礎結構入門生產專案上啟用Adobe Commerce上的來源遮蔽，請提交[Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 如果您的流量不需要快取，您可以自訂Fastly服務設定，以允許請求[略過Fastly快取](fastly-vcl-bypass-to-origin.md)。
 
@@ -58,7 +58,9 @@ Fastly提供下列服務，以最佳化並確保Adobe Commerce在雲端基礎結
 
 ## Fastly服務帳戶和認證
 
-雲端基礎結構專案上的Adobe商業不需要專用的Fastly帳戶或帳戶所有者。 相反，每個測試和生產環境都有唯一的Fastly憑證（API權杖和服務ID），可向管理員設定和管理Fastly服務。 您也需要認證才能提交Fastly API請求。
+雲端基礎結構專案上的Adobe Commerce未獲得專用的Fastly帳戶。 Fastly服務是在註冊給Adobe的集中帳戶中進行管理，並且管理儀表板只能由雲端支援團隊存取。
+
+相反，每個測試和生產環境都有唯一的Fastly憑證（API權杖和服務ID），可從Commerce管理員設定和管理Fastly服務。 Fastly API可用於執行Fastly服務的進階管理，這需要認證才能提交這些請求。
 
 在專案布建期間，Adobe會將您的專案新增到雲端基礎結構上Adobe Commerce的Fastly服務帳戶，並將Fastly憑證新增到中繼和生產環境的設定中。 檢視[取得Fastly認證](fastly-configuration.md#get-fastly-credentials)。
 
