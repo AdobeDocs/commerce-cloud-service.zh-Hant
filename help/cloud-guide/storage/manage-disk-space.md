@@ -3,7 +3,7 @@ title: 管理磁碟空間
 description: 瞭解如何使用命令列介面管理磁碟空間。
 feature: Cloud, Storage
 exl-id: 480cb33b-ac83-441d-946e-5b4de09ad84e
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 0cc0b8e49e2cccf4266ecf84ef935f24fde1c7a4
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 0%
@@ -93,7 +93,7 @@ df -h
 
 `-h`選項會以人類看得懂的格式（KB、MB或GB）顯示報表。
 
-在下列範例回應中，`/mnt/shared`掛載顯示媒體的磁碟空間，`/data/mysql/`掛載顯示資料庫的磁碟空間：
+在下列範例回應中，`/data/exports`掛載顯示媒體的磁碟空間，`/data/mysql/`掛載顯示資料庫的磁碟空間：
 
 ```
 Filesystem                                    Size  Used Avail Use% Mounted on
