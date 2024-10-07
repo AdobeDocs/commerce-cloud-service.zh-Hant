@@ -2,11 +2,11 @@
 title: ECE-Tools發行說明
 description: 請參閱ECE-Tools套件的最新改良清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-21T00:00:00Z
+last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: a464b940-c56e-4a7c-9948-559539e25361
-source-git-commit: 923e2114270df22e134e0676ac97f84d770bb226
+source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
 workflow-type: tm+mt
-source-wordcount: '2929'
+source-wordcount: '2990'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.1.19 {#latest}
+## v2002.2.0 {#latest}
+
+發行日期： 2024年10月7日
+
+- ![新圖示](../../assets/new.svg) **MariaDB 11.4** — 新增MariaDB 11.4的支援。
+- ![修正圖示](../../assets/fix.svg) **重構的程式碼** — 已移除舊版PHP 7.4、7.3、7.2及相關程式庫的支援。<!-- MCLOUD-9278 -->
+- ![修正圖示](../../assets/fix.svg) **升級的Monolog版本** — 新增對monolog 3.6的支援。<!-- MCLOUD-12855 -->
+- ![修正圖示](../../assets/fix.svg) **RabbitMQ、MariaDB及PHP的驗證器** — 修正產生錯誤服務版本之錯誤訊息的驗證器。
+
+## v2002.1.19
 
 發行日期： 2024年5月21日
 
@@ -40,7 +49,7 @@ ht-degree: 0%
 發行日期： 2024年4月8日
 
 - ![新圖示](../../assets/new.svg) **PHP** — 已新增對PHP 8.3的支援。
-- ![修正圖示](../../assets/fix.svg)驗證器 — 已更新EOL驗證器。
+- ![修正圖示](../../assets/fix.svg) **驗證器** — 已更新EOL驗證器。
 
 ## v2002.1.17
 

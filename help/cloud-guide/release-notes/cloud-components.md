@@ -3,9 +3,9 @@ title: 適用於Commerce的雲端元件
 description: 請參閱雲端元件套件最新改良的清單。
 recommendations: noDisplay, catalog
 exl-id: b4e2508a-3558-4fa8-bae0-3eb76c7b2775
-source-git-commit: c02dfd2709cdc63ac1630edaa8c89cad5f737ea1
+source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.0.14 {#latest}
+## v1.1.0 {#latest}
+
+發行日期： 2024年10月7日
+
+- ![修正圖示](../../assets/fix.svg) **重構的程式碼** — 已移除舊版PHP 7.4、7.3、7.2及相關程式庫的支援。<!-- MCLOUD-9278 - -->
+- ![修正圖示](../../assets/fix.svg) **升級的Monolog版本** — 新增對monolog 3.6的支援。<!-- MCLOUD-12855 - -->
+
+## v1.0.14
 
 發行日期： 2024年4月8日
 
@@ -121,4 +128,4 @@ ht-degree: 0%
 
 這是[`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components)封裝的第一個版本，這是`ece-tools`封裝版本2002.0.20和更新版本的新相依性。
 
-- ![新圖示](../../assets/new.svg)已新增使用規則運算式模式來設定&#x200B;**WARM_UP_PAGES**&#x200B;環境變數，以快取單一頁面、多個網域和多個頁面的功能。 請參閱[Post-deploy變數](../environment/variables-post-deploy.md#warm_up_pages).<!--MAGECLOUD-3258-->
+- ![新圖示](../../assets/new.svg)已新增使用規則運算式模式來設定&#x200B;**WARM_UP_PAGES**&#x200B;環境變數，以快取單一頁面、多個網域和多個頁面的功能。 檢視[部署後變數](../environment/variables-post-deploy.md#warm_up_pages).<!--MAGECLOUD-3258-->

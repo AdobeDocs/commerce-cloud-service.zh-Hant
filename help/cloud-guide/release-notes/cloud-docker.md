@@ -3,11 +3,11 @@ title: Cloud Docker包
 description: 請參閱Cloud Docker套件最新改良的清單。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-08T00:00:00Z
+last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: 907d977f-2e9c-4553-a46b-000bc6a57b28
-source-git-commit: c39332d352f6dcb6f92c312a6ef1b74319d37aa3
+source-git-commit: fdb596430fbc532bed4a6b251872f44c5321d375
 workflow-type: tm+mt
-source-wordcount: '3662'
+source-wordcount: '3684'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.3.7 {#latest}
+## v1.4.0 {#latest}
+
+發行日期： 2024年10月7日
+
+- ![修正圖示](../../assets/fix.svg) **重構的程式碼** — 已移除對舊PHP版本(7.4、7.3、7.2)及相關程式庫與影像的支援。
+
+## v1.3.7
 
 發行日期： 2024年4月8日
 

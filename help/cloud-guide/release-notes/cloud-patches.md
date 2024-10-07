@@ -2,11 +2,11 @@
 title: Commerce雲端修補程式
 description: 請參閱「雲端修補程式」套裝軟體的最新改良專案清單。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-21T00:00:00Z
+last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: 61c42a1bd1d5a28f90b8756032ee6f45be4565b2
+source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,15 @@ Commerce套件的雲端修補程式相依於ECE-Tools套件，會在您安裝或
 
 <!--Add release notes below-->
 
-## v1.0.27 {#latest}
+## v1.1.0 {#latest}
+
+發行日期： 2024年10月7日
+
+- ![修正圖示](../../assets/fix.svg) **重構的程式碼** — 已移除對舊PHP版本(7.4、7.3、7.2)及相關程式庫的支援。<!-- MCLOUD-9278 - -->
+- ![修正圖示](../../assets/fix.svg) **升級的Monolog版本** — 新增對monolog 3.6的支援。<!-- MCLOUD-12855 - -->
+- ![修正圖示](../../assets/fix.svg) **應用程式伺服器的修補程式** — 解決GraphQL應用程式伺服器的已知問題。 具體而言，版本2.4.7中的`CatalogGraphQl\\Model\\Config\\AttributeReader`包含錯誤，可能會導致GraphQL要求根據過時的屬性設定擷取回應。<!-- ACPT-1876 -->
+
+## v1.0.27
 
 發行日期： 2024年5月21日
 
