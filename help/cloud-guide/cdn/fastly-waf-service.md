@@ -3,9 +3,9 @@ title: Web應用程式防火牆(WAF)
 description: 瞭解Fastly WAF服務如何偵測、記錄並封鎖惡意請求流量，以免損害Adobe Commerce網路或網站。
 feature: Cloud, Configuration, Security
 exl-id: 40bfe983-7f32-4155-ae77-7cd18866f6e2
-source-git-commit: bd03b2278869b40bd4a8c3395f7061d13680696d
+source-git-commit: 48ac1759fc052175e01998703e7f4ee5eaac5224
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ WAF服務提供下列優點：
 - **預設WAF原則** — 由Fastly設定和維護的預設WAF原則，提供量身打造的安全性規則集合，可保護您的Adobe Commerce Web應用程式免受各種攻擊，包括插入攻擊、惡意輸入、跨網站指令碼、資料匯出、HTTP通訊協定違規，以及其他[OWASP十大](https://owasp.org/www-project-top-ten/)安全性威脅。
 - **WAF上線和啟用** — 布建完成後的2至3週內，Adobe在您的生產環境中部署並啟用預設WAF原則。
 - **操作與維護支援**—
-   - Adobe和Fastly設定並管理您的WAF服務記錄檔和警示。
+   - Adobe和Fastly為WAF服務設定和管理您的記錄、規則和警示。
    - Adobe會分類與WAF服務問題相關的客戶支援票證，這些服務問題會將合法流量封鎖為優先順序1問題。
    - 自動升級至WAF服務版本，確保可立即涵蓋新的或不斷演變的利用漏洞行為。 請參閱[WAF維護與升級](#waf-maintenance-and-updates)。
 
@@ -40,11 +40,11 @@ Adobe功能會在布建完成後的2至3週內，針對新帳戶啟用WAF服務�
 
 WAF服務與Fastly整合，並使用Fastly CDN服務中的快取邏輯來篩選Fastly全域節點的流量。 我們在您的生產環境中啟用WAF服務，預設的WAF原則是根據Trustwave SpiderLabs](https://github.com/owasp-modsecurity/ModSecurity)的[ModSecurity規則和OWASP十大安全性威脅。
 
-WAF服務會針對WAF規則集篩選HTTP和HTTPS流量(GET和POST請求)，並封鎖惡意流量或不遵守特定規則的流量。 此服務只會篩選嘗試重新整理快取的原始繫結流量。 因此，我們會在Fastly快取中停止大多數的攻擊流量，保護原始流量免受惡意攻擊。 若僅處理原始流量，WAF服務可以保留快取效能，只對每個非快取要求引進估計為1.5毫秒至20毫秒的延遲。
+WAF服務會針對WAF規則集檢查HTTP和HTTPS流量(GET和POST請求)，並封鎖惡意流量或不遵守特定規則的流量。 此服務只會檢查嘗試重新整理快取的原始繫結流量。 因此，我們會在Fastly快取中停止大多數的攻擊流量，保護原始流量免受惡意攻擊。 若僅處理原始流量，WAF服務可以保留快取效能，只對每個非快取要求引進估計為1.5毫秒至20毫秒的延遲。
 
 ## 疑難排解封鎖的請求
 
-WAF服務啟用時，會根據WAF規則篩選所有網頁和管理程式流量，並封鎖觸發規則的任何網頁請求。 當要求遭到封鎖時，要求者會看到預設`403 Forbidden`錯誤頁面，其中包含封鎖事件的參考ID。
+WAF服務啟用時，會根據WAF規則檢查所有網頁和管理員流量，並封鎖觸發規則的任何網頁請求。 當要求遭到封鎖時，要求者會看到預設`403 Forbidden`錯誤頁面，其中包含封鎖事件的參考ID。
 
 ![WAF錯誤頁面](../../assets/cdn/fastly-waf-403-error.png)
 
@@ -54,7 +54,7 @@ WAF服務啟用時，會根據WAF規則篩選所有網頁和管理程式流量�
 
 ## WAF維護和更新
 
-Fastly會根據商業第三方、Fastly研究和開放來源的規則更新來維護和更新WAF規則集。 Fastly會視需要或當可從其各自的來源取得規則變更時，將發佈的規則更新為原則。 此外，Fastly可以在啟用WAF服務後，將符合已發佈規則類別的規則新增到任何服務的WAF執行個體中。 這些更新可確保即時涵蓋新的或不斷演變的利用漏洞。
+Fastly會根據商業第三方、Fastly研究和開放來源的規則更新，針對新的CVE/樣板化規則更新和推出修補程式。 Fastly會視需要或當可從其各自的來源取得規則變更時，將發佈的規則更新為原則。 此外，Fastly可以在啟用WAF服務後，將符合已發佈規則類別的規則新增到任何服務的WAF執行個體中。 這些更新可確保即時涵蓋新的或不斷演變的利用漏洞。
 
 Adobe和Fastly管理更新流程，以確保新的或修改的WAF規則在您的生產環境中有效運作，然後再以封鎖模式部署更新。
 
@@ -70,6 +70,6 @@ Adobe和Fastly管理更新流程，以確保新的或修改的WAF規則在您的
 - 速率限制 — 請參閱Fastly檔案中的[速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，或參閱&#x200B;_Commerce Web API_&#x200B;安全性章節中的[速率限制](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting/)。
 - 正在設定客戶的記錄端點 — 請參閱[PrivateLink服務](../development/privatelink-service.md)作為替代方法。
 
-雖然WAF服務不允許您根據IP位址封鎖或允許流量，但您可以新增存取控制清單(ACL)和自訂VCL片段至您的Fastly服務，以指定IP位址和VCL邏輯來封鎖或允許流量。 請參閱[自訂Fastly VCL片段](fastly-vcl-custom-snippets.md)。
+WAF服務可讓您根據IP位址封鎖或允許流量。 您可以將存取控制清單(ACL)和自訂VCL片段新增到Fastly服務中，以指定用於封鎖或允許流量的IP位址和VCL邏輯。 請參閱[自訂Fastly VCL片段](fastly-vcl-custom-snippets.md)。
 
 WAF服務不支援篩選TCP、UDP或ICMP要求。 但是，此功能由Fastly CDN服務隨附的內建DDoS保護提供。 請參閱[DDoS保護](fastly.md#ddos-protection)。
