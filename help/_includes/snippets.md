@@ -1,7 +1,7 @@
 ---
-source-git-commit: 762ce3cb6268401b0f5fae5b2280a870aa9c83a5
+source-git-commit: a87039d2e96e39d6d8d19673c5e0d52de8b844a4
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,12 @@ ht-degree: 0%
 ## Pro服務支援 {#pro-update-service}
 
 >[!TIP]
+>
 >對於Pro專案，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，才能僅在`Staging`和`Production`環境中安裝或更新[服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html)。
 >
 >指示所需的服務變更，包括更新的`.magento.app.yaml`和`services.yaml`檔案，並在票證中說明PHP版本。 如需自行變更PHP版本、擴充功能或環境設定，請參閱&#x200B;_應用程式組態_&#x200B;中的[PHP設定](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html)。
 >
->若要變更&#x200B;_即時_&#x200B;生產環境（**僅限Pro**），您必須至少提供48小時的通知，讓雲端基礎結構團隊有足夠的時間封送資源並進行安全升級。 通知期間不包含週末。 例如，如果您希望服務升級在星期一完成，您必須在前一個星期三提交請求。
+>若要變更即時生產環境（**僅限Pro**），至少需要48小時的通知。 這可讓雲端基礎結構團隊有充足的時間來調配資源並進行安全升級。 通知期間從基礎架構團隊認可請求並安排升級（不包括週末）開始。 例如，若要在星期一完成服務升級，必須在星期三收到排程升級的確認。 在需求尖峰期間，處理您的請求可能需要更多時間。
 
 ## 專業備份 {#pro-backups}
 
