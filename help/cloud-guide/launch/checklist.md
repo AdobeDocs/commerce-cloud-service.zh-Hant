@@ -2,7 +2,7 @@
 title: 啟動檢查清單
 description: 檢閱網站啟動時的檢查清單專案。
 exl-id: 4525742e-18c5-40d1-975d-00ba3f3a51a0
-source-git-commit: 5b0a691a4355f5eda31d42cd3da9925439dfb510
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '1104'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [已完成傳出電子郵件的測試](../project/outgoing-emails.md)
 
-- [管理員認證和基本管理員URL的安全設定](https://docs.magento.com/user-guide/stores/security-admin.html)
+- [管理員認證和基本管理員URL的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [最佳化網頁的所有影像](../cdn/fastly-image-optimization.md)
 
@@ -137,13 +137,13 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [設定您的安全性掃描](overview.md#set-up-the-security-scan-tool)
 
-- [管理員使用者的安全設定](https://docs.magento.com/user-guide/stores/security-admin.html)
+- [管理員使用者的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- 管理員URL的[安全設定](https://docs.magento.com/user-guide/stores/store-urls-custom-admin.html)
+- [管理員URL的安全設定]https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [移除雲端基礎結構專案上任何不再使用Adobe Commerce的使用者](../project/user-access.md)
 
-- [設定雙因素驗證](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html)
+- [設定雙因素驗證](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
 
 ## 效能監視
 

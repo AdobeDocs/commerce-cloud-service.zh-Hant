@@ -3,7 +3,7 @@ title: 存放區設定的最佳做法
 description: 閱讀在Adobe Commerce雲端基礎結構上設定存放區的最佳實務。
 feature: Cloud, Best Practices
 exl-id: 01f528bd-74c2-42e7-8e77-7e6f57a40ef4
-source-git-commit: 5b0a691a4355f5eda31d42cd3da9925439dfb510
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -58,7 +58,7 @@ _促銷活動_&#x200B;提供折扣、單次優惠、優惠券、首次購買獎�
 
 以下提供建立「僅限第一筆訂單」折扣的「價格規則」的範例。 針對此折扣，您需要：
 
-* 以[客戶區段](https://docs.magento.com/user-guide/marketing/customer-segment-price-rule.html)建立價格規則，條件為：訂單總數小於1
+* 以[客戶區段](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule)建立價格規則，條件為：訂單總數小於1
 * 將此客戶區段新增為購物車規則的條件
 * 選擇性 — 新增條件和規則，將折扣套用至特定的SKU或重點購買的產品類別
 

@@ -3,7 +3,7 @@ title: 入門專案工作流程
 description: 瞭解如何使用入門程式開發和部署工作流程。
 feature: Cloud, Paas
 exl-id: f334047a-1e0d-45c7-bf96-5c2964741951
-source-git-commit: 08f43a3b0a50cdb2a5e8a45bd2e2448bc6dbca2b
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 0%
@@ -105,9 +105,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 如需設定的最佳資訊，請檢閱Adobe Commerce的檔案和已安裝的擴充功能。 以下是可協助您開始使用的一些連結和想法：
 
 - [儲存區組態的最佳實務](../store/best-practices.md)，以取得雲端中的特定最佳實務
-- [商店管理員存取、名稱、語言、貨幣、品牌、網站、商店檢視等的基本設定](https://docs.magento.com/user-guide/configuration/configuration-basic.html)
-- [佈景主題](https://docs.magento.com/user-guide/design/design-theme.html)，讓您瞭解網站和存放區的外觀與風格，包括CSS和版面配置
-- 角色、工具、通知及資料庫加密金鑰的[系統組態](https://docs.magento.com/user-guide/system/system.html)
+- [商店管理員存取、名稱、語言、貨幣、品牌、網站、商店檢視等的基本設定](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)
+- [佈景主題](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)，讓您瞭解網站和存放區的外觀與風格，包括CSS和版面配置
+- 角色、工具、通知及資料庫加密金鑰的[系統組態](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)
 - 使用其檔案的擴充功能設定
 
 除了商店設定外，您還可以進一步設定多個網站和商店、設定的服務等。 請參閱[設定您的商店](../store/overview.md)。
@@ -165,7 +165,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 - [使用您的Adobe Commerce加密金鑰匯出客戶和存放區資料的受保護備份時，執行支援公用程式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) CLI命令（建議）
 
-- 用於產生及匯出資料的[資料彙集](https://docs.magento.com/user-guide/system/support-data-collector.html)工具
+- 用於產生及匯出資料的[資料彙集](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector)工具
 
 若要移轉此資料，請參閱[移轉及部署靜態檔案和資料](../deploy/staging-production.md#migrate-static-files)。
 

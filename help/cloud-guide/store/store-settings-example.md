@@ -2,9 +2,9 @@
 title: 管理系統特定設定的範例
 description: 檢視如何在雲端基礎結構環境中跨所有Adobe Commerce管理和同步處理存放區組態設定的範例。
 hidefromtoc: true
-source-git-commit: 13e76d3e9829155995acbb72d947be3041579298
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,13 @@ ht-degree: 0%
 
 例如，您可能想要設定下列設定：
 
-* 在您的整合環境中停用[地區設定](https://glossary.magento.com/locale)和靜態檔案最佳化設定
+* 停用整合環境中的地區設定和靜態檔案最佳化設定
 * 在中繼和生產環境中啟用靜態檔案最佳化
 * 在測試和生產環境中為Fastly設定每個專案的特定認證
 
 _靜態檔案最佳化_&#x200B;是指合併並縮制JavaScript和階層式樣式表，以及縮制HTML範本。 請參閱[靜態內容部署策略](../deploy/static-content.md)。
 
-## 必要條件
+## 先決條件
 
 若要完成這些組態管理工作，您需要下列專案：
 
@@ -56,7 +56,7 @@ _靜態檔案最佳化_&#x200B;是指合併並縮制JavaScript和階層式樣式
    ![變更地區設定](../../assets/locale-options.png)
 
 1. 按一下&#x200B;**儲存設定**。
-1. 如果出現提示，[排清快取](https://docs.magento.com/user-guide/system/cache-management.html)。
+1. 如果出現提示，[排清快取](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 1. 登出Admin。
 
 ## 匯出值並將config.php傳輸至您的本機系統
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 在右窗格中，展開&#x200B;**JavaScript設定**。
 1. 從&#x200B;**合併JavaScript檔案**&#x200B;清單，按一下&#x200B;**是**。
 1. 按一下&#x200B;**儲存設定**。
-1. 如果出現提示，[排清快取](https://docs.magento.com/user-guide/system/cache-management.html)。
+1. 如果出現提示，[排清快取](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 1. 登出Admin。
 
 再次執行dump命令後，新配置會附加到檔案中。

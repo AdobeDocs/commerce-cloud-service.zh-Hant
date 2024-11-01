@@ -4,9 +4,9 @@ description: 請參閱「雲端修補程式」套裝軟體的最新改良專案�
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-10-07T00:00:00Z
 exl-id: ae6b511b-a37d-4776-9a5e-ad7d9f9f6611
-source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2256'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Adobe Commerce 2.3.3-p1及更高版本的重要修補程式：
 
 Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
-- **API速率限制問題** — 此修補程式更正了預設速率限制，該限制導致Web API無法處理陣列中超過20個專案的請求。 此修補程式會提高速率限制的預設值。 請參閱Adobe Commerce [2.4.3發行說明](https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-3.html#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting)和[2.3.7發行說明](https://devdocs.magento.com/guides/v2.3/release-notes/2-3-7-p1.html#apply-mc-43048__set_rate_limits__237-p1patch-to-address-issue-with-api-rate-limiting)。<!-- MC-43048 -->
+- **API速率限制問題** — 此修補程式更正了預設速率限制，該限制導致Web API無法處理陣列中超過20個專案的請求。 此修補程式會提高速率限制的預設值。 請參閱Adobe Commerce [2.4.3發行說明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
@@ -222,7 +222,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的關鍵修補程式：
 
 發行日期： 2020年6月26日
 
-- **Redis效能改善** — 將Redis最佳化功能新增至Adobe Commerce 2.3.3和2.3.4版。這些修正包含在Adobe Commerce 2.3.5版中。 請參閱&#x200B;_Adobe Commerce 2.3.5發行說明_&#x200B;中的[效能提升](https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html#performance-boosts)。<!--MCLOUD-5771-->
+- **Redis效能改善** — 將Redis最佳化功能新增至Adobe Commerce 2.3.3和2.3.4版。這些修正包含在Adobe Commerce 2.3.5版本<!--MCLOUD-5771-->中。
 
 - **New Relic記錄擴充器** — 新增必要的Monolog ProcessorInterface，以支援Commerce 1.0.4版雲端元件中引進的New Relic記錄功能改善。部署Adobe Commerce 2.1.x需要此修補程式。如果未套用修補程式，則建置會在`di:compile`處理序期間失敗。<!--MCLOUD-6029-->
 

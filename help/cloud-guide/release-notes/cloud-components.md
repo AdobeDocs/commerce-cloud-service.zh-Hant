@@ -3,7 +3,7 @@ title: 適用於Commerce的雲端元件
 description: 請參閱雲端元件套件最新改良的清單。
 recommendations: noDisplay, catalog
 exl-id: b4e2508a-3558-4fa8-bae0-3eb76c7b2775
-source-git-commit: 30eafa856aaa57bb2fd2ce26e3be2a69aee726e2
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 發行日期： 2022年9月13日
 
-- ![修正圖示](../../assets/fix.svg) **熱身錯誤** — 修正當管理員中的頁面可見度設為&#x200B;[**個別不可見**](https://docs.magento.com/user-guide/system/data-attributes-product.html#simple-product-csv-file-structure)時，嘗試[熱身](../environment/variables-post-deploy.md#warm_up_pages)的問題，導致部署記錄中出現`ERROR: Warming up failed: <link to page>`個錯誤。<!-- MCLOUD-9134 -->
+- ![修正圖示](../../assets/fix.svg) **熱身錯誤** — 修正當管理員中的頁面可見度設為&#x200B;[**個別不可見**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)時，嘗試[熱身](../environment/variables-post-deploy.md#warm_up_pages)的問題，導致部署記錄中出現`ERROR: Warming up failed: <link to page>`個錯誤。<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

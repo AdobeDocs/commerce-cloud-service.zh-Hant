@@ -2,7 +2,7 @@
 title: 網站啟動
 description: 瞭解如何開始網站啟動的準備工作。
 exl-id: a7b3f260-b76e-4220-b521-699548a9928a
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請聯絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+>如果您要為貴公司部署自己的延伸驗證SSL憑證，而不使用Let&#39;s Encrypt憑證，請連絡您的CTA或[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 ## 設定安全性掃描工具
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 - 接收安全性更新和網站特定通知
 
-請參閱[使用手冊](https://docs.magento.com/user-guide/magento/security-scan.html)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
+請參閱[使用手冊](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，瞭解設定和使用安全性掃描工具的資訊。 通常，當您開始使用者驗收測試(UAT)時，就會開始使用此工具。
 
 您掃描的每個站台都必須透過[安全性掃描]索引標籤登入。 在註冊過程中，您必須接受免責宣告，才能開始掃描。 您可以控制排程並授權使用者在每次掃描完成時接收通知。 您可以排程特定週期性日期與時間的掃描，或視需要執行掃描。
 
