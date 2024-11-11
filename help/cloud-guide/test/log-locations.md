@@ -3,7 +3,7 @@ title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: 633e5e75ae23a933d15a0faedae22092797d5d0b
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -208,7 +208,7 @@ type: warning
 
 ### 存檔的記錄檔
 
-應用程式記錄檔每天會壓縮並封存一次，並保留一年。 壓縮的記錄檔使用對應至`Number of Days Ago + 1`的唯一識別碼來命名。 例如，在Pro生產環境中，過去21天的PHP存取記錄會儲存起來，並命名如下：
+應用程式記錄檔每天壓縮並封存一次，並保留&#x200B;**30天**。 壓縮的記錄檔使用對應至`Number of Days Ago + 1`的唯一識別碼來命名。 例如，在Pro生產環境中，過去21天的PHP存取記錄會儲存起來，並命名如下：
 
 ```
 /var/log/platform/<project-ID>/php.access.log.22.gz
@@ -242,4 +242,4 @@ type: warning
 
 在Pro生產和測試環境中，使用與您專案整合的[New Relic記錄管理](../monitor/log-management.md)，以管理雲端基礎結構專案上與您的Adobe Commerce相關的所有記錄中的彙總記錄資料。
 
-New Relic記錄檔應用程式提供集中式記錄檔管理控制面板，用於疑難排解及監控雲端基礎結構生產和中繼環境上的Adobe Commerce。 控制面板還提供對Fastly CDN、影像最佳化和Web應用程式防火牆(WAF)服務的記錄資料存取。 請參閱[New Relic服務](../monitor/new-relic-service.md)。
+New Relic記錄檔應用程式提供集中式記錄檔管理控制面板，用於疑難排解及監控雲端基礎結構生產和中繼環境上的Adobe Commerce。 控制面板也可讓您存取Fastly CDN、影像最佳化和Web應用程式防火牆(WAF)服務的記錄資料。 請參閱[New Relic服務](../monitor/new-relic-service.md)。
