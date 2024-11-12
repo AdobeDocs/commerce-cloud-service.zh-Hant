@@ -2,9 +2,9 @@
 title: SendGrid電子郵件服務
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的SendGrid電子郵件服務，以及如何測試您的DNS設定。
 exl-id: 30d3c780-603d-4cde-ab65-44f73c04f34d
-source-git-commit: b5c8dc062a940e9e202d9bd4cca6901b07109e07
+source-git-commit: d07447fa8390794c3d019d513f23321fe02e41a1
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ SendGrid SMTP Proxy並非旨在作為一般用途電子郵件伺服器來接收�
 
 >[!TIP]
 >
->您可以在[上線UI](https://cloud.magento.com)中找到您帳戶的SendGrid詳細資料，並選取&#x200B;**專案詳細資料** > **託管資訊**&#x200B;索引標籤。
+>請前往「商店>設定>一般」 ，確認您已在「管理員」中設定適當的商店電子郵件地址，以避免傳遞能力與網域驗證的問題。 您必須取消核取&#x200B;**[!UICONTROL Use Default]**，並將預設值取代為您擁有的網域。 當透過Sendgrid傳送電子郵件時，不應將公用/共用網域電子郵件服務(例如gmail.com和outlook.com)設定為寄件者電子郵件地址。
 
 ## 啟用或停用電子郵件
 
