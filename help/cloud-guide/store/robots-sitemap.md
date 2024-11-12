@@ -3,9 +3,9 @@ title: 新增網站地圖和搜尋引擎自動機制
 description: 瞭解如何在雲端基礎結構上將網站地圖和搜尋引擎機器人新增到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: b98f43fa-1878-466d-8ea0-1e7207af8b60
-source-git-commit: b49a51aba56f79b5253eeacb1adf473f42bb8959
+source-git-commit: fda88fdf03afa4a59f40e52802c16b6136d8716f
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -117,10 +117,12 @@ VCL程式碼片段路由`http://domain.com/robots.txt`並顯示`pub/media/domain
 
 ### 依搜尋引擎設定索引
 
-若要啟用`robots.txt`自訂，您必須啟用專案設定中&#x200B;`<environment-name>`**的**&#x200B;索引由搜尋引擎開啟。
+若要在生產環境中啟用`robots.txt`自訂，您必須啟用專案設定中&#x200B;`<environment-name>`**的**&#x200B;索引由搜尋引擎開啟選項。
 
 ![使用[!DNL Cloud Console]管理環境](../../assets/robots-indexing-by-search-engine.png)
 
 >[!NOTE]
 >
->如果您使用PWA Studio且無法存取您設定的`robots.txt`檔案，請將`robots.txt`新增至[前方名稱允許清單](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位於&#x200B;**商店** >設定> **一般** > **網頁** >上層PWA設定。
+>- 搜尋引擎的索引只能在生產中啟用，但無法在任何較低層環境中啟用。
+>
+>- 如果您使用PWA Studio且無法存取您設定的`robots.txt`檔案，請將`robots.txt`新增至[前方名稱允許清單](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位於&#x200B;**商店** >設定> **一般** > **網頁** >上層PWA設定。
