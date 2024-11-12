@@ -2,20 +2,24 @@
 title: 設定傳出電子郵件
 description: 瞭解如何在雲端基礎結構上為Adobe Commerce啟用傳出電子郵件。
 exl-id: 814fe2a9-15bf-4bcb-a8de-ae288fd7f284
-source-git-commit: ec9192caa5daa1cd25a3eec6095c2c3cf8fbefb4
+source-git-commit: 75318be63adcbe23bb8b6699b1c59b2b4a3c1a4d
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
 # 設定傳出電子郵件
 
-您可以從[!DNL Cloud Console]或命令列為每個環境啟用和停用傳出電子郵件。 為整合（並僅針對入門者測試）環境啟用傳出電子郵件，以傳送雙因素驗證或為雲端專案使用者重設密碼電子郵件。
+您可以從[!DNL Cloud Console]或命令列啟用或停用整合（以及僅供入門者使用的測試）環境的傳出電子郵件。 啟用外寄電子郵件以傳送雙因素驗證，或為Cloud專案使用者重設密碼電子郵件。
 
 依預設，傳出電子郵件會在生產和預備（僅限Pro）環境中啟用。 不過，在您透過[命令列](#enable-emails-in-the-cli)或[雲端主控台](outgoing-emails.md#enable-emails-in-the-cloud-console)設定`enable_smtp`屬性之前，**[!UICONTROL Enable outgoing emails]**&#x200B;設定在環境設定中可能會顯示為停用，無論狀態為何。
 
 [命令列](#enable-emails-in-the-cli)更新`enable_smtp`屬性值也會變更Cloud Console上此環境的[!UICONTROL Enable outgoing emails]設定值。
+
+>[!NOTE]
+>
+>啟用/停用&#x200B;**[!UICONTROL Enable outgoing emails]**&#x200B;設定將不會在Pro測試或生產環境中啟用/停用電子郵件。
 
 {{redeploy-warning}}
 
@@ -27,14 +31,14 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Cloud Console上的Pro環境可能不會反映外寄電子郵件狀態。 請改用[命令列](#enable-emails-in-the-cli)來啟用及測試傳出電子郵件。
+>在Cloud Console中，Pro測試或生產環境可能不會反映傳出電子郵件狀態。
 
 **若要管理來自[!DNL Cloud Console]**&#x200B;的電子郵件支援：
 
 1. 登入[[!DNL Cloud Console]](https://console.adobecommerce.com)。
 1. 從&#x200B;_所有專案_&#x200B;清單中選取專案。
 1. 在「專案」控制面板上，按一下右上方的設定圖示。
-1. 按一下&#x200B;**[!UICONTROL Environments]**&#x200B;並從清單中選取特定環境。
+1. 按一下&#x200B;**[!UICONTROL Environments]**&#x200B;並從清單中選取特定環境（Staging和Production for Pro除外）。
 1. 若要啟用或停用傳出電子郵件，請切換&#x200B;_啟用傳出電子郵件_ **開啟**&#x200B;或&#x200B;**關閉**。
 
    ![啟用傳出電子郵件組態](../../assets/outgoing-emails.png)
