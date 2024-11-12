@@ -4,9 +4,9 @@ description: 瞭解Pro架構支援的環境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: 66b1f86c8c674d0de4e2895e328a5a850eadf903
+source-git-commit: a1e7674b99d7e289531268e1a298f61344c7bd8f
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,11 @@ ht-degree: 0%
 若要在整合環境中取得最佳效能，請遵循下列最佳實務：
 
 - 限制目錄大小 — 作為參考，範例資料包含約2,048種產品。 請嘗試將目錄大小縮減至約4,000至5,000種產品。
+若要檢查目錄中的產品數目，請執行下列MySQL查詢：
+
+  ```sql
+  select distinct count(entity_id) from catalog_product_entity;
+  ```
 
 - 減少客戶群組數量 — 擁有過多客戶群組可能會影響索引效能和整體效能。
 
