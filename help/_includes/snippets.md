@@ -1,7 +1,7 @@
 ---
-source-git-commit: a87039d2e96e39d6d8d19673c5e0d52de8b844a4
+source-git-commit: 63b966c1562318dc43dd42641e6f607f5438137b
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >透過[!DNL ECE-Tools] 2002.1.0和更新版本，您可以使用情境式部署功能，在雲端基礎結構專案上自訂Adobe Commerce的建置、部署和後續部署程式。 請參閱[以案例為基礎的部署](/help/cloud-guide/deploy/scenario-based.md)。
+
+## 第二次分段 {#second-staging}
+
+>[!NOTE]
+>
+>有些專案需要更複雜的開發工作流程。 為了支援此需求，Adobe提供[額外的中繼環境](/help/cloud-guide/test/second-staging.md)，作為雲端基礎建設的附加選項。
 
 ## 服務指示 {#service-instruction}
 

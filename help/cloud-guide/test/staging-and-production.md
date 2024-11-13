@@ -2,7 +2,7 @@
 title: 測試和生產測試
 description: 瞭解如何在測試環境和生產環境中測試。
 exl-id: 5b762d59-04c5-4e89-a637-719141759158
-source-git-commit: 1253d8357fd2554050d1775fefbc420a2097db5f
+source-git-commit: c6d4128792e688485e021bad75d9814a9f4d3b4f
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -12,6 +12,8 @@ ht-degree: 0%
 # 測試和生產測試
 
 將程式碼、檔案和資料成功移轉至測試或生產環境後，請使用環境URL來測試您的網站和存放區。 以下提供有關驗證記錄、測試Fastly設定、使用者驗收測試(UAT)等的資訊。
+
+{{second-staging}}
 
 ## 記錄檔
 

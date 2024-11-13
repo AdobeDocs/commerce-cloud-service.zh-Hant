@@ -3,7 +3,7 @@ title: Pro專案工作流程
 description: 瞭解如何使用Pro開發和部署工作流程。
 feature: Cloud, Iaas, Paas
 exl-id: 103e90d5-2ef2-4fef-845c-439344666b00
-source-git-commit: 08f43a3b0a50cdb2a5e8a45bd2e2448bc6dbca2b
+source-git-commit: c6d4128792e688485e021bad75d9814a9f4d3b4f
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -91,6 +91,8 @@ Pro專案包含單一Git存放庫，其中包含全域`master`分支和三個主
 預備是生產前的環境，可提供儘可能接近生產環境的所有服務和設定。 永遠將您的程式碼變更從`integration`環境推送到`staging`環境，以便您可以使用所有服務執行徹底的測試。 第一次使用中繼環境時，您必須設定服務，例如[Fastly CDN](../cdn/fastly.md)和[New Relic](../monitor/new-relic-service.md)。 使用沙箱或測試認證來設定付款閘道、運送、通知和其他重要服務。
 
 建議您徹底測試每個服務、驗證效能測試工具，並以管理員和客戶的身分執行UAT測試，直到您認為您的商店已準備好投入生產環境為止。 請參閱[部署您的存放區](../deploy/staging-production.md)。
+
+{{second-staging}}
 
 ### 合併至生產環境
 
