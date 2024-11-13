@@ -2,9 +2,9 @@
 title: 設定 [!DNL Xdebug]
 description: 瞭解如何設定Xdebug擴充功能，以便在雲端基礎結構專案開發上偵錯Adobe Commerce。
 exl-id: bf2d32d8-fab7-439e-8df3-b039e53009d4
-source-git-commit: 7b42174663b79b673ee5af05b794090ddc5bdd75
+source-git-commit: 83984f9e30402cda7af29ca5095a251ff835b4a1
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 - [在分支中工作以推送檔案更新](#get-started-with-a-branch)
 - [為環境啟用 [!DNL Xdebug] ](#enable-xdebug-in-your-environment)
-- [設定IDE](#configure-phpstorm)
+- [設定PHPStorm伺服器](#configure-phpstorm-server)
 - [設定連線埠轉送](#set-up-port-forwarding)
 
 ### 開始使用分支
@@ -41,6 +41,8 @@ ht-degree: 0%
 ### 在您的環境中啟用Xdebug
 
 您可以將[!DNL Xdebug]直接啟用至所有入門環境和Pro整合環境。 Pro生產和中繼環境不需要此設定步驟。 請參閱[Pro Staging和生產的Debug](#debug-for-pro-staging-and-production)。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
 
 若要啟用專案的[!DNL Xdebug]，請新增`xdebug`至`.magento.app.yaml`檔案的`runtime:extensions`區段。
 
@@ -65,11 +67,11 @@ ht-degree: 0%
 1. 新增、提交和推送變更以重新部署環境。
 
    ```bash
-   git add -A
+   git add .magento.app.yaml
    ```
 
    ```bash
-   git commit -m "Add xdebug"
+   git commit -m "add xdebug"
    ```
 
    ```bash
@@ -78,7 +80,9 @@ ht-degree: 0%
 
 部署至入門環境和Pro整合環境時，[!DNL Xdebug]現在可供使用。 繼續設定IDE。 若為PhpStorm，請參閱[設定PhpStorm](#configure-phpstorm)。
 
-### 設定PhpStorm
+### 設定PhpStorm伺服器
+
+>[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
 
 [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE必須設定為可正確搭配[!DNL Xdebug]使用。
 
@@ -86,10 +90,10 @@ ht-degree: 0%
 
 1. 在您的PhpStorm專案中，開啟&#x200B;**設定**&#x200B;面板。
 
-   - _macOS_ — 選取&#x200B;**PhpStorm** > **偏好設定**。
+   - _macOS_ — 選取&#x200B;**PhpStorm** > **設定**。
    - _Windows/Linux_ — 選取&#x200B;**檔案** > **設定**。
 
-1. 在&#x200B;_設定_&#x200B;面板中，展開並找到&#x200B;**語言與架構** > **PHP** > **伺服器**&#x200B;區段。
+1. 在&#x200B;_設定_&#x200B;面板中，展開&#x200B;**PHP**&#x200B;區段並按一下&#x200B;**伺服器**。
 
 1. 按一下&#x200B;**+**&#x200B;以新增伺服器組態。 專案名稱在頂端為灰色。
 
@@ -110,11 +114,32 @@ ht-degree: 0%
       - 生產： `/app/<project_code>/`
       - 正在暫存： `/app/<project_code>_stg/`
 
-1. 在&#x200B;**語言與架構** > **PHP** > **偵錯** > **Xdebug** > **偵錯連線埠**&#x200B;面板中，將[!DNL Xdebug]連線埠變更為9000。
+1. 將[!DNL Xdebug]連線埠變更為`9000,9003`，或者您可以在&#x200B;**PHP** > **偵錯** > **Xdebug** > **偵錯連線埠**&#x200B;面板中將其限製為只有`9000`。
 
 1. 按一下&#x200B;**套用**。
 
+### 建立PHPStorm執行/偵錯組態
+
+這可讓應用程式擁有正確的偵錯設定，以處理來自Adobe Commerce應用程式的請求。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3437426?learn=on)
+
+1. 開啟PHPStorm應用程式，然後按一下畫面右上角的&#x200B;**[!UICONTROL Add Configuration]**。
+
+1. 按一下&#x200B;**[!UICONTROL Add new run configuration]**。
+
+1. 選取&#x200B;**[!UICONTROL PHP Remote Debug]**&#x200B;選項。
+
+   - 輸入唯一但可辨識的名稱。
+   - 勾選「[!UICONTROL Filter debug connection by IDE key]**」核取方塊。
+   - 選取您在[上一節](#configure-phpstorm-server)中建立的伺服器。 如果您尚未建立，可以現在建立，但請參閱設定指南的該部分。
+   - 在&#x200B;**[!UICONTROL IDE key(session id)]**&#x200B;文字欄位中，以大寫字母輸入`PHPSTORM`。 我們會在設定的其他部分使用此專案，因此請務必維持不變。 如果您選擇其他字串，則必須記得在設定和組態程式的其他位置使用它。
+
+1. 按一下&#x200B;**[!UICONTROL Apply]** > **[!UICONTROL OK]**。
+
 ### 設定連線埠轉送
+
+>[!VIDEO](https://video.tv.adobe.com/v/3437410?learn=on)
 
 將伺服器的`XDEBUG`連線對應到您的本機系統。 若要執行任何型別的偵錯，您必須將連線埠9000從雲端基礎結構伺服器上的Adobe Commerce轉送至本機電腦。 請參閱下列其中一節：
 
@@ -280,6 +305,10 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 >- 方法2： Commerce主控台： https://CONSOLE-URL/ENVIRONMENT，按一下`SSH v`下拉式清單
 
 **若要使用環境URL**&#x200B;開始偵錯：
+
+這是用來啟動遠端偵錯工作階段之設定的示範，以及啟動遠端偵錯工作階段的GET引數的示範。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
 
 1. 啟用遠端偵錯；造訪瀏覽器中的網站，並將下列專案附加至`KEY`為`xdebug_key`值的URL。
 
