@@ -2,9 +2,9 @@
 title: 雲端基礎結構上的Commerce
 description: 瞭解如何在雲端基礎結構上建立、部署和管理Commerce。
 exl-id: c0accd55-95ac-49d9-b6f4-0da19b82c28f
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 6ac23cbcf7ab48d09b494ebe8c7136518d213c4e
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 - Amazon Web Services (AWS)主機服務，為線上銷售及零售提供可擴充且安全的環境。
 
 ![雲端優點](../assets/CloudBenefits.svg)
+
+>[!NOTE]
+>
+>如需安全性詳細資訊，請參閱[安全性啟動檢查清單](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/launch/checklist#security-configuration)。
 
 詳細檢視[技術棧疊](architecture/tech-stack.md)，或進一步瞭解Commerce ](architecture/cloud-architecture.md)的[雲端架構中的特定功能和支援產品。
 

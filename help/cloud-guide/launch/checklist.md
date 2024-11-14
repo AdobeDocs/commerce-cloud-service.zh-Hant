@@ -2,7 +2,7 @@
 title: 啟動檢查清單
 description: 檢閱網站啟動時的檢查清單專案。
 exl-id: 4525742e-18c5-40d1-975d-00ba3f3a51a0
-source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
+source-git-commit: 6ac23cbcf7ab48d09b494ebe8c7136518d213c4e
 workflow-type: tm+mt
 source-wordcount: '1104'
 ht-degree: 0%
@@ -139,7 +139,7 @@ Adobe為每個環境提供Let&#39;s Encrypt SSL/TLS憑證。 Fastly需要此憑�
 
 - [管理員使用者的安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [管理員URL的安全設定]https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- 管理員URL的[安全設定](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [移除雲端基礎結構專案上任何不再使用Adobe Commerce的使用者](../project/user-access.md)
 
