@@ -2,9 +2,9 @@
 title: 雲端基礎結構上的Commerce
 description: 瞭解如何在雲端基礎結構上建立、部署和管理Commerce。
 exl-id: c0accd55-95ac-49d9-b6f4-0da19b82c28f
-source-git-commit: 6ac23cbcf7ab48d09b494ebe8c7136518d213c4e
+source-git-commit: 5f00b20e599b7ba26e483a238d05d99daf1dd1b8
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,26 @@ ht-degree: 0%
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## 雲端區域
+
+以下章節提供雲端基礎結構上Adobe Commerce可用的不同AWS和Azure區域的詳細資訊。
+
+## AWS地區
+
+![顯示AWS地區的圖表](../assets/aws-regions.svg){zoomable="yes"}
+
+>[!NOTE]
+>
+> 僅限在中國及俄羅斯進行內部部署。
+
+## Azure地區
+
+顯示Azure區域的![圖表](../assets/azure-regions.svg){zoomable="yes"}
+
+>[!NOTE]
+>
+> 僅限在中國及俄羅斯進行內部部署。 所有需要整合環境的商家都必須使用美國地區。
 
 ## Adobe Commerce檔案
 
