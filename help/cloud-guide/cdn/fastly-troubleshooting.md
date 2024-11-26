@@ -3,7 +3,7 @@ title: Fastly疑難排解
 description: 瞭解如何疑難排解和管理Adobe Commerce的Fastly CDN模組和服務。
 feature: Cloud, Configuration, Cache, Services
 exl-id: e4c47035-cbad-4838-8d44-fa5eaaac42d1
-source-git-commit: e066e9c7e1a6010c9d316f66f1632e28a0c40652
+source-git-commit: 38c29e3a2cee1658bb73922f0f56fdfa84af5a6f
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-您可以在生產和測試環境中使用相同的VCL。 請參閱[如何設定vcl_log](https://support.fastly.com/hc/en-us/community/posts/360040447172-How-to-configure-vcl-log)。
+您可以在生產和測試環境中使用相同的VCL。 請參閱&#x200B;_Fastly檔案_&#x200B;中的[`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)。
 
 ## 網站效能、清除和快取問題
 

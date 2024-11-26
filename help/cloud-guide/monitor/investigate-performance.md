@@ -4,9 +4,9 @@ description: 瞭解如何存取您的New Relic儀表板，並分析雲端基礎�
 feature: Cloud, Observability
 topic: Performance
 exl-id: 8d1e2ad6-14d0-4754-9703-960d93e135a9
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 38c29e3a2cee1658bb73922f0f56fdfa84af5a6f
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -85,11 +85,11 @@ Adobe提供Adobe Commerce _警示原則的_&#x200B;受管理警示，以追蹤�
 
 請勿修改「Adobe Commerce的管理警示」原則中包含的任何警示。 Adobe會隨著時間更新並改善此原則中的警示條件，覆寫您新增至原則的任何自訂。
 
-您可以建立警示原則，而不必修改現有的警示。 然後，將警示條件複製到新原則。 請參閱&#x200B;_New Relic_&#x200B;檔案中的[更新原則或條件](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-policies/update-or-disable-policies-conditions/)。
+您可以建立警示原則，而不必修改現有的警示。 然後，將警示條件複製到新原則。
 
 >[!TIP]
 >
->請參閱&#x200B;_New Relic_&#x200B;檔案中的[警示簡介](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/learn-alerts/alerts-concepts-workflow/)，以取得有關警示、警示原則和工作流程的詳細資訊。
+>請參閱&#x200B;_New Relic_&#x200B;檔案中的[警示簡介](https://docs.newrelic.com/docs/alerts/overview/)，以取得有關警示、警示原則和工作流程的詳細資訊。
 
 ## 設定通知的工作流程
 
