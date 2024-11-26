@@ -3,7 +3,7 @@ title: 設定RabbitMQ服務
 description: 瞭解如何啟用RabbitMQ服務，以管理雲端基礎結構上Adobe Commerce的訊息佇列。
 feature: Cloud, Services
 exl-id: 85794b8f-2260-4a6e-b5a6-a1b4c356594e
-source-git-commit: 196efa316b9998c1980412ad96577d7ce42d4aec
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 設定[!DNL RabbitMQ]服務
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系統，可讓[模組](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)將訊息發佈至佇列。 它也會定義非同步接收訊息的消費者。
 
 MQF使用[RabbitMQ](https://www.rabbitmq.com/)作為傳訊代理人，提供可擴充的平台來傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL RabbitMQ]是以進階訊息佇列通訊協定(AMQP) 0.9.1規格為基礎。
 

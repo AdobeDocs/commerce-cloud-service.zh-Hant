@@ -3,7 +3,7 @@ title: 部署至測試與生產
 description: 瞭解如何將雲端基礎結構上的Adobe Commerce程式碼部署到中繼和生產環境，以供進一步測試。
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 4b82289f-ee04-4b14-a0ed-7a8a19fc6a6a
-source-git-commit: ae7eb6a0c3de773377c8e1efb5ce2e92c06506bd
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
 source-wordcount: '1310'
 ht-degree: 0%
@@ -140,7 +140,7 @@ Pro隨附大型整合環境，其中包含兩個作用中的分支：全域`mast
 
 ## 移轉靜態檔案
 
-[靜態檔案](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
+[靜態檔案](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)儲存在`mounts`中。 將檔案從來源掛載位置（例如您的本機環境）移轉至目的地掛載位置的方法有兩種。 這兩種方法都使用`rsync`公用程式，但Adobe建議使用`magento-cloud` CLI在本機和遠端環境之間移動檔案。 而且Adobe建議在將檔案從遠端來源移動到其他遠端位置時使用`rsync`方法。
 
 ### 使用CLI移轉檔案
 

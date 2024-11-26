@@ -4,9 +4,9 @@ description: 瞭解如何準備Adobe客戶技術顧問，以在雲端基礎結�
 recommendations: noDisplay, catalog
 role: Admin
 exl-id: cfb354b0-c255-4b6e-94aa-c5a6bf7230d6
-source-git-commit: da1dec76b9389244f9d5a65428e09f1bc897fa5f
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ SendGrid網域的範例： `example@your-store.com`
 
 在雲端基礎結構Pro專案上，選擇Amazon Web Services (AWS)或Microsoft Azure作為您Adobe Commerce的基礎結構即服務(IaaS)基礎。 每個服務提供者會在多個區域運作，並提供多個可用區域。 選擇適合您所在位置的區域，降低延遲和成本提升的可能性。
 
-請參閱&#x200B;_實作行動手冊_&#x200B;中的[Adobe Commerce雲端區域](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/regions.html)地圖。
+檢視[Adobe Commerce雲端區域](../cloud-guide/overview.md)的地圖。
 
 ## 連線服務
 

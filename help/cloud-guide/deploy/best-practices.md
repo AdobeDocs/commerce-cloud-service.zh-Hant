@@ -3,7 +3,7 @@ title: 部署最佳實務
 description: 探索在雲端基礎結構上部署Adobe Commerce的最佳作法。
 feature: Cloud, Deploy, Best Practices
 exl-id: bac3ca83-0eee-4fda-9a5c-a84ab25a837a
-source-git-commit: eace5d84fa0915489bf562ccf79fde04f6b9d083
+source-git-commit: 269681efb9925d78ffb608ecbef657be740b5531
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 0%
@@ -118,7 +118,7 @@ ht-degree: 0%
 此階段會建置程式碼基底，並在`.magento.app.yaml`的`build`區段中執行鉤點。 預設的組建掛接是`php ./vendor/bin/ece-tools`命令，並執行下列動作：
 
 - 在`vendor/magento/ece-patches`中套用修補程式，以及在`m2-hotfixes`中套用選擇性專案特定修補程式
-- 使用`bin/magento setup:di:compile`重新產生程式碼和[相依性插入](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html)組態（亦即`generated/`目錄，包含`generated/code`和`generated/metapackage`）。
+- 使用`bin/magento setup:di:compile`重新產生程式碼和[相依性插入](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)組態（亦即`generated/`目錄，包含`generated/code`和`generated/metapackage`）。
 - 檢查程式碼基底中是否存在[`app/etc/config.php`](../store/store-settings.md)檔案。 如果Adobe Commerce在建置階段期間未偵測到此檔案，且包含模組和擴充功能清單，則會自動產生此檔案。 如果存在，建置階段會照常繼續，使用GZIP壓縮靜態檔案並進行部署，以減少部署階段的停機時間。 請參考[建置選項](../environment/variables-build.md)，瞭解如何自訂或停用檔案壓縮。
 
 >[!WARNING]
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 ### 階段4：部署Slug和叢集
 
-您的應用程式和所有[後端](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html)服務布建如下：
+您的應用程式和所有[後端](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)服務布建如下：
 
 - 在容器中掛載每個服務，例如Web伺服器、OpenSearch、[!DNL RabbitMQ]
 - 掛載讀寫檔案系統（掛載在高可用性分散式儲存格線上）
@@ -183,7 +183,7 @@ ht-degree: 0%
 >
 >部署指令碼使用`.magento`目錄中組態檔定義的值，然後指令碼會刪除目錄及其內容。 您的本機開發環境不受影響。
 
-### Post-deployment：設定路由
+### 部署後：設定路由
 
 部署執行時，程式會在進入點暫停傳入流量60秒，並重新設定路由，讓您的網路流量到達您新建立的叢集。
 
