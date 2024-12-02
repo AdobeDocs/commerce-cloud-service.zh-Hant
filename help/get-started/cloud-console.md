@@ -1,5 +1,5 @@
 ---
-title: 「登入 [!DNL Cloud Console]」
+title: 登入 [!DNL Cloud Console]
 description: 瞭解雲端基礎結構上適用於Adobe Commerce的 [!DNL Cloud Console] 。
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-02-06T00:00:00Z

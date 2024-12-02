@@ -1,5 +1,5 @@
 ---
-title: 「使用 [!DNL Cloud Console]管理分支」
+title: 使用 [!DNL Cloud Console]管理分支
 description: 瞭解如何使用 [!DNL Cloud Console]在雲端基礎結構上管理Adobe Commerce的環境分支。
 role: Developer
 feature: Cloud, Install
