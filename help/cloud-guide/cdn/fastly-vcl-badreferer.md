@@ -3,7 +3,7 @@ title: 封鎖轉介垃圾訊息
 description: 使用Fastly Edge字典和自訂VCL程式碼片段，封鎖來自您網站的轉介垃圾郵件。
 feature: Cloud, Configuration, Security
 exl-id: 665bac93-75db-424f-be2c-531830d0e59a
-source-git-commit: 7a181af2149eef7bfaed4dd4d256b8fa19ae1dda
+source-git-commit: a06e3f98b8b581213de1e0fd87ea4c2241ccaa62
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Edge字典會建立VCL程式碼片段處理期間VCL函式可存取的鍵值值�
   "dynamic": "0",
   "type": "recv",
   "priority": "5",
-  "content": "set req.http.Referer-Host = regsub(req.http.Referer, \"^https?:\/\/?([^:\/s]+).*$\", \"\\1\"); if (table.lookup(referrer_blocklist, req.http.Referer-Host)) { error 403 \"Forbidden\"; }"
+  "content": "if (req.http.Referer ~ \"^(.*:)//([A-Za-z0-9\-\.]+)(:[0-9]+)?(.*)$\") {set req.http.Referer-Host = re.group.2;}if (table.lookup(referrer_blocklist, req.http.Referer-Host)) {error 403 \"Forbidden\";}"
 }
 ```
 
@@ -113,8 +113,9 @@ Edge字典會建立VCL程式碼片段處理期間VCL函式可存取的鍵值值�
    - **VCL**&#x200B;程式碼片段內容 — 
 
      ```conf
-     set req.http.Referer-Host = regsub(req.http.Referer,
-     "^https?://?([^:/\s]+).*$", "1");
+     if (req.http.Referer ~ "^(.*:)//([A-Za-z0-9\-\.]+)(:[0-9]+)?(.*)$") {
+       set req.http.Referer-Host = re.group.2;  
+     }
      if (table.lookup(referrer_blocklist, req.http.Referer-Host)) {
        error 403 "Forbidden";
      }
