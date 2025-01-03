@@ -3,9 +3,9 @@ title: 檢視和管理記錄檔
 description: 瞭解雲端基礎結構中可用的記錄檔型別以及在何處可以找到它們。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: d7f63dab-23bf-4b95-b58c-3ef9b46979d4
-source-git-commit: 633e5e75ae23a933d15a0faedae22092797d5d0b
+source-git-commit: 564a569c37ab8ec53f8a12bc105106a621251b10
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,18 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->對於Pro Staging和生產環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。 入門環境沒有記錄輪換。 環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。 無法在Pro Integration環境中設定記錄旋轉。 若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
+>對於Pro Staging和Pro Production環境，會針對具有固定檔案名稱的記錄檔啟用自動記錄旋轉、壓縮和移除。 每個記錄檔型別都有旋轉模式和存留期。
+>環境的記錄輪換和壓縮記錄存留期的完整詳細資訊，請參閱： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
+>對於Pro測試和Pro生產環境，您必須[提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以要求變更記錄輪換設定。
+
+>[!TIP]
+>
+>無法在Pro Integration環境中設定記錄旋轉。
+>若為Pro Integration，您必須實作自訂解決方案/指令碼，並[設定您的cron](../application/crons-property.md)以視需要執行指令碼。
+
+>[!NOTE]
+>
+>入門專案環境沒有記錄輪換。
 
 ## 建置和部署記錄檔
 
