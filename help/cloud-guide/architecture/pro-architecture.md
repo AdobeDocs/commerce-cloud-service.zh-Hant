@@ -4,9 +4,9 @@ description: 瞭解Pro架構支援的環境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: d10d5760-44da-4ffe-b4b7-093406d8b702
-source-git-commit: 18f4da5c6e7e5c483f5cf64e977b3fb3fd28bbb0
+source-git-commit: eb33d9867355a4ccfada99c7f5b0e4520dbe44f5
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 ### 復原點目標
 
-RPO為上次備份的最長六小時時間（例如06:00、12:00、18:00）。 備份的頻率取決於您計畫的備份排程，以及寫入儲存服務的變更量。
+請連絡您的Adobe客戶成功案例經理，以取得復原點目標上次備份時間的詳細資訊。 備份的頻率取決於您計畫的備份排程，以及寫入儲存服務的變更量。
 
 ### 保留原則
 
@@ -203,11 +203,7 @@ Adobe會根據下列資料保留原則保留自動備份：
 
 ### 復原時間目標
 
-RTO取決於儲存的大小。 大型EBS磁碟區需要更多時間來還原。 還原時間可能會因資料庫大小而異：
-
-- 大型資料庫(200+ GB)可能需要5個小時
-- 中型資料庫(150 GB)可能需要2.5小時
-- 小型資料庫(60 GB)可能需要1小時的時間
+RTO取決於儲存的大小。 大型EBS磁碟區需要更多時間來還原。 還原時間可能會因資料庫大小而異。 如需詳細資訊，請聯絡您的Adobe客戶成功案例經理。
 
 ## Pro叢集縮放
 
